@@ -1,0 +1,15 @@
+body{
+    background-image: url(../imgs/love.jpg);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    background-color:#464646;
+}
+#love{
+    font-size: 36px;
+    color:white;
+    text-align: center;
+    margin-top: 20%;
+    position: relative;
+}
