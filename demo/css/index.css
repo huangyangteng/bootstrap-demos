@@ -1,0 +1,199 @@
+body {
+　　　　font: normal 100% Helvetica, Arial, sans-serif;
+　　}
+/*清除样式*/
+#banner,.banner-box{
+	margin: 0;
+	padding: 0;
+}
+
+/*手机端禁用滚动条*/
+html,body{
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+
+
+
+/*轮播*/
+#banner{
+	width: 100%;
+  margin: 0 auto;
+	height: 700px!important;
+	background-image: linear-gradient( 135deg, #FFCF71 10%, #2376DD 100%);
+}
+.banner-box{
+    width: 100%;
+    position:relative;
+    text-align:center;
+    overflow: hidden;
+
+}
+
+.banner-box .img{
+    width:6000px;
+    position:absolute;
+    top:0;
+    left:0;
+    padding: 0;
+}
+
+
+.banner-box .img li{
+    float:left;
+}
+
+
+.banner-box .li{
+    width:100%;
+    position:absolute;
+    left:0;
+    bottom:10px;
+}
+
+/*下方小圆点*/
+.banner-box .li li{
+    width:10px;
+    height:10px;
+    background:#3f4bb7;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 3px;
+    cursor:pointer;
+}
+
+/*  左右两边*/
+.banner-box .but{
+    position: absolute;
+    top:50%;
+    margin-top:-30px;
+    width:38px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    font-size: 30px;
+    background:transparent;
+    color:#fff;
+    font-family: '宋体';
+    cursor:pointer;
+    display: none;
+}
+
+
+.banner-box:hover .but{
+    display:block;
+}
+
+
+.banner-box .but-left{
+    left:0;
+}
+
+.banner-box .but-right{
+    right:0;
+}
+/*小圆点*/
+.banner-box .li .index{
+    background:#fff;
+    width: 30px;
+    border-radius:10px;
+}
+
+
+/*   下方进度条*/
+.banner-box .bar{ 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    height: 5px; 
+    background-color:#3f4bb7;
+}
+
+
+
+
+
+/*``````````````````````备案号`````````````````````````````````*/
+#record_number{
+	text-align: center;
+  margin-top: 20px;
+
+
+}
+#record_number img{
+    margin: 0 auto;
+}
+#record_number a{
+	display: block;
+}
+
+
+
+/*兼容safari浏览器*/
+/*@media screen and (-webkit-min-device-pixel-ratio:0)  {
+   .img li{
+   	margin-left: -6px;
+   }
+   
+
+} */
+
+/* Safari 7.1+ (9.0 is the latest version of Safari at this time) */
+
+/* Safari 7.1+ */
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+
+  .img li{
+   	margin-left: -6px;
+   }
+
+}
+/*safari 10+*/
+@media not all and (min-resolution:.001dpcm) { @media {
+
+    .img li{
+   	margin-left: -6px;
+   }
+   #banner{
+   	background: #3a3a35;
+   }
+}}
+
+
+/*响应式*/
+
+@media only screen and (max-width: 640px) {
+
+
+ body,#banner{
+  overflow-x: hidden;
+ }
+ /*nav*/
+ 
+ /*轮播*/
+ #banner{
+  height: 550px;
+ }
+ #banner img{
+  height: 630px;
+ }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

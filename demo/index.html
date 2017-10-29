@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>景观设计</title>
+  <meta name="keywords" content="景观设计">
+  <meta name="description" content="景观设计">
+	<!-- 移动设备优先 -->
+		<meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 网站小图标 -->
+    
+<!-- bootstrap -->
+ <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+ <!--使用Bootstrap的js插件，必须先调入jQuery-->
+ <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+ <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- 响应式样式 -->
+	<link rel="stylesheet" type="text/css" href="css/smIndex.css">
+
+  <style>
+    /*导航条样式*/
+    #target ul li{
+      margin-right: 20px;
+    }
+    #target ul li a{
+      font-size: 1.25em;
+      color: white;
+    }
+    #target ul li a:hover{
+      background: transparent;
+      color: #f9f108;
+      transition: 1s color;
+    }
+    #target ul li a:focus{
+      background: transparent;
+      color: #f9f108;
+      
+    }
+    
+
+  </style>
+
+
+</head>
+<body >
+
+  <div id="container">
+
+
+        <!-- ````````````````````````nav`````````````````` -->
+    	
+      <nav id="nav" class="navbar navbar-fixed-top" role="navigation" style="border-bottom:1px solid rgba(255,255,255,0.3)">
+            <div class="container-fluid">
+                <!-- 导航条在手机端的样式和logo -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target">
+                        <span class="sr-only">导航切换</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#"><img src="imgs/logo.png" alt="logo"></a>
+                </div>
+                <!-- 导航条内容 -->
+                <div class="collapse navbar-collapse" id="target" style="margin-left: 36%">
+                    <ul class="nav navbar-nav" >
+                        <li style="margin-right: 20px;"><a href="#">首页</a></li>
+                        <li><a href="html/aboutus.html">关于我们</a></li>
+                        <li><a href="html/case.html">项目案例</a></li>
+                        <li><a href="html/contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- ````````````````````````轮播图```````````````` -->
+
+    	<div class='banner-box' id="banner">
+    	    <ul class='img'>
+    	        <li><img style="height: 100%" class="width-full" src="imgs/index/banner-three.JPG" alt="" /></li>
+                <li><img class="width-full" src="imgs/index/banner-one.JPG" alt="" /></li>
+                <li><img class="width-full" src="imgs/index/banner-two.JPG" alt="" /></li>
+    	    </ul>
+    	    <ul class='li'></ul>
+    	    <div class='but but-left'>&lt;</div>
+    	    <div class='but but-right'>&gt;</div>
+    	    <div class='bar'></div>
+    	</div>
+
+  
+    	<!-- ······················备案号················ -->
+    	<div id="record_number" class="am-container" class="am-g" >
+
+    		<div class="am-u-lg-12 am-center" >
+    			<a href="#" style="color: gray;">蜀ICP备18298918</a>
+    			<p>Copyright © 2010-2017 zhianshi.cn All Rights Reserved.</p>
+    		</div>
+
+    	</div>
+
+  </div>
+  <script>
+
+  	$(function() {
+		
+
+  	// ```````````````````````轮播`````````````````````````
+
+
+    var boxWidth=$('.banner-box').width(); //获取轮播盒子的宽度
+    var oSj = 5000;
+    var i = 0;
+    var bar = $(".banner-box .bar");
+    var oImg = $(".banner-box .img");//获取图片盒子
+    var oImgfirst= $('.banner-box .img li:first').clone();//复制第一张图片
+    oImg.append(oImgfirst);//将复制的第一张图片放到最后
+    var imgNum = $(".banner-box .img li").size();//获取图片数量
+
+    // 设置图片的宽度为100%
+    $(".width-full").css("width",boxWidth);
+// 设置图片高度  如果是手机屏幕，设置长：宽=1:2
+   
+    if(document.body.clientWidth<=640){
+    	$("#banner").css("height",boxWidth/0.8);
+    	$(".width-full").css("height",boxWidth/0.5);
+    	console.log(123)
+    }
+    console.log(boxWidth/1.5)
+
+
+
+
+    //根据图片个数添加圆点按钮
+    for(var j=1;j<=imgNum-1;j++){
+        $('.banner-box .li').append('<li></li>');
+    }
+
+    //给第一个按钮添加选中样式
+    $('.banner-box .li li:first').addClass('index');
+
+
+    //点击向右轮播
+    $(".but-right").click(function(){
+        int();
+    });
+
+    //点击向左轮播
+    $(".but-left").click(function(){
+        bar.stop().css('width',0);
+        i--;
+        if(i == -1){
+            $('.banner-box .img').css('left',-(imgNum-1)*boxWidth);//用CSS进行图片位置变换，达到无缝拼接效果
+            i = imgNum-2;
+        }
+        oImg.stop().animate({left:-i*boxWidth},500);//动画效果
+        clearInterval(oTime);
+        oTime = setInterval(function(){
+            int();
+        },oSj);
+        barAniMate();//进度条函数动画效果
+        $(".banner-box .li li").eq(i).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+    });
+
+    //鼠标移动到圆点后轮播
+    $(".banner-box .li li").hover(function() {
+        clearInterval(oTime);//清除定时器
+        bar.stop().css('width',0);
+        var index = $(this).index();
+        i=index;
+        oImg.stop().animate({left:-index*boxWidth},500);//动画效果
+        bar.stop().css('width',0);
+        $(this).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+    },function(){
+        barAniMate();//进度条函数动画效果
+        oTime = setInterval(function(){
+            int();
+        },oSj);
+    });
+
+    //自动轮播
+    var oTime = setInterval(function(){
+        int();
+    },oSj);
+
+    barAniMate();//进度条函数动画效果
+
+    //进度条函数动画效果
+    function barAniMate(){
+        bar.animate({width:'100%'},oSj,function(){
+            $(this).css('width',0);
+        });
+    }
+
+    //自动轮播函数
+    function int(){
+        bar.stop().css('width',0);
+        i++;
+        if(i == imgNum){
+            oImg.css('left',0);//用CSS进行图片位置变换，达到无缝拼接效果
+            i = 1;
+        }
+        oImg.stop().animate({left:-i*boxWidth},500);//动画效果
+        barAniMate();//进度条函数动画效果
+        clearInterval(oTime);
+        oTime = setInterval(function(){
+            int();
+        },oSj);
+        if(i == imgNum-1){
+            $(".banner-box .li li").eq(0).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+
+        }else{
+            $(".banner-box .li li").eq(i).addClass('index').siblings().removeClass('index');//给相应的按钮添加样式
+        }
+    }
+
+
+
+
+
+  	//····················根据屏幕大小替换轮播图············
+  	// var deviceWidth=document.body.clientWidth;
+
+  	//   	if (deviceWidth<=640) {
+
+  	// 	$("#banner img:eq(0)").attr("src","http://ov0st4ifa.bkt.clouddn.com/imgssmlun1.jpg");
+  	// 	$("#banner img:eq(1)").attr("src","http://ov0st4ifa.bkt.clouddn.com/imgssmlun2.jpg");
+  	// 	$("#banner img:eq(2)").attr("src","http://ov0st4ifa.bkt.clouddn.com/imgssmlun3.jpg");
+  	// 	$("#banner img:eq(3)").attr("src","http://ov0st4ifa.bkt.clouddn.com/imgssmlun1.jpg");
+  	// }
+  	// if(deviceWidth>=400){
+  	// $(window).resize(function () {
+  	// 	setTimeout(function () {
+  	// 		location.reload()
+  	// 	},500)
+
+
+  	// })
+  	// }
+
+  	// 滚动更换导航条颜色
+
+
+  	  $(document).scroll(function() {
+
+        // 导航条变颜色,文字变成白色
+  	  	// if($(document).scrollTop()>60){
+  	  	// 	$("#nav").css({"background":"transparent","transition":"1.5s"})
+  	  	// 	$("#smnav ul li a").css({"color":"white","transition":"1.5s"})
+
+  	  	// }else{
+  	  	// 	$("#nav").css({"background":"transparent","transition":"1.5s"})
+  	  	// 	$("#smnav ul li a").css({"color":"black","transition":"1.5s"})
+  	  	// }
+
+    // 手机屏幕导航条样式改变
+
+      var deviceWidth=document.body.clientWidth;
+
+      if (deviceWidth<640) {
+        $("#nav").removeClass("navbar-fixed-top");
+        $("nav").addClass("navbar-inverse")
+      }
+
+
+
+
+
+
+
+
+  	  	// 解决nav小屏幕兼容问题
+
+  	  	if($(document).scrollTop()>10){
+  		  		$("#smnav").removeClass("am-in");
+  		  	}
+
+  	    });
+
+  	  
+
+    
+ });
+
+  </script>
+
+</body>
+</html>

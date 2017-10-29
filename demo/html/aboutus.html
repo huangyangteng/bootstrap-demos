@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<!--使用Bootstrap的js插件，必须先调入jQuery-->
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+	<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<style>
+		/*导航条样式*/
+		#target ul li{
+		  margin-right: 20px;
+		}
+		#target ul li a{
+		  font-size: 1.25em;
+		  
+		}
+		#target ul li a:hover{
+		  background: transparent;
+		  color: #f9f108;
+		  transition: 1s color;
+		}
+		/*文本样式*/
+		p{
+			line-height: 180%;
+			font-size: 1.5em;
+			margin: 2em auto;
+		}
+		/*图片*/
+		img{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav id="nav" class="navbar navbar-static-top " role="navigation" style="border-bottom:1px solid #a7c0e0">
+		      <div class="container-fluid">
+		          <!-- 导航条在手机端的样式和logo -->
+		          <div class="navbar-header">
+		              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target">
+		                  <span class="sr-only">导航切换</span>
+		                  <span class="icon-bar" style="background-color: #a7c0e0"></span>
+		                  <span class="icon-bar" style="background-color: #a7c0e0"></span>
+		                  <span class="icon-bar" style="background-color: #a7c0e0"></span>
+		              </button>
+		              <a href="#"><img src="imgs/logo.png" alt="logo"></a>
+		          </div>
+		          <!-- 导航条内容 -->
+		          <div class="collapse navbar-collapse" id="target" style="margin-left: 36%">
+		              <ul class="nav navbar-nav" >
+		                  <li style="margin-right: 20px;"><a href="../index.html">首页</a></li>
+		                  <li><a href="aboutus.html">关于我们</a></li>
+		                  <li><a href="case.html">项目案例</a></li>
+		                  <li><a href="contact.html">联系我们</a></li>
+		              </ul>
+		          </div>
+		      </div>
+		  </nav>
+		  <!-- 公司介绍 -->
+		  <div class="row">
+		  	<div class="col-md-4"></div>
+		  	<div class="col-md-4 text-center" style="border-bottom: 1px solid gray">
+		  		<h2>COMPANY PROFILE</h2>
+		  	</div>
+		  	<div class="col-md-4"></div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-md-4"></div>
+		  	<div class="col-md-4 text-center">
+		  		<h3>公司介绍</h3>
+		  	</div>
+		  	<div class="col-md-4"></div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-md-2"></div>
+		  	<div class="col-md-8">
+		  		<p>BLG博克斯林景观国际是由刘样多先生带领的一支年轻活力创意团队，旨在探索具有独创性、 艺术性和可持续性的现代景观，既是将西方景观风格广泛延伸，更是将中国传统文化景观元 素融入现代设计细节之中。</p>
+		  		<p>我们的理念是MAKE IT DIFFERENT，这并不代表对以往经典的简 单摒弃，而是深度挖掘现代都市生活特点，探索现代实用景观的华丽创意转变。我们善于对 细节的观察与思考，我们活力创意的动力来源于对景观生活的热爱以及对高品质生活的追求。</p>
+		  		<p>BLG博克斯林景观内部一直保持着高效的工作状态，有意调整产品有序地进入，确保能在展开定制服务前有足够时间思考及更多创新尝试，即使在同种设计风格下，我们带给业主的也将会是变化多样的感官体验。
+		  		</p>
+		  	</div>
+		  	<div class="col-md-2"></div>
+		  </div>
+
+		  <hr>
+
+
+		  <!-- 团队介绍 -->
+		  <div class="row">
+		  	<div class="col-md-4"></div>
+		  	<div class="col-md-4 text-center" style="border-bottom: 1px solid gray">
+		  		<h2>TEAM INTRODUCTION</h2>
+		  	</div>
+		  	<div class="col-md-4"></div>
+		  </div>
+		  <div class="row">
+		  	<div class="col-md-4"></div>
+		  	<div class="col-md-4 text-center">
+		  		<h3>团队介绍</h3>
+		  	</div>
+		  	<div class="col-md-4"></div>
+		  </div>
+		  <div class="row" style="margin: 50px auto;">
+		  	<div class="col-md-4" data-toggle="modal" data-target="#item1"><img src="../imgs/2.jpg" alt="" class="img-responsive"></div>
+		  	<div class="col-md-4" data-toggle="modal" data-target="#item2"><img src="../imgs/2.jpg" alt="" class="img-responsive"></div>
+		  	<div class="col-md-4" data-toggle="modal" data-target="#item3"><img src="../imgs/2.jpg" alt="" class="img-responsive"></div>
+		  </div>
+		  <hr>
+		  <div class="row" style="height: 100px;">
+		  	<div class="col-md-12">
+		  		<address class="text-center">四川省绵阳市西南科技大学</address>
+		  	</div>
+		  </div>
+	</div>
+
+	<!-- 模态窗口 -->
+	<!-- 1 -->
+	 <div class="modal fade" id="item1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">张三</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../imgs/4.jpg" alt="Roller-skating" class="img-responsive">
+                        <p>首席设计师，xxxxxx</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="modal fade" id="item2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">李四</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../imgs/6.jpg" alt="Roller-skating" class="img-responsive">
+                        <p>哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="modal fade" id="item3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                        <h4 class="modal-title" id="myModalLabel">团队介绍</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="imgs/item1.jpg" alt="Roller-skating" class="img-responsive">
+                        <p>哈哈哈哈哈哈哈</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	
+</body>
+</html>
