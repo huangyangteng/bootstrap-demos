@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <title>企业管理</title>
+   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+   	/*留言框关闭按钮*/
+    .close{
+    	
+    	cursor: pointer;
+    	color: black;
+    	font-size: 2em;
+    	transition: all 0.5s ease-in;
+
+    }
+    .close:hover{
+        transform: rotate(360deg) matrix(1.2,0,0,1.2,0,0);
+    }
+   </style>
+</head>
+<body>
+
+<div class="container">
+   <div class="row panel panel-primary" >
+    <!-- 导航条 -->
+   	    <div class="panel-heading">
+		    <a class="btn btn-success" href="../index.html">回首页</a>
+        <!-- 增加功能用一个模态框实现 -->
+        <a class="btn btn-success" href="javascript:;" data-toggle="modal" data-target="#addmsg" style="margin-left: 20px" >增加</a>
+		    <span style="font-size: 2em;margin-left: 30.3%;" class="text-center">合作企业</span>
+	    </div>
+   
+    <!-- 企业内容 -->
+	    <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                          苹果公司
+                          <span class="close pull-right">X</span>
+                        </div>
+                        <div class="panel-body">
+                            <img src="../imgs/下载.jpeg" alt="" class="img-responsive">
+                            <p>苹果公司是世界有名的互联网公司,源于美国的跨国科技公司，总部位于美国加州库比蒂诺，致力于设计、开发和销售消费电子、计算机软件、在线服务和个人计算机。                 
+                            </p>
+                        </div>
+                       
+                    </div>
+                </div>
+                 
+                
+            </div>
+	    </div>
+    <!-- 增加公司信息的模态框 ````````````````````````````````-->
+              <div class="modal fade" id="addmsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                      </button>
+                      <h4 class="modal-title" id="myModalLabel">
+                        增加企业信息
+                      </h4>
+                    </div>
+                    <div class="modal-body">
+                      <form role="form" style="margin-top: 20px;">
+                        <div class="form-group">
+                          <label for="name">企业名称</label>
+                          <input type="text" class="form-control" id="name" placeholder="请输入名称，不要超过20字">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputfile">企业缩略图上传</label>
+                          <input type="file" id="inputfile">
+                          <p class="help-block">上传时注意文件的尺寸，最好为260x200左右</p>
+                        </div>
+                        <div class="form-group">
+                           <label for="name">请输入企业简介</label>
+                           <p class="help-block">不超过66个汉字。</p>
+                           <textarea class="form-control" rows="3"> </textarea>
+                         </div>
+                        <button type="submit" class="btn btn-primary">提交</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                      </button>
+                      
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+                <!-- ````````````````````````````````````````````````模态框内容 -->
+
+   </div>
+</div>
+
+</body>
+</html>

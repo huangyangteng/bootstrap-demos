@@ -10,11 +10,53 @@
 	<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<style>
-		
+	    html,body{
+	    	background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+	    	height: 100%;
+	    }
+	    .container{
+	    	height: 100%;
+	    }
+		.main{		
+			margin-top: 40%;
+			height: 300px;
+			border-radius: 5%;
+			background: rgba(0,0,0,0.3);
+		}
+		.child{
+			display: block;
+			width: 46%;
+			margin: 2%;
+			height: 130px;
+			float: left;
+			line-height: 130px;
+			background: #f3ed0f;
+			text-align: center;
+			font-size: 2em;
+			border-radius: 5%;
+			transition: all 2s ease-in-out;
+
+		}
+		.child:hover{
+			transform: rotate(720deg) matrix(1.6,0,0,1.6,0,0);
+
+		}
 	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="container" >
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="main">
+					<a href="html/edit.html" class="child">项目管理</a>
+					<a href="html/msg.html" class="child">留言管理</a>
+					<a href="html/company.html" class="child">合作企业</a>
+					<a href="html/password.html" class="child">修改密码</a>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
 		
 	</div>
 	
