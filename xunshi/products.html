@@ -53,7 +53,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2 text-left">
-					<div id="fh5co-logo"><a href="index.html">讯视科技<span>.</span></a></div>
+					<div id="fh5co-logo">
+						<a href="index.html">
+							<img src="images/logo.png" style="width: 150px;height: 40px;" alt="">
+						</a>
+
+					</div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
@@ -92,6 +97,7 @@
 
 	<div id="fh5co-project">
 		<div class="container">
+			<!-- 概述 -->
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
 					<span>项目案例</span>
@@ -99,9 +105,22 @@
 					<p>以下是我们主要的项目组和项目内容。</p>
 				</div>
 			</div>
+			<!-- 概述 -->
+            <div class="row">
+            	<div class="col-md-12" style="margin-top: -60px;margin-bottom: 40px;">
+            		<div class="btn-group">
+            				<button data-filter="*" type="button"  class="btn btn-default is-checked">全部</button>
+            				<button data-filter=".hotel" type="button"   class="btn btn-default">E-楼盘</button>
+            				<button data-filter=".web" type="button" class="btn btn-default">网站建设</button>
+            				<button data-filter=".industry" type="button" class="btn btn-default">工业模拟</button>
+            				<button data-filter=".system" type="button" id="system" class="btn btn-default">管理系统</button>
 
-			<div class="row">
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+            			</div>
+            	</div>
+            </div>
+			<div class="row isotope" id="lightBox" style="width: 100%">
+				
+				<div class="col-md-4 col-sm-6 fh5co-project  web project" data-animate-effect="fadeIn" >
 					<a href="#"><img src="images/work-1.jpg" alt="Free HTML5 Website Template" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>游仙 童话小镇</h3>
@@ -109,7 +128,8 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+
+				<div class="col-md-4 col-sm-6 fh5co-project  hotel project" data-animate-effect="fadeIn">
 					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>安州区 江与城</h3>
@@ -117,7 +137,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+				<div class="col-md-4 col-sm-6 fh5co-project  system project" data-animate-effect="fadeIn">
 					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>绵阳 太极集团</h3>
@@ -126,30 +146,46 @@
 					</a>
 				</div>
 
+				<div class="col-md-4 col-sm-6 fh5co-project  web project" data-animate-effect="fadeIn" >
+					<a href="#"><img src="images/work-1.jpg" alt="Free HTML5 Website Template" class="img-responsive">
+						<div class="fh5co-copy">
+							<h3>游仙 童话小镇</h3>
+							<p>网络建设项目组</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 col-sm-6 fh5co-project  hotel project" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template" class="img-responsive">
+						<div class="fh5co-copy">
+							<h3>安州区 江与城</h3>
+							<p>E-楼盘项目组</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project  system project" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template" class="img-responsive">
+						<div class="fh5co-copy">
+							<h3>绵阳 太极集团</h3>
+							<p>系统开发项目组</p>
+						</div>
+					</a>
+				</div>
+
+				<!-- <li class="col-md-4 web" style="height: 200px">1</li>
+				<li class="col-md-4 web" style="height: 200px">1</li>
+				<li class="col-md-4 industry" style="height: 200px">2</li>
+				<li class="col-md-4 system" style="height: 200px">3</li>
+				<li class="col-md-4 system" style="height: 200px">3</li>
+				<li class="col-md-4" style="height: 200px">4</li> -->
+
+				 
+
+
 				
 
 
-				<div class="col-md-12 text-center">
-					<nav aria-label="Page navigation">
-					  <ul class="pagination">
-					    <li>
-					      <a href="#" aria-label="Previous">
-					        <span aria-hidden="true">&laquo;</span>
-					      </a>
-					    </li>
-					    <li class="active"><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li>
-					      <a href="#" aria-label="Next">
-					        <span aria-hidden="true">&raquo;</span>
-					      </a>
-					    </li>
-					  </ul>
-					</nav>
-				</div>
+				
 
 			</div>
 		</div>
@@ -239,6 +275,9 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
+	<!-- 选项卡切换js -->
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.isotope.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 

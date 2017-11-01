@@ -261,14 +261,63 @@
 		counterWayPoint();
 		parallax();
 	});
-	// 解决导航条字体兼容性
-	
-	var logo=$("#fh5co-logo");
-	console.log(logo.text());
-	console.log()
-	if($(window).width()<640){
-		logo.text("xunshi")
-	}
+	// 案例那里添加按钮，根据class选择加载哪一个 hotel industry system web
+	// $("#web").click(function () {
+	// 	$(".project").remove(".hotel");
+	// 	$(".project").remove(".system");
+	// 	$(".project").remove(".industry");
+
+	// })
+	// $("#industry").click(function () {
+	// 	alert(1)
+	// 	$(".project").remove(".hotel");
+	// 	$(".project").remove(".system");
+	// 	$(".project").remove(".web");
+
+	// })
+	// $("#system").click(function () {
+	// 	alert(1)
+
+	// 	$(".project").remove(".hotel");
+	// 	$(".project").remove(".industry");
+	// 	$(".project").remove(".web");
+
+	// })
+	// $("#hotel").click(function () {
+	// 	alert(1)
+
+	// 	$(".project").remove(".industry");
+	// 	$(".project").remove(".system");
+	// 	$(".project").remove(".web");
+
+	// })
+	// 设置动画的效果和时间
+		var $container = $("#lightBox");
+		
+		    $container.isotope({
+		        filter:"*",
+		        animationOptions:{
+		            duration:750,
+		            easing:"ease-in-out"
+		        },
+		        layoutMode:"cellsByRow",
+		        cellsByRow:{
+		            columnWidth:360,
+		            rowHeight:280
+		        }
+		    });
+
+		    $(".btn-group .btn").click(function(){
+		        $(this).addClass("is-checked").siblings().removeClass("is-checked");
+		        var selector = $(this).attr("data-filter");
+		        $container.isotope({
+		            filter:selector,
+		            animationOptions:{
+		                duration:750,
+		                easing:"ease-in-out"
+		            }
+		        });
+		    });
 
 
 }());

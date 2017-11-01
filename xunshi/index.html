@@ -38,10 +38,12 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	
 
 	</head>
 	<body>
@@ -53,7 +55,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2 text-left">
-					<div id="fh5co-logo"><a href="index.html">讯视科技<span>.</span></a></div>
+					<div id="fh5co-logo">
+						<a href="index.html">
+							<img src="images/logo.png" style="width: 150px;height: 40px;" alt="">
+						</a>
+
+					</div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
@@ -81,7 +88,7 @@
 					<div class="display-t">
 
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
-							<h1 class="mb30">公司简介</h1>
+							<h1 class="mb30" style="font-size: 2em">公司简介</h1>
 							<p>四川讯视有限公司是一家致力于视觉显示技术和软件系统开发的科技型企业。目前公司旗下拥有广安讯视信息技术有限公司（VR\AR\MR技术开发）、成都讯视信息技术有限公司（系统开发）等两家全资公司，并与西南科技大学理学院、成都巅峰共创集团、成都光驰科技有限公司达成战略合作协议，为公司项目技术与市场的发展及拓展提供了有力的保障。</p>
 							<p>
 								<a href="http://gettemplates.co/" target="_blank" class="btn btn-primary">进入讯视</a>  <em class="or">or</em> 
@@ -95,8 +102,12 @@
 				<div class="col-md-5 text-right">
 					<div class="display-t">
 						<div class="display-tc">
-					        <p style="font-size: 1.5em;color: white">最优的产品 最好的服务 最高的信誉</p>
-						    <p style="font-size: 1.7em;color: white">创新  &nbsp;务实   尽心   尽责</p>
+							<p style="color: transparent;">jsanjjjjjjjjjjjjjjjjjj</p>
+							<p style="color: transparent;">sssssssssssssssssss</p>
+							<p style="color: transparent;">sssssssssssss</p>
+							<p style="color: transparent;">sjjjjjjj</p>
+					        <p style="font-size: 1em;color: white">最优的产品 最好的服务 最高的信誉</p>
+						    <p style="font-size: 1.1em;color: white">创新  &nbsp;务实   尽心   尽责</p>
 						</div>
 					</div>
 				</div>
@@ -106,6 +117,7 @@
 
 		<div id="fh5co-project">
 		<div class="container">
+			<!-- 概述 -->
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
 					<span>项目案例</span>
@@ -113,9 +125,22 @@
 					<p>以下是我们主要的项目组和项目内容。</p>
 				</div>
 			</div>
+			<!-- 概述 -->
+            <div class="row">
+            	<div class="col-md-12" style="margin-top: -60px;margin-bottom: 40px;">
+            		<div class="btn-group">
+            				<button data-filter="*" type="button"  class="btn btn-default is-checked">全部</button>
+            				<button data-filter=".hotel" type="button"   class="btn btn-default">E-楼盘</button>
+            				<button data-filter=".web" type="button" class="btn btn-default">网站建设</button>
+            				<button data-filter=".industry" type="button" class="btn btn-default">工业模拟</button>
+            				<button data-filter=".system" type="button" id="system" class="btn btn-default">管理系统</button>
 
-			<div class="row">
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+            			</div>
+            	</div>
+            </div>
+			<div class="row isotope" id="lightBox" style="width: 100%">
+				
+				<div class="col-md-4 col-sm-6 fh5co-project  web project" data-animate-effect="fadeIn" >
 					<a href="#"><img src="images/work-1.jpg" alt="Free HTML5 Website Template" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>游仙 童话小镇</h3>
@@ -123,7 +148,8 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+
+				<div class="col-md-4 col-sm-6 fh5co-project  hotel project" data-animate-effect="fadeIn">
 					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>安州区 江与城</h3>
@@ -131,7 +157,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
+				<div class="col-md-4 col-sm-6 fh5co-project  system project" data-animate-effect="fadeIn">
 					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>绵阳 太极集团</h3>
@@ -140,30 +166,46 @@
 					</a>
 				</div>
 
+				<div class="col-md-4 col-sm-6 fh5co-project  web project" data-animate-effect="fadeIn" >
+					<a href="#"><img src="images/work-1.jpg" alt="Free HTML5 Website Template" class="img-responsive">
+						<div class="fh5co-copy">
+							<h3>游仙 童话小镇</h3>
+							<p>网络建设项目组</p>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-4 col-sm-6 fh5co-project  hotel project" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-2.jpg" alt="Free HTML5 Website Template" class="img-responsive">
+						<div class="fh5co-copy">
+							<h3>安州区 江与城</h3>
+							<p>E-楼盘项目组</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 col-sm-6 fh5co-project  system project" data-animate-effect="fadeIn">
+					<a href="#"><img src="images/work-3.jpg" alt="Free HTML5 Website Template" class="img-responsive">
+						<div class="fh5co-copy">
+							<h3>绵阳 太极集团</h3>
+							<p>系统开发项目组</p>
+						</div>
+					</a>
+				</div>
+
+				<!-- <li class="col-md-4 web" style="height: 200px">1</li>
+				<li class="col-md-4 web" style="height: 200px">1</li>
+				<li class="col-md-4 industry" style="height: 200px">2</li>
+				<li class="col-md-4 system" style="height: 200px">3</li>
+				<li class="col-md-4 system" style="height: 200px">3</li>
+				<li class="col-md-4" style="height: 200px">4</li> -->
+
+				 
+
+
 				
 
 
-				<div class="col-md-12 text-center">
-					<nav aria-label="Page navigation">
-					  <ul class="pagination">
-					    <li>
-					      <a href="#" aria-label="Previous">
-					        <span aria-hidden="true">&laquo;</span>
-					      </a>
-					    </li>
-					    <li class="active"><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li>
-					      <a href="#" aria-label="Next">
-					        <span aria-hidden="true">&raquo;</span>
-					      </a>
-					    </li>
-					  </ul>
-					</nav>
-				</div>
+				
 
 			</div>
 		</div>
@@ -174,7 +216,7 @@
    <!--  <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
  -->    <!-- 案例 -->
 		<div id="fh5co-services" style="background: #F0F5F9">
-		<div class="container">
+		<div class="container"> 
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-left animate-box" data-animate-effect="fadeInUp">
 					<div class="fh5co-heading">
@@ -242,111 +284,7 @@
 
 
 
-	<div id="fh5co-testimonial" class="fh5co-bg-section" style="background: none;">
-		<div class="container">
-			<div class="row animate-box row-pb-md">
-				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
-					<span>You deserved happiness</span>
-					<h2>Happy Clients</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="testimonial">
-						<blockquote>
-							<p>&ldquo;Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"> <img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
-						</blockquote>
-					</div>
-
-					<div class="testimonial fh5co-selected">
-						<blockquote>
-							<p>&ldquo;Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"><img src="images/person2.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
-						</blockquote>
-					</div>
-				</div>
-
-				<div class="col-md-6 animate-box">
-					<div class="testimonial fh5co-selected">
-						<blockquote>
-							<p>&ldquo;Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"><img src="images/person3.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
-						</blockquote>
-					</div>
-
-					<div class="testimonial">
-						<blockquote>
-							<p>&ldquo;Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"><img src="images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
-						</blockquote>
-					</div>
-
-				</div>
-
-				
-
-			</div>
-		</div>
-	</div>
-
-
-	<div id="fh5co-counter">
-		<div class="container">
-
-			<div class="row animate-box" data-animate-effect="fadeInUp">
-				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading">
-					<span>Enjoy it</span>
-					<h2>Fun Facts</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-
-			<div class="row">
-				
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-					<div class="feature-center">
-						<span class="icon">
-							<i class="ti-download"></i>
-						</span>
-						<span class="counter"><span class="js-counter" data-from="0" data-to="15" data-speed="1500" data-refresh-interval="50">1</span>M+</span>
-						<span class="counter-label">Downloads</span>
-
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-					<div class="feature-center">
-							<span class="icon">
-								<i class="ti-face-smile"></i>
-							</span>
-							<span class="counter"><span class="js-counter" data-from="0" data-to="120" data-speed="1500" data-refresh-interval="50">1</span>+</span>
-							<span class="counter-label">Happy Clients</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="feature-center">
-							<span class="icon">
-								<i class="ti-briefcase"></i>
-							</span>
-							<span class="counter"><span class=" js-counter" data-from="0" data-to="90" data-speed="1500" data-refresh-interval="50">1</span>+</span>
-							<span class="counter-label">Projects Done</span>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="feature-center">
-							<span class="icon">
-								<i class="ti-time"></i>
-							</span>
-							<span class="counter"><span class="js-counter" data-from="0" data-to="12" data-speed="1500" data-refresh-interval="50">1</span>K+</span>
-							<span class="counter-label">Hours Spent</span>
-
-						</div>
-					</div>
-						
-				</div>
-			</div>
-	</div>
+	
 
 	
 	
@@ -430,9 +368,13 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Main -->
+	
+	<!-- 选项卡切换js -->
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.isotope.js"></script>
+    <!-- Main -->
 	<script src="js/main.js"></script>
-
+   
 	</body>
 </html>
 
