@@ -1,22 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>wangEditor demo</title>
-    <link rel="stylesheet" href="js/wangEditor.min.css">
+   <meta charset="utf-8"> 
+   <title>企业管理</title>
+   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   <style>
+    /*留言框关闭按钮*/
+    .close{
+        
+        cursor: pointer;
+        color: black;
+        font-size: 2em;
+        transition: all 0.5s ease-in;
+
+    }
+    .close:hover{
+        transform: rotate(360deg) matrix(1.2,0,0,1.2,0,0);
+    }
+
+    /*表单验证*/
+    .high{
+        color: red;
+        position: absolute;
+        top: 0.5em;
+        right: 0;
+    }
+   </style>
+   <script>
+      $(document).ready(function () {
+        // alert($('#oldpass'));
+        // 添加必填的小红点
+        $(".required").each(function () {
+                    // 创建元素
+                    var $required=$("<strong class='high'>*</strong>")
+                    // 添加元素
+                    
+                    $(this).parent().append($required);
+                 })
+     
+      // 原密码验证，焦点离开事件
+      var oldpass=$("input[type='password']:first");
+
+      oldpass.blur(function () {
+
+        // 从数据库获取原密码 
+         var dataOldPass='123';
+
+        // 原密码正确
+        if(oldpass.val()==dataOldPass){
+          $(".high").css("color","green");
+        }else{
+          var $error1="原密码错误，请重新输入！";
+          $(".required:first").parent().append($error1)
+
+          oldpass.val("")
+
+        }
+ 
+      })
+
+
+
+
+     })
+   </script>
 </head>
 <body>
-    <div id="editor">
-        <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
-    </div>
 
-    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
-    <script type="text/javascript" src="js/wangEditor.min.js"></script>
-    <script type="text/javascript">
-        var E = window.wangEditor
-        var editor = new E('#editor')
-        // 或者 var editor = new E( document.getElementById('#editor') )
-        editor.create()
-    </script>
+<div class="container">
+   <div class="row panel panel-primary" >
+    <!-- 导航条 -->
+        <div class="panel-heading">
+            <a class="btn btn-success" href="../index.html">回首页</a>
+        <!-- 增加功能用一个模态框实现 -->
+        
+            <span style="font-size: 2em;margin-left: 33.3%;" class="text-center">修改密码</span>
+        </div>
+   
+    <!-- 企业内容 -->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                          <p class="form-control-static">best9</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">原密码</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control  required" id="inputPassword"  placeholder="请输入原密码">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">新密码</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control required" id="inputPassword" placeholder="请输入新密码">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">再输入一次</label>
+                        <div class="col-sm-10">
+                          <input type="password" class="form-control required" id="inputPassword" placeholder="请再输入一次密码">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                         <div class="col-sm-offset-2 col-sm-10">
+                           <button type="submit" class="btn btn-primary">保存修改</button>
+                         </div>
+                       </div>
+
+
+
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+
+                 
+                
+            </div>
+        </div>
+
+
+   </div>
+</div>
+
 </body>
 </html>
