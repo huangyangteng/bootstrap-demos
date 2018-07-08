@@ -1,0 +1,223 @@
+body{
+    background:#fbfbfb;
+}
+body>section{
+    background:white;
+}
+
+// ··············1. 头部
+header{
+    height: 13.9375rem;
+    // width: 23.4375rem;
+    background:linear-gradient(to bottom,#ffbe04,#fb483e);
+    
+}
+    // 1.1 头部搜索框
+    header>nav{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-fa{
+        position: relative;
+    }
+    .search-fa+img{
+        width: 1.625rem;
+        height: 1.625rem;
+        cursor: pointer;
+    }
+    .nav-search{
+        width: 19.9375rem;
+        height: 1.75rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: .9375rem;
+        color: white;
+        font-size: 14px;
+        border: 0;
+        box-sizing: border-box;
+        padding-left: 2.875rem;
+        
+
+    }
+    ::-webkit-input-placeholder{
+            color: white;
+    }
+    .nav-search+img{
+        position: absolute;
+        left: .875rem;//14
+        top: .25rem;//7
+        width: 1.5625rem;
+        height: 1.25rem;
+    }
+    .nav-search:focus{
+        outline: 0;
+    }
+
+    // 1.2 轮播banner图
+    .banner{
+        // width: 360px;
+        // height: 164px;
+        width: 22.5rem;
+        height: 10.25rem;
+        overflow: hidden;
+    }
+    .banner>ul{
+        height: 100%;
+    }
+    .banner>ul>li{
+        height: 100%;
+        img{
+            max-width: 100%;
+        }
+    }
+    
+    
+// ··············2. 菜单
+.menu{
+    height: 10.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: .8125rem;//13
+
+    // a{
+    //     color: #333;
+    //     margin-right: 39px;
+    //     // flex-basis: 25%;
+    //     p{
+    //         // text-align: center;
+    //     }
+    //     img{
+    //        width: 3.3125rem;
+    //         height: 3.3125rem; 
+    //     }
+    // }
+    
+
+}
+// .menu-row{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     a{
+//         color: #333;
+//         position: relative;
+//         flex: 1;
+
+//         img{
+//             width: 3.3125rem;
+//             height: 3.3125rem;
+//         }
+//         p{
+//             // float: left;
+//             // position: absolute;
+//         }
+//     }
+    
+// }
+// ··············3. 比赛报名入口
+.match{
+    height: 5.125rem;
+    margin-bottom: .5rem;
+    background-image: url(../imgs/img/2018.png);
+    background-size: contain;
+    // overflow: hidden;
+    position: relative;
+}
+.match>button{
+    background:#ca040b;
+    border-radius: .9375rem;
+    color: white;
+    box-sizing: border-box;
+    width: 6.125rem;
+    height: 1.125rem;
+    border: 0;
+    &:focus{
+        outline: 0;
+    }
+    position: absolute;
+    bottom: 3px;
+    left: 0;right: 0;
+    margin: 0 auto;
+    
+
+}
+// ··············4. 热点通知
+.notice{
+    height: 4.875rem;
+    display: flex;
+    align-items: center;
+    >img{
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.0625rem;//17
+        margin-left: .9375rem;//15
+    }
+    
+}
+.notice-detail{
+    border-left: 1px solid #ffc497;
+    padding-left: 1.0625rem;
+}
+.notice-detail>a{
+    color: #333;
+}
+// ··············5. 商城
+.mall{
+    height: 9.375rem;
+}
+.mall-title{
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: .625rem;
+        height: .875rem;
+    }
+}
+.mall-item{
+    
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 7.125rem;
+        height: 5rem;
+    }
+    
+}
+.mall-content{
+    display: flex;
+    justify-content: space-between;
+}
+// ··············6. 竞赛视频
+.match-video{
+    height:11.25rem;
+    margin-bottom: .4375rem;
+    padding-bottom: .3125rem;
+}
+.match-video-content{
+    display: flex;
+    justify-content: space-between;
+}
+.match-video-item{
+    img{
+        width: 10.75rem;
+        height: 7.75rem;
+    }
+}
+// ··············7. 底部导航
+footer{
+    height: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    img{
+        width: 1.8125rem;
+        height: 1.8125rem;
+    }
+}

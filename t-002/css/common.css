@@ -1,0 +1,49 @@
+/* 媒体查询设置字体大小 */
+@media screen and (max-width: 321px) {
+    body {
+        font-size:11px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width:400px) {
+    body {
+        font-size:12px
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size:14px
+    }
+}
+
+
+/* 页面上的边距 */
+.margin-base{
+    margin-left:.5625rem;
+    margin-right:.5625rem;
+}
+
+/* ···········表单样式 */
+
+/* 字体 */
+.text-title{
+    color: #cf3c36;
+    font-size: 14px;
+}
+/* 字体超出部分隐藏 */
+.view-text{
+  /**
+    思路：
+    1.设置inline-block属相
+    2.强制不换行
+    3.固定高度
+    4.隐藏超出部分
+    5.显示“……”
+  */
+  display: inline-block;
+  white-space: nowrap; 
+  width: 90%; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
