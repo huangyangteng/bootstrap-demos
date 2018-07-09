@@ -235,3 +235,178 @@ body > section, body > footer {
   width: 1.8125rem;
   height: 1.8125rem;
 }
+
+.match-msg {
+  position: absolute;
+  top: 1.625rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../imgs/img/cansaixuzhi.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.must-know {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.law-article {
+  height: 10rem;
+  overflow: scroll;
+  display: block;
+}
+
+.mar_b_10 {
+  margin-bottom: .625rem;
+}
+
+.division {
+  padding-top: .9375rem;
+  padding-bottom: .9375rem;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: .625rem;
+}
+
+.form-control label {
+  font-size: 14px;
+  margin-right: .625rem;
+}
+
+.form-control input, .form-control select {
+  width: 17.125rem;
+  padding-left: .375rem;
+  height: 1.75rem;
+  border: 1px solid #ebebeb;
+  background: #fff;
+  color: #b0b0b0;
+  border-radius: .3125rem;
+}
+
+.form-control input:focus, .form-control select:focus {
+  outline: 0;
+}
+
+.form-control ::-webkit-input-placeholder {
+  color: #b0b0b0;
+}
+
+.form-control .short-input {
+  width: 10.5625rem;
+  margin-right: .3125rem;
+}
+
+.form-control .short-input + button {
+  background: #fe6d2c;
+  border: transparent;
+  color: #feeff7;
+  font-size: 14px;
+  padding: .3125rem .9375rem;
+  border-radius: .3125rem;
+}
+
+.form-control .short-input + button:focus {
+  outline: 0;
+}
+
+.video-upload img {
+  width: 8.5rem;
+  height: 6rem;
+  margin-bottom: .625rem;
+}
+
+.choose-video {
+  display: flex;
+  justify-content: space-around;
+}
+
+.choose-video label, .choose-video button {
+  border-radius: .3125rem;
+  background: #ffc700;
+  border: transparent;
+  color: #cd322c;
+  font-size: 14px;
+  padding: .3125rem 1.25rem;
+}
+
+.choose-video label:focus, .choose-video button:focus {
+  outline: 0;
+}
+
+.choose-video label {
+  padding-left: 1.6875rem;
+  padding-right: 1.6875rem;
+  margin-right: .875rem;
+}
+
+.choose-video label + input {
+  display: none;
+}
+
+.team-submit {
+  background: #fbfbfb;
+  height: 3.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 2.125rem;
+  padding-right: 2.125rem;
+}
+
+.team-submit button {
+  display: block;
+  height: 2.625rem;
+  width: 100%;
+  background: #fe6d2c;
+  border-radius: 25px;
+  border: transparent;
+  color: #feeff7;
+  font-size: 17px;
+}
+
+.team-submit button:focus {
+  outline: 0;
+}
+
+.match-success {
+  background: #f9f9f9;
+  position: absolute;
+  top: 2.8125rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match-success article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -16.25rem;
+}
+
+.match-success article img {
+  width: 8.375rem;
+  height: 11.25rem;
+  margin-bottom: 1.5625rem;
+}
+
+.match-success article div {
+  font-size: 18px;
+  color: #626262;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

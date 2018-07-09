@@ -1,0 +1,179 @@
+@import "base.scss";
+
+// ```````````````报名须知
+.match-msg{
+    position: absolute;
+    top: 1.625rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../imgs/img/cansaixuzhi.png);
+    // 使背景图片收缩适应整个页面
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+}
+.must-know{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.law-article{
+    height: 10rem;
+    overflow: scroll;
+    display: block;
+}
+// ·················参赛报名表单
+// 下边距10px用于报名参赛页面
+.mar_b_10{
+    margin-bottom: .625rem;
+}
+.division{
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+}
+// 表单基本样式
+.form-control{
+    display: flex;
+    align-items: center;
+    margin-bottom: .625rem;
+    label{
+        font-size: 14px;
+        margin-right: .625rem;
+    }
+    input,select{
+        width: 17.125rem;
+        padding-left: .375rem;
+        height: 1.75rem;
+        border: 1px solid #ebebeb;
+        background:#fff;
+        color: #b0b0b0;
+        border-radius: .3125rem;
+        &:focus{
+            outline: 0;
+        }
+    }
+    ::-webkit-input-placeholder{
+        color: #b0b0b0;
+    }
+    .short-input{
+        width: 10.5625rem;
+        margin-right: .3125rem;
+    }
+    .short-input+button{
+        background:$theme-hot;
+        border: transparent;
+        color: $color-white;
+        font-size: 14px;
+        padding: .3125rem .9375rem;
+        border-radius: .3125rem;
+        &:focus{
+            outline: 0;
+        }
+    }
+    
+}
+
+// 选择参赛视频
+.video-upload{
+    img{
+        width: 8.5rem;
+        height: 6rem;
+        margin-bottom: .625rem;
+    }
+    
+}
+.choose-video{
+    display: flex;
+    justify-content: space-around;
+    label,button{
+        border-radius: .3125rem;
+        background:$theme-warm;
+        border: transparent;
+        color: $color-item-title;
+        font-size: 14px;
+        padding: .3125rem 1.25rem ;
+        &:focus{
+            outline: 0;
+        }
+    }
+    label{
+        padding-left: 1.6875rem;
+        padding-right: 1.6875rem;
+        margin-right: .875rem;
+
+    }
+    label+input{
+        display: none;
+    }
+}
+
+// 提交表单
+.team-submit{
+    background:$bg-base;
+    height: 3.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2.125rem;
+    padding-right: 2.125rem;
+    button{
+        display: block;
+        height: 2.625rem;
+        width: 100%;
+        background:$theme-hot;
+        border-radius: 25px;
+        border: transparent;
+        color: $color-white;
+        font-size: 17px;
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ````````````````报名成功
+.match-success{
+    background:#f9f9f9;
+    position: absolute;
+    top: 2.8125rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    article{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -16.25rem;
+        img{
+            width: 8.375rem;
+            height: 11.25rem;
+            margin-bottom: 1.5625rem;
+        }
+        div{
+            font-size: 18px;
+            color: #626262;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

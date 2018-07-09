@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>报名信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/match.css" />
+</head>
+
+<body>
+    <header class="h-title h-title-array">
+        <img src="../../imgs/icon/array.png" alt="">
+        <span>报名参赛</span>
+    </header>
+    <!-- 赛区 -->
+    <section>
+        <div class="division margin-base">
+            <div class="form-control">
+                <label for="">选择赛区</label>
+                <select name="" id="">
+                    <option value="">华东一区</option>
+                    <option value="">华东二区</option>
+                    <option value="">华东三区</option>
+                    <option value="">华东四区</option>
+                    <option value="">华南一区</option>
+                    <option value="">华南二区</option>
+                    <option value="">华南三区</option>
+                    <option value="">华南四区</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="">选择性别</label>
+                <select name="" id="">
+                    <option value="">男</option>
+                    <option value="">女</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="">年龄组<span class="text-invisible">组</span></label>
+                <select name="" id="">
+                    <option value="">10-20岁</option>
+                    <option value="">30-40岁</option>
+                    <option value="">40-50岁</option>
+                    <option value="">50-70岁</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <!-- 个人信息 -->
+    <section>
+        <div class="margin-base padding-td">
+            <div class="text-title mar_b_10">1. 填写个人信息</div>
+            <div class="form-control">
+                <label for="">真实姓名</label>
+                <input type="text" placeholder="请输入姓名">
+            
+            
+            </div>
+            <div class="form-control">
+                <label for="">手机号码</label>
+                <input class="short-input" type="text" placeholder="请输入手机号码">
+                <button>获取验证码</button>
+            </div>
+            <div class="form-control">
+                <label for="">验证码<span class="text-invisible">码</span></label>
+                <input type="text" placeholder="请输入你收到的验证码">
+            </div>
+        </div>
+        
+    </section>
+    <!-- 参赛资料 -->
+    <section>
+        <div class="margin-base padding-base">
+            <div class="text-title mar_b_10">1. 上传参赛资料</div>
+            <div class="form-control">
+                <label for="">视频名称</label>
+                <input type="text" placeholder="请输入姓名">
+            </div>
+            <div class="video-upload">
+                <img src="../../imgs/img/bofang1.png" alt="">
+            </div>
+            <div class="choose-video">
+                <label for="choose_video">在相册内选择</label>
+                <input type="file" id="choose_video">
+                <button class="btn">马上录制参赛视频</button>
+            </div>
+
+            
+        </div>
+    </section>
+    <!-- 组队报名 -->
+    <footer class="team-submit">
+        <button>组队报名</button>
+    </footer>
+</body>
+
+</html>

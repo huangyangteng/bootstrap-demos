@@ -85,6 +85,16 @@ body > section, body > footer {
   font-weight: 800;
 }
 
+.h-title-array {
+  position: relative;
+}
+
+.h-title-array img {
+  position: absolute;
+  bottom: 1.1rem;
+  left: .5rem;
+}
+
 .nav {
   height: 3rem;
   display: flex;
@@ -214,16 +224,6 @@ body > section, body > footer {
 .footer img {
   width: 1.8125rem;
   height: 1.8125rem;
-}
-
-.h-title-array {
-  position: relative;
-}
-
-.h-title-array img {
-  position: absolute;
-  bottom: 1.1rem;
-  left: .5rem;
 }
 
 .login-reg-container {

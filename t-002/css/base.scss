@@ -25,6 +25,7 @@ $font-size-smaller:10px;
 
 $bg-base:#fbfbfb;
 $theme-hot:#fe6d2c;
+$theme-warm:#ffc700;
 
 
 /* 页面上的边距 */
@@ -44,6 +45,17 @@ $theme-hot:#fe6d2c;
     box-sizing: border-box;
     padding-left: .625rem;
     padding-right: .625rem;
+}
+
+// 字体 
+.text-invisible{
+    color: transparent;
+    opacity: 0;
+}
+// 小标题
+.text-title{
+    color: $color-item-title;
+    font-size: 14px;
 }
 
 /* ···········表单样式 */
@@ -93,6 +105,18 @@ body>section,body>footer{
     box-sizing: border-box;
     font-weight: 800;
 }
+// 带箭头的标题
+.h-title-array{
+    position: relative;
+    img{
+        
+        position: absolute;
+        bottom: 1.1rem;
+        left: .5rem;
+        // margin: auto;
+    }
+}
+
 // 搜索条样式
 .nav{
         height: 3rem;
