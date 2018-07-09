@@ -1,3 +1,9 @@
+$color-item-title:#cd322c;
+$font-size-base:12px;
+$font-size-larger:14px;
+$font-size-smaller:10px;
+
+
 body{
     background:#fbfbfb;
 }
@@ -13,7 +19,7 @@ header{
     
 }
     // 1.1 头部搜索框
-    header>nav{
+    .nav{
         height: 3rem;
         display: flex;
         align-items: center;
@@ -37,9 +43,8 @@ header{
         border: 0;
         box-sizing: border-box;
         padding-left: 2.875rem;
-        
-
     }
+    // 控制placehodle的颜色
     ::-webkit-input-placeholder{
             color: white;
     }
@@ -78,55 +83,48 @@ header{
     height: 10.75rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     box-sizing: border-box;
-    padding: .8125rem;//13
-
-    // a{
-    //     color: #333;
-    //     margin-right: 39px;
-    //     // flex-basis: 25%;
-    //     p{
-    //         // text-align: center;
-    //     }
-    //     img{
-    //        width: 3.3125rem;
-    //         height: 3.3125rem; 
-    //     }
-    // }
-    
+    padding: .75rem;//13
 
 }
-// .menu-row{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     a{
-//         color: #333;
-//         position: relative;
-//         flex: 1;
+// 菜单分为两行
+.menu-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: .625rem;//10
+    a{
+        color: #333;
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-//         img{
-//             width: 3.3125rem;
-//             height: 3.3125rem;
-//         }
-//         p{
-//             // float: left;
-//             // position: absolute;
-//         }
-//     }
+        img{
+            width: 3.3125rem;
+            height: 3.3125rem;
+        }
+        div{
+            // float: left;
+            text-align: center;
+            // position: absolute;
+        }
+    }
     
-// }
+}
 // ··············3. 比赛报名入口
 .match{
     height: 5.125rem;
     margin-bottom: .5rem;
     background-image: url(../imgs/img/2018.png);
+    //设置背景图片的平铺方式为contain,用来适应不同的浏览器
     background-size: contain;
-    // overflow: hidden;
     position: relative;
 }
-.match>button{
+.match>button{//按钮绝对定位到父元素底部
     background:#ca040b;
     border-radius: .9375rem;
     color: white;
@@ -137,6 +135,7 @@ header{
     &:focus{
         outline: 0;
     }
+    // 以下代码使按钮水平居中
     position: absolute;
     bottom: 3px;
     left: 0;right: 0;
@@ -147,6 +146,7 @@ header{
 // ··············4. 热点通知
 .notice{
     height: 4.875rem;
+    margin-bottom: .625rem;
     display: flex;
     align-items: center;
     >img{
@@ -158,54 +158,96 @@ header{
     
 }
 .notice-detail{
+    // 文章左侧的分割线
     border-left: 1px solid #ffc497;
     padding-left: 1.0625rem;
 }
 .notice-detail>a{
     color: #333;
 }
-// ··············5. 商城
+// ····································5. 商城
 .mall{
-    height: 9.375rem;
-}
-.mall-title{
-    margin-top: .625rem;
+    // height: 9.375rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
     margin-bottom: .625rem;
+}
+// 通用的标题
+.item-title{
+    // margin-top: .3125rem;
+    margin-bottom: .3125rem;
     display: flex;
     justify-content: space-between;
+    font-size: $font-size-larger;
+    color: $color-item-title;
+    
     img{
         width: .625rem;
         height: .875rem;
     }
 }
+// ················5.2 商品列表
+.mall-content{
+    display: flex;
+    justify-content: space-between;
+
+}
+// 每一件商品
 .mall-item{
-    
+    max-width: 7.125rem;
     display: flex;
     flex-direction: column;
     img{
         width: 7.125rem;
         height: 5rem;
     }
+    a{
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+    .price{
+        color: $color-item-title;
+    }
+    .line-through{
+        text-decoration: line-through;
+        color: #c3c3c3;
+        font-size: $font-size-smaller;
+        font-weight: 100;
+        transform: scale(0.8);
+    }
+
     
 }
-.mall-content{
-    display: flex;
-    justify-content: space-between;
-}
+
 // ··············6. 竞赛视频
 .match-video{
-    height:11.25rem;
+    // height:11.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
     margin-bottom: .4375rem;
-    padding-bottom: .3125rem;
 }
 .match-video-content{
     display: flex;
     justify-content: space-between;
 }
 .match-video-item{
+    // 设置一个最大宽度，防止溢出
+    max-width: 10.75rem;
     img{
-        width: 10.75rem;
-        height: 7.75rem;
+        max-width: 10.75rem;
+        max-height: 7.75rem;
+    }
+    //设置超出部分隐藏
+    span{
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        display: inline-block;
     }
 }
 // ··············7. 底部导航

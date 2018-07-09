@@ -20,8 +20,16 @@
 
 /* 页面上的边距 */
 .margin-base{
-    margin-left:.5625rem;
-    margin-right:.5625rem;
+    /* margin-left:.5625rem;
+    margin-right:.5625rem; */
+    margin-left: .625rem;
+    margin-right: .625rem;
+}
+/* 左右边距 */
+.padding-lr{
+    box-sizing: border-box;
+    padding-left: .625rem;
+    padding-right: .625rem;
 }
 
 /* ···········表单样式 */
