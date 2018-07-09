@@ -18,13 +18,13 @@
 }
 // ````````````````````````````变量定义
 $color-item-title:#cd322c;
-$color-white:white;
+$color-white:#feeff7;
 $font-size-base:12px;
 $font-size-larger:14px;
 $font-size-smaller:10px;
 
 $bg-base:#ccc;
-
+$theme-hot:#fe6d2c;
 
 
 /* 页面上的边距 */
@@ -69,12 +69,72 @@ $bg-base:#ccc;
   overflow: hidden;
   text-overflow:ellipsis;
 }
+// 页面通用样式
+body{
+    background:$bg-base;
+}
+body>section{
+    margin-bottom: .625rem;
+}
+body>section,body>footer{
+    background:#fff;
+}
 
-// 底部菜单
 
 
+// 页面大标题样式
+.h-title{
+    height: 2.8125rem;
+    font-size: 18px;
+    color: #feeff7;
+    text-align: center;
+    background:linear-gradient(to bottom,#ffbe04,#fb483e);
+    padding-top: .5rem;//8
+    box-sizing: border-box;
+    font-weight: 800;
+}
+// 搜索条样式
+.nav{
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-fa{
+        position: relative;
+    }
+    .search-fa+img{
+        width: 1.625rem;
+        height: 1.625rem;
+        cursor: pointer;
+    }
+    .nav-search{
+        width: 19.9375rem;
+        height: 1.75rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: .9375rem;
+        color: white;
+        font-size: 14px;
+        border: 0;
+        box-sizing: border-box;
+        padding-left: 2.875rem;
+    }
+    // 控制placehodle的颜色
+    ::-webkit-input-placeholder{
+            color: white;
+    }
+    .nav-search+img{
+        position: absolute;
+        left: .875rem;//14
+        top: .25rem;//7
+        width: 1.5625rem;
+        height: 1.25rem;
+    }
+    .nav-search:focus{
+        outline: 0;
+    }
 
-// 小标题样式
+// 通用标题样式
 .item-title{
     // margin-top: .3125rem;
     margin-bottom: .3125rem;
@@ -115,3 +175,48 @@ $bg-base:#ccc;
         display: inline-block;
     }
 }
+    // 没有视频
+    .no-video{
+        // height: 9.625rem;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        padding-top: 1.5625rem;
+        padding-bottom: 1.875rem;
+        box-sizing: border-box;
+        span{
+            color: #bababa;
+        }
+    }
+    // 只有一个视频
+    .video-only{
+       height: 17.1875rem; 
+       display: flex;
+       flex-direction: column;
+    //    justify-content: center;
+       align-items: center;
+       box-sizing: border-box;
+       img{
+           width: 21.75rem;
+           height: 15.625rem;
+       }
+       span{
+           align-self: flex-start;
+           margin-left: .3125rem;
+       }
+    }
+// 底部导航条
+.footer{
+    height: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    img{
+        width: 1.8125rem;
+        height: 1.8125rem;
+    }
+}
+
