@@ -104,17 +104,13 @@ section{
     }
 
 }
+// 因为个人主页页面太短，所以设置footer在最下面
 // 底部导航
-.footer{
-    height: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 1px solid #eee;
-    img{
-        width: 1.8125rem;
-        height: 1.8125rem;
-    }
+.footer-bottom{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
 }
 

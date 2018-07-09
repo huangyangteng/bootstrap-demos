@@ -63,7 +63,7 @@
 }
 
 body {
-  background: #ccc;
+  background: #fbfbfb;
 }
 
 body > section {
@@ -169,6 +169,37 @@ body > section, body > footer {
   width: 100%;
   text-overflow: ellipsis;
   display: inline-block;
+}
+
+.no-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.875rem;
+  box-sizing: border-box;
+}
+
+.no-video span {
+  color: #bababa;
+}
+
+.video-only {
+  height: 17.1875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.video-only img {
+  width: 21.75rem;
+  height: 15.625rem;
+}
+
+.video-only span {
+  align-self: flex-start;
+  margin-left: .3125rem;
 }
 
 .footer {

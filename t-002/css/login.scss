@@ -1,0 +1,108 @@
+@import "base.scss";
+// 带箭头的标题
+.h-title-array{
+    position: relative;
+    img{
+        
+        position: absolute;
+        bottom: 1.1rem;
+        left: .5rem;
+        // margin: auto;
+    }
+}
+
+// 登录注册的容器
+.login-reg-container{
+    position: absolute;
+    top:2.8125rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../imgs/img/06denglu.png);
+    // 使背景图片收缩适应整个页面
+    background-size: cover;
+
+}
+// 登录注册面板
+.panl{
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 22rem;
+    // height: 17rem;
+    background:#fff;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    border-radius: .625rem;
+}
+.panl-item{
+    height: 3.625rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #898989;
+    img{
+        width: 1.5625rem;
+        height: 1.5625rem;
+        margin-right: 1.25rem;
+    }
+    input{
+        width: 10rem;
+        border: transparent;
+        &:focus{
+            outline: 0;
+        }
+    }
+    ::-webkit-input-placeholder{
+        color: #d5d5d5;
+    }
+    //获取验证码
+    button{
+        background:$theme-hot;
+        border: transparent;
+        color: $color-white;
+        font-size: 14px;
+        padding: .3125rem .9375rem;
+        &:focus{
+            outline: 0;
+        }
+    }
+    
+    
+
+}
+.btn-fa{
+    height: 6.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .complete{//完成按钮
+        // width: 2.625rem;
+        display: block;
+        height: 2.625rem;
+        width: 100%;
+        background:$theme-hot;
+        border-radius: 25px;
+        border: transparent;
+        color: $color-white;
+        font-size: 17px;
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+
+// 登录的按钮下面还有其选项
+.login-option{
+    height: 7.8125rem;
+    flex-direction: column;
+    .option{
+        width: 92%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        a{
+            color: #4d87d6;
+        }
+    }
+}
