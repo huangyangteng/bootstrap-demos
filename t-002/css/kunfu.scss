@@ -1,3 +1,13 @@
+@import "base.scss";
+body{
+    background:$bg-base;
+}
+body>section{
+    margin-bottom: .625rem;
+}
+body>section,body>footer{
+    background:#fff;
+}
 
 // ··············1. 头部
 .h-title{
@@ -33,14 +43,85 @@
             height: 3.75rem;
             margin-bottom: 1rem;
         }
+        img:first-child{
+            width: 3.375rem;
+            height: 4rem;
+        }
     }
     >a:last-child{
         background:#ffac53;
     }
 }
+// ``````````````````武术热点
+.notice{
+    height: 4.875rem;
+    margin-bottom: .625rem;
+    display: flex;
+    align-items: center;
+    >img{
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1.0625rem;//17
+        margin-left: .9375rem;//15
+    }
+    
+}
+.notice-detail{
+    // 文章左侧的分割线
+    border-left: 1px solid #ffc497;
+    padding-left: 1.0625rem;
+}
+.notice-detail>a{
+    color: #333;
+}
+// ``````````````````教学
+.teach-banner{
+    width: 22rem;
+    height: 9rem;
+    background:url(../imgs/img/03beijing.png);
+    position: relative;
+}
+.teach-content{
+    position: absolute;
+    top: 0;bottom: 0;
+    left: 0;right: 0;
+    background:linear-gradient(to bottom,#ffbe04,#fb483e);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    >img{
+        width: 16.875rem;
+        height: 1.875rem;
+    }
+    >div{
+        margin-top: .3125rem;
+        color: white;
+        font-size: .875rem;
+    }
+}
+// ````````````````名家介绍
+.master-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+.master-item{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 5.25rem;
+        height: 5.75rem;
+        margin-top: .3125rem;
+    }
+}
 // 底部导航
-footer{
+.footer{
     height: 3rem;
     box-sizing: border-box;
     display: flex;

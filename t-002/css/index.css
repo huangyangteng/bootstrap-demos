@@ -243,7 +243,7 @@ header {
   display: inline-block;
 }
 
-footer {
+.footer {
   height: 3rem;
   box-sizing: border-box;
   display: flex;
@@ -252,7 +252,7 @@ footer {
   border-top: 1px solid #eee;
 }
 
-footer img {
+.footer img {
   width: 1.8125rem;
   height: 1.8125rem;
 }

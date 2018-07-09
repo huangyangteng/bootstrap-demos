@@ -1,3 +1,120 @@
+@charset "UTF-8";
+/* 媒体查询设置字体大小 */
+@media screen and (max-width: 321px) {
+  body {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* 页面上的边距 */
+.margin-base {
+  /* margin-left:.5625rem;
+    margin-right:.5625rem; */
+  margin-left: .625rem;
+  margin-right: .625rem;
+}
+
+.padding-td {
+  padding-top: .625rem;
+  padding-bottom: .625rem;
+}
+
+/* 左右边距 */
+.padding-lr {
+  box-sizing: border-box;
+  padding-left: .625rem;
+  padding-right: .625rem;
+}
+
+/* ···········表单样式 */
+/* 字体 */
+.text-title {
+  color: #cf3c36;
+  font-size: 14px;
+}
+
+/* 字体超出部分隐藏 */
+.view-text {
+  /**
+    思路：
+    1.设置inline-block属相
+    2.强制不换行
+    3.固定高度
+    4.隐藏超出部分
+    5.显示“……”
+  */
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-title {
+  margin-bottom: .3125rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #cd322c;
+}
+
+.item-title img {
+  width: .625rem;
+  height: .875rem;
+}
+
+.match-video {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  margin-bottom: .4375rem;
+}
+
+.match-video-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.match-video-item {
+  max-width: 10.75rem;
+}
+
+.match-video-item img {
+  max-width: 10.75rem;
+  max-height: 7.75rem;
+}
+
+.match-video-item span {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+body {
+  background: #ccc;
+}
+
+body > section {
+  margin-bottom: .625rem;
+}
+
+body > section, body > footer {
+  background: #fff;
+}
+
 .h-title {
   height: 2.8125rem;
   font-size: 18px;
@@ -37,11 +154,90 @@
   margin-bottom: 1rem;
 }
 
+.ranking > a img:first-child {
+  width: 3.375rem;
+  height: 4rem;
+}
+
 .ranking > a:last-child {
   background: #ffac53;
 }
 
-footer {
+.notice {
+  height: 4.875rem;
+  margin-bottom: .625rem;
+  display: flex;
+  align-items: center;
+}
+
+.notice > img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.0625rem;
+  margin-left: .9375rem;
+}
+
+.notice-detail {
+  border-left: 1px solid #ffc497;
+  padding-left: 1.0625rem;
+}
+
+.notice-detail > a {
+  color: #333;
+}
+
+.teach-banner {
+  width: 22rem;
+  height: 9rem;
+  background: url(../imgs/img/03beijing.png);
+  position: relative;
+}
+
+.teach-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, #ffbe04, #fb483e);
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.teach-content > img {
+  width: 16.875rem;
+  height: 1.875rem;
+}
+
+.teach-content > div {
+  margin-top: .3125rem;
+  color: white;
+  font-size: .875rem;
+}
+
+.master-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.master-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.master-item img {
+  width: 5.25rem;
+  height: 5.75rem;
+  margin-top: .3125rem;
+}
+
+.footer {
   height: 3rem;
   box-sizing: border-box;
   display: flex;
@@ -50,7 +246,7 @@ footer {
   border-top: 1px solid #eee;
 }
 
-footer img {
+.footer img {
   width: 1.8125rem;
   height: 1.8125rem;
 }
