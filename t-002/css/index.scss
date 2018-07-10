@@ -263,3 +263,58 @@ header{
         height: 1.8125rem;
     }
 }
+
+
+// ```````````报名弹窗
+.modal-fa{
+    position: absolute;
+    top: 0;bottom: 0;
+    left: 0;right: 0;
+    background:rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .modal{
+        width: 22.1875rem;
+        height: 13.125rem;
+        box-sizing: border-box;
+        border-radius: .625rem;
+        background:#fff;
+        margin-top: -6.25rem;
+        padding:0 1.25rem;
+        position: relative;
+        
+        h1{
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: .625rem;
+        }
+        time{
+            display: block;
+            text-align: center;
+            color: #999999;
+            font-size: .875rem;
+        }
+        p{
+            margin: .1875rem 0;
+            font-size: 1rem;
+        }
+        button{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-top: 1px solid #d6d6d6;
+            height: 3.125rem;
+            background:#fff;
+            color: #fd5f33;
+            font-size: 1.3125rem;
+            border-radius: 0 0 10px 10px;
+
+        }
+    }
+}
