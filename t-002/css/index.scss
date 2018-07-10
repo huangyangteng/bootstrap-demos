@@ -4,13 +4,6 @@ $font-size-larger:14px;
 $font-size-smaller:10px;
 
 
-body{
-    background:#fbfbfb;
-}
-body>section{
-    background:white;
-}
-
 // ··············1. 头部
 header{
     height: 13.9375rem;
@@ -317,4 +310,15 @@ header{
 
         }
     }
+}
+
+
+// 为js操作添加的class
+.close-modal{
+    transition: 1s;
+    opacity: 0;
+}
+.show-modal{
+    opacity: 1;
+    transition: 1s;
 }
