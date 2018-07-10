@@ -5,9 +5,15 @@
 
 .ranking{
     height: 11rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     >a{
         display: block;
         width: 10.375rem;
@@ -16,10 +22,19 @@
         background:#f5856c;
         font-size:$font-size-large;
         color: #feeff7; 
+        display: -webkit-box; 
+        display: -ms-flexbox; 
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         img{
             width: 3.75rem;
             height: 3.75rem;
@@ -38,8 +53,12 @@
 .notice{
     height: 4.875rem;
     margin-bottom: .625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     >img{
         width: 3rem;
         height: 3rem;
@@ -69,14 +88,27 @@
     position: absolute;
     top: 0;bottom: 0;
     left: 0;right: 0;
+    background:-webkit-gradient(linear,left top, left bottom,from(#ffbe04),to(#fb483e));
     background:linear-gradient(to bottom,#ffbe04,#fb483e);
     opacity: 0.9;
     border-radius: .625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+        -ms-flex-direction: column;
+
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     >img{
         width: 16.875rem;
         height: 1.875rem;
@@ -89,17 +121,34 @@
 }
 // ````````````````名家介绍
 .master-content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
 }
 .master-item{
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     img{
         width: 5.25rem;
         height: 5.75rem;

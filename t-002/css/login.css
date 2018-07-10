@@ -39,6 +39,7 @@
 
 /* 左右边距 */
 .padding-lr {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: .625rem;
   padding-right: .625rem;
@@ -83,8 +84,10 @@ body > section, body > footer {
   font-size: 1.125rem;
   color: #feeff7;
   text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffbe04), to(#fb483e));
   background: linear-gradient(to bottom, #ffbe04, #fb483e);
   padding-top: .5rem;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: 800;
 }
@@ -97,12 +100,20 @@ body > section, body > footer {
   position: absolute;
   bottom: 1.1rem;
   left: .5rem;
+  width: .9375rem;
+  height: 1.375rem;
 }
 
 .nav {
   height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -124,6 +135,7 @@ body > section, body > footer {
   color: white;
   font-size: 0.875rem;
   border: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 2.875rem;
 }
@@ -146,7 +158,11 @@ body > section, body > footer {
 
 .item-title {
   margin-bottom: .3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: 0.875rem;
   color: #cd322c;
@@ -164,7 +180,11 @@ body > section, body > footer {
 }
 
 .match-video-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -173,6 +193,11 @@ body > section, body > footer {
 }
 
 .match-video-item img {
+  width: 10.75rem;
+  height: 7.75rem;
+}
+
+.match-video-item video {
   width: 10.75rem;
   height: 7.75rem;
 }
@@ -186,11 +211,19 @@ body > section, body > footer {
 }
 
 .no-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 1.5625rem;
   padding-bottom: 1.875rem;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -205,18 +238,27 @@ body > section, body > footer {
 
 .video-only {
   height: 17.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.video-only img {
+.video-only video {
   width: 21.75rem;
   height: 15.625rem;
 }
 
 .video-only span {
+  -ms-flex-item-align: start;
   align-self: flex-start;
   margin-left: .3125rem;
 }
@@ -228,9 +270,15 @@ body > section, body > footer {
   right: 0;
   background: #fff;
   height: 3rem;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   border-top: 1px solid #eee;
 }
@@ -259,6 +307,7 @@ body > section, body > footer {
   margin-top: 1rem;
   width: 22rem;
   background: #fff;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 1rem;
   border-radius: .625rem;
@@ -267,7 +316,11 @@ body > section, body > footer {
 .panl-item {
   height: 3.625rem;
   border-bottom: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 0.875rem;
   color: #898989;
@@ -306,8 +359,14 @@ body > section, body > footer {
 
 .btn-fa {
   height: 6.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -328,13 +387,20 @@ body > section, body > footer {
 
 .login-option {
   height: 7.8125rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .login-option .option {
   width: 92%;
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
