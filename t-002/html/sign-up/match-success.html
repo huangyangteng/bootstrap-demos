@@ -13,7 +13,7 @@
 
 <body>
     <header class="h-title h-title-array">
-        <img src="../../imgs/icon/array.png" alt="">
+        <img src="../../imgs/icon/array.png" alt="" id="url-return">
         <span>报名成功</span>
     </header>
     <!-- 报名成功提示信息 -->
@@ -27,6 +27,20 @@
         </article>
         
     </main>
+    <script>
+        function $(ele) {
+            return document.getElementById(ele);
+        }
+        // 返回上一页
+        var return_array=$('url-return');
+        return_array.onclick=function(){
+            window.history.back(-1);
+        }
+        setTimeout(() => {
+            window.location.href="../../index.html";
+        }, 2000);
+        
+    </script>
 </body>
 
 </html>

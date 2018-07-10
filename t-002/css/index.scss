@@ -1,13 +1,8 @@
-$color-item-title:#cd322c;
-$font-size-base:12px;
-$font-size-larger:14px;
-$font-size-smaller:10px;
-
+@import "./base.scss";
 
 // ··············1. 头部
 header{
     height: 13.9375rem;
-    // width: 23.4375rem;
     background:linear-gradient(to bottom,#ffbe04,#fb483e);
     
 }
@@ -32,7 +27,7 @@ header{
         background: rgba(255, 255, 255, 0.2);
         border-radius: .9375rem;
         color: white;
-        font-size: 14px;
+        font-size: $font-size-larger;
         border: 0;
         box-sizing: border-box;
         padding-left: 2.875rem;
@@ -244,18 +239,6 @@ header{
     }
 }
 // ··············7. 底部导航
-.footer{
-    height: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 1px solid #eee;
-    img{
-        width: 1.8125rem;
-        height: 1.8125rem;
-    }
-}
 
 
 // ```````````报名弹窗
@@ -317,8 +300,6 @@ header{
 .close-modal{
     transition: 1s;
     opacity: 0;
-}
-.show-modal{
-    opacity: 1;
-    transition: 1s;
+    visibility: hidden;
+    
 }

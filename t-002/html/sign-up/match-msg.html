@@ -13,7 +13,7 @@
 
 <body>
     <header class="h-title h-title-array">
-        <img src="../../imgs/icon/array.png" alt="">
+        <img src="../../imgs/icon/array.png" alt="" id="url-return">
         <span>报名参赛须知</span>
     </header>
     <div class="match-msg">
@@ -38,11 +38,26 @@
             <button class="btn btn-match">
                 个人报名
             </button>
-            <button class="btn btn-match"> 团队报名
+            <button class="btn btn-match" id="signup-team"> 团队报名
             </button>
         </div>
     </div>
+    <script>
+        function $(ele) {
+            return document.getElementById(ele);
+        }
+        // 返回上一页
+        var return_array=$('url-return');
+        return_array.onclick=function(){
+            window.history.back(-1);
+        }
 
+        // 继续跳转
+        $('signup-team').onclick=function(){
+            window.location.href="./match-input.html";
+        }
+        
+    </script>
 </body>
 
 </html>

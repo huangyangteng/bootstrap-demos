@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/rem.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/base.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
 
 </head>
@@ -77,7 +76,7 @@
     </section>
     <!-- 比赛报名入口 -->
     <section class="match">
-        <button>点击报名</button>
+        <button id="start-signup">点击报名</button>
     </section>
     <!--热点通知 -->
     <section>
@@ -138,7 +137,7 @@
         
     </section>
     <!-- 竞赛视频 -->
-    <section>
+    <section class="footer-margin">
         <div class="match-video margin-base">
             <div class="item-title">
                 <div>赛事竞赛视频</div>
@@ -161,7 +160,7 @@
     <!-- 底部导航 -->
     <footer>
         <div class="footer margin-base">
-            <a href="javascript:;">
+            <a href="./index.html">
                 <img src="./imgs/icon/diburenpng.png" alt="">
             </a>
             <a href="./html/page/field.html">
@@ -182,7 +181,7 @@
             <h1>海峡两岸武术比赛</h1>
             <time>2018年5月28日</time>
             <div>
-                <p>2018年09月01日，举办海峡两岸武术比赛</p>
+                <p>2018年09月01日，举办海峡两岸武术比赛,</p>
                 <p>欢迎大家踊跃报名</p>
                 <p>地点：背景广安体育馆</p>
             </div>
@@ -194,11 +193,21 @@
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     
     <script>
-        // 点击隐藏
+        // `````````````通用函数
+        function jumpTo(url) {
+            window.location.href=url;
+        }
+        // 点击隐藏modal
         var close_btn=$('#close-modal');
         var modal=$('#js-modal');
         close_btn.click(function () {
             modal.addClass('close-modal');
+        })
+
+        // 点击报名
+        var start_btn=$('#start-signup');
+        start_btn.click(function () {
+            jumpTo("./html/sign-up/match-msg.html");
         })
     </script>
 </body>

@@ -22,12 +22,13 @@ $color-white:#feeff7;
 $font-size-base:12px;
 $font-size-larger:14px;
 $font-size-smaller:10px;
+$font-size-large:18px;
 
 $bg-base:#fbfbfb;
 $theme-hot:#fe6d2c;
 $theme-warm:#ffc700;
 
-
+// `````````````````辅助样式
 /* 页面上的边距 */
 .margin-base{
     /* margin-left:.5625rem;
@@ -55,47 +56,13 @@ $theme-warm:#ffc700;
 // 小标题
 .text-title{
     color: $color-item-title;
-    font-size: 14px;
-}
-
-/* ···········表单样式 */
-
-/* 字体 */
-.text-title{
-    color: #cf3c36;
-    font-size: 14px;
-}
-/* 字体超出部分隐藏 */
-.view-text{
-  /**
-    思路：
-    1.设置inline-block属相
-    2.强制不换行
-    3.固定高度
-    4.隐藏超出部分
-    5.显示“……”
-  */
-  display: inline-block;
-  white-space: nowrap; 
-  width: 100%; 
-  overflow: hidden;
-  text-overflow:ellipsis;
-}
-// 页面通用样式
-body{
-    background:$bg-base;
-}
-body>section{
-    margin-bottom: .625rem;
-}
-body>section,body>footer{
-    background:#fff;
+    font-size: $font-size-larger;
 }
 .btn{
     background:$theme-hot;
     border: transparent;
     color: $color-white;
-    font-size: 14px;
+    font-size: $font-size-larger;
     padding: .3125rem 1.25rem ;
     &:focus{
         outline: 0;
@@ -103,10 +70,23 @@ body>section,body>footer{
 }
 
 
+
+
+// ``````````````````````页面通用样式
+body{
+    background:$bg-base;
+}
+body>section{
+    margin-bottom: .5rem;
+}
+body>section,body>footer{
+    background:#fff;
+}
+
 // 页面大标题样式
 .h-title{
     height: 2.8125rem;
-    font-size: 18px;
+    font-size: $font-size-large;
     color: #feeff7;
     text-align: center;
     background:linear-gradient(to bottom,#ffbe04,#fb483e);
@@ -147,7 +127,7 @@ body>section,body>footer{
         background: rgba(255, 255, 255, 0.2);
         border-radius: .9375rem;
         color: white;
-        font-size: 14px;
+        font-size: $font-size-larger;
         border: 0;
         box-sizing: border-box;
         padding-left: 2.875rem;
@@ -241,6 +221,11 @@ body>section,body>footer{
     }
 // 底部导航条
 .footer{
+    //底部导航一直在底部
+    position: fixed;
+    bottom: 0;
+    left: 0;right: 0;
+    background:#fff;
     height: 3rem;
     box-sizing: border-box;
     display: flex;
@@ -251,5 +236,9 @@ body>section,body>footer{
         width: 1.8125rem;
         height: 1.8125rem;
     }
+}
+// 页面上最下面的元素需要有向下的margin，才不会被覆盖
+.footer-margin{
+    margin-bottom: 3rem;
 }
 

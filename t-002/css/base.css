@@ -48,42 +48,6 @@
   font-size: 14px;
 }
 
-/* ···········表单样式 */
-/* 字体 */
-.text-title {
-  color: #cf3c36;
-  font-size: 14px;
-}
-
-/* 字体超出部分隐藏 */
-.view-text {
-  /**
-    思路：
-    1.设置inline-block属相
-    2.强制不换行
-    3.固定高度
-    4.隐藏超出部分
-    5.显示“……”
-  */
-  display: inline-block;
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-body {
-  background: #fbfbfb;
-}
-
-body > section {
-  margin-bottom: .625rem;
-}
-
-body > section, body > footer {
-  background: #fff;
-}
-
 .btn {
   background: #fe6d2c;
   border: transparent;
@@ -94,6 +58,18 @@ body > section, body > footer {
 
 .btn:focus {
   outline: 0;
+}
+
+body {
+  background: #fbfbfb;
+}
+
+body > section {
+  margin-bottom: .5rem;
+}
+
+body > section, body > footer {
+  background: #fff;
 }
 
 .h-title {
@@ -235,6 +211,11 @@ body > section, body > footer {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
   height: 3rem;
   box-sizing: border-box;
   display: flex;
@@ -246,4 +227,8 @@ body > section, body > footer {
 .footer img {
   width: 1.8125rem;
   height: 1.8125rem;
+}
+
+.footer-margin {
+  margin-bottom: 3rem;
 }
