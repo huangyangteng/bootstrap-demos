@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>排行榜</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/match.css" />
+</head>
+<body class="ranking-body">
+    <header class="h-title h-title-array">
+        <img src="../../imgs/icon/array.png" alt="" id="url-return">
+        <span>排行榜</span>
+    </header>
+    <article>
+        
+        <section class="ranking-title">
+            <span class="rank-active">周人气排行榜</span>
+            <span>月人气排行榜</span>
+        </section>
+        <section class="ranking-content">
+            <!-- 两种图片，放宣传口号 -->
+            <div class="ranking-imgs">
+                <img src="../../imgs/icon/ranking1.png" alt="">
+                <img src="../../imgs/icon/ranking2.png" alt="">
+            </div>
+            <!-- 排行榜 -->
+            <div>
+                <!-- 前3 -->
+                <div class="level-top3">
+                    <section class="top2">
+                        <img src="../../imgs/icon/ranking6.png" alt="">
+                        <img class="flag" src="../../imgs/icon/top-2.png" alt="">
+                        <h3>小诗诗</h3>
+                        <span class="tag">太极</span>
+                        <div>
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </section>
+                    <section class="top1">
+                        <img src="../../imgs/icon/ranking6.png" alt="">
+                        <img class="flag" src="../../imgs/icon/top1.png" alt="">
+                        <h3>小诗诗</h3>
+                        <span class="tag">太极</span>
+                        <div>
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </section>
+                    <section class="top3">
+                        <img src="../../imgs/icon/ranking6.png" alt="">
+                        <img src="../../imgs/icon/top-3.png" alt="" class="flag">
+                        <h3>小诗诗</h3>
+                        <span class="tag">太极</span>
+                        <div>
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </section>
+                </div>
+                <!-- 其余的 -->
+                <div class="level-other">
+                    <div class="level-item">
+                        <div class="item-l">
+                            <span class="circle">4</span>
+                            <img src="../../imgs/icon/ranking6.png" alt="">
+                            <div>
+                                <h3>迷糊的诗诗</h3>
+                                <span class="tag">太极</span>
+                            </div>
+                        </div>
+                        <div class="item-r">
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </div>
+                    <div class="level-item">
+                        <div class="item-l">
+                            <span class="circle">5</span>
+                            <img src="../../imgs/icon/ranking6.png" alt="">
+                            <div>
+                                <h3>迷糊的诗诗</h3>
+                                <span class="tag">太极</span>
+                            </div>
+                        </div>
+                        <div class="item-r">
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </div>
+                    <div class="level-item">
+                        <div class="item-l">
+                            <span class="circle">6</span>
+                            <img src="../../imgs/icon/ranking6.png" alt="">
+                            <div>
+                                <h3>迷糊的诗诗</h3>
+                                <span class="tag">太极</span>
+                            </div>
+                        </div>
+                        <div class="item-r">
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </div>
+                    <div class="level-item">
+                        <div class="item-l">
+                            <span class="circle">7</span>
+                            <img src="../../imgs/icon/ranking6.png" alt="">
+                            <div>
+                                <h3>迷糊的诗诗</h3>
+                                <span class="tag">太极</span>
+                            </div>
+                        </div>
+                        <div class="item-r">
+                            <span>57982</span>
+                            <span>人气</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script>
+        function $(ele) {
+            return document.getElementById(ele);
+        }
+        // 返回上一页
+        var return_array=$('url-return');
+        return_array.onclick=function(){
+            window.history.back(-1);
+        }
+      
+    </script>
+
+    
+</body>
+</html>

@@ -519,3 +519,230 @@ body > section, body > footer {
   flex-direction: column;
   align-items: center;
 }
+
+.ranking-body {
+  background: #fff;
+}
+
+.ranking-title {
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+  color: #ffc700;
+}
+
+.ranking-title span {
+  position: relative;
+}
+
+.ranking-title .rank-active::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: .25rem;
+  background: #ff7600;
+  bottom: 0;
+  margin-bottom: -0.8125rem;
+}
+
+.ranking-content {
+  background-image: url(../imgs/icon/ranking7.png);
+  background-size: contain;
+}
+
+.ranking-imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ranking-imgs img:first-child {
+  width: 9rem;
+  height: 3rem;
+  margin-top: 1.125rem;
+}
+
+.ranking-imgs img:last-child {
+  width: 13.125rem;
+  height: 2rem;
+  margin-top: .75rem;
+  margin-bottom: .875rem;
+}
+
+.level-top3 {
+  height: 8.5rem;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.level-top3 section {
+  width: 7.6875rem;
+  height: 7.375rem;
+  background: #fff;
+  border-radius: .3125rem;
+}
+
+.level-top3 section h3 {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  margin-top: .3125rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.level-top3 section div {
+  color: #ffc700;
+  font-size: 0.875rem;
+}
+
+.level-top3 section div span:last-child {
+  color: #fc681a;
+}
+
+.level-top3 section.top1 {
+  height: 100%;
+  background-image: url(../imgs/icon/ranking4.png);
+  background-size: 6.25rem 5.25rem;
+  background-repeat: no-repeat;
+  background-position: center .0625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 1.25rem;
+}
+
+.level-top3 section.top1 img:first-child {
+  width: 3.9375rem;
+  height: 4.4375rem;
+}
+
+.level-top3 section.top1 .flag {
+  width: 20px;
+  height: 20px;
+  margin-top: -14px;
+}
+
+.level-top3 section.top2 {
+  background-image: url(../imgs/icon/ranking5.png);
+  background-size: 6.125rem 3.625rem;
+  background-repeat: no-repeat;
+  background-position: center .0625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 1rem;
+}
+
+.level-top3 section.top2 img:first-child {
+  width: 3.375rem;
+  height: 3.375rem;
+}
+
+.level-top3 section.top2 img.flag {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 2px;
+}
+
+.level-top3 section.top3 {
+  background-image: url(../imgs/icon/ranking3.png);
+  background-size: 6.25rem 5.25rem;
+  background-repeat: no-repeat;
+  background-position: center 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 1rem;
+}
+
+.level-top3 section.top3 img:first-child {
+  width: 3.375rem;
+  height: 3.375rem;
+}
+
+.level-top3 section.top3 img.flag {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 2px;
+}
+
+.level-other {
+  box-sizing: border-box;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  background: #fff;
+  padding-top: 1.875rem;
+}
+
+.level-item {
+  font-size: 1rem;
+  height: 4.875rem;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.level-item .item-l {
+  display: flex;
+  align-items: center;
+}
+
+.level-item img {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-right: .625rem;
+}
+
+.level-item h3 {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  color: #333;
+  font-weight: 400;
+}
+
+.level-item span.tag {
+  font-size: .5625rem;
+}
+
+.level-item .item-r {
+  color: #ffc700;
+}
+
+.level-item .item-r span:last-child {
+  color: #fc681a;
+}
+
+.circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: .75rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  margin-right: .625rem;
+  color: #656565;
+}
+
+.tag {
+  width: 2.25rem;
+  height: 1rem;
+  padding: .125rem;
+  transform: scale(0.9);
+  display: inline-block;
+  background: #ffe9d9;
+  text-align: center;
+  border-radius: .5rem;
+  color: #fd9a67;
+}

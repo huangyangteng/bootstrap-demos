@@ -97,6 +97,8 @@ body > section, body > footer {
   position: absolute;
   bottom: 1.1rem;
   left: .5rem;
+  width: .9375rem;
+  height: 1.375rem;
 }
 
 .nav {
