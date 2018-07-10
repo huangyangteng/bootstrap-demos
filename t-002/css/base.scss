@@ -54,7 +54,8 @@ $theme-warm:#ffc700;
 }
 /* 左右边距 */
 .padding-lr{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: .625rem;
     padding-right: .625rem;
 }
@@ -100,9 +101,11 @@ body>section,body>footer{
     font-size: $font-size-large;
     color: #feeff7;
     text-align: center;
+    background:-webkit-gradient(linear,left top, left bottom,from(#ffbe04),to(#fb483e));
     background:linear-gradient(to bottom,#ffbe04,#fb483e);
     padding-top: .5rem;//8
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-weight: 800;
 }
 // 带箭头的标题
@@ -121,9 +124,15 @@ body>section,body>footer{
 // 搜索条样式
 .nav{
         height: 3rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     .search-fa{
         position: relative;
@@ -141,7 +150,8 @@ body>section,body>footer{
         color: white;
         font-size: $font-size-larger;
         border: 0;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding-left: 2.875rem;
     }
     // 控制placehodle的颜色
@@ -163,8 +173,12 @@ body>section,body>footer{
 .item-title{
     // margin-top: .3125rem;
     margin-bottom: .3125rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: $font-size-larger;
     color: $color-item-title;
     
@@ -181,8 +195,12 @@ body>section,body>footer{
     margin-bottom: .4375rem;
 }
 .match-video-content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .match-video-item{
     // 设置一个最大宽度，防止溢出
@@ -207,13 +225,21 @@ body>section,body>footer{
     // 没有视频
     .no-video{
         // height: 9.625rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         // justify-content: center;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding-top: 1.5625rem;
         padding-bottom: 1.875rem;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         span{
             color: #bababa;
         }
@@ -225,17 +251,26 @@ body>section,body>footer{
     // 只有一个视频
     .video-only{
        height: 17.1875rem; 
+       display: -webkit-box; 
+       display: -ms-flexbox; 
        display: flex;
-       flex-direction: column;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+           -ms-flex-direction: column;
+               flex-direction: column;
     //    justify-content: center;
-       align-items: center;
-       box-sizing: border-box;
+       -webkit-box-align: center;
+           -ms-flex-align: center;
+               align-items: center;
+       -webkit-box-sizing: border-box;
+               box-sizing: border-box;
        video{
            width: 21.75rem;
            height: 15.625rem;
        }
        span{
-           align-self: flex-start;
+           -ms-flex-item-align: start;
+               align-self: flex-start;
            margin-left: .3125rem;
        }
     }
@@ -247,10 +282,16 @@ body>section,body>footer{
     left: 0;right: 0;
     background:#fff;
     height: 3rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     border-top: 1px solid #eee;
     img{
         width: 1.8125rem;
