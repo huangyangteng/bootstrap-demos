@@ -1,4 +1,5 @@
 
+@import "./base.scss";
 // ··············1. 头部
 header{
     height: 13.9375rem;
@@ -27,7 +28,7 @@ header>nav{
     background: rgba(255, 255, 255, 0.2);
     border-radius: .9375rem;
     color: white;
-    font-size: 14px;
+    font-size: $font-size-larger;
     border: 0;
     box-sizing: border-box;
     padding-left: 2.875rem;
@@ -55,7 +56,7 @@ header>nav{
     align-items: center;
     color: #ffeee9;
     margin-top: -0.625rem;//中间偏上一点的位置
-    font-size: 16px;
+    font-size: $font-size-sixteen;
     font-weight: 900;
     >img{
         height: 5.3125rem;
@@ -74,13 +75,13 @@ header>nav{
         padding-top: .3125rem;
         border-radius: .625rem;
         background:rgba(255, 255, 255, 0.1);
-        font-size: 14px;
+        font-size: $font-size-larger;
         font-weight: 300;
     }
 }
 // 2. 中间部分
 section{
-    font-size: 15px;
+    font-size: $font-size-sixteen;
     margin-bottom: 7.8rem;
 }
 .my-detail>li{
@@ -104,13 +105,3 @@ section{
     }
 
 }
-// 因为个人主页页面太短，所以设置footer在最下面
-// 底部导航
-.footer-bottom{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-   
-}
-

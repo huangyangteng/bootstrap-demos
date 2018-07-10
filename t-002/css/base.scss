@@ -7,22 +7,33 @@
 
 @media screen and (min-width: 321px) and (max-width:400px) {
     body {
-        font-size:12px
+        font-size:12px;
     }
 }
 
 @media screen and (min-width: 400px) {
     body {
-        font-size:14px
+        font-size: .875rem;
+    }
+}
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 1rem;
     }
 }
 // ````````````````````````````变量定义
 $color-item-title:#cd322c;
 $color-white:#feeff7;
-$font-size-base:12px;
-$font-size-larger:14px;
-$font-size-smaller:10px;
-$font-size-large:18px;
+// $font-size-base:12px;
+// $font-size-larger:14px;
+// $font-size-smaller:10px;
+// $font-size-large:18px;
+// $font-size-sixteen:16px;
+$font-size-base:.75rem;
+$font-size-larger:.875rem;
+$font-size-smaller:.625rem;
+$font-size-large:1.125rem;
+$font-size-sixteen:1rem;
 
 $bg-base:#fbfbfb;
 $theme-hot:#fe6d2c;
@@ -176,8 +187,12 @@ body>section,body>footer{
     // 设置一个最大宽度，防止溢出
     max-width: 10.75rem;
     img{
-        max-width: 10.75rem;
-        max-height: 7.75rem;
+        width: 10.75rem;
+        height: 7.75rem;
+    }
+    video{
+        width: 10.75rem;
+        height: 7.75rem;
     }
     //设置超出部分隐藏
     span{
@@ -201,6 +216,10 @@ body>section,body>footer{
         span{
             color: #bababa;
         }
+        img{
+            width: 6rem;
+            height: 4.375rem;
+        }
     }
     // 只有一个视频
     .video-only{
@@ -210,7 +229,7 @@ body>section,body>footer{
     //    justify-content: center;
        align-items: center;
        box-sizing: border-box;
-       img{
+       video{
            width: 21.75rem;
            height: 15.625rem;
        }

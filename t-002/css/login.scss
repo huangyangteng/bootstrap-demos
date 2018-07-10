@@ -28,7 +28,7 @@
     border-bottom: 1px solid #ccc;
     display: flex;
     align-items: center;
-    font-size: 13px;
+    font-size: $font-size-larger;
     color: #898989;
     img{
         width: 1.5625rem;
@@ -50,7 +50,7 @@
         background:$theme-hot;
         border: transparent;
         color: $color-white;
-        font-size: 14px;
+        font-size: $font-size-larger;
         padding: .3125rem .9375rem;
         &:focus{
             outline: 0;
@@ -74,7 +74,7 @@
         border-radius: 25px;
         border: transparent;
         color: $color-white;
-        font-size: 17px;
+        font-size: $font-size-large;
         &:focus{
             outline: 0;
         }

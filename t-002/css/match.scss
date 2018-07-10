@@ -77,13 +77,13 @@
     padding: 0 3.625rem;
     padding-top: 3.125rem;
     h1{
-        font-size: 18px;
+        font-size: $font-size-large;
         color: $color-item-title;
         margin-top: 0;
 
     }
     h2{
-        font-size: 14px;
+        font-size: $font-size-larger;
         margin-bottom: 0;
         text-align: center;
     }
@@ -110,7 +110,7 @@
     text-align: center;
     label:last-child{
         margin-left: .3125rem;
-        font-size: 14px;
+        font-size: $font-size-larger;
         vertical-align: middle;
     }
 }
@@ -145,7 +145,7 @@
     align-items: center;
     margin-bottom: .625rem;
     label{
-        font-size: 14px;
+        font-size: $font-size-larger;
         margin-right: .625rem;
     }
     input,select{
@@ -171,7 +171,7 @@
         background:$theme-hot;
         border: transparent;
         color: $color-white;
-        font-size: 14px;
+        font-size: $font-size-larger;
         padding: .3125rem .9375rem;
         border-radius: .3125rem;
         &:focus{
@@ -183,7 +183,13 @@
 
 // 选择参赛视频
 .video-upload{
+    text-align: center;
     img{
+        width: 8.5rem;
+        height: 6rem;
+        margin-bottom: .625rem;
+    }
+    video{
         width: 8.5rem;
         height: 6rem;
         margin-bottom: .625rem;
@@ -198,7 +204,7 @@
         background:$theme-warm;
         border: transparent;
         color: $color-item-title;
-        font-size: 14px;
+        font-size: $font-size-larger;
         padding: .3125rem 1.25rem ;
         &:focus{
             outline: 0;
@@ -233,7 +239,7 @@
         border-radius: 25px;
         border: transparent;
         color: $color-white;
-        font-size: 17px;
+        font-size: $font-size-large;
         &:focus{
             outline: 0;
         }

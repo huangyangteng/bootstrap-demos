@@ -61,7 +61,7 @@ header{
     .banner>ul>li{
         height: 100%;
         img{
-            max-width: 100%;
+            width: 100%;
         }
     }
     
@@ -226,8 +226,8 @@ header{
     // 设置一个最大宽度，防止溢出
     max-width: 10.75rem;
     img{
-        max-width: 10.75rem;
-        max-height: 7.75rem;
+        width: 10.75rem;
+        height: 7.75rem;
     }
     //设置超出部分隐藏
     span{

@@ -1,25 +1,8 @@
 @import "base.scss";
-body{
-    background:$bg-base;
-}
-body>section{
-    margin-bottom: .625rem;
-}
-body>section,body>footer{
-    background:#fff;
-}
+
 
 // ··············1. 头部
-.h-title{
-    height: 2.8125rem;
-    font-size: 18px;
-    color: #feeff7;
-    text-align: center;
-    background:linear-gradient(to bottom,#ffbe04,#fb483e);
-    padding-top: .5rem;//8
-    box-sizing: border-box;
-    font-weight: 800;
-}
+
 .ranking{
     height: 11rem;
     display: flex;
@@ -31,9 +14,8 @@ body>section,body>footer{
         height: 8.625rem;
         border-radius: .625rem;
         background:#f5856c;
-        font-size:19px;
+        font-size:$font-size-large;
         color: #feeff7; 
-        font-weight: 900;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -79,7 +61,9 @@ body>section,body>footer{
     width: 22rem;
     height: 9rem;
     background:url(../imgs/img/03beijing.png);
+    background-size: cover;
     position: relative;
+    border-radius: .625rem;
 }
 .teach-content{
     position: absolute;
@@ -87,7 +71,9 @@ body>section,body>footer{
     left: 0;right: 0;
     background:linear-gradient(to bottom,#ffbe04,#fb483e);
     opacity: 0.9;
+    border-radius: .625rem;
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -120,17 +106,3 @@ body>section,body>footer{
         margin-top: .3125rem;
     }
 }
-// 底部导航
-.footer{
-    height: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-top: 1px solid #eee;
-    img{
-        width: 1.8125rem;
-        height: 1.8125rem;
-    }
-}
-

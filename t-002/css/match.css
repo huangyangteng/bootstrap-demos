@@ -14,7 +14,13 @@
 
 @media screen and (min-width: 400px) {
   body {
-    font-size: 14px;
+    font-size: .875rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1rem;
   }
 }
 
@@ -45,50 +51,14 @@
 
 .text-title {
   color: #cd322c;
-  font-size: 14px;
-}
-
-/* ···········表单样式 */
-/* 字体 */
-.text-title {
-  color: #cf3c36;
-  font-size: 14px;
-}
-
-/* 字体超出部分隐藏 */
-.view-text {
-  /**
-    思路：
-    1.设置inline-block属相
-    2.强制不换行
-    3.固定高度
-    4.隐藏超出部分
-    5.显示“……”
-  */
-  display: inline-block;
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-body {
-  background: #fbfbfb;
-}
-
-body > section {
-  margin-bottom: .625rem;
-}
-
-body > section, body > footer {
-  background: #fff;
+  font-size: 0.875rem;
 }
 
 .btn {
   background: #fe6d2c;
   border: transparent;
   color: #feeff7;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: .3125rem 1.25rem;
 }
 
@@ -96,9 +66,21 @@ body > section, body > footer {
   outline: 0;
 }
 
+body {
+  background: #fbfbfb;
+}
+
+body > section {
+  margin-bottom: .5rem;
+}
+
+body > section, body > footer {
+  background: #fff;
+}
+
 .h-title {
   height: 2.8125rem;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #feeff7;
   text-align: center;
   background: linear-gradient(to bottom, #ffbe04, #fb483e);
@@ -140,7 +122,7 @@ body > section, body > footer {
   background: rgba(255, 255, 255, 0.2);
   border-radius: .9375rem;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   border: 0;
   box-sizing: border-box;
   padding-left: 2.875rem;
@@ -166,7 +148,7 @@ body > section, body > footer {
   margin-bottom: .3125rem;
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #cd322c;
 }
 
@@ -191,8 +173,13 @@ body > section, body > footer {
 }
 
 .match-video-item img {
-  max-width: 10.75rem;
-  max-height: 7.75rem;
+  width: 10.75rem;
+  height: 7.75rem;
+}
+
+.match-video-item video {
+  width: 10.75rem;
+  height: 7.75rem;
 }
 
 .match-video-item span {
@@ -216,6 +203,11 @@ body > section, body > footer {
   color: #bababa;
 }
 
+.no-video img {
+  width: 6rem;
+  height: 4.375rem;
+}
+
 .video-only {
   height: 17.1875rem;
   display: flex;
@@ -224,7 +216,7 @@ body > section, body > footer {
   box-sizing: border-box;
 }
 
-.video-only img {
+.video-only video {
   width: 21.75rem;
   height: 15.625rem;
 }
@@ -235,6 +227,11 @@ body > section, body > footer {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
   height: 3rem;
   box-sizing: border-box;
   display: flex;
@@ -246,6 +243,10 @@ body > section, body > footer {
 .footer img {
   width: 1.8125rem;
   height: 1.8125rem;
+}
+
+.footer-margin {
+  margin-bottom: 3rem;
 }
 
 .checkbox {
@@ -312,13 +313,13 @@ body > section, body > footer {
 }
 
 .must-know h1 {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #cd322c;
   margin-top: 0;
 }
 
 .must-know h2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 0;
   text-align: center;
 }
@@ -341,7 +342,7 @@ body > section, body > footer {
 
 .agree-top label:last-child {
   margin-left: .3125rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   vertical-align: middle;
 }
 
@@ -375,7 +376,7 @@ body > section, body > footer {
 }
 
 .form-control label {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-right: .625rem;
 }
 
@@ -406,7 +407,7 @@ body > section, body > footer {
   background: #fe6d2c;
   border: transparent;
   color: #feeff7;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: .3125rem .9375rem;
   border-radius: .3125rem;
 }
@@ -415,7 +416,17 @@ body > section, body > footer {
   outline: 0;
 }
 
+.video-upload {
+  text-align: center;
+}
+
 .video-upload img {
+  width: 8.5rem;
+  height: 6rem;
+  margin-bottom: .625rem;
+}
+
+.video-upload video {
   width: 8.5rem;
   height: 6rem;
   margin-bottom: .625rem;
@@ -431,7 +442,7 @@ body > section, body > footer {
   background: #ffc700;
   border: transparent;
   color: #cd322c;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: .3125rem 1.25rem;
 }
 
@@ -468,7 +479,7 @@ body > section, body > footer {
   border-radius: 25px;
   border: transparent;
   color: #feeff7;
-  font-size: 17px;
+  font-size: 1.125rem;
 }
 
 .team-submit button:focus {
