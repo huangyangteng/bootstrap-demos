@@ -84,6 +84,18 @@ body > section, body > footer {
   background: #fff;
 }
 
+.btn {
+  background: #fe6d2c;
+  border: transparent;
+  color: #feeff7;
+  font-size: 14px;
+  padding: .3125rem 1.25rem;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
 .h-title {
   height: 2.8125rem;
   font-size: 18px;

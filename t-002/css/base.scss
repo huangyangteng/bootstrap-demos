@@ -91,7 +91,16 @@ body>section{
 body>section,body>footer{
     background:#fff;
 }
-
+.btn{
+    background:$theme-hot;
+    border: transparent;
+    color: $color-white;
+    font-size: 14px;
+    padding: .3125rem 1.25rem ;
+    &:focus{
+        outline: 0;
+    }
+}
 
 
 // 页面大标题样式
