@@ -97,6 +97,8 @@ body > section, body > footer {
   position: absolute;
   bottom: 1.1rem;
   left: .5rem;
+  width: .9375rem;
+  height: 1.375rem;
 }
 
 .nav {
@@ -305,16 +307,17 @@ header {
   overflow: hidden;
 }
 
-.banner > ul {
-  height: 100%;
-}
-
-.banner > ul > li {
-  height: 100%;
-}
-
-.banner > ul > li img {
+.swiper-container {
   width: 100%;
+  height: 100%;
+}
+
+.swiper-container img {
+  width: 100%;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+  background: #ffc700 !important;
 }
 
 .menu {

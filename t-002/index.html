@@ -6,8 +6,13 @@
     <title>t-002</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/rem.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
+   
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css"/>
+    <!-- 轮播 -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./swiper/swiper-4.3.3.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css"/>
+    
+
 
 </head>
 <body>
@@ -26,11 +31,22 @@
         
         <!-- 轮播banner图 -->
         <section class="banner margin-base">
-            <ul id="carousel">
-                <li><img src="./imgs/img/shouyeheshang.png" alt=""></li>
-                <li><img src="./imgs/img/shouyeheshang.png" alt=""></li>
-                <li><img src="./imgs/img/shouyeheshang.png" alt=""></li>
-            </ul>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                         <img src="./imgs/img/shouyeheshang.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./imgs/img/shouyeheshang.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./imgs/img/shouyeheshang.png" alt="">
+                    </div>
+                </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination">
+            </div>
+            </div>
         </section>
     </header>
     <!-- 菜单 -->
@@ -178,7 +194,7 @@
         
     </footer>
     <!-- 报名的弹窗 -->
-    <article class="modal-fa" id="js-modal">
+    <!-- <article class="modal-fa" id="js-modal">
         <div class="modal margin-base padding-td">
             <h1>海峡两岸武术比赛</h1>
             <time>2018年5月28日</time>
@@ -190,11 +206,12 @@
             
             <button class="btn" id="close-modal">确定</button>
         </div>
-    </article>
+    </article> -->
     <!-- 加载jq -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    
+    <script src="./swiper/swiper-4.3.3.min.js"></script>
     <script>
+    
         // `````````````通用函数
         function jumpTo(url) {
             window.location.href=url;
@@ -211,6 +228,17 @@
         start_btn.click(function () {
             jumpTo("./html/sign-up/match-msg.html");
         })
+        // ···········轮播
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay:true,
+            delay:2000,
+            direction: 'horizontal',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+              
+            },
+        })     
     </script>
 </body>
 </html>

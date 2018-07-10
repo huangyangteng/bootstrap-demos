@@ -55,15 +55,17 @@ header{
         height: 10.25rem;
         overflow: hidden;
     }
-    .banner>ul{
-        height: 100%;
-    }
-    .banner>ul>li{
+    // 轮播
+    .swiper-container {
+        width: 100%;
         height: 100%;
         img{
             width: 100%;
         }
-    }
+        .swiper-pagination-bullet-active{
+            background:$theme-warm!important;
+        }
+    }  
     
     
 // ··············2. 菜单
