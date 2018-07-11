@@ -16,18 +16,24 @@
 @font-color-drak:#333;
 
 
+
 // `````````通用类
 .padding-lr{
     padding-left: 20%;
     padding-right: 20%;
 }
-
+.btn-warm{
+    background: @theme-color-warm;
+    color: white;
+}
 
 // `````````````页面样式
 // 重置bootstrap的样式，使长度为100%
+
 .container-fluid{
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
 }
 //````````` 1 最上面的一条线
 .top-line{
@@ -35,12 +41,83 @@
     background: @theme-color-warm;
 }
 //````````` 2 上方信息
+.top-info{
+    height: 39px;
+    line-height: 39px;
+}
 //````````` 3 导航
+.header{
+    height: 82px;
+    line-height: 82px;
+}
 //````````` 4 轮播
+// 每一张图片
+#swiper .swiper-slide{
+	width: 60%;
+	height: 600px;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	position:relative;
+}
+//左侧和右侧的vover
+.cover-l,.cover-r{
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    overflow: hidden;
+    width: 20%;
+    height: 600px;
+    position: absolute;
+}
+.cover-l{
+    left: 0;
+}
+.cover-r{
+    right: 0;
+}
+//图片使用背景图片
+#swiper .swiper-slide:nth-child(1){background-image:url(../imgs/img/nav-3.png);}
+#swiper .swiper-slide:nth-child(2){background-image:url(../imgs/img/nav-2.png);}	
+#swiper .swiper-slide:nth-child(3){background-image:url(../imgs/img/nav-2.png);}	
+#swiper .swiper-slide:nth-child(4){background-image:url(../imgs/img/nav-2.png);}	
+#swiper .swiper-slide:nth-child(5){background-image:url(../imgs/img/nav-2.png);}	
+#swiper .swiper-slide:nth-child(6){background-image:url(../imgs/img/nav-2.png);}	
+
+
 //````````` 5 公司服务
+.service{
+    height: 520px;
+    padding-top: 43px;
+    padding-bottom: 40px;
+}
 //````````` 6 公司简介
+.intro{
+    height: 477px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background:#f7f7f7;
+}
 //````````` 7 公司产品
-//````````` 8 最新产品
-//````````` 9 产品视频
-//````````` 10 赞助商
-//````````` 1 底部信息
+.production{
+    height: 643px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+}
+//````````` 8 产品视频
+.video-products{
+    height: 910px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+//````````` 9 赞助商
+.partners-pa{
+    background: @theme-color-warm;
+}
+.partners{
+    height: 107px;
+    line-height: 107px;
+}
+//````````` 10 底部信息

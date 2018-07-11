@@ -38,8 +38,8 @@
                 <img src="../../imgs/icon/04xioasanjiao.png" alt="">
             </div>
             <div class="match-video-content video-only">
-                <img src="../../imgs/img/bofang1.png" alt="">
-                <!-- <video src="../../video/movie.ogg" controls="controls"></video> -->
+                <!-- <img src="../../imgs/img/bofang1.png" alt=""> -->
+                <video id="video" src="http://v2v.cc/~j/theora_testsuite/320x240.ogg"  preload="metadata" poster="../../imgs/img/bofang1.png"></video>
                 <span>2017年第三季度两岸武术竞赛开始啦啦啦</span>
     
             </div>
@@ -55,12 +55,14 @@
             </div>
             <div class="match-video-content">
                 <div class="match-video-item">
-                    <img src="../../imgs/img/bofang1.png" alt="">
+                    <!-- <img src="../../imgs/img/bofang1.png" alt=""> -->
                     <!-- <video src="../../video/movie.ogg" controls="controls"></video> -->
+                    <video src="../../video/movie.ogg" preload="metadata" poster="../../imgs/img/bofang1.png"></video>
                     <span>2017年第三季度两岸武术竞赛开始啦啦啦</span>
                 </div>
                 <div class="match-video-item">
-                    <img src="../../imgs/img/2017bofang.png" alt="">
+                    <video src="../../video/movie.ogg" preload="metadata" poster="../../imgs/img/2017bofang.png"></video>
+                    <!-- <img src="../../imgs/img/2017bofang.png" alt=""> -->
                     <!-- <video src="../../video/movie.ogg" controls="controls"></video> -->
                     <span>2017年第三季度两岸武术竞赛开始啦啦啦</span>
                 </div>
@@ -146,5 +148,24 @@
             </a>
         </div>
     </footer>
+    <script>
+        // var video=document.getElementById('video');
+        // video.onclick=function(){
+        //     console.log(this);
+        //     this.controls=true;
+        //     this.play();
+        // }
+        var videos=document.getElementsByTagName("video");
+        for (let i = 0; i < videos.length; i++) {
+            videos[i].onclick=function(){
+                console.log(this);
+                this.play();
+                this.controls = true;
+            }
+            
+        }
+        
+
+    </script>
 </body>
 </html>
