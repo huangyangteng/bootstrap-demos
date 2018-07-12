@@ -1,26 +1,57 @@
  // out: ./index.css, compress: true, sourceMap: true
- //  `````````通用变量
+
+ //  ``````````````````````` 一 通用变量
  // 主题颜色
  @theme-color-warm: #fdbc37;
- @theme-color-drak: #333; // 字体颜色
+ @theme-color-drak: #333; 
+ // 字体颜色
  @font-color-lightest: #fff;
  @font-color-lighter: #fffcf6;
  @font-color-light: #d1d1d1;
  @font-color-gray: #6a6a6a;
  @font-color-grayer: #666666;
- @font-color-drak: #333; // 字体大小
+ @font-color-drak: #333; 
+ // 字体大小
  @font-size-sm: 12px;
  @font-size-md: 14px;
  @font-size-lg: 18px;
  @font-size-17: 17px;
  @font-size-16: 16px;
- @font-size-15: 15px; // `````````通用类
- .padding-lr {
+ @font-size-15: 15px; 
+ //  ························ 二 重置bootstrap样式
+ .container-fluid {
+     padding-left: 0px;
+     padding-right: 0px;
+     overflow: hidden;//bootstrap页面默认有15px的padding
+ }
+
+ .img-responsive {
+     max-width: 100%;
+ } 
+
+ .btn.focus,.btn:focus{//按钮的foucus
+    box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
+ } 
+ img:focus{//图片的focus
+     outline: 0;
+     box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
+ }
+ .video-responsive{
+     max-width: 100%;
+     width: 100%;
+     height: 306px;
+ }
+  
+
+
+ // ``````````````````````  三 通用样式
+
+ .padding-lr {//左右边距
      padding-left: 20%;
      padding-right: 20%;
  }
 
- .btn-warm {
+ .btn-warm {//主题色的按钮
      background: @theme-color-warm;
      color: white;
  }
@@ -31,7 +62,8 @@
 
  .mar-b-50 {
      margin-bottom: 50px;
- } // 通用的标题
+ }
+ // 通用的标题
  .article-title {
      margin-bottom: 30px;
      .line-vertical {
@@ -65,7 +97,8 @@
              }
          }
      }
- } // 我们的服务 黑色背景，所以字体颜色要改变
+ } 
+ // 通用标题 黑色背景
  .article-title.color-reverse {
      position: relative;
      p {
@@ -82,21 +115,20 @@
              cursor: pointer;
          }
      }
- } // `````````````页面样式重置
- // 重置bootstrap的样式，使长度为100%
- .container-fluid {
-     padding-left: 0px;
-     padding-right: 0px;
-     overflow: hidden;
  }
 
- .img-responsive {
-     max-width: 100%;
- } //````````` 1 最上面的一条线
+
+// `````````````````````````` 四 每一块的样式
+
+
+ //````````` 1 最上面的一条线
+
  .top-line {
      height: 3px;
      background: @theme-color-warm;
- } //````````` 2 上方信息
+ } 
+ //````````` 2 上方信息
+
  .top-info-pa {
      background: #333;
      color: @font-color-lighter;
@@ -108,25 +140,36 @@
      line-height: 39px;
      display: flex;
      justify-content: space-between;
-     div:first-child {
+     >div:first-child {
          display: flex;
          align-items: center;
+         margin-left: 32px;
      }
- } // 顶部图标
+     >div:last-child{
+         margin-right: 16px;
+     }
+ } 
+ // 顶部图标
  .top-info-icon {
      a {
          display: inline-block;
          padding-left: 13px;
          padding-right: 14px;
          color: @font-color-lighter;
+        transition: 1s;
+
      }
      a.top-info-active {
          background: @theme-color-warm;
      }
      a:hover {
+         transition: 1s;
          background: @theme-color-warm;
      }
- } //````````` 3 导航
+ }
+
+ //````````` 3 导航
+
  .header {
      height: 82px;
      line-height: 82px;
@@ -138,16 +181,21 @@
          margin-right: 10px;
          display: block;
          color: @font-color-drak;
+         transition: 1s;
      }
      a.active {
          background: @theme-color-warm;
          color: @font-color-lighter;
      }
      a:hover {
+        transition: 1s;
          color: @font-color-lighter;
          background: @theme-color-warm;
      }
- } //````````` 4 轮播
+ } 
+
+ //````````` 4 轮播
+ 
  // 每一张图片
  #swiper {
      .swiper-slide {
@@ -182,13 +230,15 @@
          background-image: url(../imgs/icon/nav/nav-Arrow\ Right.png);
          right: 20px;
      }
- } //图片使用背景图片
+ } 
+ 
+ //图片使用背景图片
  #swiper .swiper-slide:nth-child(1) {
      background-image: url(../imgs/img/nav-3.png);
  }
 
  #swiper .swiper-slide:nth-child(2) {
-     background-image: url(../imgs/img/nav-2.png);
+     background-image: url(../imgs/img/middle-3.png);
  }
 
  #swiper .swiper-slide:nth-child(3) {
@@ -196,7 +246,7 @@
  }
 
  #swiper .swiper-slide:nth-child(4) {
-     background-image: url(../imgs/img/nav-2.png);
+     background-image: url(../imgs/img/nav-3.png);
  }
 
  #swiper .swiper-slide:nth-child(5) {
@@ -205,7 +255,10 @@
 
  #swiper .swiper-slide:nth-child(6) {
      background-image: url(../imgs/img/nav-2.png);
- } //````````` 5 公司服务
+ } 
+ 
+ //````````` 5 公司服务
+
  .service {
      // height: 520px;
      padding-top: 43px;
@@ -214,18 +267,21 @@
 
  .service-item {
      h5 {
-         //    font-size: @font-size-16;
-         margin-top: 1.4em; //    margin-bottom: 21px;
-         //    font-weight: 700;
+         margin-top: 1.4em; 
      }
      p {
          font-size: @font-size-15;
      }
- } //````````` 6 公司简介
+ }
+
+
+  //````````` 6 公司简介
+
  .intro {
      padding-top: 60px;
      padding-bottom: 60px;
-     background: #f7f7f7; // 带下划线的标题
+     background: #f7f7f7; 
+     // 带下划线的标题
      span {
          position: relative;
          display: inline-block;
@@ -238,7 +294,8 @@
          height: 3px;
          background: @theme-color-warm;
          margin-top: 4px;
-     } // 无边框的按钮
+     } 
+     // 无边框的按钮
      a.btn.btn-default {
          border: 1px solid @font-color-light;
          color: @theme-color-warm;
@@ -267,7 +324,11 @@
      a {
          color: @theme-color-warm;
      }
- } //````````` 7 公司产品
+ } 
+ 
+ //````````` 7 公司产品
+
+
  .production-fa {
      background: url(../imgs/img/bg1.png);
      background-size: cover;
@@ -306,11 +367,21 @@
          height: 5px;
          background: @theme-color-warm;
      }
- } //````````` 8 产品视频
+ } 
+
+
+ //````````` 8 产品视频
+
+
  .video-products {
      padding-top: 70px;
      padding-bottom: 70px;
- } //````````` 9 赞助商
+ } 
+ 
+ 
+ //````````` 9 赞助商
+
+
  .partners-pa {
      background: @theme-color-warm;
  }
@@ -321,7 +392,11 @@
      img {
          max-width: 100%;
      }
- } //````````` 10 底部信息
+ } 
+ 
+ //````````` 10 底部信息
+
+
  .footer-pa {
      height: 498px;
      background: url(../imgs/img/bg2.png);
@@ -337,7 +412,8 @@
              font-size: @font-size-16;
          }
      }
- } //  industry
+ } 
+ //  10.1 industry
  .industry {
      // header
      .industry-title {
@@ -356,6 +432,11 @@
              P {
                  font-size: @font-size-sm;
              }
+         }
+         .font-sm-10{
+                font-weight: 100;
+                transform: scale(0.7);
+                margin-left: -36px;
          }
      } // content
      p {
@@ -394,7 +475,8 @@
      .progress-bar {
          background: @theme-color-warm;
      }
- } // latest news
+ } 
+ // 10.2  latest news
  .lastest-news {
      .new {
          margin-bottom: 20px;
@@ -403,9 +485,11 @@
          }
          h5 {
              font-size: @font-size-sm;
+             color: @font-color-light;
          }
          p {
              font-size: @font-size-sm;
+             color: @font-color-grayer;
          }
      }
  }
@@ -425,7 +509,7 @@
          color: @font-color-grayer;
      }
  }
- //Quick Contact
+ //10.3 Quick Contact
  .quick-contact{
      .form-control,.btn{
          color: @font-color-grayer;
@@ -436,7 +520,10 @@
          }
      }
  }
+
+
   //````````````` 11底部的coppright
+
  .copyright {
      height: 48px;
      line-height: 48px;
@@ -447,3 +534,18 @@
          color: @theme-color-warm;
      }
  }
+
+// ···················  五 媒体查询，进行适配
+//  媒体查询，1600-1920  
+@media screen and (max-width:1500px){
+    .padding-lr{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+@media screen and (max-width:1700px){
+    .padding-lr{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
