@@ -31,11 +31,13 @@
  } 
 
  .btn.focus,.btn:focus{//按钮的foucus
-    box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
+            box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
  } 
  img:focus{//图片的focus
      outline: 0;
-     box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
+     -webkit-box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
+             box-shadow: 0 0 0 0.2rem rgba(253, 188, 55, 0.2);
  }
  .video-responsive{
      max-width: 100%;
@@ -151,11 +153,19 @@
  .top-info {
      height: 39px;
      line-height: 39px;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     justify-content: space-between;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
      >div:first-child {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         align-items: center;
+         -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
          margin-left: 32px;
      }
      >div:last-child{
@@ -169,6 +179,7 @@
          padding-left: 13px;
          padding-right: 14px;
          color: @font-color-lighter;
+        -webkit-transition: 1s;
         transition: 1s;
 
      }
@@ -176,6 +187,7 @@
          background: @theme-color-warm;
      }
      a:hover {
+         -webkit-transition: 1s;
          transition: 1s;
          background: @theme-color-warm;
      }
@@ -187,13 +199,20 @@
      height: 82px;
      line-height: 82px;
      color: @font-color-drak;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     justify-content: space-between;
-     align-items: center;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
      ul>li>a {
          margin-right: 10px;
          display: block;
          color: @font-color-drak;
+         -webkit-transition: 1s;
          transition: 1s;
      }
      a.active {
@@ -201,6 +220,7 @@
          color: @font-color-lighter;
      }
      a:hover {
+        -webkit-transition: 1s;
         transition: 1s;
          color: @font-color-lighter;
          background: @theme-color-warm;
@@ -435,6 +455,8 @@
  .industry {
      // header
      .industry-title {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
          img {
              width: 40px;
@@ -453,7 +475,8 @@
          }
          .font-sm-10{
                 font-weight: 100;
-                transform: scale(0.7);
+                -webkit-transform: scale(0.7);
+                        transform: scale(0.7);
                 margin-left: -36px;
          }
      } // content
@@ -468,6 +491,8 @@
          }
      } // footer
      .icon-list {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
          img {
              height: 30px;
@@ -510,7 +535,8 @@
          p {
              font-size: @font-size-sm;
              color: @font-color-grayer;
-             transform: scale(0.9);
+             -webkit-transform: scale(0.9);
+                     transform: scale(0.9);
          }
      }
  }
@@ -522,8 +548,12 @@
          height: 40px;
          width: 100%;
          border-bottom: 1px dotted @font-color-grayer;
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         align-items: center;
+         -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
          
      }
      a{
@@ -588,5 +618,6 @@
 }
 
 *{
+    -webkit-transition: 1s all;
     transition: 1s all;
 }
