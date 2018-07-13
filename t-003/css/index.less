@@ -499,7 +499,7 @@
  // 10.2  latest news
  .lastest-news {
      .new {
-         margin-bottom: 20px;
+        //  margin-bottom: 20px;
          div:last-child {
              margin-left: -14px;
          }
@@ -510,6 +510,7 @@
          p {
              font-size: @font-size-sm;
              color: @font-color-grayer;
+             transform: scale(0.9);
          }
      }
  }
@@ -546,6 +547,7 @@
   //````````````` 11底部的coppright
 
  .copyright {
+     font-size: @font-size-md;
      height: 48px;
      line-height: 48px;
      text-align: center;
@@ -558,18 +560,33 @@
 
 // ···················  五 媒体查询，进行适配
 //  媒体查询，1600-1920  
-@media screen and (max-width:1500px){
-    .padding-lr{
-        padding-left: 10%;
-        padding-right: 10%;
+// 1700-
+@media screen and (min-width:1700px){
+    .new{
+        margin-bottom: 20px;
     }
 }
+//1500-1700
 @media screen and (max-width:1700px){
     .padding-lr{
         padding-left: 15%;
         padding-right: 15%;
     }
+} 
+//  - 1500
+@media screen and (max-width:1500px){
+    .padding-lr{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .industry .industry-title .font-sm-10{
+        margin-left: -25px;
+    }
+    .font-sm-10{
+        margin-left: -25px;
+    }
 }
+
 *{
     transition: 1s all;
 }
