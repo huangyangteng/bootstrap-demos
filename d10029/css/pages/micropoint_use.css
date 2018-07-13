@@ -1,0 +1,120 @@
+@charset "UTF-8";
+.micropoint-use-page {
+    min-width: 1100px;
+    padding-bottom: 100px
+}
+
+.micropoint-use-page .process-list {
+    font-size: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: #434243;
+    text-align: center
+}
+
+.micropoint-use-page .process-list li {
+    position: relative;
+    display: inline-block;
+    margin-right: 144px
+}
+
+.micropoint-use-page .process-list li:last-child {
+    margin-right: 0
+}
+
+.micropoint-use-page .process-list li:last-child:after {
+    display: none
+}
+
+.micropoint-use-page .process-list li:after {
+    content: '';
+    position: absolute;
+    width: 118px;
+    height: 3px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url(../../images/progrecss-point.png);
+    left: 100%;
+    top: 20px;
+    margin-left: 14px
+}
+
+.micropoint-use-page .process-list .size-item {
+    width: 60px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-color: #ed1c24;
+    height: 60px;
+    line-height: 60px;
+    font-size: 42px;
+    color: #fff
+}
+
+.micropoint-use-page .process-list .title {
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin: 10px
+}
+
+.micropoint-use-page .process-list .sub-title {
+    font-size: 20px
+}
+
+.micropoint-use-page .details-remark .item-row {
+    border: 1px solid #d1d1d1;
+    margin-bottom: 31px
+}
+
+.micropoint-use-page .details-remark .item-head {
+    cursor: pointer;
+    text-align: center;
+    height: 222px;
+    background-color: #ebebeb;
+    padding-top: 42px
+}
+
+.micropoint-use-page .details-remark .item-head .title {
+    font-size: 52px;
+    color: #000;
+    margin-bottom: 0
+}
+
+.micropoint-use-page .details-remark .item-head .en {
+    font-size: 16px;
+    color: #000
+}
+
+.micropoint-use-page .details-remark .item-head .sub-title {
+    font-size: 23px
+}
+
+.micropoint-use-page .details-remark .item-head .arrow {
+    display: block;
+    margin: 0 auto;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s
+}
+
+.micropoint-use-page .details-remark .item-head.is-show .arrow {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg)
+}
+
+.micropoint-use-page .details-remark .item-content {
+    display: none;
+    padding: 44px 0;
+    text-align: center
+}
+
+.micropoint-use-page .details-remark .how-row .item-content {
+    padding: 44px 0
+}
+
+.micropoint-use-page .details-remark .how-row .item-content img {
+    display: block;
+    margin: 0 auto
+}
