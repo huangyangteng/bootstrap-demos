@@ -158,6 +158,7 @@ body {
   height: 182px;
   margin-bottom: 14px;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
   cursor: pointer;
 }
 
@@ -218,6 +219,36 @@ body {
   display: inline-block;
   transform: scale(0.7);
   margin-left: -4px;
+}
+
+.recommend > section.center-h .recommend-item .hover-cover {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  height: 112px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 1.2s all;
+}
+
+.recommend > section.center-h .recommend-item .hover-cover img {
+  width: 79px;
+  height: 80px;
+}
+
+.recommend > section.center-h .recommend-item .hover-cover p {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.recommend > section.center-h .recommend-item .show-qr {
+  opacity: 1;
 }
 
 /* ································3.最热优惠 */

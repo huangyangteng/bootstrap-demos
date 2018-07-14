@@ -103,121 +103,146 @@
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
                 <div class="recommend-item">
                     <img class="img-responsive" src="images/icon5.png" class="goods-icon" alt="">
                     <section>
                         <h2>扫码分享积分免费兑换烤鱿鱼十人份</h2>
                         <figure class="circle-img-pa"><img src="./images/pangxie.png" alt=""></figure>
-                        
                     </section>
-                    
                     <footer>
                         <span>商家名称</span>
                         <span class="pt">22
                             <sup>&ensp;pt</sup>
                         </span>
                     </footer>
+                    <div class="hover-cover">
+                        <img src="./images/qrcode.png" alt="">
+                        <p>扫码兑换</p>
+                    </div>
+                    
                 </div>
+               
             </div>
             
         </section>
@@ -697,6 +722,13 @@
                     clickable: true,
                 },
             }); 
+        // 鼠标经过出现二维码
+        $('.recommend-item').mouseenter(function () {
+            $(this).find('.hover-cover').addClass('show-qr');
+        })
+        .mouseleave(function () {
+            $(this).find('.hover-cover').removeClass('show-qr');
+        })
     </script>
 </body>
 

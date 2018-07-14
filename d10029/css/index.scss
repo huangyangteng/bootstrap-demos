@@ -143,6 +143,7 @@ body{
             height: 182px;
             margin-bottom: 14px;
             box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
             cursor: pointer;
              >img{
                 width: 100%;
@@ -199,6 +200,33 @@ body{
                         margin-left: -4px;
                     }
                 }
+            }
+            .hover-cover{
+                position: absolute;
+                background:rgba(0, 0, 0, 0.3);
+                top: 0;
+                left: 0;
+                height:112px ;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 79px;
+                    height: 80px;
+
+                }
+                p{
+                    color: white;
+                    text-align: center;
+                    margin: 0;
+                }
+                opacity: 0;
+                transition: 1.2s all;
+            }
+            .show-qr{
+                opacity: 1;
             }
         }
     }
