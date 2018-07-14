@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/* ````````````````````````````重置样式*/
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* 固定高度，宽度，使用margin:0 auto */
 /* 通用样式 */
 .center-h {
@@ -12,85 +19,640 @@
   align-items: center;
 }
 
-/* ································2.广告 */
-.ads > {
-  height: 69px;
+body {
   background: #f5f5f5;
 }
 
-.ads > figure {
+/* ································1.banner */
+.banner header {
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  color: white;
+  box-sizing: border-box;
+  padding-left: 28px;
+  padding-right: 25px;
+  /*nav-左侧*/
+  /*nav-右侧*/
+}
+
+.banner header nav {
+  display: flex;
+  align-items: center;
+}
+
+.banner header nav h1 {
+  width: 107px;
+  height: 43px;
+  margin: 0;
+  margin-right: 30px;
+  margin-top: -8px;
+}
+
+.banner header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.banner header nav ul li {
+  margin-right: 30px;
+  display: flex;
+}
+
+.banner header nav ul li a {
+  color: white;
+}
+
+.banner header > div {
+  display: flex;
+  align-items: center;
+}
+
+.banner header > div img.search {
+  width: 24px;
+  height: 24px;
+}
+
+.banner header > div img.icon {
+  width: 27px;
+  height: 23px;
+  margin-right: 10px;
+}
+
+.banner header > div span {
+  margin-right: 36px;
+  margin-left: 10px;
+}
+
+.banner header > div a {
+  color: white;
+  margin-right: 10px;
+}
+
+#banner-swiper .swiper-button-next {
+  background-image: url(../images/arrow-right.png);
+  width: 39px;
+  height: 62px;
+  right: 36px;
+}
+
+/* ································2.广告 */
+.ads {
+  height: 69px;
+  background: #f5f5f5;
+  margin-bottom: 13px;
+}
+
+.ads figure {
   width: 706px;
   height: 100%;
 }
 
-.ads > figure a:first-child {
+.ads figure a:first-child {
   width: 451px;
   height: 100%;
 }
 
-.ads > figure a:last-child {
+.ads figure a:last-child {
   width: 244px;
   height: 100%;
 }
 
 /* ································2.今日推荐 */
 .recommend {
-  height: 486px;
   background: #f5f5f5;
+  box-sizing: border-box;
+  padding-top: 15px;
 }
 
-.recommend > section {
+.recommend > section.center-h {
   height: 100%;
   width: 769px;
   background: #fff;
+  box-sizing: border-box;
+  padding-top: 26px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 38px;
 }
 
-.recommend > section .recommend-list {
+.recommend > section.center-h > header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.recommend > section.center-h > header h2 {
+  font-size: 20px;
+}
+
+.recommend > section.center-h .recommend-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.recommend > section .recommend-item {
+.recommend > section.center-h .recommend-item {
   width: 165px;
   height: 182px;
+  margin-bottom: 14px;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.recommend > section .recommend-item img {
+.recommend > section.center-h .recommend-item > img {
   width: 100%;
   height: 111px;
 }
 
-.recommend > section .recommend-item section {
+.recommend > section.center-h .recommend-item .circle-img-pa {
+  width: 34px;
+  height: 32px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 3px 6px;
+  background: #fff;
+  z-index: 1;
+  margin-top: -20px;
+  margin-right: 5px;
+}
+
+.recommend > section.center-h .recommend-item > section {
   display: flex;
 }
 
-.recommend > section .recommend-item section h2 {
-  font-size: 14px;
+.recommend > section.center-h .recommend-item > section h2 {
+  font-size: 13px;
   font-weight: 800;
   margin-top: 4px;
   margin-left: 12px;
 }
 
-.recommend > section .recommend-item footer {
+.recommend > section.center-h .recommend-item footer {
   font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 8px;
 }
 
-.recommend > section .recommend-item footer span:first-child {
+.recommend > section.center-h .recommend-item footer span:first-child {
   color: #ed1c24;
   font-weight: 800;
 }
 
-.recommend > section .recommend-item footer .pt {
+.recommend > section.center-h .recommend-item footer .pt {
   display: inline-block;
-  padding: 1px 3px;
+  padding: 0px 6px;
   background: #ed1c24;
   color: white;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-.recommend > section .recommend-item footer .pt sup {
+.recommend > section.center-h .recommend-item footer .pt sup {
   top: -0.1em;
+  display: inline-block;
+  transform: scale(0.7);
+  margin-left: -4px;
+}
+
+/* ································3.最热优惠 */
+.preferential {
+  padding-top: 26px;
+  padding-bottom: 15px;
+  background: linear-gradient(#ffd386, #ffa8b2);
+}
+
+.preferential header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.preferential header h1 {
+  font-size: 20px;
+}
+
+.preferential .swiper-container {
+  width: 715px;
+  height: 216px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preferential .swiper-slide {
+  text-align: center;
+  background: #fff;
+  height: 98px;
+  box-sizing: border-box;
+  border: 1px solid #ffafb5;
+}
+
+.preferential .preferential-item {
+  padding: 12px;
+  align-items: flex-start;
+}
+
+.preferential .preferential-item aside {
+  height: 100%;
+  position: relative;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.preferential .preferential-item aside h3 {
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.preferential .preferential-item aside span.tag {
+  color: #eb1c23;
+  display: inline-block;
+  padding: 2px;
+  border: 1px solid #eb1c23;
+  transform: scale(0.8);
+  margin-left: -4px;
+}
+
+.preferential .preferential-item aside > span:last-child {
+  align-self: flex-end;
+  display: inline-block;
+  background: #eb1c23;
+  padding: 1px 4px;
+  color: white;
+  border-radius: 20%;
+  transform: scale(0.8);
+}
+
+.preferential .preferential-item aside > span:last-child sup {
+  top: -2px;
+  display: inline-block;
+  transform: scale(0.8);
+}
+
+.preferential aside {
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preferential aside .swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 6px;
+  border-radius: 0;
+  box-shadow: 0px 0px 2px white;
+  margin-right: 6px;
+  background: transparent;
+  opacity: 1;
+  border: 2px solid #fff;
+}
+
+.preferential aside .swiper-pagination .swiper-pagination-bullet:focus {
+  outline: 0;
+}
+
+.preferential aside .swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.preferential aside .swiper-pagination .swiper-pagination-bullet-active:focus {
+  outline: 0;
+}
+
+.preferential footer {
+  text-align: center;
+}
+
+.preferential footer a {
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 26px;
+  background: #fff;
+  color: #333;
+}
+
+/* ································4.商家 */
+.shops {
+  width: 770px;
+  box-sizing: border-box;
+  padding-top: 22px;
+  padding-bottom: 27px;
+  background: #fff;
+}
+
+.shops header {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.shops header h1 {
+  font-size: 30px;
+}
+
+.shops .swiper-container {
+  width: 704px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shops .swiper-slide {
+  text-align: center;
+  background: #fff;
+  height: 176px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.shops .shop-item > img {
+  height: 114px;
+  width: 100%;
+}
+
+.shops .shop-item div {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 9px;
+  color: #eb1c23;
+  font-size: 12px;
+}
+
+.shops .shop-item div figure {
+  width: 36px;
+  height: 33px;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: -20px;
+}
+
+.shops .shop-item div figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.shops .shop-item footer {
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 0 19px 10px 9px;
+}
+
+.shops .shop-item footer p {
+  font-weight: 900;
+  transform: scale(0.8);
+  text-align: left;
+  margin-left: -20px;
+  margin-top: -5px;
+}
+
+.shops aside {
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shops aside .shops-swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 6px;
+  border-radius: 0;
+  box-shadow: 0px 0px 2px #686767;
+  margin-right: 6px;
+  background: transparent;
+  opacity: 1;
+  border: 2px solid #686767;
+}
+
+.shops aside .shops-swiper-pagination .swiper-pagination-bullet:focus {
+  outline: 0;
+}
+
+.shops aside .shops-swiper-pagination .swiper-pagination-bullet-active {
+  background: #686767;
+}
+
+.shops aside .shops-swiper-pagination .swiper-pagination-bullet-active:focus {
+  outline: 0;
+}
+
+.shops footer {
+  text-align: center;
+}
+
+.shops footer a {
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 26px;
+  background: transparent;
+  color: #333;
+  border: 1px solid #c2c2c2;
+}
+
+/* ································5.视频区 */
+.video-list-pa {
+  background: #eb1c23;
+}
+
+.video-list {
+  width: 706px;
+  height: 282px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 13px;
+  color: white;
+  align-items: flex-end;
+}
+
+.video-list .video-item {
+  width: 225px;
+}
+
+.video-list .video-item h2 {
+  font-size: 19px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.video-list .video-item video-content {
+  background: #fff;
+}
+
+.video-list .video-item video-content video {
+  border: 1px solid #eb1c23;
+  width: 100%;
+  max-width: 100%;
+}
+
+.video-list .video-item.item-first video {
+  height: 136px;
+}
+
+.video-list .video-item.item-first > .video-content {
+  background: #fff;
+}
+
+.video-list .video-item.item-first > .video-content > footer {
+  box-sizing: border-box;
+  padding: 9px 12px;
+  position: relative;
+  height: 78px;
+}
+
+.video-list .video-item.item-first > .video-content > footer p {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+}
+
+.video-list .video-item.item-first > .video-content > footer a {
+  font-size: 13px;
+  background: #eb1c23;
+  color: white;
+  padding: 3px 20px;
+  position: absolute;
+  bottom: 9px;
+  right: 12px;
+}
+
+.video-list .video-item.item-first footer a {
+  font-size: 14px;
+}
+
+.video-list .video-item.item-second video {
+  height: 80px;
+}
+
+.video-list .video-item.item-second > .video-content {
+  background: #fff;
+  display: flex;
+}
+
+.video-list .video-item.item-second > .video-content aside {
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.video-list .video-item.item-second > .video-content aside p {
+  color: #333;
+  font-size: 12px;
+}
+
+.video-list .video-item.item-second > footer {
+  margin-top: 17px;
+  background: #fff;
+}
+
+.video-list .video-item.item-second > footer a {
+  font-size: 14px;
+  display: block;
+  color: #333;
+}
+
+.video-list .video-item.item-third video {
+  height: 147px;
+}
+
+.video-list .video-item.item-third .video-content {
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.video-list .video-item.item-third .video-content p {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.video-list .video-item.item-third .video-content a {
+  font-size: 12px;
+  display: block;
+  color: #333;
+}
+
+/* ································6.视频区 */
+.footer {
+  background: #323232;
+}
+
+.footer > section {
+  box-sizing: border-box;
+  padding-left: 210px;
+  padding-right: 22px;
+  width: 705px;
+  height: 90px;
+  font-size: 12px;
+}
+
+.footer > section nav > ul {
+  display: flex;
+}
+
+.footer > section nav > ul li {
+  border-left: 4px solid #636363;
+  margin-right: 5px;
+  padding-left: 5px;
+  transform: scale(0.8);
+}
+
+.footer > section nav > ul li a {
+  color: white;
+}
+
+.footer > section nav > ul li:first-child {
+  border-left: 4px solid #eb1c23;
+}
+
+.footer > section nav > ul li:last-child {
+  border-right: 4px solid #636363;
+}
+
+.footer > section nav > ul li:last-child a {
+  padding-right: 10px;
+}
+
+.footer > section aside {
+  display: flex;
+  margin-top: 14px;
+}
+
+.footer > section aside figure {
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > section aside p {
+  font-size: 12px;
+  color: white;
+  transform: scale(0.8);
+}
+
+.footer > section aside img {
+  width: 46px;
+  height: 44px;
+}
+
+/* ································7.底部信息 */
+.footer-info {
+  background: #242424;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
