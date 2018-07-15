@@ -1,11 +1,51 @@
+
+@import "reset.scss";
+
 /*·································公共变量定义*/
-
-
-
-
+// 主题色
+$color-theme-energy:#9ed527;
 
 
 
 
 
 /*·································公共类定义*/
+.flex-c{
+    display: flex;
+    align-items: center;
+    
+}
+@mixin flex-h ($h:space-between,$v:center){
+    display: flex;
+    justify-content: $h;
+    align-items: $v;
+}
+@mixin flex-v ($h:center,$v:center){
+    display: flex;
+    flex-direction: column;
+    justify-content: $h;
+    align-items: $v;
+}
+
+
+
+/*·································index页面定义*/
+/*············导航*/
+
+
+.header{
+    height: 5.5rem;
+    background:#fff;
+    box-sizing: border-box;
+    padding: 0 1.625rem;
+    @include flex-h;
+}
+.logo-papa{
+    width: 29.375rem;
+    height: 3.125rem;
+    border-left:1px solid #d2d2d2;
+    border-right:1px solid #d2d2d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
