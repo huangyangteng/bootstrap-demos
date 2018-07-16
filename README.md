@@ -19,4 +19,6 @@
 
 ## d10033 手机h5  750
 
-* 问题1： 不能以设计稿640为基准，如果以640为基准，那么font-size为16px，那么iphone5的font-size为8px，浏览器最小字体12px，所以会出现尺寸偏差
+* 问题1： 不能以设计稿640为基准，如果以640为基准，那么font-size为16px，那么iphone5的font-size为8px，浏览器最小字体12px，所以会出现溢出
+* 使用420px的设计稿为基准，在iphone5中html的font-size为12.19px
+* 字体单独设置，使用单位em，媒体查询设置body的font-size
