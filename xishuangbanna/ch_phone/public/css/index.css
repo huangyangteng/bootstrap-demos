@@ -96,7 +96,6 @@ a.btn {
   color: #9ed527;
 }
 
-/*·································index页面定义*/
 /*············0 导航*/
 .header {
   height: 3.625rem;
@@ -134,6 +133,33 @@ a.btn {
   width: 5rem;
 }
 
+/*············. footer 页脚*/
+.footer {
+  height: 10.125rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 2rem;
+  padding-bottom: 0.875rem;
+  padding-left: 0;
+  padding-right: 0;
+  background: #131313;
+}
+
+.footer > header img {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-right: 1.25rem;
+}
+
+.footer > footer {
+  transform: scale(0.8);
+}
+
+/*·································index页面定义*/
 /*············1. banner*/
 .banner {
   height: 41.5rem;
@@ -451,30 +477,4 @@ a.btn {
   background-repeat: no-repeat;
   background-position: center;
   background-position: center .5rem;
-}
-
-/*············6. footer 页脚*/
-.footer {
-  height: 10.125rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding-top: 2rem;
-  padding-bottom: 0.875rem;
-  padding-left: 0;
-  padding-right: 0;
-  background: #131313;
-}
-
-.footer > header img {
-  width: 2.25rem;
-  height: 2.25rem;
-  margin-right: 1.25rem;
-}
-
-.footer > footer {
-  transform: scale(0.8);
 }

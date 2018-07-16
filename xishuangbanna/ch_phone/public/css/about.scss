@@ -1,0 +1,138 @@
+@import "reset.scss";
+@import "base.scss";
+
+
+h2{
+    font-size: 2.5em;
+}
+/*················变量定义*/
+$color-font-white:#dedede;
+
+// @mixin img-top($url,$img-width,$img-height){
+//     &::after{
+//         content: '';
+//         background-image: $url;
+//         background-position: center;
+//         background-size: $img-width $img-height;
+//         background-repeat: no-repeat;
+//         border-radius: 50%;
+//         background-color: $color-theme-energy;
+//         position: absolute;
+//         border: 7px solid #fff;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+// }
+.about-img-top{
+    &::after{
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        position: absolute;
+        // border: 9px solid $color-theme-energy;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/*················aboutus界面通用样式*/
+.padding-base{
+    box-sizing: border-box;
+    padding-left: .75rem;
+    padding-right: .875rem;
+}
+
+
+
+
+
+
+/*················about 关于我们界面样式*/
+
+/*·······1. about 关于我们*/
+.about{
+    height: 45rem;
+    @extend .padding-base;
+    @include bg-img(url(../img/about.png),cover);
+    padding-top:2.4rem;
+    >header{
+        @extend .h-title;
+        margin-bottom: 1rem;
+        >h2{
+            color: $color-theme-energy;
+        }
+    }
+    >div{
+        p{
+            color: $color-font-white;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+/*·······2. introduce 团队介绍*/
+.introduce{
+    @extend .padding-base;
+    padding-top: 2.125rem;
+    >header{
+        @extend .h-title;
+        margin-bottom: 5.875rem;
+
+    }
+    >div.introduce-item{
+        margin-bottom: 5.25rem;
+        border: 1px solid $color-theme-energy;
+        height: 14.375rem;
+        box-sizing: border-box;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        border-radius: .3125rem;
+        position: relative;
+        @extend .about-img-top;
+        &::after{
+            width: 6.25rem;
+            height: 6.25rem;
+            background-size: 6.25rem 6.25rem;
+            margin-top: -3.75rem;
+            
+        }
+        @include flex-v;
+        h5{
+            margin-bottom: 1em;
+        }
+    }
+    div.introduce-item:last-child{
+        margin-bottom: 3.125rem;
+    }
+    
+    
+}
+.introduce-item.item1{
+    &::after{
+        background-image: url(../img/person-1.png);
+    }
+}
+.introduce-item.item2{
+    &::after{
+        background-image: url(../img/person-2.png);
+    }
+}
+.introduce-item.item3{
+    &::after{
+        background-image: url(../img/person-3.png);
+    }
+}
+.introduce-item.item4{
+    &::after{
+        background-image: url(../img/person-4.png);
+    }
+}

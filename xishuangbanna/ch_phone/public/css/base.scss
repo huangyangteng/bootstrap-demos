@@ -1,0 +1,203 @@
+
+
+
+/*·----1. 字体大小定义--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+@media screen and (max-width:321px){
+    body{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    body{
+        font-size: 13px;
+    }
+}
+@media screen and (min-width:400px) and (max-width:641px){
+    body{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:641px){
+    body{
+        font-size: 16px;
+    }
+}
+p{
+    font-size: 1em;
+}
+h5{
+    font-size: 1.2em;
+}
+h3{
+    font-size: 1.5em;
+}
+
+
+
+
+
+/*·----公共变量定义--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+
+// 主题色
+$color-theme-energy:#9ed527;
+
+$color-font-black:#787878;
+
+
+
+@mixin flex-h ($h:space-between,$v:center){
+    display: flex;
+    justify-content: $h;
+    align-items: $v;
+}
+@mixin flex-v ($h:center,$v:center){
+    display: flex;
+    flex-direction: column;
+    justify-content: $h;
+    align-items: $v;
+}
+
+@mixin border-box($top:0,$bottom:0,$left:0,$right:0){
+    box-sizing: border-box;
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin bg-img($url,$mode:cover){
+    background-image: $url;
+    background-size: $mode;
+}
+@mixin bg-c($url,$width,$height){
+    background-image: $url;
+    background-size: $width $height;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+// 按钮
+@mixin btn-color($bg,$font){
+    transition: 1s all;
+    background:$bg;
+    color: $font;
+}
+@mixin btn-distance($padding-tb,$padding-lr,$font,$raduis){
+    padding: $padding-tb $padding-lr;
+    font-size: $font;
+    border-radius: $raduis;
+}
+// 绝对定位元素居中
+// 水平居中
+@mixin ab-c-h(){
+    left: 0;right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+// 垂直居中
+@mixin ab-c-v(){
+    bottom: 0;top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+
+/*·----公共类定义--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+
+// 字体颜色定义
+body{
+    color: $color-font-black;
+}
+
+
+
+a.btn-img{
+    display: flex;
+    @include flex-h(center);
+    @include btn-distance(.125rem, 1.5rem,1em, 20px );
+    @include btn-color(rgba(0,0,0,0.2),white );
+    border: 1px solid $color-theme-energy;
+    >img{
+        margin-right: 1rem;
+        width: 2.25rem;
+    }
+}
+a.btn{
+    @include btn-color(#fff,$color-font-black );
+    @include btn-distance(.375rem, 2rem,1.2em, 20px );
+
+    
+}
+.h-title{
+    text-align: center;
+    margin-bottom: 1.875rem;
+    h3:first-child{
+        color: $color-theme-energy;
+    }
+}
+
+
+
+/*·----公共组件  header footer--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+
+/*············0 导航*/
+
+
+.header{
+    height: 3.625rem;
+    background:#fff;
+    box-sizing: border-box;
+    padding: 0 1.125rem;
+    @include flex-h;
+    >img:first-child{
+        width: .75rem;
+        height: auto;
+        margin-right: 1.375rem;
+    }
+    >img:last-child{
+        width: 1.5rem;
+        height: auto;
+        margin-left: 1.125rem;
+    }
+
+}
+.logo-papa{ 
+    width: 22.875rem;
+    height: 2.125rem;
+    border-left:1px solid #d2d2d2;
+    border-right:1px solid #d2d2d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 5rem
+    }
+}
+/*············. footer 页脚*/
+.footer{
+    height: 10.125rem;
+    text-align: center;
+    @include flex-v;
+    @include border-box(2rem,.875rem ,0 ,0 );
+
+    background: #131313;
+    >header{
+        img{
+            width: 2.25rem;
+            height: 2.25rem;
+            margin-right: 1.25rem;
+        }
+    }
+    >footer{
+        transform: scale(0.8);
+    }
+}
