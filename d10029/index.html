@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- 定义轮播的样式 -->
     <link rel="stylesheet" href="css/pages/index.css">
-    <!-- 引入动画 -->
-    <link rel="stylesheet" href="./css/animate.min.css">
     <!-- 页面样式 -->
     <link rel="stylesheet" href="css/index.css">
 
@@ -32,7 +30,7 @@
                 </h1>
                 <ul>
                     <li>
-                        <a href="./index.html">首页</a>
+                        <a class="active" href="./index.html">首页</a>
                     </li>
                     <li>
                         <a href="javascript:;">活动专栏</a>
@@ -78,6 +76,7 @@
                 </div>
             </div>
             <!-- 如果需要分页器 -->
+            <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
 
@@ -697,18 +696,15 @@
 
     <script src="js/library/jquery-2.1.1.min.js"></script>
     <script src="js/plugins/modernizr.custom.97074.js"></script>
-    <!-- <script src="js/plugins/jquery.hoverdir.js"></script> -->
     <script src="js/plugins/swiper.min.js"></script>
     <script src="js/pages/index.js"></script>
     <script>
         // banner轮播
         new Swiper('#banner-swiper', {
-                // autoplay: true,
-                // direction: 'horizontal',
-                // speed:3000,
                 loop: true,
                 navigation: {
                 nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             }
         }) 
         //最热优惠轮播
