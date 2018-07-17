@@ -2,31 +2,15 @@
 @import "base.scss";
 
 
-h2{
-    font-size: 2.5em;
-}
-/*················变量定义*/
-$color-font-white:#dedede;
-$color-border-gray:#e2e2e2;
 
-// @mixin img-top($url,$img-width,$img-height){
-//     &::after{
-//         content: '';
-//         background-image: $url;
-//         background-position: center;
-//         background-size: $img-width $img-height;
-//         background-repeat: no-repeat;
-//         border-radius: 50%;
-//         background-color: $color-theme-energy;
-//         position: absolute;
-//         border: 7px solid #fff;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         margin-left: auto;
-//         margin-right: auto;
-//     }
-// }
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+
+
+/*················aboutus界面通用样式*/
+
 .about-img-top{
     &::after{
         content: '';
@@ -34,7 +18,6 @@ $color-border-gray:#e2e2e2;
         background-repeat: no-repeat;
         border-radius: 50%;
         position: absolute;
-        // border: 9px solid $color-theme-energy;
         top: 0;
         left: 0;
         right: 0;
@@ -42,18 +25,11 @@ $color-border-gray:#e2e2e2;
         margin-right: auto;
     }
 }
-
-
-/*················aboutus界面通用样式*/
 .padding-base{
     box-sizing: border-box;
     padding-left: .75rem;
     padding-right: .875rem;
 }
-
-
-
-
 
 
 /*················about 关于我们界面样式*/
@@ -290,3 +266,41 @@ a.btn{
         
     }
 }
+
+
+
+
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*------------------------------------------------*/
+/*··············· 加盟合作页面通用样式*/
+
+
+
+
+/*·················· 加盟合作页面样式*/
+
+
+/*·················· 1. 加盟合作banner*/
+
+.join-banner{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*·················· 加盟合作页面样式*/
+/*·················· 加盟合作页面样式*/
