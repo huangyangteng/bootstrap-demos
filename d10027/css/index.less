@@ -621,3 +621,48 @@
     -webkit-transition: 1s all;
     transition: 1s all;
 }
+
+
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+
+/*```````````````products页面单独样式*/
+
+.page-product{
+    // 产品内容部分
+    .product-list{
+        margin-bottom: 55px;
+    }
+    .product-list:last-child{
+        margin-bottom: 0;
+    }
+    // 页码部分
+    .product-page-number{
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pagination{
+        a{
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        a.active,a:hover{
+            text-decoration: none;
+            color: white;
+            background: #fdbc37;
+        }
+        
+    }
+
+}
