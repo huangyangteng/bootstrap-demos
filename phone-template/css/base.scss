@@ -1,0 +1,130 @@
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*```````````````````一 . 字体定义 */
+// 媒体查询设置字体大小
+@media screen and (max-width:321px){
+    body{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    body{
+        font-size: 13px;
+    }
+}
+@media screen and (min-width:400px) and (max-width:641px){
+    body{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:641px){
+    body{
+        font-size: 16px;
+    }
+}
+p{
+    font-size: 1em;
+}
+h5{
+    font-size: 1.2em;
+}
+h3{
+    font-size: 1.5em;
+}
+h2{
+    font-size: 2.5em;
+}
+
+// 设置使用的字体
+
+// 设置字体颜色
+body{
+    color: #333;
+}
+
+
+
+/*·----公共变量定义--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+
+// 主题色
+$color-theme-energy:#9ed527;
+
+$color-font-black:#787878;
+$color-font-white:#dedede;
+$color-border-gray:#e2e2e2;
+
+
+@mixin flex-h ($h:space-between,$v:center){
+    display: flex;
+    justify-content: $h;
+    align-items: $v;
+}
+@mixin flex-v ($h:center,$v:center){
+    display: flex;
+    flex-direction: column;
+    justify-content: $h;
+    align-items: $v;
+}
+
+@mixin border-box($top:0,$bottom:0,$left:0,$right:0){
+    box-sizing: border-box;
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin bg-img($url,$mode:cover){
+    background-image: $url;
+    background-size: $mode;
+}
+@mixin bg-c($url,$width,$height){
+    background-image: $url;
+    background-size: $width $height;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+// 按钮
+@mixin btn-color($bg,$font){
+    transition: 1s all;
+    background:$bg;
+    color: $font;
+}
+@mixin btn-distance($padding-tb,$padding-lr,$font,$raduis){
+    padding: $padding-tb $padding-lr;
+    font-size: $font;
+    border-radius: $raduis;
+}
+// 绝对定位元素居中
+// 水平居中
+@mixin ab-c-h(){
+    left: 0;right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+// 垂直居中
+@mixin ab-c-v(){
+    bottom: 0;top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+
+/*·----公共类定义--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+
+
+
+/*·----公共组件  header footer--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+

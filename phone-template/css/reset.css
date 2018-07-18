@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*样式重置*/
+body {
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
