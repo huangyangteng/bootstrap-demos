@@ -9,7 +9,7 @@
     <title>微点传媒</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- 定义轮播的样式 -->
-    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <!-- 页面样式 -->
     <link rel="stylesheet" href="css/index.css">
 
@@ -27,7 +27,7 @@
                     <a href="index.html">
                         <img src="images/logo-l.png" class="img-responsive">
                     </a>
-                </h1>
+                </h1> 
                 <ul>
                     <li>
                         <a class="active" href="./index.html">首页</a>
@@ -61,9 +61,12 @@
             </div>
         </header>
 
+        
+
         <!-- 轮播 -->
         
         <div class="swiper-container" id="banner-swiper">
+
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img class="img-responsive" src="./images/bg1.png" alt="">
@@ -75,10 +78,18 @@
                     <img class="img-responsive" src="./images/bg1.png" alt="">
                 </div>
             </div>
+
             <!-- 如果需要分页器 -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            
         </div>
+        <!-- Add Pagination -->
+        <aside class="pagination-papa">
+            <div class="banner-swiper-pagination"></div>
+
+        </aside>
+       
 
     </section>
 
@@ -443,10 +454,95 @@
     <!-- 推荐商家 -->
     <section class="shops center-h">
         <header>
-            <h1>推荐商家</h1>
+            <h2>推荐商家</h2>
         </header>
         <div class="swiper-container" id="shops">
             <div class="swiper-wrapper">
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/ab.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/ab.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/pangxie.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/pangxie.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/pangxie.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/pangxie.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+                <div class="swiper-slide shop-item">
+                    <img class="img-responsive" src="./images/shop-1.png" alt="">
+                    <div>
+                        <figure>
+                            <img src="./images/pangxie.png" alt="">
+                        </figure>
+                        <p>商家店名</p>
+                    </div>
+                    <footer>
+                        <p>商家简介 | 简介简介简介简介简介简介简介简介简介简介</p>
+                    </footer>
+                </div>
+            
                 <div class="swiper-slide shop-item">
                     <img class="img-responsive" src="./images/shop-1.png" alt="">
                     <div>
@@ -655,6 +751,10 @@
         // banner轮播
         new Swiper('#banner-swiper', {
                 loop: true,
+                pagination: {
+                el: '.banner-swiper-pagination',
+                type: 'fraction',
+            },
                 navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',

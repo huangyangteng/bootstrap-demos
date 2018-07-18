@@ -23,6 +23,7 @@ ul{
 
 body{
     background:#f5f5f5;
+    overflow-x: hidden;
 }
 
 /* ································1.banner */
@@ -32,11 +33,11 @@ body{
     &::after{
         content: '';
         width: 100%;
-        height: 2px*1.5625;
+        height: 2px;
         background:#ed1c24;
         position: absolute;
         left: 0;right: 0;
-        bottom: 12px*1.5625;
+        bottom: 26px;
     }
 }
 .banner{
@@ -58,11 +59,11 @@ body{
             display: flex;
             align-items: center;
             h1{
-                width: 107px*1.5625;
-                height: 43px*1.5625;
+                width: 107px;
+                height: 43px;
                 margin: 0;
-                margin-right: 30px*1.5625;
-                margin-top: -8px*1.5625;
+                margin-right: 30px;
+                margin-top: -8px;
                 &:hover{
                     animation:1s jello;
                 }
@@ -72,7 +73,7 @@ body{
                 display: flex;
                 align-items: center;
                 li{
-                    margin-right: 30px*1.5625;
+                    margin-right: 30px;
                     display: flex;
                     a{
                         color: white;
@@ -84,11 +85,14 @@ body{
                         &::after{
                             content: '';
                             width: 100%;
-                            height: 2px*1.5625;
+                            height: 2px;
                             background:#ed1c24;
                             position: absolute;
                             left: 0;right: 0;
-                            bottom: 12px*1.5625;
+                            bottom: 26px;
+                        }
+                        &:focus{
+                            text-decoration: 0;
                         }
                     }
                 }
@@ -99,8 +103,8 @@ body{
             display: flex;
             align-items: center;
             img.search{
-                width: 22px*1.5625;
-                height: 20px*1.5625;
+                width: 22px;
+                height: 20px;
                 cursor: pointer;
                 &:hover{
                     animation: 1s rubberBand;
@@ -108,9 +112,9 @@ body{
                 }
             }
             img.icon{
-                width: 20px*1.5625;
-                height: 20px*1.5625;
-                margin-right: 10px*1.5625;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
                 cursor: pointer;
                 &:hover{
                     animation: 1s rubberBand;
@@ -118,12 +122,12 @@ body{
                 }
             }
             span{
-                margin-right: 36px*1.5625;
-                margin-left: 10px*1.5625;
+                margin-right: 36px;
+                margin-left: 10px;
             }
             a{
                 color: white;
-                margin-right: 10px*1.5625;
+                margin-right: 10px;
                 &:hover{
                     animation: 1s rubberBand;
                     text-decoration: none;
@@ -136,9 +140,9 @@ body{
 }
 // 轮播 
 #banner-swiper{
-    height: 720px;
+    height: 700px;
     img{
-        height: 720px;
+        height: 700px;
     }
 }
 #banner-swiper .swiper-button-next{
@@ -153,6 +157,31 @@ body{
     width: 39px;
     height: 62px;
     right: 36px;
+}
+.pagination-papa{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 100;
+    // background:rgba(0,0,0,0.4);
+    right:0;
+    margin-top: -150px;
+    margin-right: 20px;
+
+}
+.banner-swiper-pagination{
+    color: white;
+    font-size: 40px;
+    font-weight: 200;
+    position: absolute;
+    z-index: 3;
+    width: 124px;
+    right: 0;
+    .swiper-pagination-current{
+        font-size: 80px;
+        margin-right: -8px;
+    }
+    
 }
 
 /* ································2.广告 */
@@ -200,6 +229,7 @@ body{
             margin-bottom: 15px;
             h2{
                 font-size: 30px;
+                margin-bottom: 24px;
             }
         }
         // content 推荐列表
@@ -379,21 +409,21 @@ body{
     }
     
     aside{
-        height: 42px;
+        height: 42px*1.5625;
         display: flex;
         justify-content: center;
         align-items: center;
         // 定义分页器
         .swiper-pagination{
         .swiper-pagination-bullet{
-            width: 20px;
-            height: 6px;
+            width: 20px*1.5625;
+            height: 6px*1.5625;
             border-radius: 0;
-            box-shadow: 0px 0px 2px rgba(255, 255, 255, 1);
-            margin-right: 6px;
+            box-shadow: 0px*1.5625 0px*1.5625 2px*1.5625 rgba(255, 255, 255, 1);
+            margin-right: 6px*1.5625;
             background:transparent;
             opacity: 1;
-            border: 2px solid #fff;
+            border: 2px*1.5625 solid #fff;
             &:focus{
                 outline: 0;
             }
@@ -416,10 +446,8 @@ body{
             padding: 10px 26px;
             background:#fff;
             color: #333;
-            &:hover{
-                animation: 1s tada;
-                text-decoration: none;
-            }
+            transition: 1s all;
+            
         }
     }
 }
@@ -526,13 +554,13 @@ body{
         text-align: center;
         a{
             box-sizing: border-box;
-            border-radius: 5px*1.5625;       
+            border-radius: 5px;       
             display: inline-block;
-            font-size: 14px*1.5625;
-            padding: 10px*1.5625 26px*1.5625;
+            font-size: 14px;
+            padding: 10px 26px;
             background:transparent;
             color: #333;
-            border: 1px*1.5625 solid #c2c2c2;
+            border: 1px solid #c2c2c2;
             &:hover{
                 animation: 1s tada;
                 text-decoration: none;
@@ -578,7 +606,9 @@ body{
     // 第一个视频区
     .video-item.item-first{
         video{
-            height: 136px*1.5625;
+            width: 352px;
+            // height: 136px*1.5625;
+
         }
         
         >.video-content{
@@ -616,7 +646,7 @@ body{
     // 第二个视频区
     .video-item.item-second{
         >header{
-            margin-bottom: 60px*1.5625;
+            margin-bottom: 60px;
             margin-left: -10px*1.5625;
             text-align: center;
             cursor: pointer;
@@ -657,9 +687,13 @@ body{
         >footer{
             margin-top: 17px*1.5625;
             background:#fff;
+            height: 64px;
             a{
                 font-size: 14px*1.5625;
-                display: block;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: #333;
                 &:hover{
                     animation: 1s pulse;
@@ -670,7 +704,8 @@ body{
     // 第三个视频区
     .video-item.item-third{
         video{
-            height: 147px*1.5625;
+            width: 352px;
+            height: 228px;
         }
         .video-content{
             background:#fff;
@@ -681,6 +716,7 @@ body{
                 font-size: 12px*1.5625;
                 color: #333;
                 text-align: center;
+                // margin: 0;
             }
             a{
                 font-size: 12px*1.5625;
@@ -765,4 +801,41 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+/*媒体查询显示轮播图的大小*/
+@media screen and (min-width:1501px){
+    #banner-swiper{
+    height: 992px;
+    img{
+        height: 992px;
+    }
+}
+    .pagination-papa{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 100;
+    // background:rgba(0,0,0,0.4);
+    right:0;
+    margin-top: -200px;
+    margin-right: 50px;
+
+}
+    .banner-swiper-pagination{
+        color: white;
+        font-size: 50px;
+        font-weight: 200;
+        position: absolute;
+        z-index: 3;
+        width: 124px;
+        right: 0;
+        .swiper-pagination-current{
+            font-size: 90px;
+            margin-right: -10px;
+        }
+        
+    }
 }
