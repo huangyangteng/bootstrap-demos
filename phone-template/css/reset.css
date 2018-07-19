@@ -9,6 +9,10 @@ a {
   text-decoration: 0;
 }
 
+button {
+  background: transparent;
+}
+
 ul {
   padding: 0;
   list-style: none;
