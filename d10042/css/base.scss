@@ -1,0 +1,260 @@
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*```````````````````一 . 字体与排版 */
+// 媒体查询设置字体大小
+@media screen and (max-width:321px){
+    body{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    body{
+        font-size: 13px;
+    }
+}
+@media screen and (min-width:400px) and (max-width:641px){
+    body{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:641px){
+    body{
+        font-size: 16px;
+    }
+}
+p{
+    font-size: 1em;
+}
+h5{
+    font-size: 1.2em;
+}
+h3{
+    font-size: 1.5em;
+}
+h2{
+    font-size: 2.5em;
+}
+
+// 设置使用的字体
+
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*``````````````````````````二、颜色主题定义*/
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         #32afb5; 
+$brand-primary-lighter: #28d0c2;
+// $brand-success:         #5cb85c !default;
+// $brand-info:            #5bc0de !default;
+// $brand-warning:         #f0ad4e !default;
+// $brand-danger:          #d9534f !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #f6f6f6 !default;
+//** Global text color on `<body>`.
+$text-color:            #666666!default;
+$text-color-drak:          #333;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*``````````````````````````三、公共类mixin定义*/
+@mixin flex-h ($h:space-between,$v:center){
+    display: flex;
+    flex-direction: row;
+    justify-content: $h;
+    align-items: $v;
+}
+@mixin flex-v ($h:center,$v:center){
+    display: flex;
+    flex-direction: column;
+    justify-content: $h;
+    align-items: $v;
+}
+@mixin pad-lr($left,$right){
+    box-sizing: border-box;
+    padding-left: $left;
+    padding-right: $right;
+}
+@mixin border-box($top:0,$bottom:0,$left:0,$right:0){
+    box-sizing: border-box;
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin bg-img($url,$mode:cover){
+    background-image: $url;
+    background-size: $mode;
+}
+@mixin bg-c($url,$width,$height){
+    background-image: $url;
+    background-size: $width $height;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+// 按钮
+@mixin btn-color($bg,$font){
+    transition: 1s all;
+    background:$bg;
+    color: $font;
+}
+@mixin btn-distance($padding-tb,$padding-lr,$font,$raduis){
+    padding: $padding-tb $padding-lr;
+    font-size: $font;
+    border-radius: $raduis;
+}
+// 绝对定位元素居中
+// 水平居中
+@mixin ab-c-h(){
+    left: 0;right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+// 垂直居中
+@mixin ab-c-v(){
+    bottom: 0;top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+// 表单input  颜色和尺寸   
+// 表单基础
+@mixin form-base($theme-color:#55ade9){
+    display: inline-block;
+    transition: 0.5s all;
+    border: 1px solid #ccc;
+    background-color:transparent;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    height: 34px;
+    box-sizing: border-box;
+    &:focus{
+        outline: 0;
+        border-color: $theme-color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    }
+}
+// 覆盖表单的颜色
+@mixin form-color(){
+
+}
+// 覆盖表单的尺寸 高度由pading填充
+@mixin form-size($width,$height,$pa-t,$pa-l,$font-size){
+    width: $width;
+    height: $height;
+    padding: $pa-t $pa-l;
+    font-size: $font-size;
+}
+
+// 按钮
+@mixin btn($theme-color:#55ade9){
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    &:focus{
+        outline: 0;
+        border-color: $theme-color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        
+    }
+    &:hover{
+        background-color: #e6e6e6;
+    }
+}
+// 显示的颜色 hover的颜色 focus的颜色
+@mixin btn-color($bg-color,$font-color,$border-color){
+    background:$bg-color;
+    border-color: $border-color;
+    color: $font-color;
+    &:focus{
+        color: $font-color;
+        // background-color: darken($bg-color, 10%);
+        border-color: darken($border-color, 25%);
+    }
+}
+@mixin btn-size($pa-tb,$pa-lr,$font-size,$border-radius:4px){
+    padding: $pa-tb $pa-lr;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+
+// .btn{
+    
+    
+// }
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·············四、公共类定义*/
+.p-form{
+    @include form-base;
+}
+.p-btn{
+    @include btn;
+}
+
+/*·----公共组件  header footer--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············五、公共组件定义*/
+
+
+
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············六、body定义（不涉及字体大小）*/
+
+body{
+    color: #666666;
+    line-height: 1;
+    background:$body-bg;
+
+}
+
+
