@@ -9,14 +9,97 @@
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············一. 公共变量*/
+// 表单input  颜色和尺寸   
+// 表单基础
+@mixin form-base($theme-color:#55ade9){
+    display: inline-block;
+    transition: 0.5s all;
+    border: 1px solid #ccc;
+    background-color:transparent;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    height: 34px;
+    box-sizing: border-box;
+    &:focus{
+        outline: 0;
+        border-color: $theme-color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    }
+}
+// 覆盖表单的颜色
+@mixin form-color(){
 
+}
+// 覆盖表单的尺寸 高度由pading填充
+@mixin form-size($width,$height,$pa-t,$pa-l,$font-size){
+    width: $width;
+    height: $height;
+    padding: $pa-t $pa-l;
+    font-size: $font-size;
+}
+
+// 按钮
+@mixin btn($theme-color:#55ade9){
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    &:focus{
+        outline: 0;
+        border-color: $theme-color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        
+    }
+    &:hover{
+        background-color: #e6e6e6;
+    }
+}
+// 显示的颜色 hover的颜色 focus的颜色
+@mixin btn-color($bg-color,$font-color,$border-color){
+    background:$bg-color;
+    border-color: $border-color;
+    color: $font-color;
+    &:focus{
+        color: $font-color;
+        background-color: darken($bg-color, 10%);
+        border-color: darken($border-color, 25%);
+    }
+}
+@mixin btn-size($pa-tb,$pa-lr,$font-size,$border-radius:4px){
+    padding: $pa-tb $pa-lr;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
 
 
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
+.pig-form{
+    @include form-base;
+}
+.pig-btn{
+    @include btn;
+}
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············三. body样式*/
+body{
+    padding: 50px;
+}
+
+
 
 
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. 区域特定样式*/
+
