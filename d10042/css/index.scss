@@ -10,6 +10,9 @@ $brand-wram:#f55a5f;
 $text-lighter:#b6b6b6;
 
 $border-color:#e5e5e5;
+
+$brand-info:#d9d9d9;
+$brand-danger:#ff2233;
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············一. 公共变量*/
@@ -58,9 +61,25 @@ $border-color:#e5e5e5;
 .p-tag.education{
     @include tag-color(#71befe, transparent, #71befe);
 }
+// footer上面的一块区域，要有向下的margin,因为footer是fixed的
 .last-section{
     margin-bottom: 3.5rem;
 }
+// 很小的字体
+.small-text{
+    font-size: .75rem;
+    font-weight: 200;
+}
+// 一行超出显示...
+.only-one-line{
+    max-width: 80%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -365,4 +384,58 @@ body{
             }
         }
     }
+}
+
+
+
+/*----------------------------【【meg页面样式】】---------------*/
+/*----------------------------【【meg页面样式】】---------------*/
+/*----------------------------【【meg页面样式】】---------------*/
+.p-meg{
+    margin: 0;
+    overflow: hidden;
+}
+.p-meg-item{
+    transition: 0.5s all;
+    // width: 8.375rem;
+    width: 8.375rem+26.25rem;
+    height: 5rem;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background:#fff;
+    @include flex-h(flex-start,flex-start);
+    >section{
+        width: 26.25rem;
+        height: 100%;
+        @include flex-h;
+        @include pad-lr(1rem,1rem);
+        >img{
+            width: 3.625rem;
+            height: 3.625rem;
+            border-radius: 50%;
+        }
+        >div{
+            width: 19.625rem;
+            >p{
+                margin-top: .625rem;
+                @include flex-h;
+            }
+        }
+    }
+    >aside{
+        width: 4.1875rem;
+        height: 100%;
+        background:$brand-info;
+        font-size: 1.05rem;
+        color: white;
+        @include flex-v;
+    }
+    >aside:last-child{
+        background:$brand-danger;
+    }
+}
+// 是否显示删除按钮
+.js-show{
+    transform: translateX(-8.375rem);
+    
 }

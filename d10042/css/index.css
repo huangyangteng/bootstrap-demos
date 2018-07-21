@@ -331,6 +331,19 @@ body {
   margin-bottom: 3.5rem;
 }
 
+.small-text {
+  font-size: .75rem;
+  font-weight: 200;
+}
+
+.only-one-line {
+  max-width: 80%;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -724,4 +737,75 @@ body {
 
 .p-dynamic-item > footer > section figure sup {
   vertical-align: .5rem;
+}
+
+/*----------------------------【【meg页面样式】】---------------*/
+/*----------------------------【【meg页面样式】】---------------*/
+/*----------------------------【【meg页面样式】】---------------*/
+.p-meg {
+  margin: 0;
+  overflow: hidden;
+}
+
+.p-meg-item {
+  transition: 0.5s all;
+  width: 34.625rem;
+  height: 5rem;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.p-meg-item > section {
+  width: 26.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.p-meg-item > section > img {
+  width: 3.625rem;
+  height: 3.625rem;
+  border-radius: 50%;
+}
+
+.p-meg-item > section > div {
+  width: 19.625rem;
+}
+
+.p-meg-item > section > div > p {
+  margin-top: .625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-meg-item > aside {
+  width: 4.1875rem;
+  height: 100%;
+  background: #d9d9d9;
+  font-size: 1.05rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-meg-item > aside:last-child {
+  background: #ff2233;
+}
+
+.js-show {
+  transform: translateX(-8.375rem);
 }
