@@ -6,6 +6,8 @@
 /*----------------------------【【index页面样式】】---------------*/
 
 $brand-wram:#f55a5f;
+
+$text-lighter:#b6b6b6;
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············一. 公共变量*/
@@ -26,6 +28,9 @@ $brand-wram:#f55a5f;
         height: .75rem;
         margin-right: .1rem;
     }
+}
+.last-section{
+    margin-bottom: 3.5rem;
 }
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
@@ -136,7 +141,7 @@ body{
 */
 .p-gallery{
     margin-top: 2.25rem;
-    width: 22.875rem;
+    width: 90%;/*设置宽度为90%，兼容所有的屏幕宽度*/
     margin-left: auto;
     margin-right: auto;
     >section{
@@ -203,4 +208,56 @@ body{
         opacity: 1;
     }
 
+}
+
+
+/*----------------------------【【meet页面样式】】---------------*/
+/*----------------------------【【meet页面样式】】---------------*/
+/*----------------------------【【meet页面样式】】---------------*/
+
+
+.p-meet{
+    @include pad-lr(.5rem,.5rem);
+    @include flex-h();
+    flex-wrap: wrap;
+    margin-top: .375rem;
+
+}
+.p-meet-item{
+    height: 15.5rem;
+    background:#fff;
+    flex-basis: 48.029%;
+    margin-bottom: .375rem;
+    border-radius: .375rem;
+    >section{
+        height: 12.375rem;
+        position: relative;
+        img{
+            width: 100%;
+            height: 12.375rem;
+        }
+        // 黑色遮罩层
+        >aside{
+            position: absolute;
+            left: 0;right: 0;
+            height: 1.375rem;
+            bottom: 0;
+            z-index: 1;
+            background:rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 1.05rem;
+            @include flex-h;
+            @include pad-lr(.875rem,.875rem);
+        }
+    }
+    >footer{
+        @include pad-lr(.875rem,.875rem);
+        margin-top: .25rem;
+        >b{
+            color: $text-lighter;
+            font-size: .84rem;
+            margin-top: .375rem;
+            display: inline-block;
+        }
+    }
 }
