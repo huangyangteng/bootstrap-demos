@@ -279,6 +279,25 @@ body {
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
+.p-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: .84rem;
+  width: 2.375rem;
+  height: 1.375rem;
+  background: #f55a5f;
+  border-radius: .3125rem;
+  color: white;
+}
+
+.p-tag > img {
+  width: .5rem;
+  height: .75rem;
+  margin-right: .1rem;
+}
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -430,17 +449,11 @@ body {
 
 .p-gallery > section {
   height: 29.125rem;
-  background: #fff;
-}
-
-.p-gallery > section img {
-  width: 100%;
-  max-width: 100%;
 }
 
 .p-gallery > footer {
   width: 100%;
-  height: 4.75rem;
+  height: 6.125rem;
   margin-top: 2.25rem;
   box-sizing: border-box;
   padding-left: 3.75rem;
@@ -453,4 +466,59 @@ body {
 
 .p-gallery > footer img {
   cursor: pointer;
+}
+
+.p-stack {
+  height: 30.5rem;
+  position: relative;
+  -webkit-perspective: 1000px;
+  -webkit-perspective-origin: 50% 150%;
+}
+
+.p-stack > li {
+  position: absolute;
+  height: 29.125rem;
+  background: #fff;
+  border-radius: .625rem;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+}
+
+.p-stack > li img.person {
+  width: 100%;
+  max-width: 100%;
+  height: 22.875rem;
+}
+
+.p-stack > li img + section {
+  box-sizing: border-box;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  margin-top: .5rem;
+}
+
+.p-stack > li img + section > h3 {
+  font-size: 1.125rem;
+}
+
+.p-stack > li img + section .p-tag {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.p-stack > li:first-child {
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  opacity: 1;
+}
+
+.p-stack > li:nth-child(2) {
+  transform: translate3d(0, 0, -60px);
+  z-index: 2;
+  opacity: 1;
+}
+
+.p-stack > li:nth-child(3) {
+  transform: translate3d(0, 0, -120px);
+  z-index: 1;
+  opacity: 1;
 }

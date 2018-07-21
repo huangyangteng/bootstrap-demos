@@ -5,7 +5,7 @@
 /*----------------------------【【index页面样式】】---------------*/
 /*----------------------------【【index页面样式】】---------------*/
 
-
+$brand-wram:#f55a5f;
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············一. 公共变量*/
@@ -13,7 +13,20 @@
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
-
+.p-tag{
+    @include flex-h(center,center);
+    font-size: .84rem;
+    width: 2.375rem;
+    height: 1.375rem;
+    background:$brand-wram;
+    border-radius: .3125rem;
+    color: white;
+    >img{
+        width: .5rem;
+        height: .75rem;
+        margin-right: .1rem;
+    }
+}
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -128,18 +141,11 @@ body{
     margin-right: auto;
     >section{
         height: 29.125rem;
-        background:#fff;
-        img{
-            width: 100%;
-            max-width: 100%;
-        }
-        img+section{
-            // @include felx-v();
-        }
+        
     }
     >footer{
         width: 100%;
-        height: 4.75rem;
+        height: 6.125rem;
         margin-top: 2.25rem;
         @include pad-lr(3.75rem,3.75rem);
         @include flex-h;
@@ -147,4 +153,54 @@ body{
             cursor: pointer;
         }
     }
+}
+.p-stack{
+    height: 30.5rem;
+    position: relative;
+    -webkit-perspective: 1000px;
+     -webkit-perspective-origin: 50% 150%;
+    >li{
+        position: absolute;
+        height: 29.125rem;
+        background:#fff;
+        img.person{
+            width: 100%;
+            max-width: 100%;
+            height: 22.875rem;
+        }
+        img+section{
+            // @include felx-v();
+            @include pad-lr(1.125rem,1.125rem);
+            margin-top: .5rem;
+            >h3{
+                font-size: 1.125rem;
+            }
+            .p-tag{
+                margin-top: .5rem;
+                margin-bottom: .5rem;
+
+            }
+            
+        }
+        border-radius: .625rem;
+        box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+    }
+    >li:first-child{
+        transform: translate3d(0,0,0);
+        z-index: 10;
+
+        opacity: 1;
+
+    }
+    >li:nth-child(2){
+        transform: translate3d(0,0,-60px);
+        z-index: 2;
+        opacity: 1;
+    }
+    >li:nth-child(3){
+        transform: translate3d(0,0,-120px);
+        z-index: 1;
+        opacity: 1;
+    }
+
 }
