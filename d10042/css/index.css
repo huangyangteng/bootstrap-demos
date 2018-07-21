@@ -794,6 +794,11 @@ body {
 /*----------------------------【【meg页面样式】】---------------*/
 /*----------------------------【【meg页面样式】】---------------*/
 /*----------------------------【【meg页面样式】】---------------*/
+/* 计算方式    420+68+68=556px 为整个页面的长度
+    页面100%   为420  则556为132.3809524%
+    420相对于556是 75.5395683
+    68相对于556是12.2302158
+*/
 .p-meg {
   margin: 0;
   overflow: hidden;
@@ -801,7 +806,7 @@ body {
 
 .p-meg-item {
   transition: 0.5s all;
-  width: 34.625rem;
+  width: 132.3809524%;
   height: 5rem;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -813,7 +818,7 @@ body {
 }
 
 .p-meg-item > section {
-  width: 26.25rem;
+  width: 75.5395683%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -831,7 +836,7 @@ body {
 }
 
 .p-meg-item > section > div {
-  width: 19.625rem;
+  width: 77%;
 }
 
 .p-meg-item > section > div > p {
@@ -843,7 +848,7 @@ body {
 }
 
 .p-meg-item > aside {
-  width: 4.1875rem;
+  width: 12.23021585%;
   height: 100%;
   background: #d9d9d9;
   font-size: 1.05rem;
@@ -859,7 +864,7 @@ body {
 }
 
 .js-show {
-  transform: translateX(-8.375rem);
+  transform: translateX(-24.46043%);
 }
 
 /*----------------------------【【my 页面样式】】---------------*/

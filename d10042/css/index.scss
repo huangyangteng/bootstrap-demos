@@ -424,21 +424,26 @@ $brand-danger:#ff2233;
 /*----------------------------【【meg页面样式】】---------------*/
 /*----------------------------【【meg页面样式】】---------------*/
 /*----------------------------【【meg页面样式】】---------------*/
+/* 计算方式    420+68+68=556px 为整个页面的长度
+    页面100%   为420  则556为132.3809524%
+    420相对于556是 75.5395683
+    68相对于556是12.2302158
+*/
 .p-meg{
     margin: 0;
     overflow: hidden;
 }
 .p-meg-item{
     transition: 0.5s all;
-    // width: 8.375rem;
-    width: 8.375rem+26.25rem;
+
+    width: 132.3809524%;
     height: 5rem;
     border-top: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
     background:#fff;
     @include flex-h(flex-start,flex-start);
     >section{
-        width: 26.25rem;
+        width: 75.5395683%;
         height: 100%;
         @include flex-h;
         @include pad-lr(1rem,1rem);
@@ -448,7 +453,7 @@ $brand-danger:#ff2233;
             border-radius: 50%;
         }
         >div{
-            width: 19.625rem;
+            width: 77%;
             >p{
                 margin-top: .625rem;
                 @include flex-h;
@@ -456,7 +461,7 @@ $brand-danger:#ff2233;
         }
     }
     >aside{
-        width: 4.1875rem;
+        width: 12.23021585%;
         height: 100%;
         background:$brand-info;
         font-size: 1.05rem;
@@ -469,7 +474,7 @@ $brand-danger:#ff2233;
 }
 // 是否显示删除按钮
 .js-show{
-    transform: translateX(-8.375rem);
+    transform: translateX(-24.4604317%);
     
 }
 
