@@ -36,6 +36,63 @@ body{
     }
 }
 
+/*----------------------------【【修改密码页面样式】】---------------*/
+/*----------------------------【【修改密码页面样式】】---------------*/
+/*----------------------------【【修改密码页面样式】】---------------*/
+// 忘记密码
+.p-forgetpass{
+    @include pad-lr(1.75rem,2rem);
+    >h3{
+        margin-top: 2.625rem;
+        margin-bottom: 2.625rem;
+    }
+    >footer{
+        margin-top: 3rem;
+    }
+}
+.p-changepass{
+    @include pad-lr(1.75rem,2rem);
+    padding-top: 1rem;
+    input{
+        text-align: right;
+    }
+    >footer{
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------【【兼容iphone5】】---------------*/
 /*----------------------------【【兼容iphone5】】---------------*/

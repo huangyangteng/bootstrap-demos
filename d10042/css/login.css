@@ -212,6 +212,7 @@ h2 {
 /*``````````````````````````三、公共类mixin定义*/
 ::placeholder {
   color: #c4cfd4;
+  font-size: .875rem;
 }
 
 /*·------------------------------------------------------------------------------------------*/
@@ -273,6 +274,22 @@ h2 {
   height: 1.625rem;
 }
 
+.p-form-two > span {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  box-sizing: border-box;
+  font-size: 1.05rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .p-btn {
   display: inline-block;
   padding: .625rem 3rem;
@@ -320,6 +337,143 @@ h2 {
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············五、公共组件定义*/
+/*==导航 header
+*/
+.p-header {
+  height: 3.125rem;
+  background: linear-gradient(to right, #28d0c2, #32afb5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 1.375rem;
+  padding-right: 0.9375rem;
+}
+
+.p-header > h4 {
+  font-size: 1.33rem;
+  font-weight: 300;
+}
+
+.p-header.three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-header.three > p {
+  font-size: 1.05rem;
+}
+
+.p-header.three > p img {
+  vertical-align: -0.125rem;
+  margin-right: 1px;
+}
+
+.p-header.two {
+  display: block;
+  line-height: 3.125rem;
+  text-align: center;
+  position: relative;
+}
+
+.p-header.two > img.left {
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  padding: 1.375rem;
+}
+
+.p-header.two > img.right {
+  position: absolute;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 0;
+  padding: 1.375rem;
+}
+
+.p-header.tab button {
+  padding: 0.25rem 2rem;
+  font-size: 1.33rem;
+  border-radius: 0.3125rem;
+  font-weight: 300;
+  background: transparent;
+  border-color: white;
+  color: white;
+}
+
+.p-header.tab button:focus {
+  color: white;
+  border-color: #bfbfbf;
+}
+
+.p-header.tab button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.p-header.tab button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.p-header.tab button.active {
+  background: white;
+  border-color: transparent;
+  color: #28d0c2;
+}
+
+.p-header.tab button.active:focus {
+  color: #28d0c2;
+  border-color: transparent;
+}
+
+/*==页脚 footer
+*/
+.p-footer {
+  height: 3.4375rem;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.p-footer > a {
+  font-size: .75rem;
+  /*fix it 小屏幕下字体不能小于12px*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-footer > a > img {
+  margin-bottom: .375rem;
+}
+
+.p-footer a.active {
+  color: #28d0c2;
+}
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
@@ -377,6 +531,42 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 5.625rem;
+}
+
+/*----------------------------【【修改密码页面样式】】---------------*/
+/*----------------------------【【修改密码页面样式】】---------------*/
+/*----------------------------【【修改密码页面样式】】---------------*/
+.p-forgetpass {
+  box-sizing: border-box;
+  padding-left: 1.75rem;
+  padding-right: 2rem;
+}
+
+.p-forgetpass > h3 {
+  margin-top: 2.625rem;
+  margin-bottom: 2.625rem;
+}
+
+.p-forgetpass > footer {
+  margin-top: 3rem;
+}
+
+.p-changepass {
+  box-sizing: border-box;
+  padding-left: 1.75rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+
+.p-changepass input {
+  text-align: right;
+}
+
+.p-changepass > footer {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
 }
 
 /*----------------------------【【兼容iphone5】】---------------*/

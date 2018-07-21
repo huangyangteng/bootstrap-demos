@@ -181,6 +181,7 @@ $link-hover-decoration: underline !default;
 }
 ::placeholder{
     color: #c4cfd4;
+    font-size: .875rem;
 }
 
 // 覆盖表单的颜色
@@ -268,6 +269,14 @@ $link-hover-decoration: underline !default;
         width: 5.475rem;
         height: 1.625rem;
     }
+    >span{
+        @include ab-c-v;
+        left: 0;
+        box-sizing: border-box;
+        font-size: 1.05rem;
+        color: #333;
+        @include flex-v;
+    }
 }
 .p-btn{
     @include btn;
@@ -285,6 +294,98 @@ $link-hover-decoration: underline !default;
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············五、公共组件定义*/
+/*==导航 header
+*/
+// 有一项的导航
+.p-header{
+    height: 3.125rem;
+    background:linear-gradient(to right,$brand-primary-lighter,$brand-primary);
+    @include flex-h(center,center);
+    color: #fff;
+    @include pad-lr(1.375rem,.9375rem);
+
+    >h4{
+        font-size: 1.33rem;
+        font-weight: 300;
+    }
+
+}
+// 有三个项目的导航
+.p-header.three{
+    @include flex-h;
+    >p{
+        font-size: 1.05rem;
+        img{
+            vertical-align: -0.125rem;
+            margin-right: 1px;
+        }
+    }
+
+}
+// 有只有两项的导航 
+.p-header.two{
+    display: block;
+    line-height: 3.125rem;
+    text-align: center;
+    position: relative;
+    >img.left{
+        position: absolute;
+        @include ab-c-v;
+        left: 0;
+        padding: 1.375rem;
+    }
+    >img.right{
+        position: absolute;
+        @include ab-c-v;
+        right: 0;
+        padding: 1.375rem;
+    }
+}
+// 动态页面选项卡导航tab
+.p-header.tab{
+    button{
+        @include btn-size(.25rem, 2rem, 1.33rem, .3125rem);
+        font-weight: 300;
+        @include btn-color(transparent,white,white );
+    }
+    button:first-child{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+    }
+    button:last-child{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    button.active{
+        @include btn-color(white,$brand-primary-lighter,transparent);
+    }
+}
+
+
+/*==页脚 footer
+*/
+.p-footer{
+    height: 3.4375rem;
+    background:#fff;
+    @include flex-h;
+    @include pad-lr(2.5rem,2.5rem);
+    position: fixed;
+    left: 0;right: 0;
+    bottom: 0;
+    z-index: 1;
+    >a{
+        font-size: .75rem;/*fix it 小屏幕下字体不能小于12px*/
+        @include flex-v;
+        >img{
+            margin-bottom: .375rem;
+        }
+    }
+    a.active{
+        color: $brand-primary-lighter;
+    }
+}
+
 
 
 
