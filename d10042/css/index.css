@@ -802,6 +802,7 @@ body {
 .p-meg {
   margin: 0;
   overflow: hidden;
+  height: 12px;
 }
 
 .p-meg-item {

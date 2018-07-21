@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/*样式重置*/
+/* Document
+   ========================================================================== */
+html {
+  line-height: 1;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ *移除body元素默认的margin
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/*
+设置这些元素的margin为0，在精准布局时重置这些元素的margin
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ *
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  color: #333;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/*
+<b标签用来语义化的强调，不用来加粗>
+*/
+b {
+  font-weight: normal;
+}
+
+/*为small设置正确的字体*/
+small {
+  font-size: 80%;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+button {
+  background: transparent;
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/* list and table
+   ========================================================================== */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+}
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*```````````````````一 . 字体与排版 */
+@media screen and (max-width: 321px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 641px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 641px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+p {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*``````````````````````````二、颜色主题定义*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*``````````````````````````三、公共类mixin定义*/
+::placeholder {
+  color: #c4cfd4;
+}
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·············四、公共类定义*/
+.p-form-pa {
+  margin-bottom: .75rem;
+}
+
+.p-form {
+  display: flex;
+  width: 100%;
+  transition: 0.5s all;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  padding: .875rem 0.1rem;
+  font-size: 1.12rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125rem;
+  box-sizing: border-box;
+}
+
+.p-form:focus {
+  outline: 0;
+  border-color: #28d0c2;
+}
+
+.p-form-two {
+  position: relative;
+}
+
+.p-form-two > img {
+  position: absolute;
+  width: 1.375rem;
+  height: .9375rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 0;
+  border: 10px solid transparent;
+}
+
+.p-form-two > button {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 0;
+  box-sizing: border-box;
+  width: 5.475rem;
+  height: 1.625rem;
+}
+
+.p-btn {
+  display: inline-block;
+  padding: .625rem 3rem;
+  font-size: 1.26rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  background: transparent;
+  color: #28d0c2;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #28d0c2;
+  border-radius: .5rem;
+}
+
+.p-btn:focus {
+  outline: 0;
+  border-color: #55ade9;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(19, 190, 171, 0.6);
+}
+
+.btn-primary {
+  background: #28d0c2;
+  border-color: transparent;
+  color: white;
+}
+
+.btn-primary:focus {
+  color: white;
+  border-color: transparent;
+}
+
+.btn-sm {
+  padding: 0.2rem 0.75rem;
+  font-size: 0.77rem;
+  border-radius: 0.375rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/*·----公共组件  header footer--------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············五、公共组件定义*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············六、body定义（不涉及字体大小）*/
+body {
+  color: #666666;
+  line-height: 1;
+  background: #f6f6f6;
+}
+
+/*----------------------------【【login页面样式】】---------------*/
+/*----------------------------【【login页面样式】】---------------*/
+/*----------------------------【【login页面样式】】---------------*/
+.p-text-help {
+  font-size: .84rem;
+  color: #c4cfd4;
+}
+
+.p-text-help.active {
+  color: #28d0c2;
+}
+
+body {
+  background: #fff;
+  height: 100%;
+}
+
+.p-cover {
+  height: 18.1875rem;
+  margin-bottom: 1.125rem;
+}
+
+.p-cover > img {
+  width: 100%;
+  height: 100%;
+}
+
+.p-reg {
+  box-sizing: border-box;
+  padding-left: 2.625rem;
+  padding-right: 2.75rem;
+}
+
+.p-reg .p-help {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-reg > footer {
+  margin-top: 1.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.625rem;
+}
+
+/*----------------------------【【兼容iphone5】】---------------*/
+/*----------------------------【【兼容iphone5】】---------------*/
+/*----------------------------【【兼容iphone5】】---------------*/
+@media screen and (max-width: 321px) {
+  .xs-options button {
+    padding: .25rem 2rem;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .xs-options button {
+    padding: .4rem 2.6rem;
+  }
+}
+
+/*----------------------------【【兼容平板】】---------------*/
+/*----------------------------【【兼容平板】】---------------*/
+/*----------------------------【【兼容平板】】---------------*/
+@media screen and (min-width: 500px) {
+  .p-cover {
+    height: 36rem;
+  }
+  .xs-options {
+    justify-content: center !important;
+  }
+  .xs-options button {
+    margin-right: 2.875rem;
+  }
+}

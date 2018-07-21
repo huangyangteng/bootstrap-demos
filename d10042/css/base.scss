@@ -161,22 +161,28 @@ $link-hover-decoration: underline !default;
 
 // 表单input  颜色和尺寸   
 // 表单基础
-@mixin form-base($theme-color:#55ade9){
-    display: inline-block;
+@mixin form-base($theme-color:$brand-primary-lighter){
+    display: flex;
+    width: 100%;
     transition: 0.5s all;
-    border: 1px solid #ccc;
+    border: 0;
+    border-bottom: 1px solid #ccc;
     background-color:transparent;
-    border-radius: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    height: 34px;
+    padding: .875rem 0.1rem;
+    font-size: 1.12rem;//17.92px
+    @include flex-h;
+    height: 3.125rem;//50px
     box-sizing: border-box;
     &:focus{
         outline: 0;
         border-color: $theme-color;
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
     }
+    
 }
+::placeholder{
+    color: #c4cfd4;
+}
+
 // 覆盖表单的颜色
 @mixin form-color(){
 
@@ -192,25 +198,25 @@ $link-hover-decoration: underline !default;
 // 按钮
 @mixin btn($theme-color:#55ade9){
     display: inline-block;
-    padding: 6px 12px;
-    font-size: 14px;
+    padding: .625rem 3rem;
+    font-size: 1.26rem;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    background:transparent;
+    color: $brand-primary-lighter;
     cursor: pointer;
     user-select: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid $brand-primary-lighter;
+    border-radius: .5rem;
     &:focus{
         outline: 0;
         border-color: $theme-color;
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(19,190,171,.6);
         
     }
-    &:hover{
-        background-color: #e6e6e6;
-    }
+  
 }
 // 显示的颜色 hover的颜色 focus的颜色
 @mixin btn-color($bg-color,$font-color,$border-color){
@@ -219,7 +225,6 @@ $link-hover-decoration: underline !default;
     color: $font-color;
     &:focus{
         color: $font-color;
-        // background-color: darken($bg-color, 10%);
         border-color: darken($border-color, 25%);
     }
 }
@@ -239,13 +244,43 @@ $link-hover-decoration: underline !default;
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*·············四、公共类定义*/
+.p-form-pa{//表单元素的父类有12px的下边距
+    margin-bottom: .75rem;
+}
 .p-form{
     @include form-base;
+}
+// 带有两项的表单
+.p-form-two{
+    position: relative;
+    >img{
+        position: absolute;
+        width: 1.375rem;
+        height: .9375rem;
+        @include ab-c-v;
+        right: 0;
+        border: 10px solid transparent;
+    }
+    >button{
+        @include ab-c-v;
+        right: 0;
+        box-sizing: border-box;
+        width: 5.475rem;
+        height: 1.625rem;
+    }
 }
 .p-btn{
     @include btn;
 }
-
+.btn-primary{
+    @include btn-color($brand-primary-lighter,white,transparent );
+}
+.btn-sm{
+    @include btn-size(.2rem, .75rem, .77rem, .375rem);
+}
+.btn-full{
+    width: 100%;
+}
 /*·----公共组件  header footer--------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
