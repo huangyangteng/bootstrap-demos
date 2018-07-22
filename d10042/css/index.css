@@ -212,6 +212,7 @@ h2 {
 /*``````````````````````````三、公共类mixin定义*/
 ::placeholder {
   color: #c4cfd4;
+  font-size: .875rem;
 }
 
 /*·------------------------------------------------------------------------------------------*/
@@ -271,6 +272,22 @@ h2 {
   box-sizing: border-box;
   width: 5.475rem;
   height: 1.625rem;
+}
+
+.p-form-two > span {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+  box-sizing: border-box;
+  font-size: 1.05rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .p-btn {
@@ -588,6 +605,23 @@ body {
 
 .p-click-more {
   border: 10px solid transparent;
+}
+
+.btn-wram {
+  background: #ff657d;
+  border-color: transparent;
+  color: white;
+}
+
+.btn-wram:focus {
+  color: white;
+  border-color: transparent;
+}
+
+.btn-size-attention {
+  padding: 0.625rem 2rem;
+  font-size: 1.12rem;
+  border-radius: 0.375rem;
 }
 
 /*·------------------------------------------------------------------------------------------*/
@@ -1206,11 +1240,83 @@ body {
   border-left: 0;
 }
 
+/*----------------------------【【用户详情user-detail.html】】---------------*/
+/*----------------------------【【用户详情user-detail.html】】---------------*/
+/*----------------------------【【用户详情user-detail.html】】---------------*/
+body.p-user-detail > section {
+  margin-bottom: .375rem;
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: #fff;
+}
+
+/*````````````````````用户信息*/
+.user-info {
+  padding-top: 1.5rem;
+}
+
+.user-info > section {
+  height: 7.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info > section > img {
+  width: 7.375rem;
+  max-width: 7.375rem;
+  height: 7.375rem;
+}
+
+.user-info > section > hgroup {
+  margin-top: 1rem;
+}
+
+.user-info > section > hgroup h3 {
+  font-size: 1.12rem;
+  margin-bottom: .75rem;
+}
+
+.user-info > section > hgroup p {
+  font-size: .84rem;
+  margin-bottom: .75rem;
+}
+
+.user-info > section > hgroup b {
+  font-size: .84rem;
+}
+
+.user-info > footer {
+  height: 5.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.user-info > footer > img:not(:last-child) {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: .625rem;
+}
+
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
 /*----------------------------【【兼容iphone5】】---------------*/
 /*----------------------------【【兼容iphone5】】---------------*/
 /*----------------------------【【兼容iphone5】】---------------*/
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 361px) {
   .xs-imgs-cert {
     max-width: 60%;
   }
+  /*用户详情*/
 }

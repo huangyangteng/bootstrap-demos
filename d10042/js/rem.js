@@ -6,7 +6,7 @@
         // 当前页面宽度相对于 420 宽的缩放比例，可根据自己需要修改。
         var scale = document.documentElement.clientWidth / 420;
         // 设置页面根节点字体大小
-        document.documentElement.style.fontSize = (baseSize * Math.min(scale, 5)) + 'px'
+        document.documentElement.style.fontSize = (baseSize * Math.min(scale, 8)) + 'px'
     }
     // 初始化
     setRem();

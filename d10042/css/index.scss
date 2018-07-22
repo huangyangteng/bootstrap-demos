@@ -115,6 +115,15 @@ $brand-danger:#ff2233;
 .p-click-more{
     border: 10px solid transparent;
 }
+
+
+
+.btn-wram{
+    @include btn-color(#ff657d,white,transparent );
+}
+.btn-size-attention{
+    @include btn-size(.625rem, 2rem, 1.12rem, .375rem);
+}
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -592,13 +601,153 @@ $brand-danger:#ff2233;
 }
 
 
+/*----------------------------【【用户详情user-detail.html】】---------------*/
+/*----------------------------【【用户详情user-detail.html】】---------------*/
+/*----------------------------【【用户详情user-detail.html】】---------------*/
+// 每个section的下边距的padding
+body.p-user-detail>section{
+    margin-bottom: .375rem;
+    @include pad-lr(1.5rem,1.5rem);
+    background:#fff;
+}
+
+/*````````````````````用户信息*/
+.user-info{
+    padding-top: 1.5rem;
+    >section{
+        height: 7.375rem;
+        @include flex-h;
+        >img{
+
+            width: 7.375rem;
+            max-width: 7.375rem;
+            height: 7.375rem;
+        }
+        >hgroup{
+            margin-top: 1rem;
+            h3{
+                font-size: 1.12rem;
+                margin-bottom: .75rem;
+            }
+            p{
+                font-size: .84rem;
+                margin-bottom: .75rem;
+            }
+            b{
+                font-size: .84rem;
+            }
+        }
+    }
+    >footer{
+        height: 5.875rem;
+        @include flex-h(flex-start,center);
+        white-space: nowrap;
+        overflow: scroll;
+        >img:not(:last-child){
+            width: 3.125rem;
+            height: 3.125rem;
+            margin-right: .625rem;
+        }
+    }
+}
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+/*````````````````````用户信息*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------【【兼容iphone5】】---------------*/
 /*----------------------------【【兼容iphone5】】---------------*/
 /*----------------------------【【兼容iphone5】】---------------*/
-@media screen and (max-width:321px){
+
+@media screen and (max-width:361px){
     // my.html
     .xs-imgs-cert{
         max-width: 60%;   
     }
+    /*用户详情*/
+    // body.p-user-detail>section{
+    //     @include pad-lr(0.5rem,0.5rem);
+    // }
+    // .xs-user-info{
+    //     >section{
+    //         >img{
+    //             width: 6rem;
+    //             margin-right: .625rem;
+    //         }
+    //         button{
+    //             padding: 8px 25px;
+    //         }
+    //     }
+    // }
 }
