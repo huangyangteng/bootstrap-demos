@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>实名认证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
+</head>
+<body class="p-cert-name-body">
+ 
+  
+    <header class="p-header two"> 
+        <img class="left" src="imgs/icon/return-arrow.png">
+        <h4>实名认证</h4>
+    </header>
+    <section class="p-cert-name">
+        <section>
+            <div class="p-form-pa  p-form-two">
+                <span>真实姓名</span>
+                <input type="text" class="p-form" placeholder="请输入...">
+            </div>
+            <div class="p-form-pa  p-form-two">
+                <span>证件号类型</span>
+                <input type="text" class="p-form" placeholder="请选择 >">
+            </div>
+            <div class="p-form-pa  p-form-two">
+                <span>证件号</span>
+                <input type="text" class="p-form  no-border" placeholder="请输入...">
+            </div>
+        </section>
+        
+        <section class="p-file block">
+            <label for="id-card-front"></label>
+            <input type="file" id="id-card-front">
+            <p>添加身份证正面</p>
+        </section>
+        <section class="p-file block">
+            <label for="id-card-reverse"></label>
+            <input type="file" id="id-card-reverse">
+            <p>添加身份证反面</p>
+        </section>
+
+        <footer>
+            <button class="p-btn btn-primary btn-full">确认</button>
+        </footer>
+
+    </section>
+</body>
+</html>

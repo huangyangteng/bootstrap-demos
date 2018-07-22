@@ -60,6 +60,15 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
 $brand-primary:         #32afb5; 
 $brand-primary-lighter: #28d0c2;
+
+$brand-wram:#f55a5f;
+
+$text-lighter:#b6b6b6;
+
+$border-color:#e5e5e5;
+
+$brand-info:#d9d9d9;
+$brand-danger:#ff2233;
 // $brand-success:         #5cb85c !default;
 // $brand-info:            #5bc0de !default;
 // $brand-warning:         #f0ad4e !default;
@@ -239,6 +248,19 @@ $link-hover-decoration: underline !default;
     font-size: $font-size;
     border-radius: $border-radius;
 }
+@mixin tag-size($width,$height,$font-size:14px,$border-radius:6px){
+
+    width: $width;
+    height: $height;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+@mixin tag-color($color,$bg-color,$border-color){
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+}
+
 
 // .btn{
     
@@ -282,6 +304,7 @@ $link-hover-decoration: underline !default;
         color: #333;
         @include flex-v;
     }
+    
 }
 .p-btn{
     @include btn;
@@ -295,6 +318,173 @@ $link-hover-decoration: underline !default;
 .btn-full{
     width: 100%;
 }
+.p-tag.index{
+    @include flex-h(center,center);
+    font-size: .84rem;
+    width: 2.375rem;
+    height: 1.375rem;
+    background:$brand-wram;
+    border-radius: .3125rem;
+    color: white;
+    >img{
+        width: .5rem;
+        height: .75rem;
+        margin-right: .1rem;
+    }
+}
+.p-tag{
+    @include flex-h(center,center);
+    
+    @include tag-size(3.125rem, 1.375rem, .84rem, .3125rem);
+    white-space: nowrap;
+}
+.p-tag.age{
+    @include tag-color(#ca75ea, transparent, #ca75ea);
+}
+.p-tag.height{
+    @include tag-color(#f19ec2, transparent, #f19ec2);
+}
+.p-tag.education{
+    @include tag-color(#71befe, transparent, #71befe);
+}
+.p-tag.star{
+    @include tag-color(#fff, #ca75ea, #ca75ea);
+}
+.p-tag.theme1{
+    @include tag-color(#fff, #71befe, #71befe);
+    width:4.4rem;
+}
+.p-tag.theme2{
+    @include tag-color(#fff, #f19ec2, #f19ec2);
+}
+.p-tag-user{
+    box-sizing: border-box;
+    padding: .25rem 1.125rem;
+    font-size: .84rem;
+    background:#bde5e8;
+    border-radius: .25rem;
+    display: inline-block;
+    margin-bottom: .375rem;
+}
+.p-tag-user.warm{
+    background:#f9d1e3;
+}
+
+// footer上面的一块区域，要有向下的margin,因为footer是fixed的
+.last-section{
+    margin-bottom: 3.5rem;
+}
+// 很小的字体
+.small-text{
+    font-size: .75rem;
+    font-weight: 200;
+    line-height: 1.2;
+}
+// 一行超出显示...
+.only-one-line{
+    max-width: 80%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+// 使用label模拟表单
+// 内联级别
+.p-file{
+    display: inline-block;
+    >input{
+        display: none;
+
+    }
+    >label{
+        display: inline-block;
+        border: 1px dotted $border-color;
+        box-sizing: border-box;
+        border-radius: .25rem;
+        width: 4rem;
+        height: 3.875rem;
+        position: relative;
+        &::before{
+            content: '';
+            width: 2.5rem;
+            height: .25rem;
+            background:#d8d8d8;
+           @include ab-c;
+        }
+        &::after{
+            content: '';
+            height: 2.5rem;
+            width: .25rem;
+            @include ab-c;
+            background:#d8d8d8;
+        }
+    }
+}
+// 块状
+.p-file.block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23.5rem;
+    height: 10.5rem;
+    border-radius: .625rem;
+    margin-bottom: .625rem;
+
+    background:#fff;
+    position: relative;
+    >label{
+        width: 23.5rem;
+        height: 10.5rem;
+        border-radius: .625rem;
+        &::after,&::before{
+            background:#bec9db;
+        }
+    }
+    >p{
+        @include ab-c();
+        width: 6.125rem;
+        height: 1.125rem;
+        margin-bottom: 30px;
+        color: #cecece;
+        font-size: .84rem;
+        white-space: nowrap;
+    }
+}
+
+// 扩大点击区域
+.p-click-more{
+    border: 10px solid transparent;
+}
+
+// 前面带有横杠的小标题
+.p-title{
+    font-size: .98rem;
+    font-weight: 800;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-left: 14px;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background:$brand-primary-lighter;
+        left: -14px;
+    }
+}
+.p-title.inline{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.btn-wram{
+    @include btn-color(#ff657d,white,transparent );
+}
+// 关注按钮
+.btn-size-attention{
+    @include btn-size(.625rem, 2rem, 1.12rem, .375rem);
+}
+
 /*·----公共组件  header footer--------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/

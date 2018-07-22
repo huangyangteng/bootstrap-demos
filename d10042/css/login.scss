@@ -1,6 +1,30 @@
 @import 'reset.scss';
 @import 'base.scss';
 
+
+// `````````公共界面样式
+// label占满一行
+.p-label{
+    @include flex-h(flex-start,center);
+    color: #bababa;
+    font-size: 1.05rem;
+    height: 2.1875rem;
+}
+.cert-form-pa{
+    margin-bottom: .75rem;
+}
+// 灭有border的input
+.no-border{
+    border: 0;
+}
+
+
+
+
+
+
+
+
 /*----------------------------【【login页面样式】】---------------*/
 /*----------------------------【【login页面样式】】---------------*/
 /*----------------------------【【login页面样式】】---------------*/
@@ -69,12 +93,56 @@ body{
 
 
 
+/*----------------------------【【学历认证】】---------------*/
+/*----------------------------【【学历认证】】---------------*/
+/*----------------------------【【学历认证】】---------------*/
+
+.p-cert-education{
+    @include pad-lr(2.375rem,2.4375rem);
+    padding-top: 2.375rem;
+    img{
+        width: .75rem;
+        height: 1.375rem;
+    }
+     >footer{
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1.25rem;
+        right: 1.25rem;
+        button{
+            background:#25aab2;
+        }
+    }
+}
 
 
-
-
-
-
+/*----------------------------【【身份认证】】---------------*/
+/*----------------------------【【身份认证】】---------------*/
+/*----------------------------【【身份认证】】---------------*/
+.p-cert-name-body{
+    background:#f3f4f6;
+}
+.p-cert-name{
+    // @include border-box(1.1875rem,2.875rem,1.375rem,1.4375rem);
+    >section:first-child{
+        margin-top: 1.1875rem;
+        background:#fff;
+        @include pad-lr(1.375rem,1.375rem);
+        input{
+            text-align: right;
+        }
+    }
+   
+    >footer{
+        position: absolute;
+        bottom: 3rem;
+        left: 1.25rem;
+        right: 1.25rem;
+        button{
+            background:#25aab2;
+        }
+    } 
+}
 
 
 

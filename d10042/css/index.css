@@ -337,6 +337,230 @@ h2 {
   width: 100%;
 }
 
+.p-tag.index {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: .84rem;
+  width: 2.375rem;
+  height: 1.375rem;
+  background: #f55a5f;
+  border-radius: .3125rem;
+  color: white;
+}
+
+.p-tag.index > img {
+  width: .5rem;
+  height: .75rem;
+  margin-right: .1rem;
+}
+
+.p-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  height: 1.375rem;
+  font-size: 0.84rem;
+  border-radius: 0.3125rem;
+  white-space: nowrap;
+}
+
+.p-tag.age {
+  color: #ca75ea;
+  background-color: transparent;
+  border: 1px solid #ca75ea;
+}
+
+.p-tag.height {
+  color: #f19ec2;
+  background-color: transparent;
+  border: 1px solid #f19ec2;
+}
+
+.p-tag.education {
+  color: #71befe;
+  background-color: transparent;
+  border: 1px solid #71befe;
+}
+
+.p-tag.star {
+  color: #fff;
+  background-color: #ca75ea;
+  border: 1px solid #ca75ea;
+}
+
+.p-tag.theme1 {
+  color: #fff;
+  background-color: #71befe;
+  border: 1px solid #71befe;
+  width: 4.4rem;
+}
+
+.p-tag.theme2 {
+  color: #fff;
+  background-color: #f19ec2;
+  border: 1px solid #f19ec2;
+}
+
+.p-tag-user {
+  box-sizing: border-box;
+  padding: .25rem 1.125rem;
+  font-size: .84rem;
+  background: #bde5e8;
+  border-radius: .25rem;
+  display: inline-block;
+  margin-bottom: .375rem;
+}
+
+.p-tag-user.warm {
+  background: #f9d1e3;
+}
+
+.last-section {
+  margin-bottom: 3.5rem;
+}
+
+.small-text {
+  font-size: .75rem;
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+.only-one-line {
+  max-width: 80%;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.p-file {
+  display: inline-block;
+}
+
+.p-file > input {
+  display: none;
+}
+
+.p-file > label {
+  display: inline-block;
+  border: 1px dotted #e5e5e5;
+  box-sizing: border-box;
+  border-radius: .25rem;
+  width: 4rem;
+  height: 3.875rem;
+  position: relative;
+}
+
+.p-file > label::before {
+  content: '';
+  width: 2.5rem;
+  height: .25rem;
+  background: #d8d8d8;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.p-file > label::after {
+  content: '';
+  height: 2.5rem;
+  width: .25rem;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #d8d8d8;
+}
+
+.p-file.block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23.5rem;
+  height: 10.5rem;
+  border-radius: .625rem;
+  margin-bottom: .625rem;
+  background: #fff;
+  position: relative;
+}
+
+.p-file.block > label {
+  width: 23.5rem;
+  height: 10.5rem;
+  border-radius: .625rem;
+}
+
+.p-file.block > label::after, .p-file.block > label::before {
+  background: #bec9db;
+}
+
+.p-file.block > p {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 6.125rem;
+  height: 1.125rem;
+  margin-bottom: 30px;
+  color: #cecece;
+  font-size: .84rem;
+  white-space: nowrap;
+}
+
+.p-click-more {
+  border: 10px solid transparent;
+}
+
+.p-title {
+  font-size: .98rem;
+  font-weight: 800;
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 14px;
+}
+
+.p-title::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #28d0c2;
+  left: -14px;
+}
+
+.p-title.inline {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.btn-wram {
+  background: #ff657d;
+  border-color: transparent;
+  color: white;
+}
+
+.btn-wram:focus {
+  color: white;
+  border-color: transparent;
+}
+
+.btn-size-attention {
+  padding: 0.625rem 2rem;
+  font-size: 1.12rem;
+  border-radius: 0.375rem;
+}
+
 /*·----公共组件  header footer--------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
@@ -501,193 +725,6 @@ body {
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
-.p-tag.index {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: .84rem;
-  width: 2.375rem;
-  height: 1.375rem;
-  background: #f55a5f;
-  border-radius: .3125rem;
-  color: white;
-}
-
-.p-tag.index > img {
-  width: .5rem;
-  height: .75rem;
-  margin-right: .1rem;
-}
-
-.p-tag {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 3.125rem;
-  height: 1.375rem;
-  font-size: 0.84rem;
-  border-radius: 0.3125rem;
-  white-space: nowrap;
-}
-
-.p-tag.age {
-  color: #ca75ea;
-  background-color: transparent;
-  border: 1px solid #ca75ea;
-}
-
-.p-tag.height {
-  color: #f19ec2;
-  background-color: transparent;
-  border: 1px solid #f19ec2;
-}
-
-.p-tag.education {
-  color: #71befe;
-  background-color: transparent;
-  border: 1px solid #71befe;
-}
-
-.p-tag.star {
-  color: #fff;
-  background-color: #ca75ea;
-  border: 1px solid #ca75ea;
-}
-
-.p-tag.theme1 {
-  color: #fff;
-  background-color: #71befe;
-  border: 1px solid #71befe;
-  width: 4.4rem;
-}
-
-.p-tag.theme2 {
-  color: #fff;
-  background-color: #f19ec2;
-  border: 1px solid #f19ec2;
-}
-
-.p-tag-user {
-  box-sizing: border-box;
-  padding: .25rem 1.125rem;
-  font-size: .84rem;
-  background: #bde5e8;
-  border-radius: .25rem;
-  display: inline-block;
-  margin-bottom: .375rem;
-}
-
-.p-tag-user.warm {
-  background: #f9d1e3;
-}
-
-.last-section {
-  margin-bottom: 3.5rem;
-}
-
-.small-text {
-  font-size: .75rem;
-  font-weight: 200;
-  line-height: 1.2;
-}
-
-.only-one-line {
-  max-width: 80%;
-  display: inline-block;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.p-file {
-  display: inline-block;
-}
-
-.p-file > input {
-  display: none;
-}
-
-.p-file > label {
-  display: inline-block;
-  border: 1px dotted #e5e5e5;
-  box-sizing: border-box;
-  border-radius: .25rem;
-  width: 4rem;
-  height: 3.875rem;
-  position: relative;
-}
-
-.p-file > label::before {
-  content: '';
-  width: 2.5rem;
-  height: .25rem;
-  background: #d8d8d8;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-}
-
-.p-file > label::after {
-  content: '';
-  height: 2.5rem;
-  width: .25rem;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background: #d8d8d8;
-}
-
-.p-click-more {
-  border: 10px solid transparent;
-}
-
-.p-title {
-  font-size: .98rem;
-  font-weight: 800;
-  position: relative;
-  margin-bottom: 1rem;
-  margin-left: 14px;
-}
-
-.p-title::before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 100%;
-  background: #28d0c2;
-  left: -14px;
-}
-
-.p-title.inline {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-.btn-wram {
-  background: #ff657d;
-  border-color: transparent;
-  color: white;
-}
-
-.btn-wram:focus {
-  color: white;
-  border-color: transparent;
-}
-
-.btn-size-attention {
-  padding: 0.625rem 2rem;
-  font-size: 1.12rem;
-  border-radius: 0.375rem;
-}
-
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -1334,6 +1371,3 @@ body {
 }
 
 /*````````````````````用户信息*/
-/*----------------------------【【兼容iphone5】】---------------*/
-/*----------------------------【【兼容iphone5】】---------------*/
-/*----------------------------【【兼容iphone5】】---------------*/
