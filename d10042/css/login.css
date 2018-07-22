@@ -59,6 +59,10 @@ img {
   border-style: none;
 }
 
+figure {
+  margin: 0;
+}
+
 /* Forms
    ========================================================================== */
 button {
@@ -381,6 +385,8 @@ h2 {
 }
 
 .p-header.two > img.left {
+  width: .75rem;
+  height: 1.125rem;
   position: absolute;
   position: absolute;
   bottom: 0;
@@ -467,6 +473,8 @@ h2 {
 }
 
 .p-footer > a > img {
+  width: 1.4375rem;
+  height: 1.5625rem;
   margin-bottom: .375rem;
 }
 
@@ -567,34 +575,4 @@ body {
   bottom: 1.25rem;
   left: 1.25rem;
   right: 1.25rem;
-}
-
-/*----------------------------【【兼容iphone5】】---------------*/
-/*----------------------------【【兼容iphone5】】---------------*/
-/*----------------------------【【兼容iphone5】】---------------*/
-@media screen and (max-width: 321px) {
-  .xs-options button {
-    padding: .25rem 2rem;
-  }
-}
-
-@media screen and (max-width: 361px) {
-  .xs-options button {
-    padding: .4rem 2.6rem;
-  }
-}
-
-/*----------------------------【【兼容平板】】---------------*/
-/*----------------------------【【兼容平板】】---------------*/
-/*----------------------------【【兼容平板】】---------------*/
-@media screen and (min-width: 500px) {
-  .p-cover {
-    height: 36rem;
-  }
-  .xs-options {
-    justify-content: center !important;
-  }
-  .xs-options button {
-    margin-right: 2.875rem;
-  }
 }

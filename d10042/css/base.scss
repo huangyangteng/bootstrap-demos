@@ -334,6 +334,8 @@ $link-hover-decoration: underline !default;
     text-align: center;
     position: relative;
     >img.left{
+        width: .75rem;
+        height: 1.125rem;
         position: absolute;
         @include ab-c-v;
         left: 0;
@@ -383,6 +385,8 @@ $link-hover-decoration: underline !default;
         font-size: .75rem;/*fix it 小屏幕下字体不能小于12px*/
         @include flex-v;
         >img{
+            width: 1.4375rem;
+            height: 1.5625rem;
             margin-bottom: .375rem;
         }
     }

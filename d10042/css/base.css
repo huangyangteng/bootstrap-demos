@@ -222,6 +222,8 @@ h2 {
 }
 
 .p-header.two > img.left {
+  width: .75rem;
+  height: 1.125rem;
   position: absolute;
   position: absolute;
   bottom: 0;
@@ -308,6 +310,8 @@ h2 {
 }
 
 .p-footer > a > img {
+  width: 1.4375rem;
+  height: 1.5625rem;
   margin-bottom: .375rem;
 }
 
