@@ -338,6 +338,9 @@ $link-hover-decoration: underline !default;
     @include tag-size(3.125rem, 1.375rem, .84rem, .3125rem);
     white-space: nowrap;
 }
+.p-tag.tag-primary{
+    @include tag-color($brand-primary, transparent, $brand-primary);
+}
 .p-tag.age{
     @include tag-color(#ca75ea, transparent, #ca75ea);
 }
@@ -383,6 +386,13 @@ $link-hover-decoration: underline !default;
 // 一行超出显示...
 .only-one-line{
     max-width: 80%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.only-one-line-full{
+    max-width: 88%;
     display: inline-block;
     white-space: nowrap;
     text-overflow: ellipsis;

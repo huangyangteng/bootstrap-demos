@@ -3,6 +3,8 @@
 
 
 // `````````公共界面样式
+
+$brand-primary-draker:#25aab2;
 // label占满一行
 .p-label{
     @include flex-h(flex-start,center);
@@ -145,5 +147,133 @@ body{
 }
 
 
+/*----------------------------【【个人信息】】---------------*/
+/*----------------------------【【个人信息】】---------------*/
+/*----------------------------【【个人信息】】---------------*/
+
+.personal-info{
+    @include pad-lr(1.375rem,1.1875rem);
+    padding-top: 1.375rem;
+    >header{
+        font-size: .84rem;
+        margin-bottom: 1.25rem;
+        @include flex-v;
+        >img{
+            width: 7.25rem;
+            height: 7.25rem;
+            border-radius: 50%;
+            margin-bottom: .375rem;
+        }
+        >section{
+            @include flex-h(center,center);
+            img{
+                width: .9375rem;
+                height: .9375rem;
+                margin-left: .25rem;
+            }
+        }
+    }
+}
+
+.personal-info-item{
+    >header{
+        height: 1.25rem;
+        margin-top: .9375rem;
+        margin-bottom: .9375rem;
+        @include flex-h;
+        h3{
+            font-size: 1.30625rem;
+            margin-bottom: 0;
+            &::before{
+                width: .375rem;
+                border-radius: .125rem;
+                background:$brand-primary-draker;
+            }
+        }
+        >span{
+            color: $brand-primary-draker;
+        }
+    }
+    >section{
+        border-left: 4px dotted $brand-primary-draker;
+        padding-left: .75rem;
+        >p{
+            line-height: 2rem;/*attention注意*/
+            font-size: .84rem;
+            @include flex-h(flex-start,center);
+            span:first-child{
+                flex-basis: 55%;
+            }
+        }
+    }
+}
 
 
+
+/*----------------------------【【编辑资料】】---------------*/
+/*----------------------------【【编辑资料】】---------------*/
+/*----------------------------【【编辑资料】】---------------*/
+// 头部覆盖
+.p-header.personal{
+    @include flex-h;
+    h4{
+        font-size: 1.19rem;
+        font-weight: normal;
+    }
+    >section{
+        @include flex-h(flex-start,center);
+        
+        img{
+            border-right: .75rem solid transparent;
+            padding-top: .625rem;
+            padding-bottom: .625rem;
+            
+        }
+    }
+
+
+    
+}
+
+//
+.p-form-personal{
+    >span{
+        left: 1.125rem
+    }
+    >input{
+        height: 2.1875rem;
+        padding-right: 1.125rem;
+        font-size: 1.12rem;
+    }
+    ::placeholder{
+        color: $brand-primary-lighter;
+        font-size: 1.12rem;
+    }
+}
+.p-personal-info-edit{
+    input{
+        text-align: right;
+        border-color: #ebebeb;
+    }
+    aside{
+        background:#f1f1f1;
+        color: #333;
+        @include pad-lr(1rem,1.125rem);
+        padding-top: .5rem;
+        font-size: .98rem;
+        line-height: 2.625rem;
+        @include flex-h(flex-start,center);
+        p{
+            margin-right: .5rem;
+        }
+
+    }
+   
+}
+
+
+
+
+/*----------------------------【【搜索】】---------------*/
+/*----------------------------【【搜索】】---------------*/
+/*----------------------------【【搜索】】---------------*/
