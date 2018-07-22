@@ -105,6 +105,11 @@ $link-hover-decoration: underline !default;
     padding-left: $left;
     padding-right: $right;
 }
+@mixin pad-tb($t,$b){
+    box-sizing: border-box;
+    padding-top: $t;
+    padding-bottom: $b;
+}
 @mixin border-box($top:0,$bottom:0,$left:0,$right:0){
     box-sizing: border-box;
     padding-top: $top;
