@@ -1042,3 +1042,166 @@ body {
 /*----------------------------【【搜索】】---------------*/
 /*----------------------------【【搜索】】---------------*/
 /*----------------------------【【搜索】】---------------*/
+.p-header.search span {
+  display: inline-block;
+  margin-right: 3.75rem;
+  font-size: 1.19rem;
+  color: #95dbdc;
+}
+
+.p-header.search span:last-child {
+  margin-right: 0;
+}
+
+.p-header.search span.active {
+  color: white;
+  position: relative;
+}
+
+.p-header.search span.active::after {
+  content: '';
+  position: absolute;
+  width: 2.25rem;
+  height: .25rem;
+  background: #fff;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin-top: 2.375rem;
+}
+
+.search-body {
+  background: #edf1f4;
+}
+
+.p-search > footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.25rem;
+  right: 1.25rem;
+}
+
+.p-search > footer button {
+  background: #25aab2;
+}
+
+.condition {
+  width: 24.875rem;
+  height: 10.5rem;
+  border-radius: .625rem;
+  background: #fff;
+  margin: 1rem auto;
+}
+
+.condition-list {
+  height: 5.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.condition-list > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.condition-list > a > img {
+  width: 2.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.condition-base {
+  background: #fff;
+  margin: 0 .6875rem;
+  box-sizing: border-box;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: .9375rem;
+  border-radius: .625rem;
+}
+
+.condition-base > h3 {
+  font-size: 1.05rem;
+}
+
+.condition-base > div.p-form-pa {
+  margin-bottom: 0;
+}
+
+.condition-base > div.p-form-pa span {
+  left: 1rem;
+}
+
+.condition-base > div.p-form-pa input {
+  height: 3.4375rem;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 0;
+  padding-right: 1.25rem;
+}
+
+.condition-base > div.p-form-pa img {
+  width: .625rem;
+  height: .875rem;
+  margin-right: -0.625rem;
+}
+
+.p-search-precise .search-input-pa {
+  width: 24.875rem;
+  height: 5.0625rem;
+  margin: .75rem auto;
+  border-radius: .3125rem;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.p-search-precise .search-input-pa > input {
+  height: 2.875rem;
+  width: 22.75rem;
+  border: 0;
+  background: #f3f5f7;
+  padding-left: 2.25rem;
+  border-radius: .5rem;
+}
+
+.p-search-precise .search-input-pa > img {
+  width: 1.1875rem;
+  height: 1.125rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 1.5rem;
+}
+
+.p-search-precise footer {
+  height: 4.625rem;
+  background: #fff;
+  position: absolute;
+  bottom: 3rem;
+  border-radius: .3125rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.p-search-precise footer > button {
+  background: #d9d9d9;
+}

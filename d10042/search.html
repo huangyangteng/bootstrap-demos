@@ -8,30 +8,97 @@
     <script src="js/rem.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
 </head>
-<body>
+<body class="search-body">
 
   
-    <header class="p-header two"> 
+    <header class="p-header search two"> 
         <img class="left" src="imgs/icon/return-arrow.png">
         <h4>
-            <span>条件搜索</span>
+            <span class="active">条件搜索</span>
             <span>精准搜索</span>
         </h4>
     </header>
-    <section class="p-changepass">
-        <div class="p-form-pa  p-form-two">
-            <span>新密码</span>
-            <input type="password" class="p-form" placeholder="密码由8-16位数字字母组成" >
-        </div>
-        <div class="p-form-pa p-form-two">
-            <span>确认新密码</span>
-            <input type="password" class="p-form" placeholder="确认新密码">
-        </div>
+    <!-- 条件搜索 -->
+    <!-- <section class="p-search">
+       <section class="condition">
+           <section class="condition-list">
+               <a>
+                   <img src="imgs/icon/search1.png" alt="" srcset="">
+                   <p>猜你喜欢</p>
+               </a>
+               <a>
+                   <img src="imgs/icon/search2.png" alt="" srcset="">
+                   <p>会员专区</p>
+               </a>
+               <a>
+                   <img src="imgs/icon/search3.png" alt="" srcset="">
+                   <p>魅力用户</p>
+               </a>
+           </section>
+           <section class="condition-list">
+               <a>
+                   <img src="imgs/icon/search4.png" alt="" srcset="">
+                   <p>成功人士</p>
+               </a>
+               <a>
+                   <img src="imgs/icon/search5.png" alt="" srcset="">
+                   <p>天生一对</p>
+               </a>
+               <a>
+                   <img src="imgs/icon/search6.png" alt="" srcset="">
+                   <p>90后</p>
+               </a>
+           </section>
+       </section>
+       <section class="condition-base">
+           <h3 class="p-title">基本条件</h3>
+            <div class="p-form-two p-form-pa">
+                <span>年龄:</span>
+                <input type="text" class="p-form" value="25">
+                <img src="imgs/icon/arrow-right.png" alt="" srcset="">
+            </div>
+            <div class="p-form-two p-form-pa">
+                <span>工作地区:</span>
+                <input type="text" class="p-form" value="湖北 武汉 江夏区">
+                <img src="imgs/icon/arrow-right.png" alt="" srcset="">
+            </div>
+            <div class="p-form-two p-form-pa">
+                <span>身高:</span>
+                <input type="text" class="p-form" value="165">
+                <img src="imgs/icon/arrow-right.png" alt="" srcset="">
+            </div>
+            <div class="p-form-two p-form-pa">
+                <span>体型:</span>
+                <input type="text" class="p-form" value="不限">
+                <img src="imgs/icon/arrow-right.png" alt="" srcset="">
+            </div>
+            <div class="p-form-two p-form-pa">
+                <span>学历:</span>
+                <input type="text" class="p-form" value="本科">
+                <img src="imgs/icon/arrow-right.png" alt="" srcset="">
+            </div>
+            <div class="p-form-two p-form-pa">
+                <span>月收入:</span>
+                <input type="text" class="p-form" value="5000-10000">
+                <img src="imgs/icon/arrow-right.png" alt="" srcset="">
+            </div>
+           
+       </section>
  
         <footer>
             <button class="p-btn btn-primary btn-full">确认</button>
         </footer>
 
+    </section> -->
+    <!-- 精准搜索 -->
+    <section class="p-search-precise">
+        <section class="search-input-pa">
+            <img src="imgs/icon/search-precise.png" alt="">
+            <input type="text" class="p-form" placeholder="请输入用户昵称">
+        </section>
+        <footer>
+            <button class="p-btn btn-primary btn-full">开始搜索</button>
+        </footer>
     </section>
 </body>
 </html>

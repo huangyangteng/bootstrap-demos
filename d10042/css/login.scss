@@ -277,3 +277,141 @@ body{
 /*----------------------------【【搜索】】---------------*/
 /*----------------------------【【搜索】】---------------*/
 /*----------------------------【【搜索】】---------------*/
+// 重置header
+.p-header.search{
+    
+    span{
+        display: inline-block;
+        margin-right: 3.75rem;
+        font-size: 1.19rem;
+        color: #95dbdc;
+    }   
+    span:last-child{
+        margin-right: 0;
+    }
+    span.active{
+        color: white;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 2.25rem;
+            height: .25rem;  
+            background:#fff;
+            @include ab-c;
+            margin-top: 2.375rem;
+        }
+    }
+}
+.search-body{
+    background:#edf1f4;
+}
+// 
+.p-search{
+    >footer{
+        position: absolute;
+        bottom: 1rem;
+        left: 1.25rem;
+        right: 1.25rem;
+        button{
+            background:#25aab2;
+        }
+    } 
+}
+// 为你推荐
+.condition{
+    width: 24.875rem;
+    height: 10.5rem;
+    border-radius: .625rem;
+    background:#fff;
+    margin: 1rem auto;
+}
+.condition-list{
+    height: 5.25rem;
+    @include flex-h(space-around,center);
+    >a{
+        @include flex-v;
+        >img{
+            width: 2.125rem;
+            margin-bottom: 1.125rem;
+        }
+    }
+    
+}
+// 基本条件
+.condition-base{
+    background:#fff;
+    margin:0 .6875rem;
+    @include pad-lr(.625rem,.625rem);
+    padding-top: .9375rem;
+    border-radius: .625rem;
+    >h3{
+        font-size: 1.05rem;
+    }
+    >div.p-form-pa{
+        margin-bottom: 0;
+        span{
+            left: 1rem;
+        }
+        input{
+            height: 3.4375rem;
+             text-align: right;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 0;
+            padding-right: 1.25rem;
+        }
+        img{
+            width: .625rem;
+            height: .875rem;
+            margin-right: -0.625rem;
+        }
+    }
+    input{
+       
+    }
+}
+
+
+
+
+// ````````````精准搜索
+.p-search-precise{
+    .search-input-pa{
+        width: 24.875rem;
+        height: 5.0625rem;
+        margin: .75rem auto;
+        border-radius: .3125rem;
+        background:#fff;
+        @include flex-h(center,center);
+        position: relative;
+        >input{
+            height: 2.875rem;
+            width: 22.75rem;
+            border: 0;
+            background:#f3f5f7;
+            padding-left: 2.25rem;
+            border-radius: .5rem
+        }
+        >img{
+            width: 1.1875rem;
+            height: 1.125rem;
+            @include ab-c-v;
+            left: 1.5rem;
+        }
+    }
+
+
+    footer{
+        height: 4.625rem;
+        background:#fff;
+        position: absolute;
+        bottom: 3rem;
+        border-radius: .3125rem;
+        left: 0;right: 0;
+        @include flex-v;
+        @include pad-lr(.625rem,.625rem);
+        >button{
+            background:#d9d9d9;
+        }
+    }
+}
