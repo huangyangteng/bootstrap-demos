@@ -368,6 +368,12 @@ h2 {
   white-space: nowrap;
 }
 
+.p-tag.tag-primary {
+  color: #32afb5;
+  background-color: transparent;
+  border: 1px solid #32afb5;
+}
+
 .p-tag.age {
   color: #ca75ea;
   background-color: transparent;
@@ -431,6 +437,14 @@ h2 {
 
 .only-one-line {
   max-width: 80%;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.only-one-line-full {
+  max-width: 88%;
   display: inline-block;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -725,6 +739,29 @@ body {
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
+.p-title.primary::before {
+  background: #32afb5;
+}
+
+.p-text {
+  position: relative;
+  margin-left: 14px;
+}
+
+.p-text::before {
+  content: '';
+  width: .375rem;
+  height: .375rem;
+  background: #32afb5;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: -0.875rem;
+}
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -1204,6 +1241,174 @@ body {
   height: 1.25rem;
   margin-left: 8px;
   border-left: 0;
+}
+
+/*----------------------------【【my 我的动态】】---------------*/
+/*----------------------------【【my 我的动态】】---------------*/
+/*----------------------------【【my 我的动态】】---------------*/
+.my-dynamic h3 {
+  color: #32afb5;
+}
+
+.my-dynamic h3::before {
+  background: #32afb5;
+}
+
+.my-dynamic .my-time {
+  margin-bottom: .5rem;
+  display: inline-block;
+}
+
+.my-dynamic .sup {
+  vertical-align: 0.5rem;
+}
+
+/*----------------------------【【my 我的红娘】】---------------*/
+/*----------------------------【【my 我的红娘】】---------------*/
+/*----------------------------【【my 我的红娘】】---------------*/
+.my-matchmaker > section {
+  width: 23.125rem;
+  border-radius: .625rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 2.8125rem auto 1.625rem;
+}
+
+.my-matchmaker > section > header {
+  height: 12.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-matchmaker > section > header img {
+  width: 8.25rem;
+  border-radius: 50%;
+}
+
+.my-matchmaker > section > section {
+  padding-bottom: 2.1875rem;
+  box-sizing: border-box;
+  padding-left: 1.875rem;
+  padding-right: 1.625rem;
+}
+
+.my-matchmaker > section > section p {
+  line-height: 2rem;
+}
+
+.my-matchmaker > section > section p span {
+  color: #333;
+  font-weight: 500;
+}
+
+.my-matchmaker > section > section p.last {
+  color: #333;
+  margin-left: 16px;
+  font-weight: 500;
+}
+
+.my-matchmaker > footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.my-matchmaker > footer > button {
+  background: #32afb5;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10.9375rem;
+  height: 3.125rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.my-matchmaker > footer > button > img {
+  margin-right: 0.8rem;
+}
+
+/*----------------------------【【my 我的关注】】---------------*/
+/*----------------------------【【my 我的关注】】---------------*/
+/*----------------------------【【my 我的关注】】---------------*/
+.tag-new {
+  padding: .1875rem .25rem;
+  display: inline-block;
+  border-radius: .25rem;
+  color: white;
+}
+
+.tag-new.xs {
+  font-size: .75rem;
+}
+
+.tag-new.theme1 {
+  background: #df8bff;
+}
+
+.tag-new.theme2 {
+  background: #9ce184;
+}
+
+.tag-new.theme3 {
+  background: #71befe;
+}
+
+.tag-new.theme4 {
+  background: #f19ec2;
+}
+
+.tag-new.theme5 {
+  background: #f6b37f;
+}
+
+.tag-new.theme6 {
+  background: #8b99ff;
+}
+
+.my-focus-body {
+  background: #fff;
+}
+
+.my-focus > section {
+  height: 7rem;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 1.1875rem;
+  padding-right: 1.1875rem;
+}
+
+.my-focus > section > img {
+  width: 4.625rem;
+  height: 4.625rem;
+  margin-right: 1.4375rem;
+}
+
+.my-focus > section > aside h4 {
+  font-size: 1.05rem;
+  line-height: 1.75rem;
+}
+
+.my-focus > section > aside p {
+  font-size: .84rem;
+  line-height: 1.375rem;
+  color: #aaaaaa;
+}
+
+.my-focus > section > aside p > span:first-child {
+  display: inline-block;
+  margin-right: 1.75rem;
 }
 
 /*----------------------------【【用户详情user-detail.html】】---------------*/
