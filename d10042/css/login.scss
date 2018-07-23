@@ -224,6 +224,8 @@ body{
         @include flex-h(flex-start,center);
         
         img{
+            width: .6875rem;
+            height: 1.0625rem;
             border-right: .75rem solid transparent;
             padding-top: .625rem;
             padding-bottom: .625rem;
@@ -414,4 +416,37 @@ body{
             background:#d9d9d9;
         }
     }
+}
+
+
+
+/*----------------------------【【修改自我介绍】】---------------*/
+/*----------------------------【【修改自我介绍】】---------------*/
+/*----------------------------【【修改自我介绍】】---------------*/
+.self-intro-body{
+    background:#eeeeee;
+}
+.self-intro{
+    >section{
+        textarea{
+            height: 12.5rem;
+            @include pad-lr(1.875rem,2rem);
+            padding-top: .9375rem;
+            background:#fff;
+            font-weight: 500;
+        }
+        aside{
+            height: 3rem;
+            background:#fff;
+            @include flex-h(flex-end,center);
+            @include pad-lr(1.125rem,1.125rem);
+            color: #e5e5e5;
+        }
+    }
+    >footer{
+        margin: .9375rem 2rem 2rem 1.125rem;
+        line-height: 1.25rem;
+        font-weight: 400;
+    }
+    
 }

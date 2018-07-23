@@ -995,6 +995,8 @@ body {
 }
 
 .p-header.personal > section img {
+  width: .6875rem;
+  height: 1.0625rem;
   border-right: .75rem solid transparent;
   padding-top: .625rem;
   padding-bottom: .625rem;
@@ -1204,4 +1206,40 @@ body {
 
 .p-search-precise footer > button {
   background: #d9d9d9;
+}
+
+/*----------------------------【【修改自我介绍】】---------------*/
+/*----------------------------【【修改自我介绍】】---------------*/
+/*----------------------------【【修改自我介绍】】---------------*/
+.self-intro-body {
+  background: #eeeeee;
+}
+
+.self-intro > section textarea {
+  height: 12.5rem;
+  box-sizing: border-box;
+  padding-left: 1.875rem;
+  padding-right: 2rem;
+  padding-top: .9375rem;
+  background: #fff;
+  font-weight: 500;
+}
+
+.self-intro > section aside {
+  height: 3rem;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  color: #e5e5e5;
+}
+
+.self-intro > footer {
+  margin: .9375rem 2rem 2rem 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
 }
