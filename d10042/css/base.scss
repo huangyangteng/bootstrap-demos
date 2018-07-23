@@ -60,7 +60,7 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
 $brand-primary:         #32afb5; 
 $brand-primary-lighter: #28d0c2;
-
+$brand-primary-draker:#25aab2;
 $brand-wram:#f55a5f;
 
 $text-lighter:#b6b6b6;
@@ -312,11 +312,19 @@ $link-hover-decoration: underline !default;
 .btn-primary{
     @include btn-color($brand-primary-lighter,white,transparent );
 }
+.btn-primary-drak{
+    @include btn-color($brand-primary-draker,white,transparent );
+}
 .btn-sm{
     @include btn-size(.2rem, .75rem, .77rem, .375rem);
 }
 .btn-full{
     width: 100%;
+}
+.btn-error{
+    background:#fff;
+    color:#ff6363;
+    border:0;
 }
 .p-tag.index{
     @include flex-h(center,center);

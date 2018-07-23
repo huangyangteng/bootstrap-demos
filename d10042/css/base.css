@@ -164,6 +164,17 @@ h2 {
   border-color: transparent;
 }
 
+.btn-primary-drak {
+  background: #25aab2;
+  border-color: transparent;
+  color: white;
+}
+
+.btn-primary-drak:focus {
+  color: white;
+  border-color: transparent;
+}
+
 .btn-sm {
   padding: 0.2rem 0.75rem;
   font-size: 0.77rem;
@@ -172,6 +183,12 @@ h2 {
 
 .btn-full {
   width: 100%;
+}
+
+.btn-error {
+  background: #fff;
+  color: #ff6363;
+  border: 0;
 }
 
 .p-tag.index {
