@@ -13,6 +13,7 @@
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
+
 .p-title.primary{
     &::before{
         background:$brand-primary;
@@ -66,63 +67,11 @@
     background:#fff;
 }
 
+.text-fat{
+    font-weight: 500;
+}
 
-.p-cover{
-    position: fixed;
-    left: 0;right: 0;
-    top: 0;bottom: 0;
-    background:rgba(0, 0, 0, 0.3);
-    z-index: 3;
-}
-.p-share{
-    width: 100%;
-    background:#ddddde;
-    border-radius: .25rem;
-    position: absolute;
-    bottom: 0;
-    color: #333;
-    font-size: .84rem;
-    
-    >section{
-        height: 11.125rem;
-        border-bottom: 1px solid #d3d3d4;
-        @include flex-h;
-        @include pad-lr(1.375rem,1.375rem);
-        >h4{
-            position: absolute;
-            left: 1.375rem;
-            top: 1rem;
-            color: #adadad;
 
-        }
-        >figure{
-            margin-top: 1rem;
-            @include flex-v;
-            img{
-                width: 3.5rem;
-                margin-bottom: .625rem;
-            }
-        }
-    }
-    >footer{
-        height: 3.5rem;
-        >a{
-            display: block;
-            height: 100%;
-            @include flex-v;
-            font-size: 1.12rem;
-        }
-    }
-}
-.p-user-option{
-    @include pad-lr(1.375rem,1.375rem);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    >button{
-        margin-bottom: .5rem;
-    }
-}
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -667,10 +616,13 @@
         @include flex-h(flex-start,center);
         white-space: nowrap;
         overflow: scroll;
-        >img:not(:last-child){
+        >img{
             width: 3.125rem;
             height: 3.125rem;
             margin-right: .625rem;
+        }
+        >img:last-child{
+            margin-right: 0;
         }
     }
 }
@@ -710,7 +662,7 @@
 /*````````````````````自我评价*/
 .user-comment{
     >p{
-        line-height: 1.2;
+        line-height: 1.5;
         font-weight: 600;
         margin-left: 1rem;
         text-indent: 1rem;
@@ -751,3 +703,81 @@
 /*````````````````````用户信息*/
 
 
+/*··············分享与举报功能*/
+.p-cover{
+    position: fixed;
+    left: 0;right: 0;
+    top: 0;bottom: 0;
+    background:rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    transition: 1s all;
+    visibility: hidden;
+}
+.p-share{
+    width: 100%;
+    background:#ddddde;
+    border-radius: .25rem;
+    position: absolute;
+    bottom: 0;
+    color: #333;
+    font-size: .84rem;
+    visibility: hidden;
+    
+    >section{
+        height: 11.125rem;
+        border-bottom: 1px solid #d3d3d4;
+        @include flex-h;
+        @include pad-lr(1.375rem,1.375rem);
+        >h4{
+            position: absolute;
+            left: 1.375rem;
+            top: 1rem;
+            color: #adadad;
+
+        }
+        >figure{
+            margin-top: 1rem;
+            @include flex-v;
+            img{
+                width: 3.5rem;
+                margin-bottom: .625rem;
+            }
+        }
+    }
+    >footer{
+        height: 3.5rem;
+        >a{
+            display: block;
+            height: 100%;
+            @include flex-v;
+            font-size: 1.12rem;
+        }
+    }
+}
+.p-user-option{
+    @include pad-lr(1.375rem,1.375rem);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    >button{
+        margin-bottom: .5rem;
+    }
+}
+
+// 是否显示modal
+.js-show-modal{
+    transition: 1s all;
+    visibility: visible;
+}
+// 是否显示操作框
+.js-toggle-user-options{
+    transition: 1s all;
+    transform: translateY(600px);
+}
+
+
+// 是否分享
+.js-show-share-modal{
+    transition: 1s all;
+    visibility: visible;
+}

@@ -25,7 +25,7 @@
                    简介：我在这里，等风也等你。
                </p>
            </aside>
-        <img class="p-click-more" src="imgs/icon/arrow-right.png" alt="">
+        <img class="p-click-more" src="imgs/icon/arrow-right.png" alt="" id="go_user_info">
        </header>
 
        <footer>
@@ -48,10 +48,10 @@
        </section>
        <aside class="xs-imgs-cert">
            <figure >
-                <img src="imgs/icon/cert1.png" alt="" srcset="">
+                <img src="imgs/icon/cert1.png" alt="" srcset="" id="cert_identity">
                 <img src="imgs/icon/cert2.png" alt="" srcset="">
                 <img src="imgs/icon/cert3.png" alt="" srcset="">
-                <img src="imgs/icon/cert4.png" alt="" srcset="">
+                <img src="imgs/icon/cert4.png" alt="" srcset="" id="cert_enducation">
                 <img src="imgs/icon/cert5.png" alt="" srcset="">
                 <img src="imgs/icon/cert6.png" alt="" srcset="">
                 <img src="imgs/icon/cert7.png" alt="" srcset="">
@@ -65,7 +65,7 @@
 
    <!-- list -->
    <section class="my-list last-section">
-       <a href="javascript:;" class="my-list-item">
+       <a href="my-dynamic.html" class="my-list-item">
             <img src="imgs/icon/my-list1.png" alt="" srcset="">
             <span>我的动态</span>
        </a>
@@ -73,15 +73,15 @@
             <img src="imgs/icon/my-list2.png" alt="" srcset="">
             <span>我的参与</span>
        </a>
-       <a href="javascript:;" class="my-list-item">
+       <a href="my-matchmaker.html" class="my-list-item">
             <img src="imgs/icon/my-list3.png" alt="" srcset="">
             <span>我的红娘</span>
        </a>
-       <a href="javascript:;" class="my-list-item">
+       <a href="my-focus.html" class="my-list-item">
             <img src="imgs/icon/my-list4.png" alt="" srcset="">
             <span>我关注谁</span>
        </a>
-       <a href="javascript:;" class="my-list-item">
+       <a href="my-focus.html" class="my-list-item">
             <img src="imgs/icon/my-list5.png" alt="" srcset="">
             <span>谁关注我</span>
        </a>
@@ -120,6 +120,19 @@
     </footer>
     
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
-    <script src="lib/swiper/swiper-4.3.3.min.js"></script>
+    <script>
+        function go(url) {
+            window.location.href=url;
+        }
+        $('#go_user_info').click(function () {
+            go('personal-info.html');
+        })
+        $('#cert_identity').click(function () {
+            go('cert-name.html');
+        })
+        $('#cert_enducation').click(function () {
+            go('cert-education.html');
+        })
+    </script>
 </body>
 </html>

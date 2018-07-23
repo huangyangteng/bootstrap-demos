@@ -328,7 +328,7 @@ h2 {
 }
 
 .btn-primary-drak {
-  background: #32afb5;
+  background: #25aab2;
   border-color: transparent;
   color: white;
 }
@@ -1081,7 +1081,7 @@ body {
   content: '';
   position: absolute;
   width: 2.25rem;
-  height: .25rem;
+  height: .2rem;
   background: #fff;
   position: absolute;
   margin: auto;
@@ -1171,6 +1171,10 @@ body {
   margin-right: -0.625rem;
 }
 
+.p-search-precise {
+  display: none;
+}
+
 .p-search-precise .search-input-pa {
   width: 24.875rem;
   height: 5.0625rem;
@@ -1208,7 +1212,7 @@ body {
   height: 4.625rem;
   background: #fff;
   position: absolute;
-  bottom: 3rem;
+  bottom: 1.25rem;
   border-radius: .3125rem;
   left: 0;
   right: 0;
@@ -1223,6 +1227,20 @@ body {
 
 .p-search-precise footer > button {
   background: #d9d9d9;
+  transition: 1s all;
+}
+
+.js-search-show {
+  display: block;
+}
+
+.js-search-hide {
+  display: none;
+}
+
+.js-toggle-color {
+  background: #25aab2 !important;
+  transition: 1s all;
 }
 
 /*----------------------------【【修改自我介绍】】---------------*/

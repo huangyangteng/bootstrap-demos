@@ -12,7 +12,7 @@
 <body>
     <!-- 导航 -->
     <header class="p-header two">
-        <img class="left" src="imgs/icon/return-arrow.png">
+        <img class="left" src="imgs/icon/return-arrow.png" id="go_prev">
         <h4>我的动态</h4>
     </header>
     <!-- 动态 -->
@@ -87,5 +87,10 @@
         </section>
    
     </section>
+    <script>
+           document.getElementById('go_prev').onclick = function () {
+                window.history.back(-1);
+        }
+    </script>
 </body>
 </html>

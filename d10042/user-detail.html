@@ -12,14 +12,14 @@
 <body class="p-user-detail">
     <!-- 导航 -->
     <header class="p-header three">
-        <img src="imgs/icon/return-arrow.png">
+        <img src="imgs/icon/return-arrow.png" id="go_prev">
         <h4>用户详情</h4>
         <!-- <p><img src="imgs/icon/search.png">搜索</p> -->
-        <img src="imgs/icon/share-icon.png">
+        <img src="imgs/icon/user-options.png" id="show_modal_btn">
 
     </header>
     <!-- 用户信息 --> 
-    <section class="user-info xs-user-info">
+    <section class="user-info">
         <section>
             <img src="imgs/img/avatar-user.png" alt="">
             <hgroup>
@@ -32,10 +32,10 @@
             </div>
         </section>
         <footer>
-            <img src="imgs/img/my1.png" alt="">
+            <img src="imgs/img/my5.png" alt="">
             <img src="imgs/img/my2.png" alt="">
-            <img src="imgs/img/my2.png" alt="">
-            <img src="imgs/img/my2.png" alt="">
+            <img src="imgs/img/my3.png" alt="">
+            <img src="imgs/img/my4.png" alt="">
             <img src="imgs/img/my2.png" alt="">
             <img src="imgs/img/my2.png" alt="">
         </footer>
@@ -90,7 +90,7 @@
     <!-- 个人评价 -->
     <section class="user-comment">
         <h3 class="p-title">自我评价</h3>
-        <p>天秤男，时逗时傻，互联网IT男，爱美剧、爱电影、爱运动 爱魔兽、爱吃辣、猫奴......车房已置办。</p>
+        <p class="text-fat">天秤男，时逗时傻，互联网IT男，爱美剧、爱电影、爱运动 爱魔兽、爱吃辣、猫奴......车房已置办。</p>
     </section>
     <!-- 择偶标准 -->
     <section class="user-standard">
@@ -153,8 +153,8 @@
 
 
     <!-- 分享功能 -->
-    <div class="p-cover">
-        <!-- <section class="p-share">
+    <div class="p-cover" id="p-cover">
+        <section class="p-share" id="share_modal">
             <section>
                 <h4>分享到站外:</h4>
                 <figure>
@@ -179,18 +179,60 @@
                 </figure>
             </section>
             <footer>
-                <a class="btn">取消</a>
+                <a class="btn" id="cancel_share_btn">取消</a>
             </footer>
-        </section> -->
-        <section class="p-user-option">
-            <button class="p-btn btn-full btn-error">分享</button>
+        </section>
+        <section class="p-user-option" id="options">
+            <button class="p-btn btn-full btn-error" id="share_btn">分享</button>
             <button class="p-btn btn-full btn-error">举报</button>
             <button class="p-btn btn-full btn-error">拉黑</button>
-            <button class="p-btn btn-full btn-primary-drak">取消</button>
+            <button class="p-btn btn-full btn-primary-drak" id="cancel_option">取消</button>
         </section>
     </div>
     
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
-    <script src="lib/swiper/swiper-4.3.3.min.js"></script>
+    <script>
+        // `````````````````````````````````````````显示modal
+        // moal
+        var cover=$('#p-cover');
+        // 操作框
+        var options=$('#options');
+        // 取消按钮
+        var cancel_option=$('#cancel_option');
+        // 显示按钮
+        var show_modal_btn=$("#show_modal_btn");
+
+        var share_btn = $('#share_btn');
+        var share_modal = $('#share_modal');
+        var cancel_share_btn = $('#cancel_share_btn');
+
+        // 显示modal,显示操作框
+        show_modal_btn.click(function () {
+            cover.addClass('js-show-modal');
+            options.removeClass('js-toggle-user-options');
+        })
+        // 点击取消，modal消失
+        cancel_option.click(function () {
+            options.addClass('js-toggle-user-options');
+            cover.removeClass('js-show-modal');    
+         
+        })
+        
+        
+        // 点击分享，出现分享的框框
+        share_btn.click(function () {
+            options.addClass('js-toggle-user-options');
+            share_modal.addClass('js-show-share-modal');
+        })
+        // 点击取消，消失
+        cancel_share_btn.click(function () {
+            share_modal.removeClass('js-show-share-modal')
+            cover.removeClass('js-show-modal');    
+        })
+        // ``````````````````````````````返回上一页
+        $('#go_prev').click(function () {
+            window.history.back(-1);
+        })
+    </script>
 </body>
 </html>

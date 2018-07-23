@@ -818,83 +818,8 @@ body {
   background: #fff;
 }
 
-.p-cover {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 3;
-}
-
-.p-share {
-  width: 100%;
-  background: #ddddde;
-  border-radius: .25rem;
-  position: absolute;
-  bottom: 0;
-  color: #333;
-  font-size: .84rem;
-}
-
-.p-share > section {
-  height: 11.125rem;
-  border-bottom: 1px solid #d3d3d4;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding-left: 1.375rem;
-  padding-right: 1.375rem;
-}
-
-.p-share > section > h4 {
-  position: absolute;
-  left: 1.375rem;
-  top: 1rem;
-  color: #adadad;
-}
-
-.p-share > section > figure {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.p-share > section > figure img {
-  width: 3.5rem;
-  margin-bottom: .625rem;
-}
-
-.p-share > footer {
-  height: 3.5rem;
-}
-
-.p-share > footer > a {
-  display: block;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.12rem;
-}
-
-.p-user-option {
-  box-sizing: border-box;
-  padding-left: 1.375rem;
-  padding-right: 1.375rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.p-user-option > button {
-  margin-bottom: .5rem;
+.text-fat {
+  font-weight: 500;
 }
 
 /*·------------------------------------------------------------------------------------------*/
@@ -1569,10 +1494,14 @@ body {
   overflow: scroll;
 }
 
-.user-info > footer > img:not(:last-child) {
+.user-info > footer > img {
   width: 3.125rem;
   height: 3.125rem;
   margin-right: .625rem;
+}
+
+.user-info > footer > img:last-child {
+  margin-right: 0;
 }
 
 /*````````````````````个人标签*/
@@ -1621,7 +1550,7 @@ body {
 
 /*````````````````````自我评价*/
 .user-comment > p {
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 600;
   margin-left: 1rem;
   text-indent: 1rem;
@@ -1672,3 +1601,100 @@ body {
 }
 
 /*````````````````````用户信息*/
+/*··············分享与举报功能*/
+.p-cover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  transition: 1s all;
+  visibility: hidden;
+}
+
+.p-share {
+  width: 100%;
+  background: #ddddde;
+  border-radius: .25rem;
+  position: absolute;
+  bottom: 0;
+  color: #333;
+  font-size: .84rem;
+  visibility: hidden;
+}
+
+.p-share > section {
+  height: 11.125rem;
+  border-bottom: 1px solid #d3d3d4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+}
+
+.p-share > section > h4 {
+  position: absolute;
+  left: 1.375rem;
+  top: 1rem;
+  color: #adadad;
+}
+
+.p-share > section > figure {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-share > section > figure img {
+  width: 3.5rem;
+  margin-bottom: .625rem;
+}
+
+.p-share > footer {
+  height: 3.5rem;
+}
+
+.p-share > footer > a {
+  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.12rem;
+}
+
+.p-user-option {
+  box-sizing: border-box;
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.p-user-option > button {
+  margin-bottom: .5rem;
+}
+
+.js-show-modal {
+  transition: 1s all;
+  visibility: visible;
+}
+
+.js-toggle-user-options {
+  transition: 1s all;
+  transform: translateY(600px);
+}
+
+.js-show-share-modal {
+  transition: 1s all;
+  visibility: visible;
+}

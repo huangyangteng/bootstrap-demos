@@ -12,14 +12,14 @@
 
   
     <header class="p-header search two"> 
-        <img class="left" src="imgs/icon/return-arrow.png">
+        <img class="left" src="imgs/icon/return-arrow.png" id="go_prev">
         <h4>
-            <span class="active">条件搜索</span>
-            <span>精准搜索</span>
+            <span class="active" id="search_btn_conditions">条件搜索</span>
+            <span id="search_btn_precise">精准搜索</span>
         </h4>
     </header>
     <!-- 条件搜索 -->
-    <!-- <section class="p-search">
+    <section class="p-search" id="search_section_conditions">
        <section class="condition">
            <section class="condition-list">
                <a>
@@ -89,16 +89,62 @@
             <button class="p-btn btn-primary btn-full">确认</button>
         </footer>
 
-    </section> -->
+    </section>
     <!-- 精准搜索 -->
-    <section class="p-search-precise">
+    <section class="p-search-precise" id="search_section_precise">
         <section class="search-input-pa">
             <img src="imgs/icon/search-precise.png" alt="">
-            <input type="text" class="p-form" placeholder="请输入用户昵称">
+            <input type="text" class="p-form" id="search_input">
         </section>
         <footer>
-            <button class="p-btn btn-primary btn-full">开始搜索</button>
+            <button class="p-btn btn-primary btn-full" id="search_start">开始搜索</button>
         </footer>
     </section>
+    <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+    <script>
+        // 返回上一页
+        $('#go_prev').click(function () {
+            window.history.back(-1);
+        })
+        // 条件搜索 精准搜索切换
+     
+        var search_btn_precise=$('#search_btn_precise');
+        var search_btn_conditions=$('#search_btn_conditions');
+        var search_section_precise=$('#search_section_precise');
+        var search_section_conditions=$('#search_section_conditions');
+        // 定义函数用户显示隐藏
+        function toggleActive($this,showObj,hideObj) {
+            $this.addClass('active');
+            $this.siblings().removeClass('active');
+
+            hideObj.addClass('js-search-hide');
+            showObj.removeClass('js-search-hide');
+            showObj.addClass('js-search-show');
+        }
+        // 显示条件搜索
+        search_btn_conditions.click(function () {
+            var $this = $(this);
+            toggleActive($this,search_section_conditions, search_section_precise);
+        })
+        // 显示精准搜索
+        search_btn_precise.click(function () {
+            var $this = $(this);
+            toggleActive($this,search_section_precise, search_section_conditions);
+        })
+
+        // 精准搜索  获取焦点时，按钮变色
+        var search_input=$('#search_input');
+        search_input.focus(function () {
+            $('#search_start').addClass('js-toggle-color');
+        })
+        search_input.blur(function () {
+            $('#search_start').removeClass('js-toggle-color');
+        })
+
+
+
+    </script>
+
+
 </body>
 </html>

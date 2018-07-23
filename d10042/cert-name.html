@@ -12,7 +12,7 @@
  
   
     <header class="p-header two"> 
-        <img class="left" src="imgs/icon/return-arrow.png">
+        <img class="left" src="imgs/icon/return-arrow.png" id="go_prev">
         <h4>实名认证</h4>
     </header>
     <section class="p-cert-name">
@@ -47,5 +47,10 @@
         </footer>
 
     </section>
+    <script>
+           document.getElementById('go_prev').onclick = function () {
+                window.history.back(-1);
+            }
+    </script>
 </body>
 </html>
