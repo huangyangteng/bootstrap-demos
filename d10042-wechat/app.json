@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/meet/meet",
+    "pages/dynamic/dynamic",
+    "pages/meg/meg",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#26bcb9",
+    "navigationBarTitleText": "推荐",
+    "navigationBarTextStyle":"white",
+    "backgroundColor":"#eee"
+  },
+  "tabBar": {
+      "color": "#666666",
+      "selectedColor":"#0aba8f",
+      
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"pages/imgs/icon/footer1.png",
+        "selectedIconPath":"pages/imgs/icon/footer1-l.png"
+
+      },
+      {
+        "pagePath": "pages/meet/meet",
+        "text": "遇见",
+        "iconPath":"pages/imgs/icon/footer2.png",
+        "selectedIconPath":"pages/imgs/icon/footer2-l.png"
+
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "动态",
+        "iconPath":"pages/imgs/icon/footer3.png",
+        "selectedIconPath":"pages/imgs/icon/footer3-l.png"
+
+      },
+      {
+        "pagePath": "pages/meg/meg",
+        "text": "消息",
+        "iconPath":"pages/imgs/icon/footer4.png",
+        "selectedIconPath":"pages/imgs/icon/footer4-l.png"
+
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath":"pages/imgs/icon/footer5.png",
+        "selectedIconPath":"pages/imgs/icon/footer5-l.png"
+
+      }
+      
+    ]
+  }
+}

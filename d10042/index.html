@@ -19,7 +19,7 @@
         <h4>推荐</h4>
     </header>
     <!-- 图片画廊 -->
-    <section v-cloak class="p-gallery last-section" id="app">
+    <section v-cloak class="p-gallery" id="app">
         <section class="p-stack-wrapper">
             <ul class="p-stack">
                 <li v-for="(item, index) in pages" :style="[transformIndex(index),transform(index)]" @touchmove.stop.capture.prevent="touchmove"
@@ -50,6 +50,8 @@
             <img src="imgs/icon/like.png" alt="" @click="clickNext">
         </footer>
     </section>
+    <!-- fixed有一个bug  -->
+    <section style="height: 3.75rem;"></section>
     <!-- footer -->
     <footer class="p-footer">
         <a class="active" href="index.html">
