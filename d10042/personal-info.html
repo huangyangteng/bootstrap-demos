@@ -30,7 +30,7 @@
                 <h3 class="p-title">
                     自我介绍
                 </h3>
-                <span class="p-tag tag-primary">+编辑</span>
+                <span class="p-tag tag-primary" id="edit_personal_info" >+编辑</span>
             </header>
             <section>
                 <p>在没风的地方找太阳，在你冷的地方做暖阳。</p>
@@ -42,7 +42,7 @@
                 <h3 class="p-title">
                     基本资料
                 </h3>
-                <span class="p-tag tag-primary">+编辑</span>
+                <span class="p-tag tag-primary" >+编辑</span>
             </header>
             <section>
                 <p><span>ID:</span><span>5484218</span></p>
@@ -129,6 +129,9 @@
     <script>
         document.getElementById('go_prev').onclick=function(){
             window.history.back(-1);
+        }
+        document.getElementById('edit_personal_info').onclick=function(){
+            window.location.href='./personal-info-edit.html';
         }
     </script>
 </body>

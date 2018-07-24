@@ -13,7 +13,7 @@
   
     <header class="p-header personal"> 
         <section>
-            <img class="left" src="imgs/icon/return-arrow.png">
+            <img class="left" src="imgs/icon/return-arrow.png" id="go_prev">
             <h4>编辑资料</h4>
         </section>
         <h4>保存</h4>
@@ -212,5 +212,10 @@
 
 
     </section>
+    <script>
+        document.getElementById('go_prev').onclick = function () {
+                window.history.back(-1);
+            }
+    </script>
 </body>
 </html>
