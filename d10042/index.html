@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/rem.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <!-- 导航 -->
@@ -14,7 +19,7 @@
         <h4>推荐</h4>
     </header>
     <!-- 图片画廊 -->
-    <section class="p-gallery last-section" id="app">
+    <section v-cloak class="p-gallery last-section" id="app">
         <section class="p-stack-wrapper">
             <ul class="p-stack">
                 <li v-for="(item, index) in pages" :style="[transformIndex(index),transform(index)]" @touchmove.stop.capture.prevent="touchmove"
