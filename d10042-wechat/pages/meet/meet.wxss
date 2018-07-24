@@ -1,0 +1,48 @@
+ .meet{
+    font-size: 24rpx;
+    line-height: 36rpx;
+    padding: 12rpx 14rpx 12rpx 11rpx;
+    flex-wrap: wrap;
+     
+ }
+image{
+    width: 348rpx;
+    height: 354rpx;
+}
+
+ .meet-item{
+     flex-basis: 348rpx;
+     height: 444rpx;
+     margin-bottom: 12rpx;
+     border-radius: 6rpx;
+     align-items: flex-start;
+
+ }
+ .name-pa{
+     position: relative;
+        width: 348rpx;
+        height: 354rpx;
+ }
+ .item-name{
+     position: absolute;
+     color: white;
+     left: 0;right: 0;
+     bottom: 0;
+     height: 41rpx;
+     font-size: 30rpx;
+     background: rgba(0, 0, 0, 0.2);
+     padding-left: 20rpx;
+     
+ }
+ .meet-item-footer{
+     padding-left: 26rpx;
+     padding-right: 26rpx;
+
+ }
+ .info{
+
+ }
+ .sign{
+     margin-bottom: 16rpx;
+     color: #aaa;
+ }

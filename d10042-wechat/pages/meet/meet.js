@@ -1,6 +1,61 @@
 Page({
     data: {
+        users:[
+            {
+                name:'南方',
+                age:'24岁',
+                height:'180cm',
+                edu:'本科',
+                sign:'南方南，北秋北',
+                img:'../imgs/img/boy1.png'
 
+            },
+            {
+                name:'南方',
+                age:'24岁',
+                height:'180cm',
+                edu:'本科',
+                sign:'南方南，北秋北',
+                img:'../imgs/img/boy1.png'
+
+            },
+            {
+                name:'南方',
+                age:'24岁',
+                height:'180cm',
+                edu:'本科',
+                sign:'南方南，北秋北',
+                img:'../imgs/img/boy1.png'
+
+            },
+            {
+                name:'南方',
+                age:'24岁',
+                height:'180cm',
+                edu:'本科',
+                sign:'南方南，北秋北',
+                img:'../imgs/img/boy1.png'
+
+            },
+            {
+                name:'南方',
+                age:'24岁',
+                height:'180cm',
+                edu:'本科',
+                sign:'南方南，北秋北',
+                img:'../imgs/img/boy1.png'
+
+            },
+            {
+                name:'南方',
+                age:'24岁',
+                height:'180cm',
+                edu:'本科',
+                sign:'南方南，北秋北',
+                img:'../imgs/img/boy1.png'
+
+            },
+        ]
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载

@@ -1,0 +1,21 @@
+<view class="container meet flex-h">
+     <view class="meet-item bg-w flex-v" wx:for="{{users}}">
+        <view class="name-pa">
+            <image src="{{item.img}}"/>
+            <view class="item-name">{{item.name}}</view>
+        </view>
+        
+        <view class="meet-item-footer">
+            <view class="info">
+                <text>{{item.age}}</text>
+                <text class="mar-lr-10">|</text>
+                <text>{{item.height}}</text>
+                <text class="mar-lr-10">|</text>
+                <text>{{item.edu}}</text>
+            </view>
+            <view class="sign only-one-line">{{item.sign}}</view>
+        </view>
+        
+     </view>
+
+</view>

@@ -1,10 +1,97 @@
 /**app.wxss**/
-.container {
+page {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
+  background: #e5e5e5;
 } 
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············ 页面样式重置*/
+view{
+    box-sizing: border-box;
+}
+
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············ 辅助类*/
+.mar-lr-10{
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············ 公共样式*/
+
+/* ----------- . flex */
+.flex-v{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-h{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-h-v{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* ---------- . 绝对定位元素 */
+.ab-c{
+    position: absolute;
+    left: 0;right: 0;
+    bottom: 0;top: 0;
+    margin: auto;
+}
+.ab-c-v{
+    position: absolute;
+    left: 0;right: 0;
+    bottom: 0;top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.ab-c-h{
+    position: absolute;
+    left: 0;right: 0;
+    bottom: 0;top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* ---------背景颜色 */
+.bg-w{
+    background: #fff;
+}
+.bg-g{
+    background: #e5e5e5;
+}
+/* -------- 图片100% */
+.img{
+    width: 100%;
+}
+
+
+/* ---------- . 文字处理 */
+
+/*--超出一行隐藏  */
+.only-one-line{
+    max-width: 90%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
