@@ -1,0 +1,41 @@
+/* 公共样式 */
+.icon-img{
+    width: 38rpx;
+    height: 38rpx;
+}
+
+page{
+    background: #fff;
+}
+
+
+/* 特定区域样式 */
+.dynamic-container{
+    padding: 18rpx;
+}
+/* 每一条动态 */
+.dynamic{
+    padding: 0 18rpx 48rpx 18rpx;
+    margin-bottom: 18rpx;
+    box-shadow: 0px 2px 30rpx rgba(0, 0, 0, 0.1);
+
+}
+
+.dynamic-h{
+    height: 214rpx;
+    justify-content: flex-start;
+    margin-left: 18rpx;
+    margin-right: 18rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+/* 头像图片 */
+.avatar-img{
+    width: 132rpx;
+    height: 132rpx;
+    margin-right: 40rpx;
+    margin-left: 20rpx;
+}
+
+.dynamic-b{
+    padding: 42rpx 18rpx;
+}

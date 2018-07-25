@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/dynamic/dynamic",
+    
     "pages/meet/meet",
     
     "pages/index/index",
-    "pages/dynamic/dynamic",
     "pages/meg/meg",
     "pages/my/my"
   ],

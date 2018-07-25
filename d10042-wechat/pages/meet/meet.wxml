@@ -1,5 +1,5 @@
 <view class="container meet flex-h">
-     <view class="meet-item bg-w flex-v" wx:for="{{users}}">
+     <view class="meet-item bg-w flex-v" wx:for="{{users}}" wx:key="{{index}}">
         <view class="name-pa">
             <image src="{{item.img}}"/>
             <view class="item-name">{{item.name}}</view>
