@@ -1,12 +1,14 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/meg/meg",
+    
     "pages/dynamic/dynamic",
     
-    "pages/meet/meet",
+    "pages/meet/meet"
     
-    "pages/index/index",
-    "pages/meg/meg",
-    "pages/my/my"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

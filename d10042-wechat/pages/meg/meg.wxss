@@ -1,0 +1,60 @@
+
+
+page{
+    background: #fff;
+}
+
+image{
+    width: 104rpx;
+    height: 104rpx;
+}
+
+
+
+
+
+/* -- 消息 */
+.meg{
+    width: 132.3809524%;
+    overflow: scroll;
+    height: 146rpx;
+    margin: 0;
+}
+/* - 操作 */
+.meg-op{
+    height: 146rpx;
+    
+}
+.op-top{
+    width: 118rpx;
+    background: #d9d9d9;
+    height: 100%;
+    color: white;
+}
+.op-del{
+    width: 118rpx;
+    background: #ff2233;
+    height: 100%;
+    color: white;
+}
+
+/* - 内容 */
+.meg-c{
+    width: 100%;
+}
+/* 显示消息的长度 */
+.meg-limit{
+    max-width: 490rpx;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+.js-move{
+    transform: translateX(-236rpx);
+
+}

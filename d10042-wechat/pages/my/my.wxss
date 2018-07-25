@@ -1,0 +1,59 @@
+page{
+    background: #f6f6f6;
+}
+
+
+.my-icon{
+    width: 44rpx;
+    height: 44rpx;
+}
+.my-icon-l{
+    width: 48rpx;
+    height: 48rpx;
+}
+.arrow{
+    width: 22rpx;
+    height: 40rpx;
+    
+}
+.arrow-s{
+    width: 20rpx;
+    height: 36rpx;
+}
+.avatar{
+    width: 150rpx;
+    height: 150rpx;
+}
+.avatar-s{
+    width: 114rpx;
+    height: 114rpx;
+}
+
+
+/* 个人信息 */
+.my-h-info{
+    height: 150rpx;
+}
+.my-upfile{
+    
+}
+.my-info{
+    max-width: 450rpx;
+    margin-left: -32rpx;
+    margin-top: 30rpx;
+    max-height: 120rpx;
+}
+/* 认证中心 */
+.my-cert{
+    height: 116rpx;
+}
+.certs{
+    max-width: 420rpx;
+    overflow: scroll;
+
+}
+
+/* 列表 */
+.list-item{
+    height: 96rpx;
+}

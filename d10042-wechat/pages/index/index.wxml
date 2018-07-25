@@ -1,4 +1,29 @@
 <!--index.wxml-->
-<view class="container">
-  
-</view>
+<page>
+    <view class="index-c">
+        <view class="stack">
+            <view class="stack-item" wx:for="{{pages}}">
+                  <image class="banner-img" src="{{item.img}}" /> 
+                  <view class="flex-v-s pad-lr-30">
+                      <text class="font-ll mar-b-8">{{item.name}}</text>
+                      <view class="tag tag-sm mar-b-8">
+                        <image class="tag-icon" src="../imgs/icon/girl.png" />
+                        {{item.age}}
+                      </view>
+                      <view class="info">
+                        <text class="mar-r-10">{{item.height}}</text>
+                        <text class="mar-r-10">{{item.edu}}</text>
+                        <text class="mar-r-10">{{item.star}}</text>
+                        <text class="mar-r-10">{{item.work}}</text>
+                        <text class="mar-r-10">{{item.money}}</text>
+                      </view>
+                  </view>
+            </view>
+        
+        </view>
+    </view>
+    <view class="index-f flex-h">
+        <image class="index-op" src="../imgs/icon/dislike.png" />
+        <image class="index-op" src="../imgs/icon/like.png" />
+    </view>
+</page>

@@ -1,6 +1,21 @@
 Page({
     data: {
-
+        megs:[
+            {
+                id:1,
+                name:'南方',
+                avatar:'../imgs/icon/avatar.png',
+                meg:'在吗在吗今晚去不去玩？',
+                time:'19:29'
+            },
+            {
+                id:2,
+                name:'南方',
+                avatar:'../imgs/icon/avatar.png',
+                meg:'在吗在吗今晚去不去玩？',
+                time:'20:29'
+            },
+        ]
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载

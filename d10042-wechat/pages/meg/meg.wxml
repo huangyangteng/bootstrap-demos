@@ -1,0 +1,42 @@
+<page>
+    <view class="meg  hr flex-h-s js-move">
+        
+        <view class="meg-c flex-h-s pad-lr-30">
+            <image class="mar-r-22" src="../imgs/icon/avatar.png"/>
+            <view class="meg-info w-full">
+                <view class="meg-name font-ll">南方</view>
+                <view class="meg-detail flex-h">
+                    <text class="meg-limit">在不在吗在吗在吗？</text>
+                    <text class="font-ss">16:33</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="meg-op flex-h">
+            <view class="op-top font-l  flex-v">置顶</view>
+            <view class="op-del font-l flex-v">删除</view>
+        </view>
+    </view>
+
+
+    <view class="meg  hr flex-h-s" wx:for="{{megs}}" wx:key="{{item.id}}">
+        
+        <view class="meg-c flex-h-s pad-lr-30" >
+            <image class="mar-r-22" src="{{item.avatar}}"/>
+            <view class="meg-info w-full">
+                <view class="meg-name font-ll mar-b-18">{{item.name}}</view>
+                <view class="meg-detail flex-h">
+                    <text class="meg-limit">{{item.meg}}</text>
+                    <text class="font-ss">{{item.time}}</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="meg-op flex-h">
+            <view class="op-top font-l  flex-v">置顶</view>
+            <view class="op-del font-l flex-v">删除</view>
+        </view>
+    </view>
+
+
+</page>

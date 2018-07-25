@@ -1,6 +1,85 @@
 Page({
   data: {
+    pages: [
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
 
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+
+    ]
   },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载

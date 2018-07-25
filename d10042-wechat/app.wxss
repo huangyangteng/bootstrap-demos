@@ -21,6 +21,13 @@ image{
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············ 辅助类*/
+/* - 宽 */
+.w-full{
+    width: 100%;
+}
+.h-full{
+    height: 100%;
+}
 /* ---margin */
 .mar-lr-10{
     margin-left: 10rpx;
@@ -35,16 +42,41 @@ image{
 .mar-r-22{
     margin-right: 22rpx;
 }
+.mar-r-30{
+    margin-right: 30rpx;
+}
 .mar-r-38{
     margin-right: 38rpx;
 }
+.mar-b-8{
+    margin-bottom: 8rpx;
+}
 .mar-b-12{
     margin-bottom: 12rpx;
+}
+.mar-b-18{
+    margin-bottom: 18rpx;
 }
 .pad-lr-18{
     padding-left: 18rpx;
     padding-right: 18rpx;
 }
+.pad-lr-30{
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.pad-bt-30{
+    padding-bottom: 30rpx;
+    padding-top: 30rpx;
+}
+
+/* border */
+.hr{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+
 /* ---圆角 */
 .r-10{
     border-radius: 10rpx;
@@ -52,10 +84,21 @@ image{
 .r-6{
     border-radius: 6rpx;
 }
+
+
+
 /* 字体 */
 .font-m{
     font-size: 24rpx;
     color: #666;
+}
+.font-mm{
+    font-size: 28rpx;
+    color: #333;
+}
+.font-ss{
+    font-size: 18rpx;
+    color: #9c9da3;
 }
 .font-s{
     font-size: 20rpx;
@@ -65,7 +108,13 @@ image{
     font-size: 30rpx;
     color: #333;
 }
-
+.font-ll{
+    font-size: 32rpx;
+    color: #333;
+}
+.text-light{
+    color: #aaa;
+}
 /* 上标 */
 .font-up{
     font-size: 18rpx;
@@ -74,12 +123,16 @@ image{
     margin-left: 6rpx;
 }
 
+
+
+
 /* ----- 图片 */
 /* 评论的图片 */
 .img-op{
     width: 30rpx;
     height: 30rpx;
 }
+
 
 
 
@@ -94,6 +147,12 @@ image{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.flex-v-s{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 .flex-h{
     display: flex;
@@ -159,17 +218,36 @@ image{
 }
 
 
+
+/*--------- 扩大点击区域 */
+.click-more{
+    border: 20px solid transparent;
+}
+.bor-l{
+    border-left: 0;
+}
+.bor-r{
+    border-right: 0;
+}
+
+
+
+
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············ 公共组件*/
 
-
+/* ------- tag */
 .tag{
     display: inline-block;
     padding: 4rpx 12rpx;
     border:1px solid transparent;
     background: transparent;
     border-radius: 10rpx;
+}
+.tag-sm{
+    padding: 2rpx 6rpx;
 }
 .tag.theme1{
     border-color: #ca75ea;
@@ -182,4 +260,37 @@ image{
 .tag.theme3{
     border-color: #71befe;
     color: #71befe;
+}
+
+/* ----- upfile */
+.upfile{
+    display: inline-block;
+    border: 1px dotted #dedede;
+    box-sizing: border-box;
+    border-radius: 10rpx;
+    width: 114rpx;
+    height: 114rpx;
+    position: relative;
+}
+.upfile::before{
+    content: '';
+    width: 74rpx;
+    height: 6rpx;
+    background:#d8d8d8;
+    position: absolute;
+
+    margin: auto;
+    bottom: 0;top: 0;
+    left: 0;right: 0;
+    
+}
+.upfile::after{
+    content: '';
+    width: 6rpx;
+    height: 74rpx;
+    background:#d8d8d8;
+    position: absolute;
+    margin: auto;
+    bottom: 0;top: 0;
+    left: 0;right: 0;
 }
