@@ -29,12 +29,18 @@ image{
     height: 100%;
 }
 /* ---margin */
+.mar-18{
+    margin: 18rpx;
+}
 .mar-lr-10{
     margin-left: 10rpx;
     margin-right: 10rpx;
 }
 .mar-r{
     margin-right: 0;
+}
+.mar-r-6{
+    margin-right: 6rpx;
 }
 .mar-r-10{
     margin-right: 10rpx;
@@ -57,6 +63,9 @@ image{
 .mar-b-18{
     margin-bottom: 18rpx;
 }
+.mar-b-20{
+    margin-bottom: 20rpx;
+}
 .pad-lr-18{
     padding-left: 18rpx;
     padding-right: 18rpx;
@@ -65,11 +74,24 @@ image{
     padding-left: 30rpx;
     padding-right: 30rpx;
 }
+.pad-lr-50{
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+}
 .pad-bt-30{
     padding-bottom: 30rpx;
     padding-top: 30rpx;
 }
+.mar-t20{
+    margin-top: -20rpx;
+}
 
+
+
+
+.mar-l-20{
+    margin-left: 20rpx;
+}
 /* border */
 .hr{
     border-bottom: 1px solid #e5e5e5;
@@ -241,7 +263,7 @@ image{
 /* ------- tag */
 .tag{
     display: inline-block;
-    padding: 4rpx 12rpx;
+    padding: 2rpx 12rpx;
     border:1px solid transparent;
     background: transparent;
     border-radius: 10rpx;
@@ -293,4 +315,50 @@ image{
     margin: auto;
     bottom: 0;top: 0;
     left: 0;right: 0;
+}
+
+/* ---- 文字标题 */
+.h-title{
+    font-size: 30rpx;
+    color: #25aab2;
+    line-height: 1;
+    position: relative;
+    margin-left: 24rpx;
+
+}
+.h-title::before{
+    content: '';
+    width: 6rpx;
+    height: 100%;
+    background-color: #25aab2;
+    position: absolute;
+    left: -24rpx;
+}
+
+.h-list{
+    font-size: 28rpx;
+    color: #666;
+    position: relative;
+    margin-left: 24rpx;
+    line-height: 60rpx;
+}
+.h-list::before{
+    content: '';
+    width: 10rpx;
+    height: 10rpx;
+    top: 0;bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #25aab2;
+    left: -24rpx;
+}
+
+
+
+
+/* ---- btn */
+button{
+    margin: 0;
+
 }

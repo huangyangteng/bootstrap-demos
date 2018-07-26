@@ -1,0 +1,28 @@
+<view class="matchmaker bg-w r-10">
+    <view class="h flex-v">
+        <image class="avatar" src="../imgs/img/matchmaker.png"></image>
+    </view>
+    <view class="c pad-lr-50">
+        <view class="h-title mar-b-20">个人资料</view>
+            <view class="h-list">姓名: <text class="font-mm">朱朱</text> </view>
+            <view class="h-list">职位: <text class="font-mm">高级婚恋顾问</text> </view>
+            <view class="h-list">年龄: <text class="font-mm">50岁</text> </view>
+            <view class="h-list">工作经验: <text class="font-mm">10年</text> </view>
+            <view class="h-list">职业档案: </view>
+            <view class="mar-t20 mar-l-20">
+                <text class="font-mm">
+                    红娘经验丰富，善于运用心灵匹配，性格相容、价值观接近、关系互动和谐的原则，以专业耐心的服务宗旨，成功牵线无以数计的单身人士，创立不错的红娘口碑。
+                </text>
+            </view>
+         
+    </view>
+</view>
+<view class="matchmaker-h flex-h pad-lr-50">
+    <button  size="defaultSize" class="btn" hover-class="btn_hover">
+    <image class="icon mar-r-12" src="../imgs/icon/my-send-meg.png" />
+    发消息
+    </button>
+    <button  size="defaultSize" class="btn" hover-class="btn_hover">
+        <image class="icon-phone mar-r-12" src="../imgs/icon/my-call.png" />
+    打电话</button>
+</view>

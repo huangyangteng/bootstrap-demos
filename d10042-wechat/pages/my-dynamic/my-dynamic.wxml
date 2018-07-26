@@ -1,0 +1,71 @@
+<view class="my-dynamic bg-w mar-18 r-10 pad-lr-18">
+    <view class="my-dynamic-h flex-h-s hr">
+        <image class="avatar mar-r-38" src="../imgs/icon/avatar2.png"></image>
+        <view class="flex-v-s">
+            <view class="mar-b-12 flex-h-s">
+                <text class="font-l mar-r-38">沫沫</text>
+                <image class="icon mar-r-6" src="../imgs/icon/car.png" />
+                <image class="icon mar-r-6" src="../imgs/icon/car.png" />
+                <image class="icon" src="../imgs/icon/car.png" />
+            </view>
+            <view>
+                <view class="tag theme1 mar-r-6">22岁</view>
+                <view class="tag theme2 mar-r-6">175cm</view>
+                <view class="tag theme3">本科</view>
+            </view>
+        </view>
+    </view>
+    <view class="my-dynamic-c">
+        <view class="h-title mar-b-20">个人动态</view>
+        <view class="font-ss">07-12</view>
+        <text>如果有一天我能够拥有一条渔船，我愿放下所有执着做个渔夫住在海边，每一个早晨我航行在晨曦的海面，每一个黄昏我遥望在无际的瀚间，我会把思绪都消失在波涛里，等待风雨后的平静</text>
+        <view class="flex-h">
+            <view>
+                <image class="img-op" src="../imgs/icon/commet.png" />
+                <text class="font-up">10</text>
+            </view>
+            <view>
+                <image  class="img-op " src="../imgs/icon/good.png" />
+                <text class="font-up">1</text>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+
+
+<view class="my-dynamic bg-w mar-18 r-10 pad-lr-18">
+    <view class="my-dynamic-h flex-h-s hr">
+        <image class="avatar mar-r-38" src="../imgs/icon/avatar2.png"></image>
+        <view class="flex-v-s">
+            <view class="mar-b-12 flex-h-s">
+                <text class="font-l mar-r-38">沫沫</text>
+                <image class="icon mar-r-6" src="../imgs/icon/car.png" />
+                <image class="icon mar-r-6" src="../imgs/icon/car.png" />
+                <image class="icon" src="../imgs/icon/car.png" />
+            </view>
+            <view>
+                <view class="tag theme1 mar-r-6">22岁</view>
+                <view class="tag theme2 mar-r-6">175cm</view>
+                <view class="tag theme3">本科</view>
+            </view>
+        </view>
+    </view>
+    <view class="my-dynamic-c">
+        <view class="h-title mar-b-20">个人动态</view>
+        <view class="font-ss">07-12</view>
+        <text>如果有一天我能够拥有一条渔船，我愿放下所有执着做个渔夫住在海边，每一个早晨我航行在晨曦的海面，每一个黄昏我遥望在无际的瀚间，我会把思绪都消失在波涛里，等待风雨后的平静</text>
+        <view class="flex-h">
+            <view>
+                <image class="img-op" src="../imgs/icon/commet.png" />
+                <text class="font-up">10</text>
+            </view>
+            <view>
+                <image  class="img-op " src="../imgs/icon/good.png" />
+                <text class="font-up">1</text>
+            </view>
+        </view>
+    </view>
+
+</view>

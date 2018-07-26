@@ -1,0 +1,42 @@
+page{
+    background: #f6f6f6;
+}
+
+.avatar{
+    width: 236rpx;
+    height: 236rpx;
+}
+.icon{
+    width: 40rpx;
+    height: 29rpx;
+}
+.icon-phone{
+    width: 26rpx;
+    height: 38rpx;
+    vertical-align: -6rpx;
+}
+.btn{
+    padding: 0rpx 66rpx;
+    background: #26bbb9;
+    color: white;
+
+}
+.btn::after{
+    border: 0;
+}
+.btn_hover{
+    background: #00aba8;
+}
+
+
+
+.matchmaker{
+    margin: 84rpx 42rpx 44rpx 42rpx;
+    padding-bottom: 60rpx;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+
+}
+
+.h{
+    height:362rpx;
+}
