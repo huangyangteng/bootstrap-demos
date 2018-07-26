@@ -568,12 +568,18 @@ $link-hover-decoration: underline !default;
         border-bottom-right-radius: 0;
 
     }
-    button:last-child{
+    button.last{
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
     button.active{
         @include btn-color(white,$brand-primary-lighter,transparent);
+    }
+    >img{
+        width: 1.625rem;
+        height: 1.375rem;
+        position: absolute;
+        right: .625rem;
     }
 }
 

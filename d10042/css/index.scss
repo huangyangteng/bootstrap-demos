@@ -770,6 +770,42 @@
     }
 }
 
+
+/*··············增加动态页面*/
+
+.p-cover.dy{
+    top:3.125rem;
+     transition: 1s all;
+}
+.add-dy{
+    background:#fff;
+    height: 9.125rem;
+    @include flex-h;
+    @include pad-lr(1.625rem,1.625rem);
+    >a{
+        @include flex-v;
+        img{
+            margin-bottom: .4rem;
+        }
+
+    }
+}
+.js-cover-toggle{
+    transition: .1s all;
+    visibility: visible;
+}
+.js-up{
+    transition: .2s all;
+    transform: translateY(-12.5rem);
+}
+
+
+
+
+
+
+
+
 // 是否显示modal
 .js-show-modal{
     transition: 1s all;

@@ -12,7 +12,8 @@
     <!-- 导航 -->
     <header class="p-header tab">
         <button class="p-btn active">关注</button>
-        <button class="p-btn">发现</button>
+        <button class="p-btn last">发现</button>
+        <img src="imgs/icon/photo.png" alt="" id="toggle_camera">
     </header>
     <!-- 动态 -->
     <section class="p-dynamic last-section">
@@ -143,7 +144,41 @@
             <p>我的</p>
         </a>
     </footer>
-    
+    <!-- modal -->
+    <div class="p-cover dy" id="add_dy_cover">
+        <section class="add-dy">
+            <a href="javascript:;">
+                <img src="imgs/icon/add-1.png">
+                <span>文字</span>
+            </a>
+            <a href="javascript:;">
+                <img src="imgs/icon/add-2.png">
+                <span>拍照</span>
+            </a>
+            <a href="javascript:;">
+                <img src="imgs/icon/add-3.png">
+                <span>视频</span>
+            </a>
+            <a href="javascript:;">
+                <img src="imgs/icon/add-4.png">
+                <span>相册</span>
+            </a>
+        </section>
+    </div>
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+    <script>
+        var toggle_camera=$('#toggle_camera');
+        var cover=$('#add_dy_cover');
+        toggle_camera.click(function () {
+            if(cover.hasClass('js-cover-toggle')){
+                cover.find('.add-dy').addClass('js-up');
+                cover.removeClass('js-cover-toggle')
+                
+            }else{
+                cover.addClass('js-cover-toggle')
+                cover.find('.add-dy').removeClass('js-up');
+            }
+        })
+    </script>
 </body>
 </html> 
