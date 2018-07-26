@@ -48,6 +48,12 @@ image{
 .mar-r-10{
     margin-right: 10rpx;
 }
+.mar-r-18{
+    margin-right: 18rpx;
+}
+.mar-r-20{
+    margin-right: 20rpx;
+}
 .mar-r-22{
     margin-right: 22rpx;
 }
@@ -57,6 +63,14 @@ image{
 .mar-r-38{
     margin-right: 38rpx;
 }
+
+.mar-t20{
+    margin-top: -20rpx;
+}
+.mar-l20{
+    margin-left: -20rpx;
+}
+
 .mar-b-8{
     margin-bottom: 8rpx;
 }
@@ -69,6 +83,29 @@ image{
 .mar-b-20{
     margin-bottom: 20rpx;
 }
+.mar-b-30{
+    margin-bottom: 30rpx;
+}
+
+
+
+.mar-b-40{
+    margin-bottom: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pad-lr-18{
     padding-left: 18rpx;
     padding-right: 18rpx;
@@ -81,12 +118,18 @@ image{
     padding-left: 50rpx;
     padding-right: 50rpx;
 }
+
+
+
+
+
+.pad-bt-26{
+    padding-top: 26rpx;
+    padding-bottom: 28rpx;
+}
 .pad-bt-30{
     padding-bottom: 30rpx;
     padding-top: 30rpx;
-}
-.mar-t20{
-    margin-top: -20rpx;
 }
 
 
@@ -98,6 +141,9 @@ image{
 /* border */
 .hr{
     border-bottom: 1px solid #e5e5e5;
+}
+.hr-r{
+    border-right: 1px solid #e5e5e5;
 }
 
 
@@ -271,10 +317,22 @@ image{
     background: transparent;
     border-radius: 10rpx;
 }
+
+
+
 .tag.xs{
     padding: 4rpx 4rpx;
     line-height: 1.4;
 }
+.tag.l{
+    padding: 4rpx 30rpx;
+    line-height: 1.4;
+}
+
+
+
+
+
 .tag.theme1{
     border-color: #ca75ea;
     color: #ca75ea;
@@ -307,6 +365,19 @@ image{
     color: white;
     background: #9ce184 ;
 }
+
+.tag.theme-info{
+    background: #bde5e8;
+    color: #666;
+}
+.tag.theme-standard{
+    background: #f9d1e3;
+    color: #666;
+}
+
+
+
+
 
 
 /* ----- upfile */
@@ -345,12 +416,16 @@ image{
 /* ---- 文字标题 */
 .h-title{
     font-size: 30rpx;
-    color: #25aab2;
+    color: #333;
     line-height: 1;
     position: relative;
     margin-left: 24rpx;
 
 }
+.h-title.theme{
+    color: #25aab2;
+}
+
 .h-title::before{
     content: '';
     width: 6rpx;

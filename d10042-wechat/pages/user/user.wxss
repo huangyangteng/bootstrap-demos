@@ -1,0 +1,90 @@
+page{
+    background: #f6f6f6;
+}
+
+/* img */
+.avatar{
+    width: 210rpx;
+    height: 210rpx;
+}
+
+.avatar-s{
+    width: 92rpx;
+    height: 92rpx;
+}
+.icon{
+    width: 76rpx;
+    height: 76rpx;
+}
+.icon-s{
+    width: 27rpx;
+
+}
+.btn-icon{
+    width: 44rpx;
+    height: 36rpx;
+}
+
+/*  通用*/
+.user-limit{
+    max-width: 76%;
+}
+.user-limit>view{
+    margin-right: 16rpx;
+    margin-bottom: 14rpx;
+}
+
+
+/* btn */
+.btn{
+    font-size: 32rpx;
+    line-height: 1;
+    padding: 16rpx 60rpx;
+    background: #ff667e;
+    color: white;
+}
+.btn-hover{
+    background: #ff4763;
+}
+
+
+
+
+
+.user-t,.user-tag,
+.user-cert,
+.user-info,
+.user-standard,
+.user-self,
+.user-dynamic
+
+
+{
+    padding-left: 42rpx;
+    padding-right: 42rpx;
+    margin-bottom: 8rpx;
+    background: #fff;
+}
+
+.user-t{
+    
+    padding-top: 44rpx;
+    padding-bottom: 40rpx;
+}
+
+.user-tag{
+    padding-top: 30rpx;
+    padding-bottom: 32rpx;
+}
+.user-cert{
+    height: 160rpx;
+}
+
+.user-op{
+    height:100rpx ;
+    padding: 10rpx;
+}
+.user-op>view{
+    flex-basis: 50%;
+}
+

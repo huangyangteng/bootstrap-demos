@@ -1,0 +1,124 @@
+<view class="user-t">
+    <view class="flex-h mar-b-40">
+        <image class="avatar" src="../imgs/img/avatar-user.png" />
+        <view class="flex-v-s mar-l20">
+            <text class="font-ll">南方</text>
+            <text>ID:645213354</text>
+            <text class="only-one-line">南方南，北秋北...</text>
+        </view>
+        <button class="btn" hover-class="btn-hover">关注</button>
+    </view>
+    <view class="flex-h-s">
+        <image class="avatar-s mar-r-18" src="../imgs/img/my2.png"></image>
+        <image class="avatar-s mar-r-18" src="../imgs/img/my3.png"></image>
+        <image class="avatar-s mar-r-18" src="../imgs/img/my4.png"></image>
+        <image class="avatar-s mar-r-18" src="../imgs/img/my5.png"></image>
+        <image class="avatar-s mar-r-18" src="../imgs/img/my2.png"></image>
+        <image class="avatar-s mar-r-18" src="../imgs/img/my2.png"></image>
+    </view>
+</view>
+
+
+<view class="user-tag flex-h-s">
+    <view class="h-title mar-r-8">个人标签:</view>
+    <view>
+        <view class="tag theme-1 xs mar-r-10">天蝎</view>
+        <view class="tag theme-2 xs mar-r-10">永远年轻</view>
+        <view class="tag theme-3 xs mar-r-10">双重人格</view>
+        <view class="tag theme-4 xs mar-r-10">安静</view>
+    </view>
+</view>
+
+
+<view class="user-cert flex-h">
+    <view class="flex-v">
+        <image class="icon mar-b-8" src="../imgs/icon/cert1.png" />
+        <text class="font-s">实名</text>
+    </view>
+    <view class="flex-v">
+        <image class="icon mar-b-8" src="../imgs/icon/cert2.png" />
+        <text class="font-s">手机</text>
+    </view>
+    <view class="flex-v">
+        <image class="icon mar-b-8" src="../imgs/icon/cert3.png" />
+        <text class="font-s">红娘</text>
+    </view>
+    <view class="flex-v">
+        <image class="icon mar-b-8" src="../imgs/icon/cert4.png" />
+        <text class="font-s">亲友</text>
+    </view>
+    <view class="flex-v">
+        <image class="icon mar-b-8" src="../imgs/icon/cert5.png" />
+        <text class="font-s">车</text>
+    </view>
+    <view class="flex-v">
+        <image class="icon mar-b-8" src="../imgs/icon/cert6.png" />
+        <text class="font-s">房</text>
+    </view>
+</view>
+
+
+
+<view class="user-info pad-bt-26">
+    <view class="h-title mar-b-30">个人资料</view>
+    <view class="user-limit">
+        <view class="tag theme-info l">未婚</view>
+        <view class="tag theme-info l">24岁</view>
+        <view class="tag theme-info l">76kg</view>
+        <view class="tag theme-info l">180cm</view>
+        <view class="tag theme-info l">工作地：武汉黄坡区</view>
+        <view class="tag theme-info l">月收入：8千-1.2万</view>
+        <view class="tag theme-info l">其他职业</view>
+    </view>
+</view>
+
+<view class="user-self pad-bt-26">
+    <view class="h-title mar-b-30">自我评价</view>
+    <text> 天秤男，时逗时傻，互联网IT男，爱美剧、爱电影、爱运动爱魔兽、爱吃辣、猫奴......车房已置办。</text>
+</view>
+
+
+<view class="user-standard pad-bt-26">
+    <view class="h-title mar-b-30">择偶标准</view>
+    <view class="user-limit">
+        <view class="tag theme-standard l">未婚</view>
+        <view class="tag theme-standard l">24岁</view>
+        <view class="tag theme-standard l">56kg</view>
+        <view class="tag theme-standard l">170cm</view>
+        <view class="tag theme-standard l">工作地：武汉黄坡区</view>
+        <view class="tag theme-standard l">月收入：8千-1.2万</view>
+        <view class="tag theme-standard l">大学本科</view>
+    </view>
+</view>
+
+
+<view class="user-dynamic pad-bt-26">
+    <view class="h-title mar-b-30">个人动态</view>
+    <view>
+        <view class="font-ss">07-10</view>
+        <text>一个人的日子，真的很难熬。</text>
+        <view class="flex-h">
+            <view>
+                <image class="img-op" src="../imgs/icon/commet.png" />
+                <text class="font-up">10</text>
+            </view>
+            <view>
+                <image  class="img-op " src="../imgs/icon/good.png" />
+                <text class="font-up">1</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+<view class="flex-h user-op bg-w">
+    <view class="flex-h-v hr-r">
+        <image class="btn-icon mar-r-20" src="../imgs/icon/sendmeg.png"></image>
+        <text class="font-mm">发消息</text>
+        
+    </view>
+    <view class="flex-h-v">
+        <image class="btn-icon mar-r-20" src="../imgs/icon/sendmeg.png"></image>
+        <text class="font-mm">红娘牵手</text>
+    </view>
+</view>
