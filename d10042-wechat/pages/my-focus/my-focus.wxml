@@ -1,0 +1,32 @@
+<view class="hr my-focus flex-h-s">
+    <image class="avatar mar-r-38" src="../imgs/img/avatar-nanfang.png" />
+    <view>
+        <text class="font-l mar-b-12">南方</text>
+        <view class="mar-b-12">
+            <text class="mar-r-38">上海</text>
+            <text>24岁</text>
+        </view>
+        <view class="flex-h-s">
+            <view class="tag font-ss xs theme-1 mar-r-8">天蝎</view>
+            <view class="tag font-ss xs theme-2 mar-r-8">永远年轻</view>
+            <view class="tag font-ss xs theme-3 mar-r-8">双重人格</view>
+            <view class="tag font-ss xs theme-4 mar-r-8">安静</view>
+        </view>
+    </view>
+</view>
+<view class="hr my-focus flex-h-s">
+    <image class="avatar mar-r-38" src="../imgs/img/avatar-nanfang.png" />
+    <view>
+        <text class="font-l mar-b-12">南方</text>
+        <view class="mar-b-12">
+            <text class="mar-r-38">上海</text>
+            <text>24岁</text>
+        </view>
+        <view class="flex-h-s">
+            <view class="tag font-ss xs theme-1 mar-r-8">天蝎</view>
+            <view class="tag font-ss xs theme-2 mar-r-8">永远年轻</view>
+            <view class="tag font-ss xs theme-3 mar-r-8">双重人格</view>
+            <view class="tag font-ss xs theme-4 mar-r-8">安静</view>
+        </view>
+    </view>
+</view>

@@ -42,6 +42,9 @@ image{
 .mar-r-6{
     margin-right: 6rpx;
 }
+.mar-r-8{
+    margin-right: 8rpx;
+}
 .mar-r-10{
     margin-right: 10rpx;
 }
@@ -268,8 +271,9 @@ image{
     background: transparent;
     border-radius: 10rpx;
 }
-.tag-sm{
-    padding: 2rpx 6rpx;
+.tag.xs{
+    padding: 4rpx 4rpx;
+    line-height: 1.4;
 }
 .tag.theme1{
     border-color: #ca75ea;
@@ -283,6 +287,27 @@ image{
     border-color: #71befe;
     color: #71befe;
 }
+.tag.theme-1{
+    color: white;
+    background: #df8bff;
+}
+.tag.theme-2{
+    color: white;
+    background: #71befe;
+}
+.tag.theme-3{
+    color: white;
+    background: #f6b37f;
+}
+.tag.theme-4{
+    color: white;
+    background: #f19ec2 ;
+}
+.tag.theme-5{
+    color: white;
+    background: #9ce184 ;
+}
+
 
 /* ----- upfile */
 .upfile{

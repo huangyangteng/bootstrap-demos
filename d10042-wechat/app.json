@@ -1,12 +1,13 @@
 {
   "pages":[
+    "pages/my-focus/my-focus",
+    
     "pages/my-matchmaker/my-matchmaker",
     
     "pages/my-dynamic/my-dynamic",
     
     "pages/my/my",
     
-    "pages/my-focus/my-focus",
     "pages/index/index",
     "pages/meg/meg",
     

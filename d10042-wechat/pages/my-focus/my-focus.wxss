@@ -1,0 +1,19 @@
+page{
+    background: #fff;
+}
+
+.avatar{
+    width: 134rpx;
+    height: 134rpx;
+}
+
+
+
+
+
+
+
+
+.my-focus{
+    padding: 34rpx;
+}
