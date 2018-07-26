@@ -1,5 +1,10 @@
 {
   "pages":[
+    "pages/reg/reg",
+    "pages/login/login",
+    "pages/forget-pass/forget-pass",
+    "pages/change-pass/change-pass",
+    "pages/cert-self/cert-self",
     "pages/user/user",
     "pages/my-focus/my-focus",
     

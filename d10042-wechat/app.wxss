@@ -118,6 +118,11 @@ image{
     padding-left: 50rpx;
     padding-right: 50rpx;
 }
+.pad-lr-74{
+    padding-left: 74rpx;
+    padding-right: 74rpx;
+}
+
 
 
 
@@ -461,4 +466,77 @@ image{
 button{
     margin: 0;
 
+}
+.btn{
+    line-height: 1;
+    
+}
+.btn::after{
+    border: 0;
+}
+.btn.plain{
+    color: #13beab;
+    background: transparent;
+}
+.btn.plain::after{
+    border:1px solid #13beab;
+}
+
+.btn.s{
+    padding: 12rpx 20rpx;
+    font-size: 22rpx;
+}
+.btn.m{
+    padding: 20rpx 96rpx;
+}
+
+.primary{
+    background: #13beab;
+    color: white;
+}
+
+
+.btn-h{
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+/* ---  input */
+.input-pa{
+    position: relative;
+}
+.input-pa>image{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    top: 0;bottom: 0;
+    z-index:6;
+}
+.input-pa>button{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    top: 0;bottom: 0;
+    height: 46rpx;
+    z-index:6;
+}
+
+
+
+
+.input{
+    height: 86rpx;
+    border-bottom: 1px solid #e5e5e5;
+}
+.input-p{
+    font-size: 32rpx;
+    color: #c7c7cd;
 }

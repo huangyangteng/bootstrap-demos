@@ -1,0 +1,25 @@
+<image src="../imgs/img/cover.png" />
+<view class="pad-lr-74">
+    <view class="mar-b-20">
+        <input class="input" type="number" placeholder="手机号" placeholder-class="input-p"/>
+    </view>
+    
+    <view class="input-pa  mar-b-20">
+        <input class="input" type="number" placeholder="验证码" placeholder-class="input-p"/>
+        <button class="btn s primary" hover-class="btn-h" bindtap="getcode">获取验证码</button>
+    </view>
+    
+    
+    <view class="input-pa mar-b-20">
+        <input class="input" type="text" password  placeholder="6-16位密码" placeholder-class="input-p"/>
+        <image class="icon" src="../imgs/icon/see-pass.png" />
+    </view>
+
+    <view class="flex-h">
+        <button class="btn primary m" hover-class="btn-h">注册</button>
+        <button class="btn m plain"  hover-class="btn-h">登录</button>
+    </view>
+    
+    
+</view>
+

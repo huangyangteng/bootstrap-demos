@@ -1,0 +1,14 @@
+
+
+page{
+    background: #fff;
+}
+
+.cover-img{
+    width: 100%;
+    height: 518rpx;
+}
+.icon{
+    width: 36rpx;
+    height: 24rpx;
+}
