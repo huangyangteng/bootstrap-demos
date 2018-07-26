@@ -1723,6 +1723,8 @@ body {
 
 .add-dy > a img {
   margin-bottom: .4rem;
+  width: 3.375rem;
+  height: 3.375rem;
 }
 
 .js-cover-toggle {
