@@ -1,0 +1,106 @@
+
+<view class="search-mode-1" style="display:none">
+    <view class="reco bg-w mar-18">
+        <view class="flex-h pad-lr-50">
+            <view class="flex-v">
+                <image class="icon mar-b-8" src="../imgs/icon/search1.png" />
+                <text class="font-mm">猜你喜欢</text>
+            </view>
+            <view class="flex-v">
+                <image class="icon mar-b-8" src="../imgs/icon/search2.png" />
+                <text class="font-mm">会员专区</text>
+            </view>
+            <view class="flex-v">
+                <image class="icon mar-b-8" src="../imgs/icon/search3.png" />
+                <text class="font-mm">魅力用户</text>
+            </view>
+        </view>
+        <view class="flex-h pad-lr-50">
+            <view class="flex-v">
+                <image class="icon mar-b-8" src="../imgs/icon/search4.png" />
+                <text class="font-mm">成功人士</text>
+            </view>
+            <view class="flex-v">
+                <image class="icon mar-b-8" src="../imgs/icon/search5.png" />
+                <text class="font-mm">天生一对</text>
+            </view>
+            <view class="flex-v">
+                <image class="icon mar-b-8" src="../imgs/icon/search6.png" />
+                <text class="font-mm">90后</text>
+            </view>
+        </view>
+    </view>
+    <view class="base bg-w mar-18">
+        <view class="title  pad-lr-30 flex-h">
+            <view class="h-title">基本条件</view>
+        </view>
+        <view class="input-pa-r mar-lr-18 pad-lr-30">
+            <text class="l font-l">年龄</text>
+            <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+                <view class="input-pa">
+                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'18-20岁':array[index]}}" placeholder-class="input-p"/>
+                    <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="input-pa-r mar-lr-18 pad-lr-30">
+            <text class="l font-l">工作地区</text>
+            <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+                <view class="input-pa">
+                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'湖北 武汉':array[index]}}" placeholder-class="input-p"/>
+                    <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="input-pa-r mar-lr-18 pad-lr-30">
+            <text class="l font-l">身高</text>
+            <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+                <view class="input-pa">
+                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
+                    <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="input-pa-r mar-lr-18 pad-lr-30">
+            <text class="l font-l">体型</text>
+            <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+                <view class="input-pa">
+                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
+                    <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="input-pa-r mar-lr-18 pad-lr-30">
+            <text class="l font-l">学历</text>
+            <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+                <view class="input-pa">
+                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
+                    <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="input-pa-r mar-lr-18 pad-lr-30">
+            <text class="l font-l">月收入</text>
+            <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+                <view class="input-pa">
+                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'6000以上':array[index]}}" placeholder-class="input-p"/>
+                    <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
+                </view>
+            </picker>
+        </view>
+
+
+
+        <button class="btn-bottom primary">开始搜索</button>
+    </view>
+
+</view>
+<view class="search-mode-2">
+    <view class="se-i mar-18 bg-w r-10">
+        <image class="search-icon" src="../imgs/icon/search-precise.png" />
+        <input type="search" placeholder="请输入用户昵称"  auto-focus  />
+    </view>
+    <view class="se-b bg-w r-10 pad-lr-18">
+        <button class="primary">开始搜索</button>
+    </view>
+</view>

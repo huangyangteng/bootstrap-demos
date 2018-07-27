@@ -1,0 +1,63 @@
+.icon{
+    width: 60rpx;
+    height: 50rpx;
+}
+
+.icon-input{
+    width: 17rpx;
+    height: 24rpx;
+}
+
+.search-icon{
+    width: 34rpx;
+    height: 34rpx;
+}
+
+
+.reco>view{
+    height:150rpx ;
+}
+
+.input-pa-r>text.l{
+    left: 50rpx;
+}
+.input-pa-r input{
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.title{
+    height: 80rpx;
+}
+
+
+/* --------------------精准搜索 */
+.se-i{
+    height: 140rpx;
+    padding: 34rpx 32rpx 30rpx 32rpx;
+    position: relative;
+}
+.se-i>input{
+    height: 80rpx;
+    background: #f3f5f7;
+    padding-left: 50rpx;
+
+}
+.se-i>image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40rpx;
+    z-index: 2;
+    margin: auto;
+}
+.se-b{
+    height: 134rpx;
+    width: 100%;
+    position: absolute;
+    bottom: 60rpx;
+    line-height: 134rpx;
+}
+.se-b>button{
+    margin-top: 18rpx;
+}
