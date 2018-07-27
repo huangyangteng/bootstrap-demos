@@ -188,6 +188,9 @@ image{
     font-size: 32rpx;
     color: #333;
 }
+.font-primary{
+    color:#13beab;
+}
 .text-light{
     color: #aaa;
 }

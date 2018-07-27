@@ -14,10 +14,13 @@
         <input class="input" type="text" password  placeholder="6-16位密码" placeholder-class="input-p"/>
         <image class="icon" src="../imgs/icon/see-pass.png" />
     </view>
+    <view class="meet-q flex-h">
+        登录遇到问题
+    </view>
 
-    <view class="flex-h">
-        <button class="btn primary m" hover-class="btn-h">注册</button>
-        <button class="btn m plain"  hover-class="btn-h">登录</button>
+    <view class="flex-h ">
+        <button class="btn primary m" hover-class="btn-h" >注册</button>
+        <button class="btn m plain"  hover-class="btn-h" bindtap="goLogin">登录</button>
     </view>
     
     

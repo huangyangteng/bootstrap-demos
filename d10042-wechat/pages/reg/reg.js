@@ -9,6 +9,11 @@ Page({
     getcode(){
         console.log(1)
     },
+    goLogin(){
+        wx.redirectTo({
+            url:'../login/login'
+        })
+    },
     onShareAppMessage: function () {
         // 用户点击右上角分享
         return {

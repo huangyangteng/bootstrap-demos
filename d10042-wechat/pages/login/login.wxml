@@ -1,0 +1,26 @@
+<image src="../imgs/img/cover.png" />
+<view class="pad-lr-74">
+    <view class="mar-b-20">
+        <input class="input" type="number" placeholder="手机号" placeholder-class="input-p"/>
+    </view>
+    
+
+    
+    
+    <view class="input-pa mar-b-20">
+        <input class="input" type="text" password  placeholder="6-16位密码" placeholder-class="input-p"/>
+        <image class="icon" src="../imgs/icon/see-pass.png" />
+    </view>
+    <view class="meet-q flex-h">
+        <text class="font-primary" bindtap="forgetPass">忘记密码？</text>
+        登录遇到问题
+    </view>
+
+    <view class="flex-h ">
+        <button class="btn plain  m" hover-class="btn-h">注册</button>
+        <button class="btn m primary "  hover-class="btn-h">登录</button>
+    </view>
+    
+    
+</view>
+

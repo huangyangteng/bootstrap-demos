@@ -12,3 +12,10 @@ page{
     width: 36rpx;
     height: 24rpx;
 }
+
+
+.meet-q{
+    height: 88rpx;
+    justify-content: flex-end;
+    color: #cccccc; 
+}
