@@ -188,6 +188,10 @@ image{
     font-size: 32rpx;
     color: #333;
 }
+.font-lll{
+    font-size: 34rpx;
+    color: #333;
+}
 .font-primary{
     color:#13beab;
 }

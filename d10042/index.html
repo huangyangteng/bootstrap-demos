@@ -46,14 +46,14 @@
             </ul>
         </section>
         <footer>
-            <img src="imgs/icon/dislike.png" alt="" @click="clickPrev" class="js-scale">
-            <img src="imgs/icon/like.png" alt="" @click="clickNext">
+            <img src="imgs/icon/dislike.png" alt="" @touchstart.stop.capture.prevent="clickPrev" class="js-scale">
+            <img src="imgs/icon/like.png" alt="" @touchstart.stop.capture.prevent="clickNext">
         </footer>
     </section>
     <!-- fixed有一个bug  -->
-    <section style="height: 3.75rem;"></section>
+    <section style="height: 3.125rem;"></section>
     <!-- footer -->
-    <footer class="p-footer">
+    <footer class="p-footer index">
         <a class="active" href="index.html">
             <img src="imgs/icon/footer1-l.png" alt="">
             <p>推荐</p>
