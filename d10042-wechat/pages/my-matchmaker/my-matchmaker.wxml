@@ -18,11 +18,11 @@
     </view>
 </view>
 <view class="matchmaker-h flex-h pad-lr-50">
-    <button  size="defaultSize" class="btn" hover-class="btn_hover">
+    <button  size="defaultSize" class="btn-m" hover-class="btn_hover">
     <image class="icon mar-r-12" src="../imgs/icon/my-send-meg.png" />
     发消息
     </button>
-    <button  size="defaultSize" class="btn" hover-class="btn_hover">
+    <button  size="defaultSize" class="btn-m" hover-class="btn_hover">
         <image class="icon-phone mar-r-12" src="../imgs/icon/my-call.png" />
     打电话</button>
 </view>

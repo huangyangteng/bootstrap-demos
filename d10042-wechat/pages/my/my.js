@@ -6,6 +6,21 @@ Page({
         // 生命周期函数--监听页面加载
         
     },
+    certSelf(){
+        wx.navigateTo({
+            url:'../cert-self/cert-self'
+        })
+    },
+    certSchool(){
+        wx.navigateTo({
+            url: '../cert-edu/cert-edu'
+        })
+    },
+    goInfo(){
+        wx.navigateTo({
+            url:'../self-info/self-info'
+        })
+    },
     onShareAppMessage: function() {
         // 用户点击右上角分享
         return {

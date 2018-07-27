@@ -2,7 +2,7 @@
     <view class="mar-b-40">
         <text class="label">真实姓名</text>
          <view class="input-pa">
-            <input class="input font-l" type="number" value="未填写" placeholder-class="input-p"/>
+            <input class="input font-l" type="text"  value="未填写" placeholder-class="input-p"/>
         </view>
     </view>
 
@@ -10,7 +10,7 @@
         <text class="label">学校</text>
          <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
             <view class="input-pa">
-                <input class="input font-l" type="number" value="{{index===0?'清华大学':array[index]}}" placeholder-class="input-p"/>
+                <input class="input font-l" type="text" disabled value="{{index===0?'清华大学':array[index]}}" placeholder-class="input-p"/>
                 <image src="../imgs/icon/arrow-right.png" class="icon"></image>
             </view>
         </picker>
@@ -19,7 +19,7 @@
         <text class="label">院系</text>
          <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
             <view class="input-pa">
-                <input class="input font-l" type="number" value="{{index===0?'工业设计系':array[index]}}" placeholder-class="input-p"/>
+                <input class="input font-l" type="text" disabled value="{{index===0?'工业设计系':array[index]}}" placeholder-class="input-p"/>
                 <image src="../imgs/icon/arrow-right.png" class="icon"></image>
             </view>
         </picker>
@@ -30,7 +30,7 @@
         <text class="label">入学年份</text>
         <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
             <view class="input-pa">
-                <input class="input font-l" type="number" value="{{index===0?'2014':array[index]}}" placeholder-class="input-p"/>
+                <input class="input font-l" type="text" disabled value="{{index===0?'2014':array[index]}}" placeholder-class="input-p"/>
                 <image src="../imgs/icon/arrow-right.png" class="icon"></image>
             </view>
         </picker>

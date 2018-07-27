@@ -11,6 +11,11 @@ Page({
             url:'../forget-pass/forget-pass'
         })
     },
+    goReg(){
+        wx.redirectTo({
+            url:'../reg/reg'
+        })
+    },
     onShareAppMessage: function () {
         // 用户点击右上角分享
         return {

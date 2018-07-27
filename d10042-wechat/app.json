@@ -1,5 +1,14 @@
 {
   "pages":[
+    "pages/index/index",
+    
+    "pages/login/login",
+    
+    "pages/my/my",
+    
+    "pages/my-matchmaker/my-matchmaker",
+    
+    
     "pages/search/search",
     "pages/self-info/self-info",
     
@@ -11,19 +20,15 @@
     
     "pages/forget-pass/forget-pass",
     "pages/reg/reg",
-    "pages/login/login",
     
     "pages/change-pass/change-pass",
     "pages/user/user",
     "pages/my-focus/my-focus",
     
-    "pages/my-matchmaker/my-matchmaker",
     
     "pages/my-dynamic/my-dynamic",
     
-    "pages/my/my",
     
-    "pages/index/index",
     "pages/meg/meg",
     
     "pages/dynamic/dynamic",

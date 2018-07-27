@@ -635,6 +635,7 @@ button{
 .input{
     height: 86rpx;
     border-bottom: 1px solid #e5e5e5;
+    font-size: 32rpx;
 }
 .input-p{
     font-size: 32rpx;

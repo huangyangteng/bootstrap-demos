@@ -1,11 +1,11 @@
 <view class="pad-lr-30 change-pass">
     <view class="input-pa-r  mar-b-20">
         <text class="l font-l">新密码</text>
-        <input class="input" type="number" placeholder="密码由6-16位字符组成" placeholder-class="input-p"/>
+        <input class="input" type="text" password placeholder="密码由6-16位字符组成" placeholder-class="input-p"/>
     </view>
     <view class="input-pa-r  mar-b-20">
         <text class="l font-l">确认新密码</text>
-        <input class="input" type="number" placeholder="请输入" placeholder-class="input-p"/>
+        <input class="input" type="text" password placeholder="请输入" placeholder-class="input-p"/>
     </view>
     <button class="primary btn-bottom" hover-class="btn-h">确认</button>
 </view>

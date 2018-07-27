@@ -13,7 +13,7 @@
                 <view class="h-title">
                     自我介绍
                 </view>
-                <view class="tag tag-edit-info" >+编辑</view>
+                <view class="tag tag-edit-info"   bindtap="goEdit">+编辑</view>
             </view>
             <view class="info-item">
                 <view>在没风的地方找太阳，在你冷的地方做暖阳。</view>

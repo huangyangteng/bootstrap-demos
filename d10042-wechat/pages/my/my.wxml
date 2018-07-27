@@ -6,7 +6,7 @@
                 <text class="font-ll">沫沫</text>
                 <text class="text-light">简介：在没风的地方等太阳，在你冷的地方做暖阳。</text>
             </view>
-            <image class="arrow-s" src="../imgs/icon/arrow-right.png" />
+            <image bindtap="goInfo" class="arrow-s click-more bor-r bor-l" src="../imgs/icon/arrow-right.png" />
         </view>
         <view class="my-upfile flex-h-s">
             <view class="upfile mar-r-30"></view>
@@ -20,10 +20,10 @@
         <image class="my-icon mar-r-30" src="../imgs/icon/my-list1.png" />
         <text class="font-mmm mar-r-30">认证中心</text>
         <view class="certs flex-h-s">
-            <image class="my-icon-l mar-r-10" src="../imgs/icon/cert1.png" />
+            <image bindtap="certSelf" class="my-icon-l mar-r-10" src="../imgs/icon/cert1.png" />
             <image class="my-icon-l mar-r-10" src="../imgs/icon/cert2.png" />
             <image class="my-icon-l mar-r-10" src="../imgs/icon/cert3.png" />
-            <image class="my-icon-l mar-r-10" src="../imgs/icon/cert4.png" />
+            <image bindtap="certSchool" class="my-icon-l mar-r-10" src="../imgs/icon/cert4.png" />
             <image class="my-icon-l mar-r-10" src="../imgs/icon/cert5.png" />
             <image class="my-icon-l mar-r-10" src="../imgs/icon/cert6.png" />
             <image class="my-icon-l mar-r-10" src="../imgs/icon/cert7.png" />

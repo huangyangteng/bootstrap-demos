@@ -15,13 +15,13 @@ page{
     height: 38rpx;
     vertical-align: -6rpx;
 }
-.btn{
+.btn-m{
     padding: 0rpx 66rpx;
     background: #26bbb9;
     color: white;
 
 }
-.btn::after{
+.btn-m::after{
     border: 0;
 }
 .btn_hover{
