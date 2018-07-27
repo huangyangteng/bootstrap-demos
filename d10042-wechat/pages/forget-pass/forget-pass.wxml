@@ -1,3 +1,12 @@
-<view>
-    <view class="font-lll">验证手机</view>
+<view class="forget-pass">
+    <view class="font-lll mar-b-50">验证手机</view>
+     <view class="mar-b-20">
+        <input class="input" type="number" value="0086    " placeholder="手机号" placeholder-class="input-p"/>
+    </view>
+    <view class="input-pa  mar-b-20">
+
+        <input class="input" type="number" placeholder="验证码" placeholder-class="input-p"/>
+        <text class="font-mm">获取验证码</text>
+    </view>
+    <button class="primary next-step" hover-class="btn-h" bindtap="nextStep">下一步</button>
 </view>

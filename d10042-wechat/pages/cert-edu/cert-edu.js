@@ -1,6 +1,14 @@
 Page({
     data: {
-
+        array:[
+            '测试数据1', '测试数据2', '测试数据3','测试数据4'
+        ],
+        index:0
+    },
+    selectTest(e){
+        this.setData({
+            index:e.detail.value
+        })
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载

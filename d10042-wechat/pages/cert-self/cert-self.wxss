@@ -1,0 +1,19 @@
+page{
+    background: #f3f4f6;
+}
+
+
+
+.icon{
+    width: 20rpx;
+    height: 38rpx;
+}
+
+
+
+
+.cert-self{
+    margin-top: 33rpx;
+    margin-bottom: 30rpx;
+    padding: 0 40rpx;
+}

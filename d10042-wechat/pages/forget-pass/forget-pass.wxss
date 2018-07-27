@@ -1,0 +1,14 @@
+page{
+    background: #fff;
+}
+
+
+
+.forget-pass{
+    margin: 80rpx 52rpx 0 52rpx;
+}
+
+
+.next-step{
+    margin-top: 86rpx;
+}

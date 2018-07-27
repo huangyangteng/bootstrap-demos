@@ -1,0 +1,9 @@
+page{
+    background: #fff;
+}
+
+
+
+.change-pass{
+    margin-top: 40rpx;
+}

@@ -1,0 +1,33 @@
+<view class="bg-w cert-self">
+    <view class="input-pa-r  mar-b-20">
+        <text class="l font-l">真实姓名</text>
+        <input class="input" type="number" placeholder="请输入" placeholder-class="input-p"/>
+    </view>
+    <view class="input-pa-r">
+        <text class="l font-l">证件类型</text>
+         <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
+            <view class="input-pa">
+                <input class="input font-l pad-r-30" type="number" value="{{index===0?'身份证':array[index]}}" placeholder-class="input-p"/>
+                <image src="../imgs/icon/arrow-right.png" class="icon"></image>
+            </view>
+        </picker>
+    </view>
+    <view class="input-pa-r  mar-b-20 ">
+        <text class="l font-l">证件号</text>
+        <input class="input" type="number" placeholder="请输入" placeholder-class="input-p"/>
+    </view>
+</view>
+
+
+<view class="upfile block bg-w flex-v">
+    <text class="label">添加身份证正面</text>
+
+</view>
+
+<view class="upfile block bg-w flex-v">
+    <text class="label">添加身份证反面</text>
+
+</view>
+<view class="mar-lr-40">
+    <button class="primary btn-bottom" hover-class="btn-h">确认</button>
+</view>

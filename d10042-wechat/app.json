@@ -1,11 +1,14 @@
 {
   "pages":[
+    "pages/cert-self/cert-self",
+    
+    "pages/cert-edu/cert-edu",
+    
     "pages/forget-pass/forget-pass",
     "pages/reg/reg",
     "pages/login/login",
     
     "pages/change-pass/change-pass",
-    "pages/cert-self/cert-self",
     "pages/user/user",
     "pages/my-focus/my-focus",
     

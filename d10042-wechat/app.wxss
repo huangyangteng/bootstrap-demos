@@ -86,6 +86,12 @@ image{
 .mar-b-30{
     margin-bottom: 30rpx;
 }
+.mar-b-40{
+    margin-bottom: 40rpx;
+}
+.mar-b-50{
+    margin-bottom: 50rpx;
+}
 
 
 
@@ -103,7 +109,12 @@ image{
 
 
 
-
+.pad-r-20{
+    padding-right: 20rpx;
+}
+.pad-r-30{
+    padding-right: 30rpx;
+}
 
 
 .pad-lr-18{
@@ -424,6 +435,19 @@ image{
     bottom: 0;top: 0;
     left: 0;right: 0;
 }
+.upfile.block{
+    display: flex;
+    width: 670rpx;
+    height: 300rpx;
+    margin-left: 40rpx;
+    margin-right:auto ;
+    margin-bottom: 18rpx;
+}
+.upfile.block>text{
+    margin-top: 140rpx;
+    font-size: 24rpx;
+
+}
 
 /* ---- 文字标题 */
 .h-title{
@@ -507,6 +531,11 @@ button{
     background: rgba(0, 0, 0, 0.8);
     opacity: 0.7;
 }
+.btn-bottom{
+    position: fixed;
+    bottom: 80rpx;
+    left: 40rpx;right: 40rpx;
+}
 
 
 
@@ -535,6 +564,30 @@ button{
     height: 46rpx;
     z-index:6;
 }
+.input-pa>text{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    top: 0;bottom: 0;
+    height: 46rpx;
+    z-index:6;
+}
+.input-pa-r{
+    position: relative;
+}
+.input-pa-r>text.l{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;bottom: 0;
+    height: 46rpx;
+    z-index:6;
+}
+.input-pa-r  input{
+    text-align: right;
+}
+
+
 
 
 
@@ -546,4 +599,10 @@ button{
 .input-p{
     font-size: 32rpx;
     color: #c7c7cd;
+}
+
+.label{
+    color: #bababa;
+    line-height: 1;
+    font-size: 30rpx;
 }

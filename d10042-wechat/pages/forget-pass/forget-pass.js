@@ -6,6 +6,11 @@ Page({
         // 生命周期函数--监听页面加载
 
     },
+    nextStep(){
+        wx.navigateTo({
+            url:'../change-pass/change-pass'
+        })
+    },
     onShareAppMessage: function () {
         // 用户点击右上角分享
         return {

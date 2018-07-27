@@ -1,0 +1,17 @@
+page{
+    background: #fff;
+}
+
+
+
+.icon{
+    width: 20rpx;
+    height: 38rpx;
+}
+
+
+
+
+.cert-edu{
+    margin: 68rpx;
+}
