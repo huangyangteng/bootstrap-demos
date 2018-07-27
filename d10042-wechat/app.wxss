@@ -64,6 +64,22 @@ image{
     margin-right: 38rpx;
 }
 
+
+
+
+.mar-t-20{
+    margin-top: 20rpx;
+}
+
+
+
+
+
+
+
+
+
+
 .mar-t20{
     margin-top: -20rpx;
 }
@@ -101,7 +117,10 @@ image{
 
 
 
-
+.mar-bt-25{
+    margin-bottom: 25rpx;
+    margin-top: 25rpx;
+}
 
 
 
@@ -115,6 +134,20 @@ image{
 .pad-r-30{
     padding-right: 30rpx;
 }
+
+
+
+.pad-l-30{
+    padding-left: 30rpx;
+}
+
+
+
+
+
+
+
+
 
 
 .pad-lr-18{
@@ -397,7 +430,10 @@ image{
     background: #f9d1e3;
     color: #666;
 }
-
+.tag.tag-edit-info{
+    border: 1px solid #25aab2;
+    color: #25aab2;
+}
 
 
 

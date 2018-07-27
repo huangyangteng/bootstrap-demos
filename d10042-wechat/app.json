@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/self-info/self-info",
+    
+    "pages/self-info-e/self-info-e",
+    
     "pages/cert-self/cert-self",
     
     "pages/cert-edu/cert-edu",

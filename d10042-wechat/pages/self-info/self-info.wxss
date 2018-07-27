@@ -1,0 +1,63 @@
+page{
+    background:#fff;
+}
+
+
+
+.avatar{
+    width: 206rpx;
+    height: 206rpx;
+    border-radius: 50%;
+}
+
+
+.icon{
+    width: 24rpx;
+    height: 24rpx;
+}
+
+.icon-btn{
+    width: 16rpx;
+    height: 16rpx;
+
+}
+
+
+.self-info{
+    /* padding-left: 43rpx; */
+    /* padding-right: 43rpx; */
+
+}
+
+.h{
+    height: 318rpx;
+}
+.c{
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+}
+.h-title{
+    font-size: 37.34rpx;
+}
+
+.info-item{
+    border-left: 4rpx dotted #25aab2;
+    padding-left: 24rpx;
+}
+
+.info-item>view{
+    line-height: 52rpx;
+    font-size: 28rpx;
+    display: flex;
+}
+.info-item>view text:first-child{
+    flex-basis: 60%;
+}
+.info-item>view text:last-child{
+    color: #333;
+}
+
+
+.not-edit{
+    color: #bababa!important;
+}

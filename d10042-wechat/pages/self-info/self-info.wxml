@@ -1,0 +1,115 @@
+<view class="self-info">
+    <view class="h flex-v mar-t-20">
+        <image class="avatar" src="../imgs/img/my1.png" />
+        <view class="mar-t-20">
+            <text class="mar-r-20">在每风的地方找太阳，在你冷的地方做暖阳</text>
+            <image class="icon" src="../imgs/icon/edit.png" />
+        </view>
+    </view>
+
+    <view class="c">
+         <view class="personal-info-item">
+            <view class="mar-bt-25 c-h flex-h">
+                <view class="h-title">
+                    自我介绍
+                </view>
+                <view class="tag tag-edit-info" >+编辑</view>
+            </view>
+            <view class="info-item">
+                <view>在没风的地方找太阳，在你冷的地方做暖阳。</view>
+            </view>
+        </view>                     
+        <!-- 基本资料 -->
+        <view class="personal-info-item">
+            <view class="mar-bt-25 c-h flex-h" >
+                <view class="h-title">
+                    基本资料
+                </view>
+                <view class="tag tag-edit-info" >+编辑</view>
+            </view>
+            <view class="info-item">
+                <view><text>ID:</text><text>5484218</text></view>
+                <view><text>昵称:</text><text>沫沫</text></view>
+                <view><text>性别:</text><text>女</text></view>
+                <view><text>生日:</text><text>1990年01月01日</text></view>
+                <view><text>身高:</text><text>165</text></view>
+                <view><text>学历:</text><text>本科</text></view>
+                <view><text>月收入:</text><text>5000-10000</text></view>
+                <view><text>居住地:</text><text>武汉</text></view>
+                <view><text>家乡:</text><text>天津</text></view>
+                <view><text>户口:</text><text class="not-edit">未填写</text></view>
+                <view><text>民族:</text><text class="not-edit">未填写</text></view>
+                <view><text>属相:</text><text class="not-edit">未填写</text></view>
+                <view><text>星座:</text><text class="not-edit">未填写</text></view>
+                <view><text>血型:</text><text>B</text></view>
+                <view><text>体型:</text><text class="not-edit">未填写</text></view>
+                <view><text>体重:</text><text class="not-edit">未填写</text></view>
+                <view><text>相貌自评:</text><text class="not-edit">未填写</text></view>
+                <view><text>宗教信仰:</text><text class="not-edit">未填写</text></view>
+                <view><text>是否喝酒:</text><text class="not-edit">未填写</text></view>
+                <view><text>是否吸烟:</text><text class="not-edit">未填写</text></view>
+                <view><text>生活作息:</text><text class="not-edit">未填写</text></view>
+            </view>
+        </view>
+
+        <view class="personal-info-item">
+            <view class="mar-bt-25 c-h flex-h" >
+                <view class="h-title">
+                    择偶标准
+                </view>
+                <view class="tag tag-edit-info">+编辑</view>
+            </view>
+            <view class="info-item">
+                <view><text>年龄:</text><text>27-35岁</text></view>
+                <view><text>身高:</text><text>187厘米及以上</text></view>
+                <view><text>学历:</text><text class="not-edit">未填写</text></view>
+                <view><text>月收入:</text><text class="not-edit">未填写</text></view>
+                <view><text>居住地:</text><text>天津</text></view>
+                <view><text>婚姻状况:</text><text class="not-edit">未填写</text></view>
+                <view><text>购房情况:</text><text class="not-edit">未填写</text></view>
+                <view><text>有无子女:</text><text class="not-edit">未填写</text></view>
+            </view>
+        </view>
+
+        <view class="personal-info-item">
+            <view class="mar-bt-25 c-h flex-h" >
+                <view class="h-title">
+                    家庭状况
+                </view>
+                <view class="tag tag-edit-info">+编辑</view>
+            </view>
+            <view class="info-item">
+                <view><text>家庭排行:</text><text class="not-edit">未填写</text></view>
+                <view><text>父母情况:</text><text class="not-edit">未填写</text></view>
+                <view><text>父亲工作:</text><text class="not-edit">未填写</text></view>
+                <view><text>母亲工作:</text><text class="not-edit">未填写</text></view>
+                <view><text>父母经济:</text><text class="not-edit">未填写</text></view>
+                <view><text>父母医保:</text><text class="not-edit">未填写</text></view>
+            </view>
+        </view>
+
+        <view class="personal-info-item">
+            <view class="mar-bt-25 c-h flex-h" >
+                <view class="h-title">
+                    爱情规划
+                </view>
+                <view class="tag tag-edit-info">+编辑</view>
+            </view>
+            <view class="info-item">
+                <view><text>想何时结婚:</text><text class="not-edit">未填写</text></view>
+                <view><text>偏爱约会方式:</text><text class="not-edit">未填写</text></view>
+                <view><text>希望对方看重:</text><text class="not-edit">未填写</text></view>
+                <view><text>期待婚礼形式:</text><text class="not-edit">未填写</text></view>
+                <view><text>愿与对方父母住否:</text><text class="not-edit">未填写</text></view>
+                <view><text>是否想要孩子:</text><text class="not-edit">未填写</text></view>
+                <view><text>厨艺状况:</text><text class="not-edit">未填写</text></view>
+                <view><text>家务分工:</text><text class="not-edit">未填写</text></view>
+            </view>
+        </view>
+    </view>
+
+
+
+
+
+</view>

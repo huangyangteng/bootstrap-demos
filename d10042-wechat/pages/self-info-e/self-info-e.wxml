@@ -1,0 +1,193 @@
+    <view class="self-info-e">
+        <view class="e-item">
+            <text class="mar-r-20">基本资料</text>
+            <text>(10/21)</text>
+        </view>
+
+        <view class="input-pa-r bg-w ">
+            <text class="l">ID:</text>
+            <input type="text" class="input pad-lr-30" value="5484218"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">昵称:</text>
+            <input type="text" class="input pad-lr-30" value="沫沫"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">性别:</text>
+            <input type="text" class="input pad-lr-30" value="女"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">生日:</text>
+            <input type="text" class="input pad-lr-30" value="1990年01月01日"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">身高:</text>
+            <input type="text" class="input pad-lr-30" value="165"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">学历:</text>
+            <input type="text" class="input pad-lr-30" value="本科"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">月收入:</text>
+            <input type="text" class="input pad-lr-30" value="5000-10000"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">居住地:</text>
+            <input type="text" class="input pad-lr-30" value="武汉"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">家乡:</text>
+            <input type="text" class="input pad-lr-30" value="天津"/>
+        </view>
+
+
+
+        
+        <view class="input-pa-r bg-w ">
+            <text class="l">户口:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">民族:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">属相:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">星座:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">血型:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">体型:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">体重:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">相貌自评:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">宗教信仰:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">是否喝酒:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">是否吸烟:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+        <view class="input-pa-r bg-w ">
+            <text class="l">生活作息:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写" />
+        </view>                                            
+
+        <view class="e-item">
+            <text class="mar-r-20">择偶标准</text>
+            <text>(3/18)</text>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">年龄:</text>
+            <input type="text" class="input pad-lr-30" value="27-35岁"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">身高:</text>
+            <input type="text" class="input pad-lr-30" value="187厘米及以上"/>
+        </view>
+
+
+        <view class="input-pa-r bg-w ">
+            <text class="l">学历:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">月收入:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">居住地:</text>
+            <input type="text" class="input pad-lr-30" value="天津"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">婚姻状况:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">购房情况:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">有无子女:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="e-item">
+            <text class="mar-r-20">家庭状况</text>
+            <text>(0/6)</text>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">家庭排行:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">父母情况:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">父亲工作:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">母亲工作:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">父母经济:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">父母医保:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+        <view class="e-item">
+            <text class="mar-r-20">爱情规划</text>
+            <text>(0/9)</text>
+        </view>
+        <view class="input-pa-r bg-w ">
+            <text class="l">想何时结婚:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">偏爱约会方式:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">希望对方看重:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">期待婚礼形式:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">愿与对方父母住否:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">是否想要孩子:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">厨艺状况:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view><view class="input-pa-r bg-w 30">
+            <text class="l">家务分工:</text>
+            <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
+        </view>
+
+
+    </view>

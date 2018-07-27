@@ -1,0 +1,29 @@
+page{
+    background: #f1f1f1;
+    font-size: 32rpx;
+    line-height: 1;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+.input-pa-r>text.l{
+    left: 30rpx;
+}
+
+.input-holder{
+    color:#26bcb9;
+}
+.e-item{
+    height: 74rpx;
+    font-size: 28rpx;
+    line-height: 74rpx;
+    padding-left: 30rpx;
+    margin-top: 16rpx;
+}
