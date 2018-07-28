@@ -2,7 +2,18 @@
 <page>
     <view class="index-c">
         <view class="stack">
-            <view class="stack-item" wx:for="{{pages}}">
+
+
+            <view id="{{index}}" class="stack-item" wx:for="{{pages}}" wx:key="item.id" 
+            style="z-index:{{item.style.zIndex}};opacity:{{item.style.opacity}};transform:{{item.style.transform}};transition-duration:{{item.style.transitionDuration}};transition-timing-function:{{item.style.transitionTimingFunction}}"
+                catchtouchstart="touchstart"
+                catchtouchmove="touchmove"
+                catchtouchend="touchend"
+                catchtransitionend="onTransitionEnd"
+            
+            
+            
+            >
                   <image class="banner-img" src="{{item.img}}" /> 
                   <view class="flex-v-s pad-lr-30">
                       <text class="font-ll mar-b-8">{{item.name}}</text>

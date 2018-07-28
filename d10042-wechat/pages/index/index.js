@@ -1,5 +1,20 @@
 Page({
   data: {
+    
+    basicdata:{
+      start:{},
+      end:{},
+      currentPage:0
+    },
+    tempData:{
+      poswidth:'',
+      posheight:'',
+      visible: 2,
+      tracking:false,//是否在滑动
+      animation:false,//首图是否在启用动画效果
+      opacity:1,//记录首图透明度
+      swipe:false//onTransition判定条件
+    },
     pages: [
       {
         img: '../imgs/img/girl1.png',
@@ -81,10 +96,271 @@ Page({
 
     ]
   },
+  transform(){
+    for (let i = 0; i < this.data.pages.length; i++) {
+      // 非首页样式切换
+      if (i > this.data.basicdata.currentPage) {
+        let style = {};
+        let visible = this.data.tempData.visible;
+        let perIndex = i - this.data.basicdata.currentPage;
+        // visible可见数量前的滑块样式
+        if (i <= this.data.basicdata.currentPage + visible - 1) {
+          style['opacity'] = '1'
+          style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
+          style['zIndex'] = visible - i + this.data.basicdata.currentPage
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 300 + 'ms'
+        } else {
+          style['zIndex'] = '-1'
+          style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
+        }
+        this.data.pages[i].style = style;
+        
+      } else if (i === this.data.basicdata.currentPage - 1) {//已滑动滑块释放后
+        let style = {}
+        // 继续执行动画
+        style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
+        style['opacity'] = '0'
+        style['zIndex'] = '-1'
+        style['transitionTimingFunction'] = 'ease'
+        style['transitionDuration'] = 300 + 'ms'
+        this.data.pages[i].style = style;
+      }
+
+      if (i == this.data.basicdata.currentPage) {
+        let style = {};
+        style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
+        style['opacity'] = 1;
+        style['zIndex'] = 10;
+        if (this.data.tempData.animation) {
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 300 + 'ms'
+        }
+        this.data.pages[i].style = style;
+      }
+
+
+    }
+    this.setData({
+      pages: this.data.pages
+    })
+    // 首页样式切换
+  },
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
+    // 设置刚开始的样式 设置pages中的样式
+    // 根据index设置样式
+    this.transform();
+    
+
+
 
   },
+  onTransitionEnd(e){
+    console.log('动画结束了');
+    let that=this;
+    // let index=e.currentTarget.id;
+    // console.log(index);
+    // dom发生变化后，正在执行的动画滑动序列变为上一层
+    // console.log(this.data.basicdata.currentPage)
+    for (let index = 0; index < this.data.pages.length; index++) {
+      if (this.data.tempData.swipe && index === this.data.basicdata.currentPage - 1) {//1 2 3 4 
+        console.log('haahahh')
+        this.data.tempData.animation = true;
+        this.data.tempData.lastPosWidth = 0;
+        this.data.tempData.lastPosHeight = 0;
+        this.data.tempData.swipe = false;
+        let style = {}
+        // 继续执行动画
+        style['transform'] = 'translate3D(' + that.data.tempData.lastPosWidth + 'px' + ',' + that.data.tempData.lastPosHeight + 'px' + ',0px)'
+        style['opacity'] = '0'
+        style['zIndex'] = '-1'
+        style['transitionTimingFunction'] = 'ease'
+        style['transitionDuration'] = 300 + 'ms'
+        that.data.pages[that.data.basicdata.currentPage - 1].style = style;
+        console.log(that.data.pages[that.data.basicdata.currentPage - 1].style)
+        that.setData({
+          pages: that.data.pages
+        })
+      }
+      
+    }
+    
+  },
+  touchstart(e){//记录开始位置
+    if(this.data.tempData.tracking){
+      return;
+    }
+    // 是否是touch
+    if(e.touches.length>1){
+      this.data.tempData.tracking=false;
+      return;
+    }else{
+      // 记录开始位置
+      this.data.basicdata.start.t=new Date().getTime();
+      this.data.basicdata.start.x=e.touches[0].clientX;
+      this.data.basicdata.start.y=e.touches[0].clientY;
+      this.setData({
+        basicdata:this.data.basicdata
+      })
+      this.data.tempData.tracking=true;
+      this.data.tempData.animation=false;
+      this.setData({
+        tempData:this.data.tempData
+      })
+    }
+
+
+  },
+  touchmove(e){//计算滑动位置
+    console.log(this.data.tempData.tracking && !this.data.tempData.animation)
+    if(this.data.tempData.tracking && !this.data.tempData.animation){
+        this.data.basicdata.end.x=e.touches[0].clientX;
+        this.data.basicdata.end.y=e.touches[0].clientY;
+
+        this.data.tempData.poswidth = this.data.basicdata.end.x - this.data.basicdata.start.x;
+        this.data.tempData.posheight = this.data.basicdata.end.y - this.data.basicdata.start.y;
+        this.setData({
+          tempData:this.data.tempData
+        })
+        this.transform();
+        
+
+    }
+  },
+  touchend(e){//滑动结束
+    let that=this;
+    this.data.tempData.tracking=false;
+    this.data.tempData.animation=true;
+    console.log(this.data.tempData.poswidth);
+    // 滑动结束，触发判断
+    if(Math.abs(this.data.tempData.poswidth)>=100){//滑动距离超过100
+      // 最终位移设置为x轴200像素的偏移
+      let ratio = Math.abs(this.data.tempData.posheight / this.data.tempData.poswidth);
+      this.data.tempData.poswidth = this.data.tempData.poswidth >= 0 ? this.data.tempData.poswidth + 200 : this.data.tempData.poswidth - 200;
+      this.data.tempData.posheight = this.data.tempData.posheight >= 0 ? Math.abs(this.data.tempData.posheight * ratio) : -Math.abs(this.data.tempData.posheight * ratio);
+      this.data.tempData.opacity=0;
+      this.data.tempData.swipe=true;
+      // 记录最终滑动距离
+      this.data.tempData.lastPosWidth=this.data.tempData.poswidth;
+      this.data.tempData.lastPosHeight=this.data.tempData.posheight;
+      // currentPage+1引发排序变化 0 1 2
+      this.data.basicdata.currentPage+=1;
+      // currentPage切换，整体dom进行变化，把第一层滑动置0
+      
+      // let that=this;
+      // setTimeout(() => {
+      //   that.data.tempData.poswidth=0;
+      //   that.data.tempData.posheight=0;
+      //   that.data.tempData.opacity=1;
+      //   that.setData({
+      //     tempData:that.data.tempData
+      //   })
+      // }, 0);
+
+    }else{//不满足条件则划入
+      this.data.tempData.poswidth=0;
+      this.data.tempData.posheight=0;
+      this.data.tempData.swipe=false;
+    }
+    this.setData({
+      tempData:this.data.tempData
+    })
+    for (let i = 0; i < this.data.pages.length; i++) {
+      // 非首页样式切换
+      if (i > this.data.basicdata.currentPage) {
+        let style = {};
+        let visible = this.data.tempData.visible;
+        let perIndex = i - this.data.basicdata.currentPage;
+        // visible可见数量前的滑块样式
+        if (i <= this.data.basicdata.currentPage + visible - 1) {
+          style['opacity'] = '1'
+          style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
+          style['zIndex'] = visible - i + this.data.basicdata.currentPage
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 300 + 'ms'
+        } else {
+          style['zIndex'] = '-1'
+          style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
+        }
+        this.data.pages[i].style = style;
+      } else if (i === this.data.basicdata.currentPage - 1) {//已滑动滑块释放后
+        let style = {}
+        // 继续执行动画
+        style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
+        style['opacity'] = '0'
+        style['zIndex'] = '-1'
+        style['transitionTimingFunction'] = 'ease'
+        style['transitionDuration'] = 300 + 'ms'
+        this.data.pages[i].style = style;
+      }
+
+      if (i == this.data.basicdata.currentPage) {
+        let style = {};
+        style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
+        style['opacity'] = 1;
+        style['zIndex'] = 10;
+        if (this.data.tempData.animation) {
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 300 + 'ms'
+        }
+        this.data.pages[i].style = style;
+      }
+
+
+    }
+    this.setData({
+      pages: this.data.pages
+    },function () {
+      // 首页置为0
+      that.data.tempData.poswidth=0;
+      that.data.tempData.posheight=0;
+      that.data.tempData.opacity=1;
+      that.setData({
+        tempData:that.data.tempData
+      })
+      console.log(that.data.pages)
+      // 重新设置首页的样式
+      let style = {}
+      style['transform'] = 'translate3D(' + that.data.tempData.poswidth + 'px' + ',' + that.data.tempData.posheight + 'px' + ',0px)'
+      style['opacity'] = that.data.tempData.opacity
+      style['zIndex'] = 10
+      if (that.data.tempData.animation) {
+        style['transitionTimingFunction'] = 'ease'
+        style['transitionDuration'] = 300 + 'ms'
+      }
+      that.data.pages[that.data.basicdata.currentPage].style=style;
+      // console.log(that.data.pages[that.data.basicdata.currentPage].style)
+      that.setData({
+        pages:that.data.pages
+      });
+
+    })
+
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   onShareAppMessage: function () {
     // 用户点击右上角分享
     return {
