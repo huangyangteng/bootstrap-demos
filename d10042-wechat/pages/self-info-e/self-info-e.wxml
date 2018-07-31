@@ -189,5 +189,7 @@
             <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
         </view>
 
-
+        <view class="btn-block-pa">
+            <button class="primary" hover-class="btn-h">保存</button>
+        </view>
     </view>

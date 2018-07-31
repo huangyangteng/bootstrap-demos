@@ -360,6 +360,12 @@ image{
 .bor-r{
     border-right: 0;
 }
+.bor-t{
+    border-top: 0;
+}
+.bor-b{
+    border-bottom: 0;
+}
 
 
 
@@ -577,6 +583,9 @@ button{
     left: 40rpx;right: 40rpx;
 }
 
+.btn-block-pa{
+    padding: 40rpx;
+}
 
 
 

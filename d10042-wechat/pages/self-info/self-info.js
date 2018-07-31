@@ -11,6 +11,11 @@ Page({
             url:'../self-info-e/self-info-e'
         })
     },
+    goEditSign(){
+        wx.navigateTo({
+            url: '../edit-sign/edit-sign'
+        })
+    },
     onShareAppMessage: function () {
         // 用户点击右上角分享
         return {

@@ -1,0 +1,16 @@
+textarea{
+    background: #fff;
+    padding-left: 55rpx;
+    padding-right: 55rpx;
+    padding-top: 24rpx;
+    height: 358rpx;
+    width: 100%;
+    box-sizing: border-box;
+}
+.total-num{
+    height: 84rpx;
+    line-height: 84rpx;
+    text-align: right;
+    background: #fff;
+    padding-right: 55rpx;
+}

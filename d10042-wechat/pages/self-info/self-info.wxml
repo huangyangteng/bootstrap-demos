@@ -2,8 +2,8 @@
     <view class="h flex-v mar-t-20">
         <image class="avatar" src="../imgs/img/my1.png" />
         <view class="mar-t-20">
-            <text class="mar-r-20">在每风的地方找太阳，在你冷的地方做暖阳</text>
-            <image class="icon" src="../imgs/icon/edit.png" />
+            <text>在每风的地方找太阳，在你冷的地方做暖阳</text>
+            <image bindtap="goEditSign" class="icon click-more bor-t bor-b" src="../imgs/icon/edit.png" />
         </view>
     </view>
 
@@ -13,7 +13,7 @@
                 <view class="h-title">
                     自我介绍
                 </view>
-                <view class="tag tag-edit-info"   bindtap="goEdit">+编辑</view>
+                <view class="tag tag-edit-info"   bindtap="goEditSign">+编辑</view>
             </view>
             <view class="info-item">
                 <view>在没风的地方找太阳，在你冷的地方做暖阳。</view>
@@ -25,7 +25,7 @@
                 <view class="h-title">
                     基本资料
                 </view>
-                <view class="tag tag-edit-info" >+编辑</view>
+                <view  bindtap="goEdit"class="tag tag-edit-info" >+编辑</view>
             </view>
             <view class="info-item">
                 <view><text>ID:</text><text>5484218</text></view>
@@ -57,7 +57,7 @@
                 <view class="h-title">
                     择偶标准
                 </view>
-                <view class="tag tag-edit-info">+编辑</view>
+                <view bindtap="goEdit" class="tag tag-edit-info">+编辑</view>
             </view>
             <view class="info-item">
                 <view><text>年龄:</text><text>27-35岁</text></view>
@@ -76,7 +76,7 @@
                 <view class="h-title">
                     家庭状况
                 </view>
-                <view class="tag tag-edit-info">+编辑</view>
+                <view bindtap="goEdit" class="tag tag-edit-info">+编辑</view>
             </view>
             <view class="info-item">
                 <view><text>家庭排行:</text><text class="not-edit">未填写</text></view>
@@ -93,7 +93,7 @@
                 <view class="h-title">
                     爱情规划
                 </view>
-                <view class="tag tag-edit-info">+编辑</view>
+                <view bindtap="goEdit" class="tag tag-edit-info">+编辑</view>
             </view>
             <view class="info-item">
                 <view><text>想何时结婚:</text><text class="not-edit">未填写</text></view>

@@ -1,0 +1,8 @@
+<textarea class="hr font-ll" placeholder="placeholder" value="我希望在这里找到一个真诚，自信，积极，阳光的,另一半,相互扶持，一起生活。"/>
+<view class="total-num text-light">463</view>
+<view class="pad-lr-30 mar-t-20">
+    为了您的信息安全，请不要在自我介绍内填写微信、QQ、手机号等带有联系方式的个人信息
+</view>
+<view class="btn-block-pa">
+    <button class="primary" hover-class="btn-h">保存</button>
+</view>
