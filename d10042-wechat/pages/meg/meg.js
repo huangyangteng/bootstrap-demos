@@ -6,7 +6,8 @@ Page({
                 name:'南方',
                 avatar:'../imgs/icon/avatar.png',
                 meg:'在吗在吗今晚去不去玩？',
-                time:'19:29'
+                time:'19:29',
+                show:true
             },
             {
                 id:2,
@@ -16,6 +17,19 @@ Page({
                 time:'20:29'
             },
         ]
+    },
+    touchstart(e){
+        let index = e.currentTarget.id;
+        let megs=this.data.megs;
+        if (typeof megs[index].show==='undefined'){
+            megs[index].show = true;
+
+        }else{
+            megs[index].show = !megs[index].show;
+        }
+        this.setData({
+            megs
+        })
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载

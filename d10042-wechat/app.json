@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/meg/meg",
+    
+    "pages/search/search",
+    
     "pages/self-info/self-info",
     "pages/edit-sign/edit-sign",
     
@@ -12,7 +16,6 @@
     "pages/my-matchmaker/my-matchmaker",
     
     
-    "pages/search/search",
     
     "pages/self-info-e/self-info-e",
     
@@ -31,7 +34,6 @@
     "pages/my-dynamic/my-dynamic",
     
     
-    "pages/meg/meg",
     
     "pages/dynamic/dynamic",
     
@@ -55,7 +57,7 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath":"pages/imgs/icon/footer1.png",
-        "selectedIconPath":"pages/imgs/icon/footer1-l.png"
+        "selectedIconPath":"pages/imgs/icon/footer1-e.png"
 
       },
       {

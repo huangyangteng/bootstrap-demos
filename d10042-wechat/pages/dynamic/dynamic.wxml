@@ -2,7 +2,7 @@
 
     <view class="dynamic bg-w r-10" wx:for="{{dynamics}}" wx:key="item.id">
         <view class="dynamic-h flex-h">
-            <image class="avatar-img" src="{{item.avatar}}" />
+            <image catchtap="goUser" class="avatar-img" src="{{item.avatar}}" />
             <view class="info-pa">
                 <view class="info flex-h-s mar-b-12">
                     <text class="mar-r-38 font-l">{{item.name}}</text>

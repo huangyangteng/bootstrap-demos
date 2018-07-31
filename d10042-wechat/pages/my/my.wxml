@@ -47,11 +47,11 @@
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list5.png" />
             <text>我关注谁</text>
         </navigator>
-        <navigator class="list-item hr pad-lr-30 flex-h-s" url=""  hover-class="className">
+        <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-focus/my-focus"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list6.png" />
             <text>谁关注我</text>
         </navigator>
-        <navigator class="list-item hr pad-lr-30 flex-h-s" url=""  hover-class="className">
+        <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-focus/my-focus"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list7.png" />
             <text>谁看过我</text>
         </navigator>
