@@ -4,7 +4,7 @@
         <view class="stack">
 
 
-            <view id="{{index}}" class="stack-item" wx:for="{{pages}}" wx:key="item.id" 
+            <view id="{{index}}" class="stack-item {{}}" wx:for="{{pages}}" wx:key="item.id" 
             style="z-index:{{item.style.zIndex}};opacity:{{item.style.opacity}};transform:{{item.style.transform}};transition-duration:{{item.style.transitionDuration}};transition-timing-function:{{item.style.transitionTimingFunction}}"
                 catchtouchstart="touchstart"
                 catchtouchmove="touchmove"
@@ -34,7 +34,7 @@
         </view>
     </view>
     <view class="index-f flex-h">
-        <image class="index-op" src="../imgs/icon/dislike.png" />
-        <image class="index-op" src="../imgs/icon/like.png" />
+        <image catchtap="prev" class="index-op" src="../imgs/icon/dislike.png" />
+        <image catchtap="next" class="index-op" src="../imgs/icon/like.png" />
     </view>
 </page>

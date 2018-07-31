@@ -93,6 +93,28 @@ Page({
         name:'沫沫'
 
       },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
+      {
+        img: '../imgs/img/girl1.png',
+        height: '160cm',
+        work: '英语老师',
+        star: '双子座',
+        money: '6千-1万',
+        edu: '硕士',
+        age:'26岁',
+        name:'沫沫'
+
+      },
 
     ]
   },
@@ -159,13 +181,15 @@ Page({
   onTransitionEnd(e){
     console.log('动画结束了');
     let that=this;
+
     // let index=e.currentTarget.id;
     // console.log(index);
     // dom发生变化后，正在执行的动画滑动序列变为上一层
     // console.log(this.data.basicdata.currentPage)
+    
     for (let index = 0; index < this.data.pages.length; index++) {
-      if (this.data.tempData.swipe && index === this.data.basicdata.currentPage - 1) {//1 2 3 4 
-        console.log('haahahh')
+      let lastPage = this.data.basicdata.currentPage === 0 ? this.data.pages.length - 1 : this.data.basicdata.currentPage - 1;
+      if (this.data.tempData.swipe && index === lastPage) {//1 2 3 4 
         this.data.tempData.animation = true;
         this.data.tempData.lastPosWidth = 0;
         this.data.tempData.lastPosHeight = 0;
@@ -177,13 +201,15 @@ Page({
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
         style['transitionDuration'] = 300 + 'ms'
-        that.data.pages[that.data.basicdata.currentPage - 1].style = style;
-        console.log(that.data.pages[that.data.basicdata.currentPage - 1].style)
+        that.data.pages[lastPage].style = style;
         that.setData({
           pages: that.data.pages
         })
       }
       
+    }
+    if (this.data.basicdata.currentPage == this.data.pages.length - 3) {
+      this.data.basicdata.currentPage = 0;
     }
     
   },
@@ -232,7 +258,6 @@ Page({
     let that=this;
     this.data.tempData.tracking=false;
     this.data.tempData.animation=true;
-    console.log(this.data.tempData.poswidth);
     // 滑动结束，触发判断
     if(Math.abs(this.data.tempData.poswidth)>=100){//滑动距离超过100
       // 最终位移设置为x轴200像素的偏移
@@ -244,99 +269,105 @@ Page({
       // 记录最终滑动距离
       this.data.tempData.lastPosWidth=this.data.tempData.poswidth;
       this.data.tempData.lastPosHeight=this.data.tempData.posheight;
+      this.data.basicdata.currentPage === this.data.pages.length - 1 ? 0 : this.data.basicdata.currentPage++;
+      console.log(this.data.basicdata.currentPage);
+
+      this.setData({
+        tempData:this.data.tempData,
+      })
+      let lastPage=this.data.basicdata.currentPage===0?this.data.pages.length-1:this.data.basicdata.currentPage-1;
       // currentPage+1引发排序变化 0 1 2
-      this.data.basicdata.currentPage+=1;
-      // currentPage切换，整体dom进行变化，把第一层滑动置0
+      for (let i = 0; i < this.data.pages.length; i++) {
+        // 非首页样式切换
+        if (i > this.data.basicdata.currentPage) {
+          let style = {};
+          let visible = this.data.tempData.visible;
+          let perIndex = i - this.data.basicdata.currentPage;
+          // visible可见数量前的滑块样式
+          if (i <= this.data.basicdata.currentPage + visible - 1) {
+            style['opacity'] = '1'
+            style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
+            style['zIndex'] = visible - i + this.data.basicdata.currentPage
+            style['transitionTimingFunction'] = 'ease'
+            style['transitionDuration'] = 300 + 'ms'
+          } else {
+            style['zIndex'] = '-1'
+            style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
+          }
+          this.data.pages[i].style = style;
+        } else if (i === lastPage) {//已滑动滑块释放后
+          let style = {}
+          // 继续执行动画
+          style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
+          style['opacity'] = '0'
+          style['zIndex'] = '20'
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 300 + 'ms'
+          this.data.pages[i].style = style;
+        }
+
+        if (i == this.data.basicdata.currentPage) {
+          let style = {};
+          style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
+          style['opacity'] = 1;
+          style['zIndex'] = 10;
+          if (this.data.tempData.animation) {
+            style['transitionTimingFunction'] = 'ease'
+            style['transitionDuration'] = 300 + 'ms'
+          }
+          this.data.pages[i].style = style;
+        }
+
+
+      }
+      this.setData({
+        pages: this.data.pages,
+      }, function () {
+        // 首页置为0
+        that.data.tempData.poswidth = 0;
+        that.data.tempData.posheight = 0;
+        that.data.tempData.opacity = 1;
+        that.setData({
+          tempData: that.data.tempData
+        })
+        // 重新设置首页的样式
+        let style = {}
+        style['transform'] = 'translate3D(' + that.data.tempData.poswidth + 'px' + ',' + that.data.tempData.posheight + 'px' + ',0px)'
+        style['opacity'] = that.data.tempData.opacity
+        style['zIndex'] = 10
+        if (that.data.tempData.animation) {
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 300 + 'ms'
+        }
+        that.data.pages[that.data.basicdata.currentPage].style = style;
+        that.setData({
+          pages: that.data.pages
+        });
+
+      })
       
-      // let that=this;
-      // setTimeout(() => {
-      //   that.data.tempData.poswidth=0;
-      //   that.data.tempData.posheight=0;
-      //   that.data.tempData.opacity=1;
-      //   that.setData({
-      //     tempData:that.data.tempData
-      //   })
-      // }, 0);
+  
 
     }else{//不满足条件则划入
       this.data.tempData.poswidth=0;
       this.data.tempData.posheight=0;
       this.data.tempData.swipe=false;
-    }
-    this.setData({
-      tempData:this.data.tempData
-    })
-    for (let i = 0; i < this.data.pages.length; i++) {
-      // 非首页样式切换
-      if (i > this.data.basicdata.currentPage) {
-        let style = {};
-        let visible = this.data.tempData.visible;
-        let perIndex = i - this.data.basicdata.currentPage;
-        // visible可见数量前的滑块样式
-        if (i <= this.data.basicdata.currentPage + visible - 1) {
-          style['opacity'] = '1'
-          style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
-          style['zIndex'] = visible - i + this.data.basicdata.currentPage
-          style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
-        } else {
-          style['zIndex'] = '-1'
-          style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
-        }
-        this.data.pages[i].style = style;
-      } else if (i === this.data.basicdata.currentPage - 1) {//已滑动滑块释放后
-        let style = {}
-        // 继续执行动画
-        style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
-        style['opacity'] = '0'
-        style['zIndex'] = '-1'
-        style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 300 + 'ms'
-        this.data.pages[i].style = style;
-      }
-
-      if (i == this.data.basicdata.currentPage) {
-        let style = {};
-        style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
-        style['opacity'] = 1;
-        style['zIndex'] = 10;
-        if (this.data.tempData.animation) {
-          style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
-        }
-        this.data.pages[i].style = style;
-      }
-
-
-    }
-    this.setData({
-      pages: this.data.pages
-    },function () {
-      // 首页置为0
-      that.data.tempData.poswidth=0;
-      that.data.tempData.posheight=0;
-      that.data.tempData.opacity=1;
-      that.setData({
-        tempData:that.data.tempData
+      this.setData({
+        tempData: this.data.tempData
       })
-      console.log(that.data.pages)
-      // 重新设置首页的样式
-      let style = {}
-      style['transform'] = 'translate3D(' + that.data.tempData.poswidth + 'px' + ',' + that.data.tempData.posheight + 'px' + ',0px)'
-      style['opacity'] = that.data.tempData.opacity
-      style['zIndex'] = 10
-      if (that.data.tempData.animation) {
-        style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 300 + 'ms'
-      }
-      that.data.pages[that.data.basicdata.currentPage].style=style;
-      // console.log(that.data.pages[that.data.basicdata.currentPage].style)
-      that.setData({
-        pages:that.data.pages
-      });
+      this.transform();
+    }
+    
+    
 
-    })
-
+  },
+  prev(){
+    this.data.tempData.poswidth=-200;
+    this.touchend();
+  },
+  next(){
+    this.data.tempData.poswidth = 200;
+    this.touchend();
   },
 
 
