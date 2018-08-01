@@ -246,6 +246,12 @@ image{
 .text-light{
     color: #aaa;
 }
+.text-primary{
+    color: #26bcb9;
+}
+.text-transparent{
+    color: transparent;
+}
 /* 上标 */
 .font-up{
     font-size: 18rpx;
@@ -302,6 +308,12 @@ image{
     justify-content: flex-start;
     align-items: center;
 }
+.flex-h-e{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 /* ---------- . 绝对定位元素 */
 .ab-c{
     position: absolute;
@@ -656,3 +668,41 @@ button{
     line-height: 1;
     font-size: 30rpx;
 }
+
+
+/* 顶部信息区--小程序导航条上不能放东西 */
+.top-info{
+    height: 75rpx;
+    background: #fdfdfd;
+    border-bottom: 1px solid #eee;
+    padding-left: 38rpx;
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* cover */
+.cover{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    transition: .5s;
+    visibility: hidden;
+}
+.cover.dynamic-c{
+    top: 75rpx;
+}
+
+
+
+

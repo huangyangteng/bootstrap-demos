@@ -2,7 +2,10 @@ page{
     background: #f6f6f6;
 }
 
-
+.setting-icon{
+    width: 30rpx;
+    height: 30rpx;
+}
 .my-icon{
     width: 44rpx;
     height: 44rpx;

@@ -53,10 +53,17 @@ Page({
                 stars_num:10,
             },
         ],
+        cover_show:false,
     },
     goUser(){
         wx.navigateTo({
             url:'../user/user'
+        })
+    },
+    showEditModal(){
+        this.data.cover_show=!this.data.cover_show;
+        this.setData({
+            cover_show:this.data.cover_show
         })
     },
     onLoad: function (options) {

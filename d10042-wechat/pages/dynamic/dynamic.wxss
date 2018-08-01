@@ -3,10 +3,59 @@
     width: 38rpx;
     height: 38rpx;
 }
-
+.add-icon{
+    width: 98rpx;
+    height: 98rpx;
+}
 page{
     background: #fff;
 }
+
+/* 头部信息 */
+.top-info.dynamic{
+    line-height: 75rpx;
+    text-align: center;
+    position: relative;
+}
+.top-info.dynamic>image{
+    width: 44rpx;
+    height: 36rpx;
+    position: absolute;
+    right:20rpx;
+    margin:auto;
+    top:0;
+    bottom:0;
+
+}
+
+.top-info.dynamic>button{
+    margin-top: 6rpx;
+    padding: 8rpx 58rpx 10rpx 58rpx;
+    border: 1rpx solid transparent;
+    font-size: 38rpx;
+    display:inline-block;
+    background:transparent;
+    transition: 1s;
+    border-radius: 10rpx;
+
+}
+
+.top-info.dynamic>button:first-child{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.top-info.dynamic>button.last{
+    border: 1rpx solid #26bab7;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: #26bab7;
+}
+.top-info.dynamic>button.active{
+    background: #26bab7;
+    color: #fff;
+}
+
+
 
 
 /* 特定区域样式 */
@@ -38,4 +87,19 @@ page{
 
 .dynamic-b{
     padding: 42rpx 18rpx;
+}
+
+
+/* cover */
+.edit{
+    height: 260rpx;
+    width: 100%;
+    padding: 0 42rpx;
+}
+
+
+/* js */
+.cover-show{
+    visibility: visible;
+    transition: .5s;
 }

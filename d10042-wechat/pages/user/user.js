@@ -1,6 +1,11 @@
 Page({
     data: {
-
+        modal_show:false
+    },
+    toggleModal(){
+        this.setData({
+            modal_show:!this.data.modal_show
+        })
     },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载

@@ -1,3 +1,10 @@
+<view class="top-info dynamic">
+    <button class="active btn">关注</button>
+    <button class="last btn">发现</button>
+    <image bindtap="showEditModal" class="photo-icon" src="../imgs/icon/photo.png" />
+</view>
+
+
 <view class="dynamic-container">
 
     <view class="dynamic bg-w r-10" wx:for="{{dynamics}}" wx:key="item.id">
@@ -32,6 +39,29 @@
                     <text class="font-up">{{item.stars_num}}</text>
                 </view>
             </view>
+        </view>
+    </view>
+</view>
+
+
+
+<view class="cover dynamic-c {{cover_show?'cover-show':''}}">
+    <view class="edit bg-w flex-h">
+        <view class="flex-v">
+            <image class="add-icon mar-b-8" src="../imgs/icon/add-1.png"></image>
+            <text class="font-mm">文字</text>
+        </view>
+        <view class="flex-v">
+            <image class="add-icon mar-b-8" src="../imgs/icon/add-2.png"></image>
+            <text class="font-mm">拍照</text>
+        </view>
+        <view class="flex-v">
+            <image class="add-icon mar-b-8" src="../imgs/icon/add-3.png"></image>
+            <text class="font-mm">视频</text>
+        </view>
+        <view class="flex-v">
+            <image class="add-icon mar-b-8" src="../imgs/icon/add-4.png"></image>
+            <text class="font-mm">照相</text>
         </view>
     </view>
 </view>

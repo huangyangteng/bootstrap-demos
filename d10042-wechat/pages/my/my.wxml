@@ -1,4 +1,6 @@
-<page>
+<view class="top-info flex-h-e">
+    <image class="click-more bor-r setting-icon" src="../imgs/icon/setting.png" />
+</view>
     <view class="bg-w pad-lr-30 pad-bt-30 mar-b-12">
         <view class="my-h-info flex-h mar-b-12">
             <image class="avatar" src="../imgs/icon/avatar2.png" />
@@ -61,4 +63,3 @@
         </navigator>
         
     </view>
-</page>

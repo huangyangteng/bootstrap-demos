@@ -1,3 +1,6 @@
+<view class="top-info flex-h-e pad-lr-38">
+    <image bindtap="toggleModal" class="click-more report-icon" src="../imgs/icon/user-options.png"></image>
+</view>
 <view class="user-t">
     <view class="flex-h mar-b-40">
         <image class="avatar" src="../imgs/img/avatar-user.png" />
@@ -120,5 +123,18 @@
     <view class="flex-h-v">
         <image class="btn-icon mar-r-20" src="../imgs/icon/sendmeg.png"></image>
         <text class="font-mm">红娘牵手</text>
+    </view>
+</view>
+
+
+
+
+
+<view class="cover {{modal_show?'cover-show':''}}">
+    <view class="report pad-lr-40">
+        <button class="mar-b-12" hover-class="btn-h">分享</button>
+        <button class="mar-b-12" hover-class="btn-h">举报</button>
+        <button class="mar-b-12" hover-class="btn-h">拉黑</button>
+        <button bindtap="toggleModal" class="mar-b-12 primary" hover-class="btn-h">取消</button>
     </view>
 </view>

@@ -1,3 +1,6 @@
+page{
+    background: #f6f6f6;
+}
  .meet{
     font-size: 24rpx;
     line-height: 36rpx;
@@ -8,6 +11,11 @@
 image{
     width: 348rpx;
     height: 354rpx;
+}
+.meet-search-icon{
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: -2rpx;
 }
 
  .meet-item{

@@ -1,3 +1,13 @@
+
+
+<view class="top-info flex-h ">
+    <view class="font-l text-primary">武汉</view>
+    <view class="font-l text-primary">
+        <image class="meet-search-icon" src="../imgs/icon/meet-search.png" />
+        搜索
+    </view>
+</view>
+
 <view class="container meet flex-h">
      <view class="meet-item bg-w flex-v" wx:for="{{users}}" wx:key="{{index}}" bindtap="goUser">
         <view class="name-pa">

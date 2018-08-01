@@ -24,7 +24,10 @@ page{
     width: 44rpx;
     height: 36rpx;
 }
-
+.report-icon{
+    width: 50rpx;
+    height: 10rpx;
+}
 /*  通用*/
 .user-limit{
     max-width: 76%;
@@ -88,3 +91,23 @@ page{
     flex-basis: 50%;
 }
 
+
+
+
+/* cover */
+
+.cover{
+    top:75rpx;
+}
+.report{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.cover-show{
+    visibility: visible;
+    transition: .5s;
+}

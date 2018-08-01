@@ -30,7 +30,9 @@
     height: 80rpx;
 }
 
-
+.btn-bottom{
+    bottom: 50rpx;
+}
 /* --------------------精准搜索 */
 .se-i{
     height: 140rpx;
@@ -60,4 +62,40 @@
 }
 .se-b>button{
     margin-top: 18rpx;
+}
+
+
+
+/* 切换条件搜索和精准搜索 */
+.top-info.search{
+    justify-content: center;
+}
+.top-info.search>view{
+    display: inline-block;
+    color: #96d8d7;
+    font-size: 34rpx;
+}
+.top-info.search>view:first-child{
+    margin-right: 110rpx;
+}
+.top-info.search>view.active{
+    color: #26bab7;
+    position: relative;
+}
+.top-info.search>view.active::after{
+    content: '';
+    position: absolute;
+    height: 4rpx;
+    width: 64rpx;
+    background: #26bab7;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -6rpx;
+}
+
+
+
+.search-show{
+    display: block!important;
 }
