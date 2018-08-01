@@ -222,20 +222,19 @@ Page({
       this.data.basicdata.start.t=new Date().getTime();
       this.data.basicdata.start.x=e.touches[0].clientX;
       this.data.basicdata.start.y=e.touches[0].clientY;
+
+      this.data.tempData.tracking = true;
+      this.data.tempData.animation = false;
+
       this.setData({
-        basicdata:this.data.basicdata
-      })
-      this.data.tempData.tracking=true;
-      this.data.tempData.animation=false;
-      this.setData({
-        tempData:this.data.tempData
+        basicdata:this.data.basicdata,
+        tempData: this.data.tempData
       })
     }
 
 
   },
   touchmove(e){//计算滑动位置
-    console.log(this.data.tempData.tracking && !this.data.tempData.animation)
     if(this.data.tempData.tracking && !this.data.tempData.animation){
         this.data.basicdata.end.x=e.touches[0].clientX;
         this.data.basicdata.end.y=e.touches[0].clientY;
@@ -245,6 +244,7 @@ Page({
         this.setData({
           tempData:this.data.tempData
         })
+        // 执行动画，滑动了多少移动多少
         this.transform();
         
 
