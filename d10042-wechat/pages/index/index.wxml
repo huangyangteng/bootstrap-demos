@@ -4,7 +4,7 @@
         <view class="stack">
 
 
-            <view  class="stack-item" wx:for="{{pages}}" wx:key="item.id" 
+            <view  class="stack-item {{index>4?'shadow-none':''}}" wx:for="{{pages}}" wx:key="item.id" 
             style="z-index:{{item.style.zIndex}};opacity:{{item.style.opacity}};transform:{{item.style.transform}};transition-duration:{{item.style.transitionDuration}};transition-timing-function:{{item.style.transitionTimingFunction}}"
                 catchtouchstart="touchstart"
                 catchtouchmove="touchmove"

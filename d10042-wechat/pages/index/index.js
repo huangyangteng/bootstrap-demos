@@ -28,7 +28,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index2.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -39,7 +39,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index5.jpeg',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -50,7 +50,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index3.jpeg',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -61,7 +61,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index4.jpeg',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -72,7 +72,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index8.jpeg',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -83,7 +83,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index5.jpeg',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -94,7 +94,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/girl1.png',
+        img: '../imgs/img/index6.jpeg',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -131,7 +131,7 @@ Page({
           style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
           style['zIndex'] = visible - i + this.data.basicdata.currentPage
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
         } else {
           style['zIndex'] = '-1'
           style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
@@ -145,9 +145,17 @@ Page({
         style['opacity'] = '0'
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 300 + 'ms'
+        style['transitionDuration'] = 3000 + 'ms'
         this.data.pages[i].style = style;
       }
+      // } else if (i != this.data.basicdata.currentPage) {
+      //   let style = {};
+      //   let visible = this.data.tempData.visible;
+      //   console.log('其余情况' + i)
+      //   style['zIndex'] = '-1'
+      //   style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
+      //   this.data.pages[i].style = style;
+      // }
 
       if (i == this.data.basicdata.currentPage) {
         let style = {};
@@ -156,7 +164,7 @@ Page({
         style['zIndex'] = 10;
         if (this.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
         }
         this.data.pages[i].style = style;
       }
@@ -192,7 +200,7 @@ Page({
         style['opacity'] = '0'
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 300 + 'ms'
+        style['transitionDuration'] = 3000 + 'ms'
         that.data.pages[lastPage].style = style;
         that.setData({
           pages: that.data.pages
@@ -206,9 +214,9 @@ Page({
       }
       
     }
-    if (this.data.basicdata.currentPage == this.data.pages.length - 3) {
-      this.data.basicdata.currentPage = 0;
-    }
+    // if (this.data.basicdata.currentPage == this.data.pages.length - 3) {
+    //   this.data.basicdata.currentPage = 0;
+    // }
     
   },
   touchstart(e){//记录开始位置
@@ -270,13 +278,13 @@ Page({
       this.data.tempData.lastPosWidth=this.data.tempData.poswidth;
       this.data.tempData.lastPosHeight=this.data.tempData.posheight;
       // 改变currentPage
-      this.data.basicdata.currentPage === this.data.pages.length - 1 ? 0 : this.data.basicdata.currentPage++;
+      this.data.basicdata.currentPage === this.data.pages.length - 2 ? this.data.basicdata.currentPage=0 : this.data.basicdata.currentPage++;
       console.log('当前页面是'+this.data.basicdata.currentPage);
       this.setData({
         tempData:this.data.tempData,
       })
       let lastPage=this.data.basicdata.currentPage===0?this.data.pages.length-1:this.data.basicdata.currentPage-1;
-      console.log('上一个页面是' + lastPage);
+      
       // currentPage+1引发排序变化 0 1 2
       for (let i = 0; i < this.data.pages.length; i++) {
         // 非首页样式切换
@@ -292,7 +300,7 @@ Page({
             style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
             style['zIndex'] = visible - i + this.data.basicdata.currentPage
             style['transitionTimingFunction'] = 'ease'
-            style['transitionDuration'] = 300 + 'ms'
+            style['transitionDuration'] = 3000 + 'ms'
             this.data.pages[i].style = style;
           } else {
             // console.log('隐藏的页面的index是'+i)
@@ -302,14 +310,21 @@ Page({
           }
           
         } else if (i === lastPage) {//已滑动滑块释放后
-          console.log('继续执行动画的index是'+i)
+          // console.log('继续执行动画的index是'+i)
           let style = {}
           // 继续执行动画
           style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
           style['opacity'] = '0'
           style['zIndex'] = '20'
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
+          this.data.pages[i].style = style;
+        } else if (i != this.data.basicdata.currentPage){
+          let style={};
+          let visible = this.data.tempData.visible;
+          console.log('其余情况'+i)
+          style['zIndex'] = '-1'
+          style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
           this.data.pages[i].style = style;
         }
 
@@ -320,7 +335,7 @@ Page({
           style['zIndex'] = 10;
           if (this.data.tempData.animation) {
             style['transitionTimingFunction'] = 'ease'
-            style['transitionDuration'] = 300 + 'ms'
+            style['transitionDuration'] = 3000 + 'ms'
           }
           this.data.pages[i].style = style;
         }
@@ -344,7 +359,7 @@ Page({
         style['zIndex'] = 10
         if (that.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
         }
         that.data.pages[that.data.basicdata.currentPage].style = style;
         that.setData({
