@@ -4,7 +4,7 @@
 </view>
 
 <view class="{{search_first?'search-show':''}}" style="display:none">
-    <view class="reco bg-w mar-18">
+    <view class="r-10 reco bg-w mar-18">
         <view class="flex-h pad-lr-50">
             <view class="flex-v">
                 <image class="icon mar-b-8" src="../imgs/icon/search1.png" />
@@ -34,7 +34,7 @@
             </view>
         </view>
     </view>
-    <view class="base bg-w mar-18">
+    <view class="r-10 base bg-w mar-18">
         <view class="title  pad-lr-30 flex-h">
             <view class="h-title">基本条件</view>
         </view>

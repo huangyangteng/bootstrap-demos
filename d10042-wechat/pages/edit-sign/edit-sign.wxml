@@ -1,3 +1,6 @@
+<view class="top-info flex-h-e">
+    <text class="text-primary font-lll">保存</text>
+</view>
 <textarea class="hr font-ll" placeholder="placeholder" value="我希望在这里找到一个真诚，自信，积极，阳光的,另一半,相互扶持，一起生活。"/>
 <view class="total-num text-light">463</view>
 <view class="pad-lr-30 mar-t-20">

@@ -62,6 +62,11 @@ Page({
             url:'../user/user'
         })
     },
+    goSearch(){
+        wx.navigateTo({
+            url:'../search/search'
+        })
+    },
     onLoad: function (options) {
         // 生命周期函数--监听页面加载
 

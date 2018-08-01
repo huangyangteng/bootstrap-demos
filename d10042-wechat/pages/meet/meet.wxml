@@ -2,8 +2,8 @@
 
 <view class="top-info flex-h ">
     <view class="font-l text-primary">武汉</view>
-    <view class="font-l text-primary">
-        <image class="meet-search-icon" src="../imgs/icon/meet-search.png" />
+    <view catchtap="goSearch" class="font-l text-primary">
+        <image  class="meet-search-icon" src="../imgs/icon/meet-search.png" />
         搜索
     </view>
 </view>
