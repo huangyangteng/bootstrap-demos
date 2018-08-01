@@ -131,7 +131,7 @@ Page({
           style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
           style['zIndex'] = visible - i + this.data.basicdata.currentPage
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 3000 + 'ms'
+          style['transitionDuration'] = 300 + 'ms'
         } else {
           style['zIndex'] = '-1'
           style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
@@ -145,7 +145,7 @@ Page({
         style['opacity'] = '0'
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 3000 + 'ms'
+        style['transitionDuration'] = 300 + 'ms'
         this.data.pages[i].style = style;
       }
 
@@ -156,7 +156,7 @@ Page({
         style['zIndex'] = 10;
         if (this.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 3000 + 'ms'
+          style['transitionDuration'] = 300 + 'ms'
         }
         this.data.pages[i].style = style;
       }
@@ -186,21 +186,23 @@ Page({
     for (let index = 0; index < this.data.pages.length; index++) {
       let lastPage = this.data.basicdata.currentPage === 0 ? this.data.pages.length - 1 : this.data.basicdata.currentPage - 1;
       if (this.data.tempData.swipe && index === lastPage) {//1 2 3 4 
-        this.data.tempData.animation = true;
-        this.data.tempData.lastPosWidth = 0;
-        this.data.tempData.lastPosHeight = 0;
-        this.data.tempData.swipe = false;
         let style = {}
         // 继续执行动画
         style['transform'] = 'translate3D(' + that.data.tempData.lastPosWidth + 'px' + ',' + that.data.tempData.lastPosHeight + 'px' + ',0px)'
         style['opacity'] = '0'
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 3000 + 'ms'
+        style['transitionDuration'] = 300 + 'ms'
         that.data.pages[lastPage].style = style;
         that.setData({
           pages: that.data.pages
         })
+        this.data.tempData.animation = true;
+        this.data.tempData.lastPosWidth = 0;
+        this.data.tempData.lastPosHeight = 0;
+        this.data.tempData.swipe = false;
+        
+        
       }
       
     }
@@ -254,6 +256,7 @@ Page({
     let that=this;
     this.data.tempData.tracking=false;
     this.data.tempData.animation=true;
+
     // 滑动结束，触发判断
     if(Math.abs(this.data.tempData.poswidth)>=100){//滑动距离超过100
       // 最终位移设置为x轴200像素的偏移
@@ -262,43 +265,51 @@ Page({
       this.data.tempData.posheight = this.data.tempData.posheight >= 0 ? Math.abs(this.data.tempData.posheight * ratio) : -Math.abs(this.data.tempData.posheight * ratio);
       this.data.tempData.opacity=0;
       this.data.tempData.swipe=true;
+
       // 记录最终滑动距离
       this.data.tempData.lastPosWidth=this.data.tempData.poswidth;
       this.data.tempData.lastPosHeight=this.data.tempData.posheight;
+      // 改变currentPage
       this.data.basicdata.currentPage === this.data.pages.length - 1 ? 0 : this.data.basicdata.currentPage++;
-      console.log(this.data.basicdata.currentPage);
-
+      console.log('当前页面是'+this.data.basicdata.currentPage);
       this.setData({
         tempData:this.data.tempData,
       })
       let lastPage=this.data.basicdata.currentPage===0?this.data.pages.length-1:this.data.basicdata.currentPage-1;
+      console.log('上一个页面是' + lastPage);
       // currentPage+1引发排序变化 0 1 2
       for (let i = 0; i < this.data.pages.length; i++) {
         // 非首页样式切换
         if (i > this.data.basicdata.currentPage) {
+          console.log('大于当前页面的index是'+i);
           let style = {};
           let visible = this.data.tempData.visible;
           let perIndex = i - this.data.basicdata.currentPage;
           // visible可见数量前的滑块样式
           if (i <= this.data.basicdata.currentPage + visible - 1) {
+            // console.log('可见数量的滑块的index是'+i);
             style['opacity'] = '1'
             style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
             style['zIndex'] = visible - i + this.data.basicdata.currentPage
             style['transitionTimingFunction'] = 'ease'
-            style['transitionDuration'] = 3000 + 'ms'
+            style['transitionDuration'] = 300 + 'ms'
+            this.data.pages[i].style = style;
           } else {
+            // console.log('隐藏的页面的index是'+i)
             style['zIndex'] = '-1'
             style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
+            this.data.pages[i].style = style;
           }
-          this.data.pages[i].style = style;
+          
         } else if (i === lastPage) {//已滑动滑块释放后
+          console.log('继续执行动画的index是'+i)
           let style = {}
           // 继续执行动画
           style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
           style['opacity'] = '0'
           style['zIndex'] = '20'
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 3000 + 'ms'
+          style['transitionDuration'] = 300 + 'ms'
           this.data.pages[i].style = style;
         }
 
@@ -309,7 +320,7 @@ Page({
           style['zIndex'] = 10;
           if (this.data.tempData.animation) {
             style['transitionTimingFunction'] = 'ease'
-            style['transitionDuration'] = 3000 + 'ms'
+            style['transitionDuration'] = 300 + 'ms'
           }
           this.data.pages[i].style = style;
         }
@@ -333,7 +344,7 @@ Page({
         style['zIndex'] = 10
         if (that.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 3000 + 'ms'
+          style['transitionDuration'] = 300 + 'ms'
         }
         that.data.pages[that.data.basicdata.currentPage].style = style;
         that.setData({
