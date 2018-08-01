@@ -131,7 +131,7 @@ Page({
           style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
           style['zIndex'] = visible - i + this.data.basicdata.currentPage
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
         } else {
           style['zIndex'] = '-1'
           style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
@@ -145,7 +145,7 @@ Page({
         style['opacity'] = '0'
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 300 + 'ms'
+        style['transitionDuration'] = 3000 + 'ms'
         this.data.pages[i].style = style;
       }
 
@@ -156,7 +156,7 @@ Page({
         style['zIndex'] = 10;
         if (this.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
         }
         this.data.pages[i].style = style;
       }
@@ -179,13 +179,9 @@ Page({
 
   },
   onTransitionEnd(e){
-    console.log('动画结束了');
     let that=this;
 
-    // let index=e.currentTarget.id;
-    // console.log(index);
     // dom发生变化后，正在执行的动画滑动序列变为上一层
-    // console.log(this.data.basicdata.currentPage)
     
     for (let index = 0; index < this.data.pages.length; index++) {
       let lastPage = this.data.basicdata.currentPage === 0 ? this.data.pages.length - 1 : this.data.basicdata.currentPage - 1;
@@ -200,7 +196,7 @@ Page({
         style['opacity'] = '0'
         style['zIndex'] = '-1'
         style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 300 + 'ms'
+        style['transitionDuration'] = 3000 + 'ms'
         that.data.pages[lastPage].style = style;
         that.setData({
           pages: that.data.pages
@@ -289,7 +285,7 @@ Page({
             style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
             style['zIndex'] = visible - i + this.data.basicdata.currentPage
             style['transitionTimingFunction'] = 'ease'
-            style['transitionDuration'] = 300 + 'ms'
+            style['transitionDuration'] = 3000 + 'ms'
           } else {
             style['zIndex'] = '-1'
             style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
@@ -302,7 +298,7 @@ Page({
           style['opacity'] = '0'
           style['zIndex'] = '20'
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
           this.data.pages[i].style = style;
         }
 
@@ -313,7 +309,7 @@ Page({
           style['zIndex'] = 10;
           if (this.data.tempData.animation) {
             style['transitionTimingFunction'] = 'ease'
-            style['transitionDuration'] = 300 + 'ms'
+            style['transitionDuration'] = 3000 + 'ms'
           }
           this.data.pages[i].style = style;
         }
@@ -337,7 +333,7 @@ Page({
         style['zIndex'] = 10
         if (that.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 300 + 'ms'
+          style['transitionDuration'] = 3000 + 'ms'
         }
         that.data.pages[that.data.basicdata.currentPage].style = style;
         that.setData({
