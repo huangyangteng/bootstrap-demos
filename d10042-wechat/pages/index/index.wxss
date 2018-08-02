@@ -9,6 +9,8 @@ page{
 .banner-img{
     width: 652rpx;
     height: 656rpx;
+    border-radius: 10px 10px 0 0;
+
 }
 .tag-icon{
     width: 16rpx;
@@ -29,7 +31,7 @@ page{
 /* banner */
 .index-c{
     margin: 66rpx 48rpx 0 48rpx;
-    background: #fff;
+    /* background: #fff; */
 }
 .stack{
     position: relative;

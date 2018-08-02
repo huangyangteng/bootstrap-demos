@@ -42,7 +42,7 @@
             <text class="l font-l">年龄</text>
             <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
                 <view class="input-pa">
-                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'18-20岁':array[index]}}" placeholder-class="input-p"/>
+                    <input disabled	 class="input font-l pad-r-30" type="number" value="{{index===0?'18-20岁':array[index]}}" placeholder-class="input-p"/>
                     <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
                 </view>
             </picker>
@@ -51,7 +51,7 @@
             <text class="l font-l">工作地区</text>
             <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
                 <view class="input-pa">
-                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'湖北 武汉':array[index]}}" placeholder-class="input-p"/>
+                    <input disabled	 class="input font-l pad-r-30" type="number" value="{{index===0?'湖北 武汉':array[index]}}" placeholder-class="input-p"/>
                     <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
                 </view>
             </picker>
@@ -60,7 +60,7 @@
             <text class="l font-l">身高</text>
             <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
                 <view class="input-pa">
-                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
+                    <input disabled	 class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
                     <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
                 </view>
             </picker>
@@ -69,7 +69,7 @@
             <text class="l font-l">体型</text>
             <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
                 <view class="input-pa">
-                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
+                    <input disabled	 class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
                     <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
                 </view>
             </picker>
@@ -78,7 +78,7 @@
             <text class="l font-l">学历</text>
             <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
                 <view class="input-pa">
-                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
+                    <input disabled	 class="input font-l pad-r-30" type="number" value="{{index===0?'不限':array[index]}}" placeholder-class="input-p"/>
                     <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
                 </view>
             </picker>
@@ -87,7 +87,7 @@
             <text class="l font-l">月收入</text>
             <picker bindchange="selectTest" value="{{index}}" range="{{array}}">
                 <view class="input-pa">
-                    <input class="input font-l pad-r-30" type="number" value="{{index===0?'6000以上':array[index]}}" placeholder-class="input-p"/>
+                    <input disabled	 class="input font-l pad-r-30" type="number" value="{{index===0?'6000以上':array[index]}}" placeholder-class="input-p"/>
                     <image src="../imgs/icon/arrow-right.png" class="icon-input"></image>
                 </view>
             </picker>
@@ -101,7 +101,7 @@
 <view class="{{search_last?'search-show':''}}" style="display:none">
     <view class="se-i mar-18 bg-w r-10">
         <image class="search-icon" src="../imgs/icon/search-precise.png" />
-        <input type="search" placeholder="请输入用户昵称"  auto-focus  />
+        <input type="search" placeholder="请输入用户昵称" />
     </view>
     
     <view class="se-b bg-w r-10 pad-lr-18">
