@@ -2,6 +2,7 @@
         <view class="e-item">
             <text class="mar-r-20">基本资料</text>
             <text>(10/21)</text>
+            <text class="text-primary" style="float:right">保存</text>
         </view>
 
         <view class="input-pa-r bg-w ">
@@ -189,7 +190,4 @@
             <input type="text" class="input pad-lr-30" placeholder-class="input-holder" placeholder="未填写"/>
         </view>
 
-        <view class="btn-block-pa">
-            <button class="primary" hover-class="btn-h">保存</button>
-        </view>
     </view>

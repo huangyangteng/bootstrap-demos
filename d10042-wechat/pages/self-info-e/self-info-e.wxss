@@ -25,5 +25,6 @@ page{
     font-size: 28rpx;
     line-height: 74rpx;
     padding-left: 30rpx;
+    padding-right: 30rpx;
     margin-top: 16rpx;
 }
