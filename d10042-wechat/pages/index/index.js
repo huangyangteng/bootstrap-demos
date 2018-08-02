@@ -125,7 +125,7 @@ Page({
       let perIndex = i - currentPage > 0 ? i - currentPage : i - currentPage + this.data.pages.length;
       // 1. 判断是否是当前页
       if (i == this.data.basicdata.currentPage) {
-        console.log('当前页是' + i);
+        // console.log('当前页是' + i);
 
         let style = {};
         style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
@@ -138,33 +138,36 @@ Page({
         this.data.pages[i].style = style;
       } else if (this.inStack(i, this.data.basicdata.currentPage)) {
       // 2.判断是否是当前页的下一页
-        console.log('当前页的下一页是' + i);
+        // console.log('当前页的下一页是' + i);
         style['opacity'] = '1'
         style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
         style['zIndex'] = visible - i + this.data.basicdata.currentPage
-        style['transitionTimingFunction'] = 'ease'
-        style['transitionDuration'] = 400 + 'ms'
+ 
+        if (!this.data.tempData.tracking) {
+          style['transitionTimingFunction'] = 'ease'
+          style['transitionDuration'] = 400 + 'ms'
+        }
         this.data.pages[i].style = style;
 
       } else if (i === lastPage) {
-      // 判断是否是当前页的上一页
-        console.log('当前页的上一页是' + i)
+      // 3.判断是否是当前页的上一页
+        // console.log('当前页的上一页是' + i)
 
 
         style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
         style['opacity'] = '0'
         style['zIndex'] = '20';
-        if (!this.data.tempData.tracking) {
+        // if (!this.data.tempData.tracking) {
           style['transitionTimingFunction'] = 'ease'
           style['transitionDuration'] = 400 + 'ms'
-        }
+        // }
 
         this.data.pages[i].style = style;
 
 
       } else {
-        console.log('其他页是' + i);
-        console.log('---------------------------------------')
+        // console.log('其他页是' + i);
+        // console.log('---------------------------------------')
         style['zIndex'] = '-1'
         style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
         this.data.pages[i].style = style;
@@ -192,8 +195,11 @@ Page({
     // dom发生变化后，正在执行的动画滑动序列变为上一层
 
     for (let index = 0; index < this.data.pages.length; index++) {
+
+
       let lastPage = this.data.basicdata.currentPage === 0 ? this.data.pages.length - 1 : this.data.basicdata.currentPage - 1;
       if (this.data.tempData.swipe && index === lastPage) {//1 2 3 4 
+
         console.log('继续执行动画的是'+index)
         let style = {}
         // 继续执行动画
@@ -210,6 +216,10 @@ Page({
         this.data.tempData.lastPosWidth = 0;
         this.data.tempData.lastPosHeight = 0;
         this.data.tempData.swipe = false;
+        this.setData({
+          template:this.data.tempData
+        })
+        // this.transform();
 
 
       }
@@ -308,7 +318,7 @@ Page({
         let perIndex = i - currentPage > 0 ? i - currentPage : i - currentPage + this.data.pages.length;
         // 1. 判断是否是当前页
         if (i == this.data.basicdata.currentPage) {
-          console.log('当前页是'+i);
+          // console.log('当前页是'+i);
           
           let style = {};
           style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
@@ -321,21 +331,10 @@ Page({
           this.data.pages[i].style = style;
         } else if (this.inStack(i, this.data.basicdata.currentPage)){
 
-          console.log('当前页的下一页是'+i);
+          // console.log('当前页的下一页是'+i);
           style['opacity'] = '1'
           style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
           style['zIndex'] = visible - i + this.data.basicdata.currentPage
-          style['transitionTimingFunction'] = 'ease'
-          style['transitionDuration'] = 400 + 'ms'
-          this.data.pages[i].style = style;
-
-        }else if(i===lastPage){
-          console.log('当前页的上一页是'+i)
-
-
-          style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
-          style['opacity'] = '0'
-          style['zIndex'] = '20';
           if(!this.data.tempData.tracking){
             style['transitionTimingFunction'] = 'ease'
             style['transitionDuration'] = 400 + 'ms'
@@ -343,10 +342,24 @@ Page({
           
           this.data.pages[i].style = style;
 
+        }else if(i===lastPage){
+          // console.log('当前页的上一页是'+i)
+
+
+          style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
+          style['opacity'] = '0'
+          style['zIndex'] = '20';
+          // if(!this.data.tempData.tracking){
+            style['transitionTimingFunction'] = 'ease'
+            style['transitionDuration'] = 400 + 'ms'
+          // }
+          
+          this.data.pages[i].style = style;
+
 
         }else{
-          console.log('其他页是'+i);
-          console.log('---------------------------------------')
+          // console.log('其他页是'+i);
+          // console.log('---------------------------------------')
           style['zIndex'] = '-1'
           style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
           this.data.pages[i].style = style;
@@ -354,97 +367,12 @@ Page({
         
 
       }
-      // for (let i = 0; i < this.data.pages.length; i++) {
-      //   // 非首页样式切换
-      //   if (i > this.data.basicdata.currentPage) {
-
-      //     let style = {};
-      //     let visible = this.data.tempData.visible;
-      //     let perIndex = i - this.data.basicdata.currentPage;
-      //     // visible可见数量前的滑块样式
-      //     if (i <= this.data.basicdata.currentPage + visible - 1) {
-      //       console.log('可见数量的滑块的index是' + i);
-      //       style['opacity'] = '1'
-      //       style['transform'] = 'translate3D(0,0,' + -1 * perIndex * 60 + 'px' + ')'
-      //       style['zIndex'] = visible - i + this.data.basicdata.currentPage
-      //       style['transitionTimingFunction'] = 'ease'
-      //       style['transitionDuration'] = 400 + 'ms'
-      //       this.data.pages[i].style = style;
-      //     } else {
-      //       // console.log('隐藏的页面的index是'+i)
-      //       style['zIndex'] = '-1'
-      //       style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
-      //       this.data.pages[i].style = style;
-      //     }
-      //     if (i === lastPage) {//8
-      //       let style = {}
-      //       // 继续执行动画
-      //       style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
-      //       style['opacity'] = '0'
-      //       style['zIndex'] = '20'
-      //       style['transitionTimingFunction'] = 'ease'
-      //       style['transitionDuration'] = 400 + 'ms'
-      //       this.data.pages[i].style = style;
-      //     }
-
-
-
-
-
-      //   } else if (i === lastPage) {//已滑动滑块释放后
-      //     let style = {}
-      //     // 继续执行动画
-      //     style['transform'] = 'translate3D(' + this.data.tempData.lastPosWidth + 'px' + ',' + this.data.tempData.lastPosHeight + 'px' + ',0px)'
-      //     style['opacity'] = '0'
-      //     style['zIndex'] = '20'
-      //     style['transitionTimingFunction'] = 'ease'
-      //     style['transitionDuration'] = 400 + 'ms'
-      //     this.data.pages[i].style = style;
-      //   } else if (i != this.data.basicdata.currentPage) {
-      //     console.log('在下面的i是' + i);
-      //     let style = {};
-      //     let visible = this.data.tempData.visible;
-      //     style['zIndex'] = '-1'
-      //     style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
-      //     this.data.pages[i].style = style;
-      //   }
-
-
-
-
-
-
-      //   if (i == this.data.basicdata.currentPage) {
-      //     // console.log('当前的currentPage是'+i);
-      //     let style = {};
-      //     style['transform'] = 'translate3D(' + this.data.tempData.poswidth + 'px' + ',' + this.data.tempData.posheight + 'px' + ',0px)'
-      //     style['opacity'] = 1;
-      //     style['zIndex'] = 10;
-      //     if (this.data.tempData.animation) {
-      //       style['transitionTimingFunction'] = 'ease'
-      //       style['transitionDuration'] = 400 + 'ms'
-      //     }
-      //     this.data.pages[i].style = style;
-      //   }
-
-
-      // }
-
-
-
-
-
-
-
-
-
-
-
 
       this.setData({
         pages: this.data.pages,
       }, function () {
         // 首页置为0
+        console.log('首页重新设置样式')
         that.data.tempData.poswidth = 0;
         that.data.tempData.posheight = 0;
         that.data.tempData.opacity = 1;
@@ -452,14 +380,15 @@ Page({
           tempData: that.data.tempData
         })
         // 重新设置首页的样式
+        // console.log(that.data.basicdata.currentPage)
         let style = {}
         style['transform'] = 'translate3D(' + that.data.tempData.poswidth + 'px' + ',' + that.data.tempData.posheight + 'px' + ',0px)'
         style['opacity'] = that.data.tempData.opacity
         style['zIndex'] = 10
-        if (that.data.tempData.animation) {
+        // if (that.data.tempData.animation) {
           style['transitionTimingFunction'] = 'ease'
           style['transitionDuration'] = 400 + 'ms'
-        }
+        // }
         that.data.pages[that.data.basicdata.currentPage].style = style;
         that.setData({
           pages: that.data.pages
