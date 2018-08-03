@@ -14,62 +14,7 @@
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
 
-.p-title.primary{
-    &::before{
-        background:$brand-primary;
-    }
-}
-// 前面带小点点的P
-.p-text{
-    position: relative;
-    margin-left: 14px;
-    &::before{
-        content: '';
-        width: .375rem;
-        height: .375rem;
-        background:$brand-primary;
-        border-radius: 50%;
-        @include ab-c-v;
-        left: -0.875rem;
 
-    }
-}
-
-.tag-new{
-    padding: .1875rem .25rem;
-    display: inline-block;
-    border-radius: .25rem;
-    color: white;
-}
-.tag-new.xs{
-    font-size: .75rem;
-
-}
-.tag-new.theme1{
-    background:#df8bff;
-}
-.tag-new.theme2{
-    background:#9ce184;
-}
-.tag-new.theme3{
-    background:#71befe;
-}
-.tag-new.theme4{
-    background:#f19ec2;
-}
-.tag-new.theme5{
-    background:#f6b37f;
-}
-.tag-new.theme6{
-    background:#8b99ff;
-}
-.my-focus-body{
-    background:#fff;
-}
-
-.text-fat{
-    font-weight: 500;
-}
 
 
 /*·------------------------------------------------------------------------------------------*/

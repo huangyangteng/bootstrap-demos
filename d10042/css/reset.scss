@@ -42,6 +42,12 @@ a{
     text-decoration: none;
     background-color: transparent;
 }
+
+a {//点击图片会出现阴影
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
 /*
 <b标签用来语义化的强调，不用来加粗>
 */

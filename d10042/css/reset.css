@@ -38,6 +38,12 @@ a {
   background-color: transparent;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
 /*
 <b标签用来语义化的强调，不用来加粗>
 */

@@ -38,6 +38,12 @@ a {
   background-color: transparent;
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
 /*
 <b标签用来语义化的强调，不用来加粗>
 */
@@ -590,6 +596,72 @@ h2 {
   padding: 0.625rem 2rem;
   font-size: 1.12rem;
   border-radius: 0.375rem;
+}
+
+.p-title.primary::before {
+  background: #32afb5;
+}
+
+.p-text {
+  position: relative;
+  margin-left: 14px;
+}
+
+.p-text::before {
+  content: '';
+  width: .375rem;
+  height: .375rem;
+  background: #32afb5;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: -0.875rem;
+}
+
+.tag-new {
+  padding: .1875rem .25rem;
+  display: inline-block;
+  border-radius: .25rem;
+  color: white;
+}
+
+.tag-new.xs {
+  font-size: .75rem;
+}
+
+.tag-new.theme1 {
+  background: #df8bff;
+}
+
+.tag-new.theme2 {
+  background: #9ce184;
+}
+
+.tag-new.theme3 {
+  background: #71befe;
+}
+
+.tag-new.theme4 {
+  background: #f19ec2;
+}
+
+.tag-new.theme5 {
+  background: #f6b37f;
+}
+
+.tag-new.theme6 {
+  background: #8b99ff;
+}
+
+.my-focus-body {
+  background: #fff;
+}
+
+.text-fat {
+  font-weight: 500;
 }
 
 /*·----公共组件  header footer--------------------------------------------------------------------------------------*/
