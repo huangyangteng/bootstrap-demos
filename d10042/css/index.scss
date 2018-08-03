@@ -159,12 +159,6 @@
 
 }
 
-.js-prev-scale{
-    transition: 0.5s all;
-    transform: scale(1.1);
-}
-.p-footer.index{
-}
 
 
 /*----------------------------【【meet页面样式】】---------------*/
@@ -258,6 +252,7 @@
                 }
                 img{
                     vertical-align: -0.25rem;
+                    width: 1.4375rem
                 }
             }
             >footer{
@@ -286,6 +281,9 @@
             figure{
                 margin: 0;
                 margin-right: .75rem;
+                img{
+                    width: 1.125rem;
+                }
                 sup{
                     vertical-align: .5rem;
                 }
@@ -361,6 +359,10 @@
 /*----------------------------【【my 页面样式】】---------------*/
 /*----------------------------【【my 页面样式】】---------------*/
 // 个人简介
+.my-icon{
+    width: 1.25rem;
+    height: 1.25rem;
+}
 .my-intro{
     height: 11.375rem;
     background:#fff;
@@ -382,6 +384,9 @@
                 margin-bottom: .375rem;
                 font-size: 1.125rem;
             }
+        }
+        >img:last-child{
+            width: .8125rem;
         }
 
          
@@ -405,9 +410,7 @@
 }
 
 // my-list
-.my-list{
 
-}
 .my-list-item{
     background:#fff;
     border-bottom: 1px solid $border-color;

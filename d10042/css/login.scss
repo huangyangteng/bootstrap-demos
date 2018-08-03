@@ -327,6 +327,7 @@ body{
     border-radius: .625rem;
     background:#fff;
     margin: 1rem auto;
+    font-size: 1.05rem;
 }
 .condition-list{
     height: 5.25rem;
@@ -368,9 +369,7 @@ body{
             margin-right: -0.625rem;
         }
     }
-    input{
-       
-    }
+   
 }
 
 
@@ -435,6 +434,17 @@ body{
 }
 
 
+@media screen and (min-width:760px){
+    // 针对平板的底部按钮
+    .ll-search-f{
+        position: relative!important;
+        padding: 0 1.875rem;
+        bottom: 1rem;
+        margin-top: 3.75rem;
+        left: 0!important;
+        right: 0!important;
+    }
+}
 
 
 

@@ -168,25 +168,25 @@ table {
 /*```````````````````一 . 字体与排版 */
 @media screen and (max-width: 321px) {
   body {
-    font-size: 12px;
+    font-size: .75rem;
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 400px) {
   body {
-    font-size: 13px;
+    font-size: .8125rem;
   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 641px) {
   body {
-    font-size: 14px;
+    font-size: .875rem;
   }
 }
 
 @media screen and (min-width: 641px) {
   body {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -630,6 +630,8 @@ h2 {
 .p-header.three > p img {
   vertical-align: -0.125rem;
   margin-right: 1px;
+  width: 1.125rem;
+  height: 1.0625rem;
 }
 
 .p-header.two {
@@ -683,7 +685,7 @@ h2 {
   border-bottom-right-radius: 0;
 }
 
-.p-header.tab button:last-child {
+.p-header.tab button.last {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -697,6 +699,13 @@ h2 {
 .p-header.tab button.active:focus {
   color: #28d0c2;
   border-color: transparent;
+}
+
+.p-header.tab > img {
+  width: 1.625rem;
+  height: 1.375rem;
+  position: absolute;
+  right: .625rem;
 }
 
 /*==页脚 footer
@@ -1113,6 +1122,7 @@ body {
   border-radius: .625rem;
   background: #fff;
   margin: 1rem auto;
+  font-size: 1.05rem;
 }
 
 .condition-list {
@@ -1241,6 +1251,17 @@ body {
 .js-toggle-color {
   background: #25aab2 !important;
   transition: 1s all;
+}
+
+@media screen and (min-width: 760px) {
+  .ll-search-f {
+    position: relative !important;
+    padding: 0 1.875rem;
+    bottom: 1rem;
+    margin-top: 3.75rem;
+    left: 0 !important;
+    right: 0 !important;
+  }
 }
 
 /*----------------------------【【修改自我介绍】】---------------*/
