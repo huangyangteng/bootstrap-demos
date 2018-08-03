@@ -32,7 +32,7 @@
     </view>
 </view>
 
-
+<!-- -->
 <view class="user-cert flex-h">
     <view class="flex-v">
         <image class="icon mar-b-8" src="../imgs/icon/cert1.png" />
@@ -132,9 +132,9 @@
 
 <view class="cover {{modal_show?'cover-show':''}}">
     <view class="report pad-lr-40">
-        <button class="mar-b-12" hover-class="btn-h">分享</button>
-        <button class="mar-b-12" hover-class="btn-h">举报</button>
-        <button class="mar-b-12" hover-class="btn-h">拉黑</button>
+        <button class="mar-b-12 text-err" hover-class="btn-h" open-type="share">分享</button>
+        <button class="mar-b-12 text-err" hover-class="btn-h">举报</button>
+        <button class="mar-b-12 text-err" hover-class="btn-h">拉黑</button>
         <button bindtap="toggleModal" class="mar-b-12 primary" hover-class="btn-h">取消</button>
     </view>
 </view>

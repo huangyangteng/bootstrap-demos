@@ -252,6 +252,9 @@ image{
 .text-transparent{
     color: transparent;
 }
+.text-err{
+    color: #ff6363;
+}
 /* 上标 */
 .font-up{
     font-size: 18rpx;

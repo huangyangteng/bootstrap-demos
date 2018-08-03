@@ -28,7 +28,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index2.png',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -39,7 +39,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index5.jpeg',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -50,7 +50,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index3.jpeg',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -61,7 +61,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index4.jpeg',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -72,7 +72,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index8.jpeg',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -83,7 +83,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index5.jpeg',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
@@ -94,7 +94,7 @@ Page({
 
       },
       {
-        img: '../imgs/img/index6.jpeg',
+        img: '../imgs/img/girl1.png',
         height: '160cm',
         work: '英语老师',
         star: '双子座',
