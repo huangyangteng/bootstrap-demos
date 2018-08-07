@@ -6,7 +6,7 @@ page{
 
 .icon{
     width: 20rpx;
-    height: 38rpx;
+    height: 33rpx;
 }
 
 
