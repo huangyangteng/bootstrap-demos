@@ -95,7 +95,7 @@
 </view>
 
 
-<view class="user-dynamic pad-bt-26">
+<view class="user-dynamic pad-bt-26" style="margin-bottom:100rpx">
     <view class="h-title mar-b-30">个人动态</view>
     <view>
         <view class="font-ss">07-10</view>
@@ -114,7 +114,7 @@
 </view>
 
 
-<view class="flex-h user-op bg-w">
+<view class="flex-h user-op bg-w" >
     <view class="flex-h-v hr-r">
         <image class="btn-icon mar-r-20" src="../imgs/icon/sendmeg.png"></image>
         <text class="font-mm">发消息</text>

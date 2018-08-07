@@ -84,7 +84,10 @@ page{
 }
 
 .user-op{
-    height:100rpx ;
+    height:100rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0rpx;
     padding: 10rpx;
 }
 .user-op>view{

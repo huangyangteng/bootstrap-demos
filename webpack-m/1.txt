@@ -1,0 +1,137 @@
+
+> mutipages@1.0.0 dev /Users/best9/github/练习/webpack/multipage-webpack-scaffolding
+> webpack-dev-server --inline  --watch --host 0.0.0.0 --config webpack.config.dev.js
+
+ℹ ｢wds｣: Project is running at [1m[34mhttp://0.0.0.0:8080/[39m[22m
+ℹ ｢wds｣: webpack output is served from [1m[34m/[39m[22m
+ℹ ｢wds｣: Content not from webpack is served from [1m[34m./dist/[39m[22m
+ℹ ｢wds｣: 404s will fallback to [1m[34m/index.html[39m[22m
+ℹ ｢wdm｣: Hash: [1m1d63bdf85c509a8ed480[39m[22m
+Version: webpack [1m4.16.4[39m[22m
+Time: [1m2490[39m[22mms
+Built at: 2018-08-04 [1m09:48:13[39m[22m
+                         [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+   [1m[32mstatic/img/cat.724abed.jpeg[39m[22m    124 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+    [1m[32mstatic/js/index.1d63bdf.js[39m[22m    321 KiB       [1m0[39m[22m  [1m[32m[emitted][39m[22m  index
+  [1m[32mstatic/js/contact.1d63bdf.js[39m[22m    322 KiB       [1m1[39m[22m  [1m[32m[emitted][39m[22m  contact
+    [1m[32mstatic/js/about.1d63bdf.js[39m[22m    318 KiB       [1m2[39m[22m  [1m[32m[emitted][39m[22m  about
+  [1m[32mstatic/css/index.1d63bdf.css[39m[22m   47 bytes       [1m0[39m[22m  [1m[32m[emitted][39m[22m  index
+  [1m[32mstatic/css/about.1d63bdf.css[39m[22m    0 bytes       [1m2[39m[22m  [1m[32m[emitted][39m[22m  about
+[1m[32mstatic/css/contact.1d63bdf.css[39m[22m   24 bytes       [1m1[39m[22m  [1m[32m[emitted][39m[22m  contact
+                    [1m[32mindex.html[39m[22m  409 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+                    [1m[32mabout.html[39m[22m  468 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+                  [1m[32mcontact.html[39m[22m  360 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+Entrypoint [1mindex[39m[22m = [1m[32mstatic/js/index.1d63bdf.js[39m[22m [1m[32mstatic/css/index.1d63bdf.css[39m[22m
+Entrypoint [1mabout[39m[22m = [1m[32mstatic/js/about.1d63bdf.js[39m[22m [1m[32mstatic/css/about.1d63bdf.css[39m[22m
+Entrypoint [1mcontact[39m[22m = [1m[32mstatic/js/contact.1d63bdf.js[39m[22m [1m[32mstatic/css/contact.1d63bdf.css[39m[22m
+ [0] [1mmulti ./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080 ./src/pages/home/index.js[39m[22m 40 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [1] [1m./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080[39m[22m 7.78 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+ [2] [1m./node_modules/_url@0.11.0@url/url.js[39m[22m 22.8 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[10] [1m./node_modules/_strip-ansi@3.0.1@strip-ansi/index.js[39m[22m 161 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[12] [1m./node_modules/_loglevel@1.6.1@loglevel/lib/loglevel.js[39m[22m 7.68 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[13] [1m./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client/socket.js[39m[22m 1.05 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[21] [1m./node_modules/webpack/hot sync nonrecursive ^\.\/log$[39m[22m 170 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[23] [1m(webpack)/hot/emitter.js[39m[22m 77 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[25] [1m./src/pages/home/index.js[39m[22m 176 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[33] [1m./src/tools/utils.js[39m[22m 2.34 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+[34] [1mmulti ./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080 ./src/pages/about/about.js[39m[22m 40 bytes {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[35] [1m./src/pages/about/about.js[39m[22m 229 bytes {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[38] [1m./src/images/cat.jpeg[39m[22m 73 bytes {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[39] [1mmulti ./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080 ./src/pages/contact/contact.js[39m[22m 40 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+[40] [1m./src/pages/contact/contact.js[39m[22m 172 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    + 28 hidden modules
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!src/common/css/com.less[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./src/common/css/com.less[39m[22m 212 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!src/pages/about/about.less[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./src/pages/about/about.less[39m[22m 185 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!src/pages/home/index.less[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./src/pages/home/index.less[39m[22m 211 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!src/pages/contact/contact.css[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./src/pages/contact/contact.css[39m[22m 185 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mhtml-webpack-plugin for "about.html"[39m[22m:
+     2 assets
+    Entrypoint [1mundefined[39m[22m = [1m[32mabout.html[39m[22m
+    [0] [1m./node_modules/_html-webpack-plugin@3.2.0@html-webpack-plugin/lib/loader.js!./src/pages/about/about.html[39m[22m 427 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./src/images/cat.jpeg[39m[22m 73 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mhtml-webpack-plugin for "contact.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32mcontact.html[39m[22m
+    [0] [1m./node_modules/_html-webpack-plugin@3.2.0@html-webpack-plugin/lib/loader.js!./src/pages/contact/contact.html[39m[22m 282 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32mindex.html[39m[22m
+    [0] [1m./node_modules/_html-webpack-plugin@3.2.0@html-webpack-plugin/lib/loader.js!./src/pages/home/index.html[39m[22m 346 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ℹ ｢wdm｣: Compiled successfully.
+ℹ ｢wdm｣: Compiling...
+ℹ ｢wdm｣: Hash: [1mb0f001f5c66d35f20de8[39m[22m
+Version: webpack [1m4.16.4[39m[22m
+Time: [1m1049[39m[22mms
+Built at: 2018-08-04 [1m09:48:47[39m[22m
+                         [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+   [1m[32mstatic/img/cat.724abed.jpeg[39m[22m    124 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+    [1m[32mstatic/js/index.b0f001f.js[39m[22m    321 KiB       [1m0[39m[22m  [1m[32m[emitted][39m[22m  index
+  [1m[32mstatic/js/contact.b0f001f.js[39m[22m    322 KiB       [1m1[39m[22m  [1m[32m[emitted][39m[22m  contact
+    [1m[32mstatic/js/about.b0f001f.js[39m[22m    318 KiB       [1m2[39m[22m  [1m[32m[emitted][39m[22m  about
+  [1m[32mstatic/css/index.b0f001f.css[39m[22m   66 bytes       [1m0[39m[22m  [1m[32m[emitted][39m[22m  index
+  [1m[32mstatic/css/about.b0f001f.css[39m[22m    0 bytes       [1m2[39m[22m  [1m[32m[emitted][39m[22m  about
+[1m[32mstatic/css/contact.b0f001f.css[39m[22m   24 bytes       [1m1[39m[22m  [1m[32m[emitted][39m[22m  contact
+                    [1m[32mindex.html[39m[22m  409 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+                    [1m[32mabout.html[39m[22m  468 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+                  [1m[32mcontact.html[39m[22m  360 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+Entrypoint [1mindex[39m[22m = [1m[32mstatic/js/index.b0f001f.js[39m[22m [1m[32mstatic/css/index.b0f001f.css[39m[22m
+Entrypoint [1mabout[39m[22m = [1m[32mstatic/js/about.b0f001f.js[39m[22m [1m[32mstatic/css/about.b0f001f.css[39m[22m
+Entrypoint [1mcontact[39m[22m = [1m[32mstatic/js/contact.b0f001f.js[39m[22m [1m[32mstatic/css/contact.b0f001f.css[39m[22m
+ [0] [1mmulti ./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080 ./src/pages/home/index.js[39m[22m 40 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [1] [1m./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080[39m[22m 7.78 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+ [2] [1m./node_modules/_url@0.11.0@url/url.js[39m[22m 22.8 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[10] [1m./node_modules/_strip-ansi@3.0.1@strip-ansi/index.js[39m[22m 161 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[12] [1m./node_modules/_loglevel@1.6.1@loglevel/lib/loglevel.js[39m[22m 7.68 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[13] [1m./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client/socket.js[39m[22m 1.05 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[21] [1m./node_modules/webpack/hot sync nonrecursive ^\.\/log$[39m[22m 170 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[23] [1m(webpack)/hot/emitter.js[39m[22m 77 bytes {[1m[33m0[39m[22m} {[1m[33m1[39m[22m} {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[25] [1m./src/pages/home/index.js[39m[22m 176 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[33] [1m./src/tools/utils.js[39m[22m 2.34 KiB {[1m[33m0[39m[22m} {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+[34] [1mmulti ./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080 ./src/pages/about/about.js[39m[22m 40 bytes {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[35] [1m./src/pages/about/about.js[39m[22m 229 bytes {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[38] [1m./src/images/cat.jpeg[39m[22m 73 bytes {[1m[33m2[39m[22m}[1m[32m [built][39m[22m
+[39] [1mmulti ./node_modules/_webpack-dev-server@3.1.5@webpack-dev-server/client?http://0.0.0.0:8080 ./src/pages/contact/contact.js[39m[22m 40 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+[40] [1m./src/pages/contact/contact.js[39m[22m 172 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    + 28 hidden modules
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!src/common/css/com.less[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./src/common/css/com.less[39m[22m 212 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!src/pages/about/about.less[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./src/pages/about/about.less[39m[22m 185 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!src/pages/home/index.less[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!./src/pages/home/index.less[39m[22m 231 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/_extract-text-webpack-plugin@4.0.0-beta.0@extract-text-webpack-plugin/dist node_modules/_css-loader@0.28.11@css-loader/index.js!src/pages/contact/contact.css[39m[22m:
+    Entrypoint [1mundefined[39m[22m = [1m[32mextract-text-webpack-plugin-output-filename[39m[22m
+    [0] [1m./node_modules/_css-loader@0.28.11@css-loader!./src/pages/contact/contact.css[39m[22m 185 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./node_modules/_css-loader@0.28.11@css-loader/lib/css-base.js[39m[22m 2.21 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+Child [1mhtml-webpack-plugin for "about.html"[39m[22m:
+     2 assets
+    Entrypoint [1mundefined[39m[22m = [1m[32mabout.html[39m[22m
+    [0] [1m./node_modules/_html-webpack-plugin@3.2.0@html-webpack-plugin/lib/loader.js!./src/pages/about/about.html[39m[22m 427 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    [1] [1m./src/images/cat.jpeg[39m[22m 73 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+Child [1mhtml-webpack-plugin for "contact.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32mcontact.html[39m[22m
+    [0] [1m./node_modules/_html-webpack-plugin@3.2.0@html-webpack-plugin/lib/loader.js!./src/pages/contact/contact.html[39m[22m 282 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32mindex.html[39m[22m
+    [0] [1m./node_modules/_html-webpack-plugin@3.2.0@html-webpack-plugin/lib/loader.js!./src/pages/home/index.html[39m[22m 346 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+ℹ ｢wdm｣: Compiled successfully.
