@@ -62,7 +62,7 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath":"pages/imgs/icon/footer1.png",
-        "selectedIconPath":"pages/imgs/icon/footer1-e.png"
+        "selectedIconPath":"pages/imgs/icon/footer1-l.png"
 
       },
       {

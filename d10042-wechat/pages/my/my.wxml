@@ -20,7 +20,7 @@
 
     <view class="my-cert pad-lr-30 flex-h bg-w mar-b-12">
         <image class="my-icon mar-r-30" src="../imgs/icon/my-list1.png" />
-        <text class="font-mmm mar-r-30">认证中心</text>
+        <text class="font-mm mar-r-30">认证中心</text>
         <view class="certs flex-h-s">
             <image bindtap="certSelf" class="my-icon-l mar-r-10" src="../imgs/icon/cert1.png" />
             <image class="my-icon-l mar-r-10" src="../imgs/icon/cert2.png" />
@@ -35,31 +35,31 @@
     <view class="my-list bg-w">
         <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-dynamic/my-dynamic"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list2.png" />
-            <text>我的动态</text>
+            <text class="font-mm">我的动态</text>
         </navigator>
         <navigator class="list-item hr pad-lr-30 flex-h-s" url=""  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list3.png" />
-            <text>我的参与</text>
+            <text class="font-mm">我的参与</text>
         </navigator>
         <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-matchmaker/my-matchmaker"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list4.png" />
-            <text>我的红娘</text>
+            <text class="font-mm">我的红娘</text>
         </navigator>
         <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-focus/my-focus"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list5.png" />
-            <text>我关注谁</text>
+            <text class="font-mm">我关注谁</text>
         </navigator>
         <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-focus/my-focus"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list6.png" />
-            <text>谁关注我</text>
+            <text class="font-mm">谁关注我</text>
         </navigator>
         <navigator class="list-item hr pad-lr-30 flex-h-s" url="../my-focus/my-focus"  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list7.png" />
-            <text>谁看过我</text>
+            <text class="font-mm">谁看过我</text>
         </navigator>
         <navigator class="list-item hr pad-lr-30 flex-h-s" url=""  hover-class="className">
             <image class="my-icon-l mar-r-30" src="../imgs/icon/my-list8.png" />
-            <text>会员中心</text>
+            <text class="font-mm">会员中心</text>
         </navigator>
         
     </view>
