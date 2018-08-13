@@ -1,0 +1,231 @@
+@import 'reset.scss';
+@import 'base.scss';
+
+/*----------------------------【【index页面样式】】---------------*/
+/*----------------------------【【index页面样式】】---------------*/
+/*----------------------------【【index页面样式】】---------------*/
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············一. 公共变量*/
+
+@mixin pad-lr($l,$r){
+    box-sizing: border-box;
+    padding-left: $l;
+    padding-right: $r;
+}
+@mixin mar-lr($l,$r){
+    margin-left: $l;
+    margin-right: $r;
+}
+
+
+
+// 表单input  颜色和尺寸   
+// 表单基础
+@mixin form-base($theme-color:#55ade9){
+    display: inline-block;
+    transition: 0.5s all;
+    border: 1px solid #ccc;
+    background-color:transparent;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    height: 34px;
+    box-sizing: border-box;
+    &:focus{
+        outline: 0;
+        border-color: $theme-color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    }
+}
+// 覆盖表单的颜色
+@mixin form-color(){
+
+}
+// 覆盖表单的尺寸 高度由pading填充
+@mixin form-size($width,$height,$pa-t,$pa-l,$font-size){
+    width: $width;
+    height: $height;
+    padding: $pa-t $pa-l;
+    font-size: $font-size;
+}
+
+// 按钮
+@mixin btn($theme-color:#55ade9){
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    &:focus{
+        outline: 0;
+        border-color: $theme-color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        
+    }
+    &:hover{
+        background-color: #e6e6e6;
+    }
+}
+// 显示的颜色 hover的颜色 focus的颜色
+@mixin btn-color($bg-color,$font-color,$border-color){
+    background:$bg-color;
+    border-color: $border-color;
+    color: $font-color;
+    &:focus{
+        color: $font-color;
+        background-color: darken($bg-color, 10%);
+        border-color: darken($border-color, 25%);
+    }
+}
+@mixin btn-size($pa-tb,$pa-lr,$font-size,$border-radius:4px){
+    padding: $pa-tb $pa-lr;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············二. 公共样式*/
+// .pig-form{
+//     @include form-base;
+// }
+// .pig-btn{
+//     @include btn;
+// }
+// 页面左右间距默认的16px，如需更改，只需要改动这个class
+.mar-base{
+    @include mar-lr(1rem,1rem );
+}
+.mar-r-10{
+    margin-right: .625rem;
+}
+
+// 字体样式 common
+.font-m{
+
+}
+
+.text-light{
+    color: #999;
+}
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············三. body样式*/
+
+
+
+
+/*·------------------------------------------------------------------------------------------*/
+/*·------------------------------------------------------------------------------------------*/
+/*············三. 区域特定样式*/
+
+
+/*············1. header*/
+.index-header{
+    height: 3.0625rem;
+    @include flex-h(space-between,center);
+    @extend .mar-base;
+    >img:first-child{
+        width: 15.625rem;
+        height: 2.5rem;
+    }
+    >img:last-child{
+        width: 2.375rem;
+        height: 2.75rem;
+    }
+}
+/*············2. banner 轮播*/
+.banner{
+    @extend .mar-base;
+    height: 16rem;
+    .swiper-pagination{
+
+    }
+    // 小圆点
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 .8rem;
+    }
+    .swiper-pagination-bullet{
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 2px solid transparent;
+        position: relative;
+        margin: 0 1rem;
+    }
+    .swiper-pagination-bullet-active{
+        background:#21acfa;
+    }
+    .swiper-pagination-bullet::after{
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: -5px;
+        margin-left: -5px;
+    }
+}
+
+
+/*············2. 产品信息*/
+.pro-info{
+    @extend .mar-base;
+    >header{
+        margin-top: 1.25rem;
+        font-weight: 800;
+    }
+    >section{
+        margin: 1.125rem 0;
+        line-height: 1.5rem;
+        @include flex-h(flex-start,center);
+    }
+    img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/*············2. 菜单*/
+.index-menu{
+    height: 3rem;
+    @include flex-h();
+    @extend .mar-base;
+    >a{
+        flex-basis: 22%;
+        height: 100%;
+        text-align: center;
+        @include flex-v();
+        position: relative;
+
+    }
+    >a.active{
+        color: $brand-primary;   
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: .25rem;
+            background:$brand-primary;
+        }
+    }
+}
