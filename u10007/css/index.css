@@ -228,15 +228,49 @@ body {
   font-size: .984375rem;
 }
 
-/*----------------------------【【index页面样式】】---------------*/
-/*----------------------------【【index页面样式】】---------------*/
-/*----------------------------【【index页面样式】】---------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············一. 公共变量*/
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
+.input {
+  font-size: .985rem;
+  display: block;
+  width: 99%;
+  color: #999999;
+  transition: .5s all;
+  height: 3rem;
+  box-sizing: border-box;
+  padding: 1rem 1rem 1rem 1rem;
+  font-weight: 200;
+  border: 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.input:focus {
+  outline: 0;
+  border-color: #21acfa;
+}
+
+.input.textarea {
+  height: 11.25rem;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 1.2rem;
+  color: #fff;
+  background: #21acfa;
+  border-radius: .375rem;
+}
+
+.btn:focus {
+  outline: 0;
+  background-color: #0593e3;
+}
+
 .mar-base, .index-header, .banner, .pro-info, .index-menu, .process {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -260,10 +294,80 @@ body {
 
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
-/*············三. body样式*/
+/*············三. 页面公共组件*/
+.index-footer {
+  height: 3.625rem;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+.index-footer > a {
+  flex-basis: 25%;
+  height: 3.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ccc;
+}
+
+.index-footer > a:last-child {
+  border: 0;
+}
+
+.index-footer a.active {
+  background: #21acfa;
+  color: #fff;
+}
+
+.poster {
+  height: 9.375rem;
+  width: 100%;
+  position: relative;
+}
+
+.poster .cover {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.075);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster h1 {
+  color: #fff;
+  font-size: 1.395625rem;
+  font-weight: 400;
+}
+
+.poster.report {
+  background-size: 100% 9.375rem;
+  background-image: url("../imgs/img/poster-report.png");
+  background-size: cover;
+}
+
+.poster.company {
+  background-size: 100% 9.375rem;
+  background-image: url("../imgs/img/poster-company.png");
+  background-size: cover;
+}
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
-/*············三. 区域特定样式*/
+/*············四. 区域特定样式*/
 /*············1. header*/
 .index-header {
   height: 3.0625rem;
@@ -372,6 +476,10 @@ body {
   right: 0;
   height: .25rem;
   background: #21acfa;
+}
+
+.menu-content {
+  margin-bottom: 120px;
 }
 
 /*············4.1 追溯流程*/
@@ -574,4 +682,93 @@ body {
 .js-reverse {
   transform: rotate(180deg);
   transition: .5s;
+}
+
+/*------------------------*/
+/*------------------------*/
+.report-form {
+  margin-bottom: 4rem;
+}
+
+.report-form > footer {
+  padding: .9375rem;
+  margin-top: 6.375rem;
+}
+
+/*------------------------*/
+/*------------------------*/
+.company-intro, .country-intro {
+  box-sizing: border-box;
+  padding: 1rem 0.9375rem 2.875rem 0.9375rem;
+}
+
+.company-intro h3, .country-intro h3 {
+  font-weight: 800;
+  font-size: .984375rem;
+  line-height: 2rem;
+}
+
+.company-intro p, .country-intro p {
+  line-height: 1.8;
+  color: #666;
+}
+
+.company-addr {
+  height: 11rem;
+  color: white;
+  background: #21acfa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-addr img {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  width: 3.625rem;
+  height: 3.625rem;
+}
+
+.company-addr h4 {
+  margin-bottom: 1rem;
+}
+
+.company-addr p {
+  font-weight: 200;
+}
+
+.company-tel {
+  height: 10.9375rem;
+  margin-bottom: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+.company-tel img {
+  margin-top: -1.25rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1.3125rem;
+}
+
+.company-tel h4 {
+  margin-bottom: 1.1875rem;
+  font-weight: 600;
+}
+
+.company-tel p {
+  color: #999;
+  font-weight: 200;
+}
+
+.country-intro h3 {
+  margin: .625rem 0;
+}
+
+.country-intro p {
+  margin-bottom: 1.25rem;
 }

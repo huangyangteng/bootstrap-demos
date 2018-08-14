@@ -1,10 +1,5 @@
 @import 'reset.scss';
-@import 'base.scss'
-;
-/*----------------------------【【index页面样式】】---------------*/
-/*----------------------------【【index页面样式】】---------------*/
-/*----------------------------【【index页面样式】】---------------*/
-
+@import 'base.scss';
 
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
@@ -22,35 +17,6 @@
 
 
 
-// 表单input  颜色和尺寸   
-// 表单基础
-@mixin form-base($theme-color:#55ade9){
-    display: inline-block;
-    transition: 0.5s all;
-    border: 1px solid #ccc;
-    background-color:transparent;
-    border-radius: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    height: 34px;
-    box-sizing: border-box;
-    &:focus{
-        outline: 0;
-        border-color: $theme-color;
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
-    }
-}
-// 覆盖表单的颜色
-@mixin form-color(){
-
-}
-// 覆盖表单的尺寸 高度由pading填充
-@mixin form-size($width,$height,$pa-t,$pa-l,$font-size){
-    width: $width;
-    height: $height;
-    padding: $pa-t $pa-l;
-    font-size: $font-size;
-}
 
 // 按钮
 @mixin btn($theme-color:#55ade9){
@@ -96,12 +62,41 @@
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············二. 公共样式*/
-// .pig-form{
-//     @include form-base;
-// }
-// .pig-btn{
-//     @include btn;
-// }
+
+.input{
+    font-size: .985rem;
+    display: block;
+    width: 99%;
+    color: #999999;
+    transition: .5s all;
+    height: 3rem;
+    @include pad(1rem,1rem,1rem,1rem);
+    font-weight: 200;
+    border: 0;
+    border-bottom: 1px solid #ebebeb;
+    &:focus{
+        outline: 0;
+        border-color: $brand-primary;
+    }
+}
+.input.textarea{
+    height: 11.25rem;
+}
+.btn{
+    display: block;
+    width: 100%;
+    padding: 1.2rem; 
+    color: #fff;
+    background:$brand-primary;
+    border-radius: .375rem;
+    &:focus{
+        outline: 0;
+        background-color: darken($brand-primary, 10%);
+    }
+
+
+}
+
 // 页面左右间距默认的16px，如需更改，只需要改动这个class
 .mar-base{
     @include mar-lr(1rem,1rem );
@@ -127,14 +122,64 @@
 
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
-/*············三. body样式*/
+/*············三. 页面公共组件*/
+// footer
+.index-footer{
+    height: 3.625rem;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background:#fff;
 
-
+    bottom: 0;
+    @include flex-h();
+    border-top: 1px solid #ccc;
+    >a{
+        flex-basis: 25%;
+        height: 3.625rem;
+        @include flex-v();
+        border-right: 1px solid #ccc;
+    }
+    >a:last-child{
+        border: 0;
+    }
+    a.active{
+        background:$brand-primary;
+        color: #fff;
+    }
+}
+// poster
+.poster{
+    height: 9.375rem;
+    width: 100%;
+    position: relative;
+    .cover{
+        position: absolute;
+        z-index:1;
+        left: 0;right: 0;
+        bottom: 0;top: 0;
+        background:rgba(0,0,0,.075);
+        @include flex-v();
+    }
+    h1{
+        color: #fff;
+        font-size: 1.395625rem;
+        font-weight: 400;
+    }
+}
+.poster.report{
+    background-size: 100% 9.375rem;
+    @include bg-img(url('../imgs/img/poster-report.png'))
+}
+.poster.company{
+    background-size: 100% 9.375rem;
+    @include bg-img(url('../imgs/img/poster-company.png'))
+}
 
 
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
-/*············三. 区域特定样式*/
+/*············四. 区域特定样式*/
 
 
 /*············1. header*/
@@ -234,7 +279,9 @@
         }
     }
 }
-
+.menu-content{
+    margin-bottom: 120px;
+}
 /*············4.1 追溯流程*/
 // 4.1 通用组件
 // icon
@@ -417,4 +464,90 @@
 .js-reverse{
     transform: rotate(180deg);
     transition: .5s;
+}
+
+
+
+
+
+
+/*------------------------*/
+// report.html
+/*------------------------*/
+.report-form{
+    margin-bottom: 4rem;
+    >footer{
+        padding: .9375rem;
+        margin-top: 6.375rem;
+    }
+}
+
+
+
+/*------------------------*/
+// company.html
+/*------------------------*/
+.company-intro{
+    @include pad(1rem,.9375rem,2.875rem,.9375rem);
+    
+    h3{
+        font-weight: 800;
+        font-size: .984375rem;
+        line-height: 2rem;
+    }
+    p{
+        line-height: 1.8;
+        color: #666;
+    }
+}
+.company-addr{
+    height: 11rem;
+    color: white;
+    background:$brand-primary;
+    @include flex-v();
+    img{
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        width: 3.625rem;
+        height: 3.625rem;
+    }
+    h4{
+        margin-bottom: 1rem;
+    }
+    p{
+        font-weight: 200;
+    }
+
+}
+
+.company-tel{
+    height: 10.9375rem;
+    margin-bottom: 8.5rem;
+    @include flex-v();
+    background:#eee;
+    img{
+        margin-top: -1.25rem;
+        width: 3.25rem;
+        height: 3.25rem;
+        margin-bottom: 1.3125rem;
+    }
+    h4{
+        margin-bottom: 1.1875rem;
+        font-weight: 600;
+    }
+    p{
+        color: #999;
+        font-weight: 200;
+    }
+}
+
+
+.country-intro{
+    @extend .company-intro;
+    h3{
+        margin: .625rem 0;
+    }
+    p{
+        margin-bottom: 1.25rem;
+    }
 }

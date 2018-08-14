@@ -5,8 +5,9 @@
 //如果a标签的href属性为空，那么设置为javascript::
 var all_link = Array.prototype.slice.apply($('a'));
 all_link.forEach(item => {
-    item.href = 'javascript:;'
-    console.log(item.href)
+    if(item.href==''){
+        item.href = 'javascript:;'
+    }
 });
 
 
