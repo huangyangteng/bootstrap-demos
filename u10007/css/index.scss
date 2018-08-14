@@ -119,6 +119,10 @@
     color: #999;
 }
 
+.hidden{
+    display: none;
+}
+
 
 
 /*·------------------------------------------------------------------------------------------*/
@@ -149,6 +153,10 @@
 }
 /*············2. banner 轮播*/
 .banner{
+    // 显示轮播图大小
+    img{
+        height: 16rem;
+    }
     @extend .mar-base;
     height: 16rem;
     // 小圆点
@@ -259,10 +267,11 @@
 
     margin-bottom: 1.875rem;
     position: relative;
-    height: 31.25rem;
-    border-radius: .625rem;
+    border-radius: .5rem;
     box-shadow: 1px 1px 10px rgba(0,0,0,.075);
     >header{
+        color: #fff;
+        font-weight: 600;
         background:$brand-primary;
         height: 3.125rem;
         @include flex-v();
@@ -279,8 +288,11 @@
     height: 100%;
     width: 1px;
     background:#ccc;
-    margin-left: -1.42rem;
+    margin-left: -1.4375rem;
     margin-top: 1.75rem;
+}
+.panel.step5::before{
+    width: 0;
 }
 
 
@@ -312,11 +324,18 @@
         
         border-left: 1px solid #ccc;
     }
+    >section.step5{
+        border: 0;
+    }
 }
 
 //==== step1
 // 轮播
-.swiper-container.step1{
+.swiper-container.step1,
+.swiper-container.step2,
+.swiper-container.step3,
+.swiper-container.step5,
+{
     height:9.25rem;
     img{
         height: 9.25rem;
@@ -351,8 +370,16 @@
     }
 }
 // 信息
-.step1-info{
-    line-height: 1.25rem;
+.step1.panel>header>img{
+    height: 2.5rem;
+}
+.step1-info,
+.step2-info,
+.step3-info,
+.step4-info,
+.step5-info,
+{
+    line-height: 1.4rem;
     margin: 1rem 0;
 }
 .step1-video{
@@ -361,7 +388,22 @@
     
 }
 //=== step2
+.step2-info,
+.step3-info,
+.step4-info,
+.step5-info,
+{
+    margin-bottom: .5rem;
+}
 
+//=== step3
+
+
+//=== step4
+.step4-img{
+    width: 100%;
+    height:9.375rem;
+}
 
 
 // 4.3 js样式
@@ -369,6 +411,8 @@
 .js-initial{
     transition: .5s;
     transform: rotate(0deg);
+    width: 1.25rem;
+    height: .75rem;
 }
 .js-reverse{
     transform: rotate(180deg);

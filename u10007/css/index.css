@@ -254,6 +254,10 @@ body {
   color: #999;
 }
 
+.hidden {
+  display: none;
+}
+
 /*·------------------------------------------------------------------------------------------*/
 /*·------------------------------------------------------------------------------------------*/
 /*············三. body样式*/
@@ -280,6 +284,10 @@ body {
 
 /*············2. banner 轮播*/
 .banner {
+  height: 16rem;
+}
+
+.banner img {
   height: 16rem;
 }
 
@@ -401,12 +409,13 @@ body {
 .panel {
   margin-bottom: 1.875rem;
   position: relative;
-  height: 31.25rem;
-  border-radius: .625rem;
+  border-radius: .5rem;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.075);
 }
 
 .panel > header {
+  color: #fff;
+  font-weight: 600;
   background: #21acfa;
   height: 3.125rem;
   display: flex;
@@ -427,8 +436,12 @@ body {
   height: 100%;
   width: 1px;
   background: #ccc;
-  margin-left: -1.42rem;
+  margin-left: -1.4375rem;
   margin-top: 1.75rem;
+}
+
+.panel.step5::before {
+  width: 0;
 }
 
 .process {
@@ -460,19 +473,35 @@ body {
   border-left: 1px solid #ccc;
 }
 
-.swiper-container.step1 {
+.process-item > section.step5 {
+  border: 0;
+}
+
+.swiper-container.step1,
+.swiper-container.step2,
+.swiper-container.step3,
+.swiper-container.step5 {
   height: 9.25rem;
 }
 
-.swiper-container.step1 img {
+.swiper-container.step1 img,
+.swiper-container.step2 img,
+.swiper-container.step3 img,
+.swiper-container.step5 img {
   height: 9.25rem;
 }
 
-.swiper-container.step1 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-container.step1 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-container.step2 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-container.step3 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-container.step5 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 .8rem;
 }
 
-.swiper-container.step1 .swiper-pagination-bullet {
+.swiper-container.step1 .swiper-pagination-bullet,
+.swiper-container.step2 .swiper-pagination-bullet,
+.swiper-container.step3 .swiper-pagination-bullet,
+.swiper-container.step5 .swiper-pagination-bullet {
   width: 0.5rem;
   height: 0.5rem;
   border: 2px solid transparent;
@@ -480,11 +509,17 @@ body {
   margin: 0 1rem;
 }
 
-.swiper-container.step1 .swiper-pagination-bullet-active {
+.swiper-container.step1 .swiper-pagination-bullet-active,
+.swiper-container.step2 .swiper-pagination-bullet-active,
+.swiper-container.step3 .swiper-pagination-bullet-active,
+.swiper-container.step5 .swiper-pagination-bullet-active {
   background: #21acfa;
 }
 
-.swiper-container.step1 .swiper-pagination-bullet::after {
+.swiper-container.step1 .swiper-pagination-bullet::after,
+.swiper-container.step2 .swiper-pagination-bullet::after,
+.swiper-container.step3 .swiper-pagination-bullet::after,
+.swiper-container.step5 .swiper-pagination-bullet::after {
   content: '';
   position: absolute;
   width: 1rem;
@@ -499,8 +534,16 @@ body {
   margin-left: -5px;
 }
 
-.step1-info {
-  line-height: 1.25rem;
+.step1.panel > header > img {
+  height: 2.5rem;
+}
+
+.step1-info,
+.step2-info,
+.step3-info,
+.step4-info,
+.step5-info {
+  line-height: 1.4rem;
   margin: 1rem 0;
 }
 
@@ -509,9 +552,23 @@ body {
   height: 9.25rem;
 }
 
+.step2-info,
+.step3-info,
+.step4-info,
+.step5-info {
+  margin-bottom: .5rem;
+}
+
+.step4-img {
+  width: 100%;
+  height: 9.375rem;
+}
+
 .js-initial {
   transition: .5s;
   transform: rotate(0deg);
+  width: 1.25rem;
+  height: .75rem;
 }
 
 .js-reverse {
