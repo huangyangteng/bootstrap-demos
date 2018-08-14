@@ -282,7 +282,9 @@
 .menu-content{
     margin-bottom: 120px;
 }
-/*············4.1 追溯流程*/
+
+
+//============================4-1 procee
 // 4.1 通用组件
 // icon
 .icon{
@@ -465,6 +467,204 @@
     transform: rotate(180deg);
     transition: .5s;
 }
+
+//============================4-2 检测证书
+
+
+
+//============================4-3 产品信息
+// product通用样式
+.pro-title{
+    height: 3.3125rem;
+    background:$brand-warm;
+    border-bottom: .4375rem solid $brand-hot;
+    @include flex-v();
+    font-size: 1.230625rem;
+    color: #fff;
+}
+.pro-title.special{
+    span{
+        display: inline-block;
+        font-size: 1.394375rem;
+        position: relative;
+        margin-right: 1.875rem;
+        margin-top: .3125rem;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 1.625rem;
+            height: 2.25rem;
+            border: 2px solid #fff;
+            left: 0;
+            top: 0;
+            margin-top: -0.625rem;
+            margin-left: -1.5625rem;
+            border-right: 0;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1.625rem;
+            height: 2.25rem;
+            border: .125rem solid #fff;
+            right: 0;
+            top: 0;
+            margin-top: -0.625rem;
+            margin-right: -1.25rem;
+            border-left: 0;
+        }
+    }
+}
+.product{
+    margin-top: 1.625rem;
+} 
+// 基本信息
+.prod-meg{
+    height: 14.5625rem;
+    @include pad-lr(1rem,1rem );
+    @include flex-h();
+    img{
+        width: 10.9375rem;
+        height: 8.4375rem;
+        margin-right: 1rem;
+    }
+    aside{
+        h4{
+            margin-bottom: .4rem;
+        }
+        p{
+            font-size: .9025rem;
+            margin-bottom: .8rem
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+    
+}
+// 产地
+.pro-address{
+    margin-bottom: 1.875rem;
+    img{
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
+    p{
+        @extend .mar-base;
+        line-height: 1.4rem;
+    }
+}
+// 优势
+.pro-advantage{
+    img{
+        width: 100%;
+        height: 18.125rem;
+    }
+    p{
+        line-height: 1.4rem;
+        @extend .mar-base;
+        margin-top: 1.5rem;
+        margin-bottom: 1.875rem;
+    }
+}
+// 对比
+.pro-contrast{
+    >header{
+        text-align: center;
+        line-height: 1.2rem;
+        @include flex-v();
+        padding-top: 1.5rem;
+        padding-bottom: 1.875rem;
+    }
+    >section{
+        @include flex-h();
+        @extend .mar-base;
+        figure{
+            margin: 0;
+            @include flex-v();
+            img{
+                width: 8.375rem;
+                height: 8.375rem;
+                margin-bottom: 1.1875rem;
+            }
+            span{
+                font-size: 1.230625rem;
+                display: inline-block;
+                padding: .5rem .6875rem;
+                background:#fe9a59;
+                border-radius: .375rem;
+                color: #fff;
+                font-weight: 300;
+
+            }
+            .bg-red{
+                background:#80151d;
+            }
+        }
+        >p{
+            font-size: 3.75rem;
+            color: #83c146;
+            margin-top: -3.75rem;
+        }
+        
+    }
+    >footer{
+        padding-top: 2.1875rem;
+        padding-bottom: 2.375rem;
+        font-weight: 500;
+        ul{
+            @include flex-v();
+            li{
+                margin-bottom: 1.5625rem;
+            }
+            li:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .text-gold{
+            color: #fe9a59;
+        }
+        .text-red{
+            color: #80151d;
+        }
+        .text-line{
+            color: #83c146;
+        }
+    }
+}
+
+.pro-fit{
+    padding-top: 1rem;
+    figure:first-child{
+        margin: 0;
+        @include pad-lr(1rem, 1rem);
+        z-index: 2;
+        img{
+            width: 100%;
+        }
+    }
+    figure:last-child{
+        margin: 0;
+        margin-top: -38px;
+        background-image: url(../imgs/img/chelizi.png);
+        background-size: 100% 100%;
+        height: 16.125rem;
+    }
+    
+}
+//============================4-4 企业信息
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

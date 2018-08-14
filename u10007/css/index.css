@@ -271,7 +271,7 @@ body {
   background-color: #0593e3;
 }
 
-.mar-base, .index-header, .banner, .pro-info, .index-menu, .process {
+.mar-base, .index-header, .banner, .pro-info, .index-menu, .process, .pro-address p, .pro-advantage p, .pro-contrast > section {
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -482,7 +482,6 @@ body {
   margin-bottom: 120px;
 }
 
-/*············4.1 追溯流程*/
 .icon {
   width: 1.25rem;
   height: 1.25rem;
@@ -682,6 +681,217 @@ body {
 .js-reverse {
   transform: rotate(180deg);
   transition: .5s;
+}
+
+.pro-title {
+  height: 3.3125rem;
+  background: #ff8560;
+  border-bottom: 0.4375rem solid #f9531f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.230625rem;
+  color: #fff;
+}
+
+.pro-title.special span {
+  display: inline-block;
+  font-size: 1.394375rem;
+  position: relative;
+  margin-right: 1.875rem;
+  margin-top: .3125rem;
+}
+
+.pro-title.special span::before {
+  content: '';
+  position: absolute;
+  width: 1.625rem;
+  height: 2.25rem;
+  border: 2px solid #fff;
+  left: 0;
+  top: 0;
+  margin-top: -0.625rem;
+  margin-left: -1.5625rem;
+  border-right: 0;
+}
+
+.pro-title.special span::after {
+  content: '';
+  position: absolute;
+  width: 1.625rem;
+  height: 2.25rem;
+  border: .125rem solid #fff;
+  right: 0;
+  top: 0;
+  margin-top: -0.625rem;
+  margin-right: -1.25rem;
+  border-left: 0;
+}
+
+.product {
+  margin-top: 1.625rem;
+}
+
+.prod-meg {
+  height: 14.5625rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prod-meg img {
+  width: 10.9375rem;
+  height: 8.4375rem;
+  margin-right: 1rem;
+}
+
+.prod-meg aside h4 {
+  margin-bottom: .4rem;
+}
+
+.prod-meg aside p {
+  font-size: .9025rem;
+  margin-bottom: .8rem;
+}
+
+.prod-meg aside p:last-child {
+  margin-bottom: 0;
+}
+
+.pro-address {
+  margin-bottom: 1.875rem;
+}
+
+.pro-address img {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.pro-address p {
+  line-height: 1.4rem;
+}
+
+.pro-advantage img {
+  width: 100%;
+  height: 18.125rem;
+}
+
+.pro-advantage p {
+  line-height: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.875rem;
+}
+
+.pro-contrast > header {
+  text-align: center;
+  line-height: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.875rem;
+}
+
+.pro-contrast > section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pro-contrast > section figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro-contrast > section figure img {
+  width: 8.375rem;
+  height: 8.375rem;
+  margin-bottom: 1.1875rem;
+}
+
+.pro-contrast > section figure span {
+  font-size: 1.230625rem;
+  display: inline-block;
+  padding: .5rem .6875rem;
+  background: #fe9a59;
+  border-radius: .375rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.pro-contrast > section figure .bg-red {
+  background: #80151d;
+}
+
+.pro-contrast > section > p {
+  font-size: 3.75rem;
+  color: #83c146;
+  margin-top: -3.75rem;
+}
+
+.pro-contrast > footer {
+  padding-top: 2.1875rem;
+  padding-bottom: 2.375rem;
+  font-weight: 500;
+}
+
+.pro-contrast > footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro-contrast > footer ul li {
+  margin-bottom: 1.5625rem;
+}
+
+.pro-contrast > footer ul li:last-child {
+  margin-bottom: 0;
+}
+
+.pro-contrast > footer .text-gold {
+  color: #fe9a59;
+}
+
+.pro-contrast > footer .text-red {
+  color: #80151d;
+}
+
+.pro-contrast > footer .text-line {
+  color: #83c146;
+}
+
+.pro-fit {
+  padding-top: 1rem;
+}
+
+.pro-fit figure:first-child {
+  margin: 0;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 2;
+}
+
+.pro-fit figure:first-child img {
+  width: 100%;
+}
+
+.pro-fit figure:last-child {
+  margin: 0;
+  margin-top: -38px;
+  background-image: url(../imgs/img/chelizi.png);
+  background-size: 100% 100%;
+  height: 16.125rem;
 }
 
 /*------------------------*/
