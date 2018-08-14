@@ -60,14 +60,70 @@
         <a href="">产品信息</a>
         <a href="">企业信息</a>
     </section>
-    <!-- process -->
+    <!-- content -->
     <section class="menu-content">
+        <!-- 追溯流程 -->
+        <!-- 组件 -->
+        <section class="process">
+            <article class="process-item">
+                <header class="toggle-panel">
+                    <h4>
+                        <span class="icon active"></span>
+                        <span>生产企业</span>
+                    </h4>
+                    <aside>
+                        <span class="js-pack-up">收起</span>
+                        <img class="js-initial" src="imgs/icon/arrow-up.png" alt="">
+                    </aside>
+                </header>
+                <section>
+                    <article class="panel step1">
+                        <header>
+                            <img src="imgs/img/step1-h.png" alt="">
+                        </header>
+                        <section>
+                            <!-- 轮播 -->
+                            <div class="swiper-container step1" id="step1-banner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="imgs/img/step1-banner1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="imgs/img/step1-banner1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="imgs/img/step1-banner1.png" alt="">
+                                    </div>
+                                </div>
+                                <!-- 如果需要分页器 -->
+                                <div class="swiper-pagination">
+                                </div>
+                            </div>
+                            <!-- 信息 -->
+                            <div class="step1-info font-s">
+                                <p>企业名称：<span class="text-light">中检集团溯源技术服务有限公司</span></p>
+                                <p>企业地址：<span class="text-light">上海市浦东新区张江华佗路68号9栋</span></p>
+                                <p>联系电话：<span class="text-light">0086-21-63255018</span></p>
+                                <p>联系传真：<span class="text-light">0086-21-63255018</span></p>
+                                <p>网站地址：<span class="text-light">www.ccicshanghai.com</span></p>
+                                <p>电子信箱：<span class="text-light">ccicshanghai@ccicshanghai.com</span></p>
+
+                            </div>
+                            <!-- video -->
+                            <video class="step1-video"  src="video/301680022.mp4" poster="imgs/img/video-poster.png"></video>
+                        </section>
+                    </article>
+                </section>
+            </article>
+           
+         
+        </section>
 
     </section>
     <script src="lib/jquery/jquery-1.11.3.min.js"></script>
     <script src="lib/swiper/swiper-4.3.3.min.js"></script>
     <script>
-        // 轮播
+        // banner轮播
         new Swiper('.swiper-container', {
                 // autoplay: true,
                 delay: 2000,
@@ -84,6 +140,36 @@
             item.href='javascript:;'
             console.log(item.href)
         });
+
+        // toggle panel
+        var toggle_panel_btns=$('.toggle-panel');
+        var panels=$('.panel');
+        toggle_panel_btns.click(function (e) {
+            var _this=$(this);
+            // 切换panel
+            _this.next().find('.panel').slideToggle('1000');
+            // 更改header
+            var icon=_this.find('.icon'),
+                text=_this.find('.js-pack-up'),
+                arrow= _this.find('.js-pack-up').next();
+            
+            if(icon.hasClass('active')){
+                icon.removeClass('active');
+            }else{
+                icon.addClass('active');
+            }
+
+            if(text.html()==='收起'){
+                text.html('展开');
+            }else{
+                text.html('收起');
+            }
+            if(arrow.hasClass('js-reverse')){
+                arrow.removeClass('js-reverse');
+            }else{
+                arrow.addClass('js-reverse');
+            }
+        })
     </script>
 </body>
 </html>

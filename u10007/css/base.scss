@@ -138,6 +138,16 @@ $link-hover-decoration: underline !default;
     margin-top: auto;
     margin-bottom: auto;
 }
+@mixin ab-c(){
+    margin: auto;
+    left: 0;right: 0;
+    bottom: 0;top: 0;
+}
+// padding
+@mixin pad($t:0,$r:0,$b:0,$l:0){
+    box-sizing: border-box;
+    padding: $t $r $b $l;
+}
 
 
 

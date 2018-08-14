@@ -1,6 +1,6 @@
 @import 'reset.scss';
-@import 'base.scss';
-
+@import 'base.scss'
+;
 /*----------------------------【【index页面样式】】---------------*/
 /*----------------------------【【index页面样式】】---------------*/
 /*----------------------------【【index页面样式】】---------------*/
@@ -111,8 +111,8 @@
 }
 
 // 字体样式 common
-.font-m{
-
+.font-s{
+    font-size: .75rem;
 }
 
 .text-light{
@@ -151,9 +151,6 @@
 .banner{
     @extend .mar-base;
     height: 16rem;
-    .swiper-pagination{
-
-    }
     // 小圆点
     .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
         margin: 0 .8rem;
@@ -185,7 +182,7 @@
 }
 
 
-/*············2. 产品信息*/
+/*············3. 产品信息*/
 .pro-info{
     @extend .mar-base;
     >header{
@@ -203,7 +200,7 @@
     }
 }
 
-/*············2. 菜单*/
+/*············4. 菜单*/
 .index-menu{
     height: 3rem;
     @include flex-h();
@@ -228,4 +225,152 @@
             background:$brand-primary;
         }
     }
+}
+
+/*············4.1 追溯流程*/
+// 4.1 通用组件
+// icon
+.icon{
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: .9rem;
+        height: .9rem;
+        border-radius: 50%;
+        background:#ccc;
+        @include ab-c();
+        
+    }
+}
+.icon.active{
+    border-color: $brand-primary;
+    &::after{
+        background:$brand-primary;
+    }
+}
+// 面板
+.panel{
+
+    margin-bottom: 1.875rem;
+    position: relative;
+    height: 31.25rem;
+    border-radius: .625rem;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.075);
+    >header{
+        background:$brand-primary;
+        height: 3.125rem;
+        @include flex-v();
+        border-radius: .5rem .5rem 0 0;
+    }
+    >section{
+        @include pad(1.375rem,2.3125rem,1.875rem,2.375rem);
+    }
+}
+// 模拟border-left
+.panel::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background:#ccc;
+    margin-left: -1.42rem;
+    margin-top: 1.75rem;
+}
+
+
+
+
+// 4.2 容器样式
+.process{
+    margin-top: 1.75rem;
+    @extend .mar-base;
+
+}
+.process-item{
+    >header{
+        @include flex-h();
+        h4{
+            @include flex-h(flex-start);
+            span.icon{
+                margin-right: 1rem;
+            }
+        }
+            
+    }
+    >section{
+        box-sizing: border-box;
+        padding: 1.125rem .75rem 0 1.375rem;
+        margin-left: .625rem;
+        margin-top: .125rem;
+        margin-bottom: .125rem;
+        
+        border-left: 1px solid #ccc;
+    }
+}
+
+//==== step1
+// 轮播
+.swiper-container.step1{
+    height:9.25rem;
+    img{
+        height: 9.25rem;
+    }
+    // 小圆点
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 .8rem;
+    }
+    .swiper-pagination-bullet{
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 2px solid transparent;
+        position: relative;
+        margin: 0 1rem;
+    }
+    .swiper-pagination-bullet-active{
+        background:#21acfa;
+    }
+    .swiper-pagination-bullet::after{
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #21acfa;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: -5px;
+        margin-left: -5px;
+    }
+}
+// 信息
+.step1-info{
+    line-height: 1.25rem;
+    margin: 1rem 0;
+}
+.step1-video{
+    width: 17.0625rem;
+    height: 9.25rem;
+    
+}
+//=== step2
+
+
+
+// 4.3 js样式
+// arrow 旋转
+.js-initial{
+    transition: .5s;
+    transform: rotate(0deg);
+}
+.js-reverse{
+    transform: rotate(180deg);
+    transition: .5s;
 }
